@@ -1,0 +1,26 @@
+# alias and function source file
+
+alias ll='ls -alh'
+alias mss='mysql.server start'
+alias msss='mysql.server stop'
+alias buu='brew update && brew upgrade && brew cask upgrade'
+alias netb='/Applications/netbeans/bin/netbeans'
+alias py='python3'
+alias vgs='vagrant global-status'
+alias stoc='stat -f %Mp%Lp'
+
+### Funcions ###
+
+   	lazyg ()
+		{
+		git add .
+		git commit -a -m "$1"
+		git push -u origin master
+		}
+
+	mkd () {
+		mkdir "$1"
+		cd "$1"
+			}
+
+alias vmrun='/Applications/VMware\ Fusion.app/Contents/Library/vmrun'
