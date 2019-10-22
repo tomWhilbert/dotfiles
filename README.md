@@ -1,2 +1,0 @@
-# dotFiles
-config files
