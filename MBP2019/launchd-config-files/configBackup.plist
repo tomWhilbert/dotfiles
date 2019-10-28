@@ -7,7 +7,8 @@
 	
 	<key>ProgramArguments</key>
 	<array>
-		<string>/Users/thomaswhilbert/LaunchAgentConfigs/configBackup.sh</string>
+		<string>/Users/thomaswhilbert/dotFiles/MBP2019/launchd-config-files/configBackup.sh</string>		
+
 	</array>
 	<key>RunAtLoad</key>
 	<true/>
