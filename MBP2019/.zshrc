@@ -59,3 +59,7 @@ LS_COLORS='no=00:fi=00:di=34:ow=34;40:ln=35:pi=30;44:so=35;44:do=35;44:bd=33;44:
 
 #* To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
+#* zsh history substring search bindkeys
+bindkey '^[[A' history-substring-search-up
+bindkey '^[[B' history-substring-search-down
