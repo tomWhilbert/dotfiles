@@ -13,6 +13,8 @@
 <!-- #!/bin/bash 
 script draft 1.0
 
+**add clone steps of dotfiles repo**
+
 cd ~/
 git clone https://github.com/robbyrussell/oh-my-zsh
 git clone https://github.com/romkatv/powerlevel10k
