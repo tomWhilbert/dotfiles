@@ -8,3 +8,17 @@
 5. git clone https://github.com/zsh-users/zsh-completions
 6. git clone https://github.com/zsh-users/zsh-history-substring-search
 7. git clone https://github.com/zsh-users/zsh-syntax-highlighting.git
+
+
+<!-- #!/bin/bash 
+script draft 1.0
+
+cd ~/
+git clone https://github.com/robbyrussell/oh-my-zsh
+git clone https://github.com/romkatv/powerlevel10k
+mkdir scripts
+cd scripts
+git clone https://github.com/zsh-users/zsh-completions
+git clone https://github.com/zsh-users/zsh-history-substring-search
+git clone https://github.com/zsh-users/zsh-syntax-highlighting.git
+ -->
