@@ -12,6 +12,7 @@ alias rmf='rm -rf'
 alias code='/Applications/Visual\ Studio\ Code.app/Contents/MacOS/./Electron'
 alias vmrun='/Applications/VMware\ Fusion.app/Contents/Library/vmrun'
 alias srz='source .zshrc'
+alias adk='ssh-add -K ~/.ssh/id_rsa'  # add key to keychain
 
 ### Git aliases ###
 alias g='git'
