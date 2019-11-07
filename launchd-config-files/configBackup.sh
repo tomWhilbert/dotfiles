@@ -1,6 +1,6 @@
 #!/bin/bash
 
-target=/Users/thomaswhilbert/dotFiles/MBP2019
+target=/Users/thomaswhilbert/dotFiles/
 
 cp /Users/thomaswhilbert/Library/Application\ Support/Code/User/settings.json $target
 cp /Users/thomaswhilbert/.zshrc $target

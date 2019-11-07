@@ -1,7 +1,8 @@
 export PATH="/usr/local/bin:$PATH"
+export PATH="/usr/local/sbin:$PATH"
 
 #* History
-[ -z "$HISTFILE" ] && HISTFILE="$HOME/.zsh_history"
+#[ -z "$HISTFILE" ] && HISTFILE="$HOME/.zsh_history"
 HISTSIZE=50000
 SAVEHIST=10000
 setopt extended_history
@@ -18,6 +19,7 @@ unsetopt pushd_ignore_dups
 setopt pushdminus
 
 #* Completions
+setopt dot_glob  #allows for ** globs
 setopt auto_menu
 setopt always_to_end
 setopt complete_in_word

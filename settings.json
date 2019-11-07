@@ -1,3 +1,10 @@
 {
-    "workbench.iconTheme": "vscode-icons"
+    "workbench.iconTheme": "vscode-icons",
+    "workbench.statusBar.visible": false,
+    "editor.minimap.enabled": false,
+    "workbench.settings.useSplitJSON": true,
+    "terminal.integrated.fontFamily": "MesloLGS NF",
+    "window.zoomLevel": 1,
+
+    
 }

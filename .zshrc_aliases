@@ -20,6 +20,7 @@ alias gaa='git add --all'
 alias gb='git branch'
 alias gco='git checkout'
 alias gst='git status'
+alias gc='git commit -m'
 
 
 ### Functions ###
