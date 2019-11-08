@@ -22,15 +22,9 @@ https://github.com/romkatv/dotfiles-public/raw/master/.local/share/fonts/NerdFon
 12. which zsh then 
 13. set zsh as default shell `chsh -s /usr/bin/zsh`
 14. ** fedora `sudo dnf install zsh`
-****Added the ruby colors as listed here: https://fedoramagazine.org/tuning-your-bash-or-zsh-shell-in-workstation-and-silverblue/
-`sudo gem install colorls`
+15. ** PREFERED over RUBY method ** alternate to the ruby version:  https://github.com/Peltoche/lsd *** 
+16. **add to .zshrc_aliases** alias ls='lsd' and remove the `G` from the ll = ls -lahG
 
-**add to .zshrc_aliases**
-
-alias ll='colorls -lA --sd --gs --group-directories-first'
-alias ls='colorls --group-directories-first'
-
-** alternate to the ruby version:  https://github.com/Peltoche/lsd *** 
 <!-- #!/bin/bash 
 script draft 1.0
 
