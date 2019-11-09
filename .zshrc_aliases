@@ -24,6 +24,7 @@ alias gb='git branch'
 alias gco='git checkout'
 alias gst='git status'
 alias gc='git commit -m'
+alias gpo='git push -u origin'
 
 
 ### Functions ###

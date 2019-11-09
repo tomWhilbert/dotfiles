@@ -25,6 +25,14 @@ https://github.com/romkatv/dotfiles-public/raw/master/.local/share/fonts/NerdFon
 15. ** PREFERED over RUBY method ** alternate to the ruby version:  https://github.com/Peltoche/lsd *** 
 16. **add to .zshrc_aliases** alias ls='lsd' and remove the `G` from the ll = ls -lahG
 
+17. 11/9/19: trying out FSH @ https://github.com/zdharma/fast-syntax-highlighting 
+	Install notes:
+	Clone the Repository (put in the same `scripts` directory as the other plugins)
+		git clone https://github.com/zdharma/fast-syntax-highlighting ~/path/to/fsh
+	And add the following to your zshrc file. (comment out the current zsh syntax highlighitng)
+		source ~/path/to/fsh/fast-syntax-highlighting.plugin.zsh
+
+
 <!-- #!/bin/bash 
 script draft 1.0
 
