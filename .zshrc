@@ -1,15 +1,8 @@
-# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
-# Initialization code that may require console input (password prompts, [y/n]
-# confirmations, etc.) must go above this block, everything else may go below.
-if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
-  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
-fi
-
 export PATH="/usr/local/bin:$PATH"
 export PATH="/usr/local/sbin:$PATH"
 
 #* History
-#[ -z "$HISTFILE" ] && HISTFILE="$HOME/.zsh_history"
+[ -z "$HISTFILE" ] && HISTFILE="$HOME/.zsh_history"
 HISTSIZE=50000
 SAVEHIST=10000
 setopt extended_history
@@ -26,6 +19,7 @@ unsetopt pushd_ignore_dups
 setopt pushdminus
 
 #* Completions
+setopt dot_glob  #allows for ** globs
 setopt auto_menu
 setopt always_to_end
 setopt complete_in_word
@@ -46,7 +40,7 @@ autoload -Uz compinit && compinit
 
 #* Aliases, Themes and plugins
 #* source OMZ
-ZSH=~/.oh-my-zsh
+ZSH=~/oh-my-zsh
 #ZSH_CUSTOM=$ZSH/custom
 source $ZSH/plugins/z/z.plugin.zsh
 source $ZSH/lib/directories.zsh  # Adds the 'd' show recent directories
@@ -56,9 +50,9 @@ source $ZSH/lib/directories.zsh  # Adds the 'd' show recent directories
 
 setopt prompt_subst
 source ~/.zshrc_aliases
-source ~/.scripts/zsh-syntax-highlighting/zsh-syntax-highlighting.plugin.zsh
-source ~/.scripts/zsh-history-substring-search/zsh-history-substring-search.plugin.zsh
-source ~/.scripts/zsh-completions/zsh-completions.plugin.zsh
+source ~/scripts/zsh-syntax-highlighting/zsh-syntax-highlighting.plugin.zsh
+source ~/scripts/zsh-history-substring-search/zsh-history-substring-search.plugin.zsh
+source ~/scripts/zsh-completions/zsh-completions.plugin.zsh
 source ~/powerlevel10k/powerlevel10k.zsh-theme
 
 #* Sets the Colors used by the ls command

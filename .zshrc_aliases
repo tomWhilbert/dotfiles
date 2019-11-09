@@ -1,25 +1,30 @@
-### Custom Aliases ###
+# alias and function source file
 
-alias ll='ls -lah'
+alias ll='ls -alh'
+alias mss='mysql.server start'
+alias msss='mysql.server stop'
 alias buu='brew update && brew upgrade && brew cask upgrade'
-alias au='autopkg'
-alias dkl='diskutil list'
-alias p3='ping -c 3'
-alias le='less'
-alias srz='source ~/.zshrc'
+alias netb='/Applications/netbeans/bin/netbeans'
+alias py='python3'
+alias vgs='vagrant global-status'
+alias stoc='stat -f %Mp%Lp'
+alias rmf='rm -rf'
+alias code='/Applications/Visual\ Studio\ Code.app/Contents/MacOS/./Electron'
+alias vmrun='/Applications/VMware\ Fusion.app/Contents/Library/vmrun'
+alias srz='source .zshrc'
+alias adk='ssh-add -K ~/.ssh/id_rsa'  # add key to keychain
 alias ls='lsd'
 
 
-### Git specific Aliases
-
-alias gb='git branch'
-alias gaa='git add --all'
+### Git aliases ###
 alias g='git'
-alias gcm='git checkout master'
+alias ga='git add'
+alias gaa='git add --all'
+alias gb='git branch'
 alias gco='git checkout'
 alias gst='git status'
-alias gpm='git push origin master'
-alias gp='git pull'
+alias gc='git commit -m'
+
 
 ### Functions ###
 
@@ -35,9 +40,3 @@ alias gp='git pull'
 		cd "$1"
 			}
 
-
-
-
-
-
-alias 'so=stat -f %Mp%Lp'
