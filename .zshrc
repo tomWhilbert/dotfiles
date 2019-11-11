@@ -47,7 +47,7 @@ autoload -Uz compinit && compinit
 
 #* Aliases, Themes and plugins
 #* source OMZ
-ZSH=~/oh-my-zsh
+ZSH=~/.oh-my-zsh
 #ZSH_CUSTOM=$ZSH/custom
 source $ZSH/plugins/z/z.plugin.zsh
 source $ZSH/lib/directories.zsh  # Adds the 'd' show recent directories
@@ -61,7 +61,7 @@ source ~/.zshrc_aliases
 source ~/.scripts/fast-syntax-highlighting/fast-syntax-highlighting.plugin.zsh
 source ~/.scripts/zsh-history-substring-search/zsh-history-substring-search.plugin.zsh
 source ~/.scripts/zsh-completions/zsh-completions.plugin.zsh
-source ~/powerlevel10k/powerlevel10k.zsh-theme
+source ~/.powerlevel10k/powerlevel10k.zsh-theme
 
 #* Sets the Colors used by the ls command
 
