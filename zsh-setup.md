@@ -1,5 +1,8 @@
 # New Setup
 #zsh 
+https://github.com/tomwhilbert/dotfiles
+
+Refer to this doc and the Bear note "ZSH -  Setup"
 
 1. git checkout macOS or linux into local repo
 
