@@ -1,4 +1,4 @@
-export PATH="/usr/local/bin:$PATH"
+cdexport PATH="/usr/local/bin:$PATH"
 export PATH="/usr/local/sbin:$PATH"
 
 #* History
@@ -50,9 +50,10 @@ source $ZSH/lib/directories.zsh  # Adds the 'd' show recent directories
 
 setopt prompt_subst
 source ~/.zshrc_aliases
-source ~/scripts/zsh-syntax-highlighting/zsh-syntax-highlighting.plugin.zsh
-source ~/scripts/zsh-history-substring-search/zsh-history-substring-search.plugin.zsh
-source ~/scripts/zsh-completions/zsh-completions.plugin.zsh
+#source ~/scripts/zsh-syntax-highlighting/zsh-syntax-highlighting.plugin.zsh
+source ~/.scripts/fast-syntax-highlighting/fast-syntax-highlighting.plugin.zsh
+source ~/.scripts/zsh-history-substring-search/zsh-history-substring-search.plugin.zsh
+source ~/.scripts/zsh-completions/zsh-completions.plugin.zsh
 source ~/powerlevel10k/powerlevel10k.zsh-theme
 
 #* Sets the Colors used by the ls command
