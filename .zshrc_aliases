@@ -1,6 +1,7 @@
 # alias and function source file
 
-alias ll='ls -alhG'
+alias ll='ls -alh'
+alias ls='lsd'
 alias mss='mysql.server start'
 alias msss='mysql.server stop'
 alias buu='brew update && brew upgrade && brew cask upgrade'
@@ -13,6 +14,10 @@ alias code='/Applications/Visual\ Studio\ Code.app/Contents/MacOS/./Electron'
 alias vmrun='/Applications/VMware\ Fusion.app/Contents/Library/vmrun'
 alias srz='source .zshrc'
 alias adk='ssh-add -K ~/.ssh/id_rsa'  # add key to keychain
+#alias ll='colorls -lA --sd --gs --group-directories-first'
+#alias ls='colorls --group-directories-first'
+alias cl='clear'
+
 
 ### Git aliases ###
 alias g='git'
