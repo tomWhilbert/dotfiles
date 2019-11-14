@@ -1,5 +1,4 @@
 # ZSH Setup and Configuration # 
-same as zsh-setup.4.0.md in repo
 ### Install Instructions assume macOS 10.15+ or Linux  
 modified on 11/13/19
  
