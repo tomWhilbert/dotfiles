@@ -23,13 +23,15 @@ modified on 11/3/19
     git clone https://github.com/zdharma/fast-syntax-highlighting
     ```
 13.  **mkdir .ssh/** then  `ssh-keygen -t rsa -b 4096`  next  `cat ~/.ssh/id_rsa.pub | pbcopy`  and paste key to github     ssh keys(anyone else can use the http clone option).
-14. `mkdir .dotfiles && cd .dotfiles && git init && git remote add origin git@github.com:tomWhilbert/.dotfiles.git &&        git pull origin macOS`
+14. ```
+    mkdir .dotfiles && cd .dotfiles && git init && git remote add origin git@github.com:tomWhilbert/.dotfiles.git && git pull origin macOS
+    ```
 15. Enter passphrase for for ssh key if one was set... **BAM!!!** 
 16. `cp ~/.dotfiles/.zshrc .zshrc_aliases .p10k.zsh ~/`
 17.  Add colors to shell output:  `brew install lsd`  **this should already be there in the dotfiles clone but if not**) add `alias ls='lsd'` to                .zshrc_aliases 
 18.  Install the Fonts, ` cd ~/.dotfiles && open MesloLGS NF Regular.ttf` this should open in Font Book, click install.
 19  Set the font to the `MesloLGS NF Regular` in iTerm.
-20.  Run git-completions script:
+1.   Run git-completions script:
     
     **Create the folder structure**
     ```
@@ -41,7 +43,7 @@ modified on 11/3/19
     curl -o git-completion.bash https://raw.githubusercontent.com/git/git/master/contrib/completion/git-completion.bash
     curl -o _git https://raw.githubusercontent.com/git/git/master/contrib/completion/git-completion.zsh
     ```
-22.  Restore word jump (Command + left,right arrow) 
+2.   Restore word jump (Command + left,right arrow) 
      
     In `iTerm2` go to 
 
@@ -50,7 +52,7 @@ modified on 11/3/19
     Press `Load Preset…`
 
     Select `Natural Text Editing`
-23. Run `p10k configure` and walk through the powerleve10k theme setup.(not necessary as the theme is picked up by the settings file `p10k.zsh`          that was cloned, but run if you want to make adjustments)
-24.  Set a color profile in iTerm if you like.
+3.  Run `p10k configure` and walk through the powerleve10k theme setup.(not necessary as the theme is picked up by the settings file `p10k.zsh`          that was cloned, but run if you want to make adjustments)
+4.   Set a color profile in iTerm if you like.
         
           Done!!!
