@@ -58,9 +58,9 @@ source $ZSH/lib/directories.zsh  # Adds the 'd' show recent directories
 setopt prompt_subst
 source ~/.zshrc_aliases
 #source ~/scripts/zsh-syntax-highlighting/zsh-syntax-highlighting.plugin.zsh
-source ~/.scripts/fast-syntax-highlighting/fast-syntax-highlighting.plugin.zsh
-source ~/.scripts/zsh-history-substring-search/zsh-history-substring-search.plugin.zsh
-source ~/.scripts/zsh-completions/zsh-completions.plugin.zsh
+source ~/.plugins/fast-syntax-highlighting/fast-syntax-highlighting.plugin.zsh
+source ~/.plugins/zsh-history-substring-search/zsh-history-substring-search.plugin.zsh
+source ~/.plugins/zsh-completions/zsh-completions.plugin.zsh
 source ~/.powerlevel10k/powerlevel10k.zsh-theme
 
 #* To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
