@@ -9,7 +9,7 @@
     "editor.snippetSuggestions": "top",
     "editor.minimap.enabled": false,
     "workbench.editor.enablePreview": false,
-    "editor.lineHeight": 25,
+    "editor.lineHeight": 30,
     "html.autoClosingTags": false,
     "editor.matchBrackets": true,
     "editor.wordWrap": "on",
