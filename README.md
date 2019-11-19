@@ -22,16 +22,24 @@ modified on 11/3/19
     git clone https://github.com/zsh-users/zsh-history-substring-search 
     git clone https://github.com/zdharma/fast-syntax-highlighting
     ```
-13.  **mkdir .ssh/** then  `ssh-keygen -t rsa -b 4096`  next  `cat ~/.ssh/id_rsa.pub | pbcopy`  and paste key to github     ssh keys(anyone else can use the http clone option).
+
+_**Public Users: You will not have access to set an SSH key in this repo. Skip to Clone option #15 to clone**_
+
+13. **mkdir .ssh/** then  `ssh-keygen -t rsa -b 4096`  next  `cat ~/.ssh/id_rsa.pub | pbcopy`   
+    and paste key to github ssh keys
+
 14. ```
     mkdir .dotfiles && cd .dotfiles && git init && git remote add origin git@github.com:tomWhilbert/.dotfiles.git && git pull origin macOS
     ```
-15. Enter passphrase for for ssh key if one was set... **BAM!!!** 
+15. ```
+    mkdir .dotfiles && cd .dotfiles && git init && git clone https://github.com/tomWhilbert/.dotfiles.git
+    ```
 16. `cp ~/.dotfiles/.zshrc .zshrc_aliases .p10k.zsh ~/`
-17.  Add colors to shell output:  `brew install lsd`  **this should already be there in the dotfiles clone but if not**) add `alias ls='lsd'` to                .zshrc_aliases 
-18.  Install the Fonts, ` cd ~/.dotfiles && open MesloLGS NF Regular.ttf` this should open in Font Book, click install.
-19  Set the font to the `MesloLGS NF Regular` in iTerm.
-1.   Run git-completions script:
+18. Add colors to shell output:  `brew install lsd`  **this should already be there in the dotfiles clone but if not**) add `alias ls='lsd'` to                         .zshrc_aliases 
+19. Install the Fonts, `cd ~/.dotfiles && open MesloLGS NF Regular.ttf` this should open in Font Book, click install.
+20. Set the font to the `MesloLGS NF Regular` in iTerm.
+
+21. Run git-completions script:
     
     **Create the folder structure**
     ```
@@ -43,7 +51,7 @@ modified on 11/3/19
     curl -o git-completion.bash https://raw.githubusercontent.com/git/git/master/contrib/completion/git-completion.bash
     curl -o _git https://raw.githubusercontent.com/git/git/master/contrib/completion/git-completion.zsh
     ```
-2.   Restore word jump (Command + left,right arrow) 
+22.   Restore word jump (Command + left,right arrow) 
      
     In `iTerm2` go to 
 
