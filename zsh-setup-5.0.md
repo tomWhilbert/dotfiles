@@ -25,6 +25,7 @@ modified on 11/3/19
     git clone https://github.com/zsh-users/zsh-completions 
     git clone https://github.com/zsh-users/zsh-history-substring-search 
     git clone https://github.com/zdharma/fast-syntax-highlighting
+    cd ..
     ```
 
 _**Public Users: You will not have access to set an SSH key in this repo. Skip to Clone option #15 to clone**_
@@ -36,9 +37,9 @@ _**Public Users: You will not have access to set an SSH key in this repo. Skip t
      git init && git remote add origin git@github.com:tomWhilbert/.dotfiles.git && git pull origin macOS
     ```
 16. ```
-    mkdir .dotfiles && cd .dotfiles && git init && git clone https://github.com/tomWhilbert/.dotfiles.git
+    git clone https://github.com/tomWhilbert/.dotfiles.git
     ```
-17. `cp ~/.dotfiles/.zshrc .zshrc_aliases .p10k.zsh ~/`
+17. `cp ~/.dotfiles/.zshrc .zshrc_aliases .p10k.zsh ~/`d
     
 18. Add colors to shell output:  `brew install lsd`  
     
