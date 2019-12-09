@@ -33,13 +33,6 @@ _**Public Users: You will not have access to set an SSH key in this repo. Skip t
 14. **mkdir .ssh/** then  `ssh-keygen -t rsa -b 4096`  next  `cat ~/.ssh/id_rsa.pub | pbcopy`   
     and paste key to github ssh keys
 
-<<<<<<< HEAD
-14. ```
-    mkdir .dotfiles && cd .dotfiles && git init && git remote add origin git@github.com:tomWhilbert/.dotfiles.git && git pull origin macOS
-    ```
-    **Public User Command**
-=======
->>>>>>> 9455aeea0d0665f28e9af12150ef503c5127e788
 15. ```
      git init && git remote add origin git@github.com:tomWhilbert/.dotfiles.git && git pull origin macOS
     ```
