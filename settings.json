@@ -41,10 +41,13 @@
     "telemetry.enableCrashReporter": false,
     "scm.diffDecorations": "none",
     "local-history.daysLimit": 10,
-    "workbench.iconTheme": "vscode-icons",
     "better-comments.multilineComments": true,
     "editor.fontFamily": "MesloLGS NF, Menlo",
     "vsnotes.defaultNotePath": "/Users/thomaswhilbert/VSNotes",
+    "terminal.integrated.shell.linux": "/usr/bin/bash",
+    "workbench.enableExperiments": false,
+    "workbench.settings.enableNaturalLanguageSearch": false,
+    "workbench.iconTheme": "vscode-icons",
     
     
 
