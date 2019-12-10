@@ -16,7 +16,7 @@ alias ds='diskutil'
 alias hs='history 1'
 alias zbk='$HOME/.dotfiles/launchd-config-files/configBackup.sh'
 alias pcp='pbcopy'
-alias webdev='VBoxManage startvm webdev --type headless && ssh lamp'
+alias wdev='VBoxManage startvm <vmName> --type headless && ssh lamp'
 
 
 ### Git aliases ###
