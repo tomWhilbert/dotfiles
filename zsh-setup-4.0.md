@@ -31,6 +31,7 @@ _**Public Users: You will not have access to set an SSH key in this repo. Skip t
 14. ```
     mkdir .dotfiles && cd .dotfiles && git init && git remote add origin git@github.com:tomWhilbert/.dotfiles.git && git pull origin macOS
     ```
+    **Public User Command**
 15. ```
     mkdir .dotfiles && cd .dotfiles && git init && git clone https://github.com/tomWhilbert/.dotfiles.git
     ```
