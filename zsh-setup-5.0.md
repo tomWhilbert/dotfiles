@@ -28,7 +28,7 @@ modified on 11/3/19
     cd ..
     ```
 
-_**Public Users: You will not have access to set an SSH key in this repo. Skip to Clone option #15 to clone**_
+**Public Users: You will not have access to set an SSH key in this repo. Skip to Clone option #15 to clone**
 
 14. **mkdir .ssh/** then  `ssh-keygen -t rsa -b 4096`  next  `cat ~/.ssh/id_rsa.pub | pbcopy`   
     and paste key to github ssh keys
