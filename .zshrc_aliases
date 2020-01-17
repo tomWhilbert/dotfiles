@@ -16,7 +16,7 @@ alias ds='diskutil'
 alias hs='history 1'
 alias zbk='$HOME/.dotfiles/launchd-config-files/configBackup.sh'
 alias pcp='pbcopy'
-alias vm='VBoxManage startvm <vmName> --type headless && ssh <config>'
+alias vm='VBoxManage startvm deVian --type headless && ssh deb'
 
 
 ### Git aliases ###
