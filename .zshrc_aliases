@@ -16,9 +16,14 @@ alias ds='diskutil'
 alias hs='history 1'
 alias zbk='$HOME/.dotfiles/launchd-config-files/configBackup.sh'
 alias pcp='pbcopy'
+<<<<<<< HEAD
 alias vm='VBoxManage startvm deVian --type headless && ssh deb'
 
 
+=======
+alias vm='VBoxManage startvm webdev --type headless && ssh lamp'
+alias bye='sudo shutdown -h now'
+>>>>>>> 7f215c4ce0bfa46059369b820ef136c61cf26a8a
 
 ### Git aliases ###
 alias g='git'
@@ -47,8 +52,13 @@ alias gp='git pull'
 		}
 
 ### diskutil erase function
+<<<<<<< HEAD
 	### $1 is the volume name
 	### $2 is the voluem path
+=======
+### $1 is the volume name
+### $2 is the volume path
+>>>>>>> 7f215c4ce0bfa46059369b820ef136c61cf26a8a
 
 	de () {
 		diskutil eraseDisk HFS+ "$1" /dev/disk"$2"
