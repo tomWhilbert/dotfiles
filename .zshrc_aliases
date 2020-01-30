@@ -62,3 +62,4 @@ alias gp='git pull'
 	bak () {
 		cp "$1" "$1".bak
 	}
+alias ip='scutil --nwi | grep address | cut -d':' -f2'

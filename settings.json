@@ -19,7 +19,7 @@
     "explorer.confirmDelete": false,
     "workbench.statusBar.visible": true,
     "explorer.openEditors.visible": 0,
-    "workbench.activityBar.visible": true,
+    "workbench.activityBar.visible": false,
     "explorer.confirmDragAndDrop": false,
     "terminal.integrated.shell.osx": "zsh",
     "extensions.ignoreRecommendations": true,
