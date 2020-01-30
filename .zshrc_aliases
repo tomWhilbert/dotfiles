@@ -16,7 +16,8 @@ alias ds='diskutil'
 alias hs='history 1'
 alias zbk='$HOME/.dotfiles/launchd-config-files/configBackup.sh'
 alias pcp='pbcopy'
-alias wdev='VBoxManage startvm <vmName> --type headless && ssh lamp'
+alias vm='VBoxManage startvm deVian --type headless && ssh deb'
+
 
 
 ### Git aliases ###
@@ -46,9 +47,19 @@ alias gp='git pull'
 		}
 
 ### diskutil erase function
-### $1 is the volume name
-### $2 is the voluem path
+	### $1 is the volume name
+	### $2 is the voluem path
 
 	de () {
 		diskutil eraseDisk HFS+ "$1" /dev/disk"$2"
 		}
+
+### cheat.sh command dictionary ###
+	ch () {
+		curl cht.sh/"$1"
+	}
+
+	bak () {
+		cp "$1" "$1".bak
+	}
+alias ip='scutil --nwi | grep address | cut -d':' -f2'
