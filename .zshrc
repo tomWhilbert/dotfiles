@@ -54,6 +54,7 @@ source $ZSH/lib/directories.zsh  # Adds the 'd' show recent directories
 # fpath+=$ZSH/plugins/ dir path not needed....
 # git -C $ZSH pull  ***Uncomment and source .zshrc to upate OMZ
 
+
 setopt prompt_subst
 source ~/.zshrc_aliases
 #source ~/scripts/zsh-syntax-highlighting/zsh-syntax-highlighting.plugin.zsh

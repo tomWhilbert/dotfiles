@@ -16,9 +16,14 @@ alias ds='diskutil'
 alias hs='history 1'
 alias zbk='$HOME/.dotfiles/launchd-config-files/configBackup.sh'
 alias pcp='pbcopy'
+<<<<<<< HEAD
 alias vm='VBoxManage startvm webdev --type headless && ssh lamp'
 alias bye='sudo shutdown -h now'
 alias ip='scutil --nwi | grep address | cut -d':' -f2'
+=======
+alias vm='VBoxManage startvm deVian --type headless && ssh deb'
+
+>>>>>>> 6a8c41e246ad1db8d08f0ccd73067d7726081bef
 
 
 ### Git aliases ###
@@ -63,5 +68,9 @@ alias gp='git pull'
 	bak () {
 		cp "$1" "$1".bak
 	}
+<<<<<<< HEAD
 
 
+=======
+alias ip='scutil --nwi | grep address | cut -d':' -f2'
+>>>>>>> 6a8c41e246ad1db8d08f0ccd73067d7726081bef
