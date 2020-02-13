@@ -16,14 +16,12 @@ alias ds='diskutil'
 alias hs='history 1'
 alias zbk='$HOME/.dotfiles/launchd-config-files/configBackup.sh'
 alias pcp='pbcopy'
-<<<<<<< HEAD
 alias vm='VBoxManage startvm webdev --type headless && ssh lamp'
 alias bye='sudo shutdown -h now'
 alias ip='scutil --nwi | grep address | cut -d':' -f2'
-=======
-alias vm='VBoxManage startvm deVian --type headless && ssh deb'
+alias rp='realpath . | pbcopy'
+alias rcs='rclone sync OneDrive:ABTech-IT /Users/thomaswhilbert/Desktop/OneDrive-RClone/ -P'
 
->>>>>>> 6a8c41e246ad1db8d08f0ccd73067d7726081bef
 
 
 ### Git aliases ###
@@ -60,6 +58,11 @@ alias gp='git pull'
 		diskutil eraseDisk HFS+ "$1" /dev/disk"$2"
 		}
 
+	dku () {
+		diskutil unmountDisk /dev/disk"$1"
+	}
+
+
 ### cheat.sh command dictionary ###
 	ch () {
 		curl cht.sh/"$1"
@@ -68,9 +71,5 @@ alias gp='git pull'
 	bak () {
 		cp "$1" "$1".bak
 	}
-<<<<<<< HEAD
 
 
-=======
-alias ip='scutil --nwi | grep address | cut -d':' -f2'
->>>>>>> 6a8c41e246ad1db8d08f0ccd73067d7726081bef
