@@ -72,4 +72,8 @@ alias gp='git pull'
 		cp "$1" "$1".bak
 	}
 
+	wp () {
+		cd /Users/thomaswhilbert/Scripts/Walk-and-Pull
+		./walk-and-pull.sh
+	}
 
