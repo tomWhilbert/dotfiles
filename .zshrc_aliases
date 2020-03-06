@@ -3,6 +3,7 @@
 # alias and function source file
 
 alias ll='ls -alh'
+alias lld='ls -l | grep '^d''
 alias mss='mysql.server start'
 alias msss='mysql.server stop'
 alias buu='brew update && brew upgrade && brew cask upgrade'
@@ -22,12 +23,14 @@ alias vm='VBoxManage startvm webdev --type headless && ssh lamp'
 alias bye='sudo shutdown -h now'
 alias ip='scutil --nwi | grep address | cut -d':' -f2'
 alias rp='realpath . | pbcopy'
+
+#* rclone aliases
 alias rcs='rclone sync OneDrive:ABTech-IT /Users/thomaswhilbert/OneDrive-RClone/ -P'
 alias rclr='rclone listremotes'
 alias rc='rclone'
+alias rcodq='rclone copy --max-age 24h --no-traverse /Users/thomaswhilbert/OneDrive-RClone/ od: -P'  #* rcodq == rclone onedrive quick
 
-
-### Git aliases ###
+#* Git aliases 
 alias g='git'
 alias ga='git add'
 alias gaa='git add --all'
