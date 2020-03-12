@@ -1,17 +1,31 @@
+#!/bin/bash  
+#* ^ not a bash script -> enables syntax highlighting in vscode
 # alias and function source file
 
 alias ll='ls -alh'
 alias mss='mysql.server start'
+alias msss='mysql.server stop'
+alias buu='brew update && brew upgrade && brew cask upgrade'
 alias py='python3'
+alias stoc='stat -f %Mp%Lp'
 alias rmf='rm -rf'
+#alias code='/Applications/Visual\ Studio\ Code.app/Contents/MacOS/./Electron'
 alias srz='source .zshrc'
 alias adk='ssh-add -K ~/.ssh/id_rsa'  # add key to keychain
 alias ls='lsd'
+alias dkl='diskutil list'
 alias ds='diskutil'
 alias hs='history 1'
 alias zbk='$HOME/.dotfiles/launchd-config-files/configBackup.sh'
 alias pcp='pbcopy'
-alias cl='clear'
+alias vm='VBoxManage startvm webdev --type headless && ssh lamp'
+alias bye='sudo shutdown -h now'
+alias ip='scutil --nwi | grep address | cut -d':' -f2'
+alias rp='realpath . | pbcopy'
+alias rcs='rclone sync OneDrive:ABTech-IT /Users/thomaswhilbert/OneDrive-RClone/ -P'
+alias rclr='rclone listremotes'
+alias rc='rclone'
+
 
 ### Git aliases ###
 alias g='git'
@@ -37,5 +51,32 @@ alias gp='git pull'
 	mkd () {
 		mkdir "$1"
 		cd "$1"
-			}
+		}
 
+### diskutil erase function
+	### $1 is the volume name
+	### $2 is the voluem path
+
+	de () {
+		diskutil eraseDisk HFS+ "$1" /dev/disk"$2"
+		}
+
+	dku () {
+		diskutil unmountDisk /dev/disk"$1"
+	}
+
+
+### cheat.sh command dictionary ###
+	ch () {
+		curl cht.sh/"$1"
+	}
+
+	bak () {
+		cp "$1" "$1".bak
+	}
+
+	wp () {
+		cd /Users/thomaswhilbert/Scripts/Walk-and-Pull/
+		./walk-and-pull.sh
+		cd ~
+	}
