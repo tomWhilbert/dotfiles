@@ -2,7 +2,7 @@
 #* Backup dotfiles to github
 
 
-target=/Users/thomaswhilbert/.dotFiles/
+target=/Users/thomaswhilbert/.dotFiles
 
 cp /Users/thomaswhilbert/Library/Application\ Support/Code/User/settings.json $target
 cp /Users/thomaswhilbert/.zshrc $target
@@ -15,7 +15,7 @@ sleep 1
 cd $target || exit
 git add .
 git commit -m  "Dotfiles Backup"
-git push orign macOS
+git push origin macOS
 exit
 
 
