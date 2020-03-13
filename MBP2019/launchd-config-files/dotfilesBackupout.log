@@ -1,0 +1,5 @@
+[macOS d459260] Dotfiles Backup
+ 9 files changed, 269 insertions(+), 299 deletions(-)
+ create mode 100644 MBP2019/launchd-config-files/dotfilesBackup.err
+ create mode 100644 MBP2019/launchd-config-files/dotfilesBackupout.log
+ rename launchd-config-files/{configBackup.plist => com.dotfiles.backup.plist} (65%)
