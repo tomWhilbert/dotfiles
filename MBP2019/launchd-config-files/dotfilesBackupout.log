@@ -3,3 +3,5 @@
  create mode 100644 MBP2019/launchd-config-files/dotfilesBackup.err
  create mode 100644 MBP2019/launchd-config-files/dotfilesBackupout.log
  rename launchd-config-files/{configBackup.plist => com.dotfiles.backup.plist} (65%)
+[macOS 33854df] Dotfiles Backup
+ 2 files changed, 10 insertions(+)
