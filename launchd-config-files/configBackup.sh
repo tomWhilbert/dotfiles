@@ -1,7 +1,6 @@
 #!/bin/bash
 #* Backup dotfiles to github
 
-
 target=/Users/thomaswhilbert/.dotFiles
 
 cp /Users/thomaswhilbert/Library/Application\ Support/Code/User/settings.json $target
