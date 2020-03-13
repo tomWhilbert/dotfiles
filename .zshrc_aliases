@@ -3,7 +3,6 @@
 # alias and function source file
 
 alias ll='ls -alh'
-alias lld='ls -l | grep '^d''
 alias mss='mysql.server start'
 alias msss='mysql.server stop'
 alias buu='brew update && brew upgrade && brew cask upgrade'
@@ -24,13 +23,13 @@ alias bye='sudo shutdown -h now'
 alias ip='scutil --nwi | grep address | cut -d':' -f2'
 alias rp='realpath . | pbcopy'
 
-#* rclone aliases
+#* RClone commands 
 alias rcs='rclone sync OneDrive:ABTech-IT /Users/thomaswhilbert/OneDrive-RClone/ -P'
 alias rclr='rclone listremotes'
 alias rc='rclone'
-alias rcodq='rclone copy --max-age 24h --no-traverse /Users/thomaswhilbert/OneDrive-RClone/ od: -P'  #* rcodq == rclone onedrive quick
+alias rcbn='rc copy /Users/thomaswhilbert/gdrive/Secure/Boostnote/notes gdS:Boostnote -P'
 
-#* Git aliases 
+### Git aliases ###
 alias g='git'
 alias ga='git add'
 alias gaa='git add --all'
@@ -47,8 +46,8 @@ alias gp='git pull'
    	lazyg ()
 		{
 		git add .
-		git commit -a -m "$1"
-		git push -u origin master
+		git commit -m "$1"
+		git push -u origin "$2"
 		}
 
 	mkd () {
