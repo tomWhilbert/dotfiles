@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Label</key>
+	<string>com.dotfile.backup.plist</string>
+	
+	<key>ProgramArguments</key>
+	<array>
+		<string>/Users/thomaswhilbert/.dotfiles/launchd-config-files/configBackup.sh</string>	
+								
+	</array>
+	<key>RunAtLoad</key>
+	<true/>
+	<key>StandardErrorPath</key>
+	<string>/Users/thomaswhilbert/.dotFiles/launchd-config-files/stderr.log</string>
+	<key>StandardOutPath</key>
+	<string>/Users/thomaswhilbert/.dotFiles/launchd-config-files/stdout.log</string>
+	<key>StartInterval</key>
+		<integer>3600</integer>
+	</dict>
+</plist>

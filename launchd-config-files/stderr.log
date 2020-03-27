@@ -1,0 +1,40 @@
+To github.com:tomWhilbert/.dotfiles.git
+   6f11b02..57b7e9b  macOS -> macOS
+To github.com:tomWhilbert/.dotfiles.git
+   57b7e9b..95751a3  macOS -> macOS
+To github.com:tomWhilbert/.dotfiles.git
+   95751a3..f0ea943  macOS -> macOS
+To github.com:tomWhilbert/.dotfiles.git
+   f0ea943..608658f  macOS -> macOS
+To github.com:tomWhilbert/.dotfiles.git
+   608658f..c3b81ba  macOS -> macOS
+To github.com:tomWhilbert/.dotfiles.git
+   c3b81ba..8806180  macOS -> macOS
+To github.com:tomWhilbert/.dotfiles.git
+   8806180..498e9ff  macOS -> macOS
+To github.com:tomWhilbert/.dotfiles.git
+   498e9ff..f1b1b6e  macOS -> macOS
+To github.com:tomWhilbert/.dotfiles.git
+   f1b1b6e..cb6abb9  macOS -> macOS
+To github.com:tomWhilbert/.dotfiles.git
+   cb6abb9..986c462  macOS -> macOS
+To github.com:tomWhilbert/.dotfiles.git
+   986c462..e967257  macOS -> macOS
+To github.com:tomWhilbert/.dotfiles.git
+   e967257..4e914ba  macOS -> macOS
+To github.com:tomWhilbert/.dotfiles.git
+   e4084b2..8390204  macOS -> macOS
+fatal: Unable to create '/Users/thomaswhilbert/.dotFiles/.git/index.lock': File exists.
+
+Another git process seems to be running in this repository, e.g.
+an editor opened by 'git commit'. Please make sure all processes
+are terminated then try again. If it still fails, a git process
+may have crashed in this repository earlier:
+remove the file manually to continue.
+fatal: Unable to create '/Users/thomaswhilbert/.dotFiles/.git/index.lock': File exists.
+
+Another git process seems to be running in this repository, e.g.
+an editor opened by 'git commit'. Please make sure all processes
+are terminated then try again. If it still fails, a git process
+may have crashed in this repository earlier:
+remove the file manually to continue.
