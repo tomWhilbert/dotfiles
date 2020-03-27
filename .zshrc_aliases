@@ -3,7 +3,7 @@
 # alias and function source file
 
 alias ll='ls -alh'
-alias lld='ls -l | grep '^d''
+alias lld='ls -l | grep ^d'
 alias mss='mysql.server start'
 alias msss='mysql.server stop'
 alias buu='brew update && brew upgrade && brew cask upgrade'
@@ -28,7 +28,7 @@ alias rp='realpath . | pbcopy'
 alias rcs='rclone sync OneDrive:ABTech-IT /Users/thomaswhilbert/OneDrive-RClone/ -P'
 alias rclr='rclone listremotes'
 alias rc='rclone'
-alias rcodq='rclone copy --max-age 24h --no-traverse /Users/thomaswhilbert/OneDrive-RClone/ od: -P'  #* rcodq == rclone onedrive quick
+alias rcod='rclone copy --max-age 24h --no-traverse --skip-links /Users/thomaswhilbert/OneDrive-RClone/ od: -P'  #* rcod == rclone onedrive 
 
 #* Git aliases 
 alias g='git'

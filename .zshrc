@@ -1,4 +1,3 @@
-#!/bin/bash
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
 # confirmations, etc.) must go above this block, everything else may go below.
@@ -9,7 +8,6 @@ fi
 export PATH="/usr/local/bin:$PATH"
 export PATH="/usr/local/sbin:$PATH"
 export PATH="$PATH:/usr/local/bin/Scripts"
-
 
 #* History
 [ -z "$HISTFILE" ] && HISTFILE="$HOME/.zsh_history"
@@ -27,6 +25,7 @@ setopt auto_cd
 setopt auto_pushd
 unsetopt pushd_ignore_dups
 setopt pushdminus
+setopt extendedglob
 
 #* Completions
 setopt dot_glob  #allows for ** globs
@@ -59,8 +58,7 @@ source $ZSH/lib/directories.zsh  # Adds the 'd' show recent directories
 
 setopt prompt_subst
 source ~/.zshrc_aliases
-#source ~/scripts/zsh-syntax-highlighting/zsh-syntax-highlighting.plugin.zsh
-source ~/.plugins/fast-syntax-highlighting/fast-syntax-highlighting.plugin.zsh
+source ~/.plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source ~/.plugins/zsh-history-substring-search/zsh-history-substring-search.plugin.zsh
 source ~/.plugins/zsh-completions/zsh-completions.plugin.zsh
 source ~/.powerlevel10k/powerlevel10k.zsh-theme
@@ -75,7 +73,5 @@ bindkey '^[[B' history-substring-search-down
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
-source ~/.iterm2_shell_integration.zsh
-
-# test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
+test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 
