@@ -3,6 +3,10 @@
 # alias and function source file
 
 alias ll='ls -alh'
+<<<<<<< HEAD
+alias lld='ls -l | grep ^d'
+=======
+>>>>>>> b024cfc0677901c3f276d8dba24b788deeabc6d7
 alias mss='mysql.server start'
 alias msss='mysql.server stop'
 alias buu='brew update && brew upgrade && brew cask upgrade'
@@ -17,6 +21,21 @@ alias dkl='diskutil list'
 alias ds='diskutil'
 alias hs='history 1'
 alias zbk='$HOME/.dotfiles/launchd-config-files/configBackup.sh'
+<<<<<<< HEAD
+alias pcp='pbcopy'
+alias vm='VBoxManage startvm webdev --type headless && ssh lamp'
+alias bye='sudo shutdown -h now'
+alias ip='scutil --nwi | grep address | cut -d':' -f2'
+alias rp='realpath . | pbcopy'
+
+#* rclone aliases
+alias rcs='rclone sync OneDrive:ABTech-IT /Users/thomaswhilbert/OneDrive-RClone/ -P'
+alias rclr='rclone listremotes'
+alias rc='rclone'
+alias rcod='rclone copy --max-age 24h --no-traverse --skip-links /Users/thomaswhilbert/OneDrive-RClone/ od: -P'  #* rcod == rclone onedrive 
+
+#* Git aliases 
+=======
 alias pbc='pbcopy'
 alias vm='VBoxManage startvm webdev --type headless && ssh lamp'
 alias shut='sudo shutdown -h now'
@@ -32,6 +51,7 @@ alias rcbn='rc copy /Users/thomaswhilbert/Data/GoogleDrive/Secure/Boostnote/note
 alias rcod='rclone copy --max-age 24h --no-traverse /Users/thomaswhilbert/Data/OneDrive od: -P'  #* rcodq == rclone onedrive quick
 
 ### Git aliases ###
+>>>>>>> b024cfc0677901c3f276d8dba24b788deeabc6d7
 alias g='git'
 alias ga='git add'
 alias gaa='git add --all'
@@ -48,8 +68,13 @@ alias gp='git pull'
    	lazyg ()
 		{
 		git add .
+<<<<<<< HEAD
+		git commit -a -m "$1"
+		git push -u origin master
+=======
 		git commit -m "$1"
 		git push -u origin "$2"
+>>>>>>> b024cfc0677901c3f276d8dba24b788deeabc6d7
 		}
 
 	mkd () {

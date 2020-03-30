@@ -2,22 +2,37 @@
     "workbench.settings.editor": "json",
     "workbench.fontAliasing": "antialiased",
     "workbench.settings.useSplitJSON": true,
+<<<<<<< HEAD
+    "editor.fontSize": 14,
+    "window.zoomLevel": 1,
+=======
     "editor.fontSize": 15,
     "window.zoomLevel": 0,
+>>>>>>> b024cfc0677901c3f276d8dba24b788deeabc6d7
     "editor.formatOnPaste": true,
     "editor.multiCursorModifier": "ctrlCmd",
     "editor.snippetSuggestions": "top",
     "editor.minimap.enabled": false,
     "workbench.editor.enablePreview": false,
+<<<<<<< HEAD
+    "editor.lineHeight": 25,
+=======
     "editor.lineHeight": 30,
+>>>>>>> b024cfc0677901c3f276d8dba24b788deeabc6d7
     "html.autoClosingTags": false,
     "editor.matchBrackets": true,
     "editor.wordWrap": "on",
     "terminal.integrated.fontSize": 14,
+<<<<<<< HEAD
+    "terminal.integrated.fontFamily": "MesloLGS NF, Menlo",
+    "explorer.confirmDelete": false,
+    "workbench.statusBar.visible": false,
+=======
     "terminal.integrated.fontFamily": "MesloLGS NF",
     // "terminal.integrated.fontFamily": "Roboto Mono for Powerline",
     "explorer.confirmDelete": false,
     "workbench.statusBar.visible": true,
+>>>>>>> b024cfc0677901c3f276d8dba24b788deeabc6d7
     "explorer.openEditors.visible": 0,
     "workbench.activityBar.visible": true,
     "explorer.confirmDragAndDrop": false,
@@ -41,12 +56,24 @@
     "telemetry.enableCrashReporter": false,
     "scm.diffDecorations": "none",
     "local-history.daysLimit": 10,
+<<<<<<< HEAD
+    "better-comments.multilineComments": true,
+    "editor.fontFamily": "MesloLGS NF, Menlo",
+    "vsnotes.defaultNotePath": "/Users/thomaswhilbert/VSNotes",
+    "terminal.integrated.shell.linux": "/usr/bin/bash",
+    "workbench.enableExperiments": false,
+    "workbench.settings.enableNaturalLanguageSearch": false,
+    "workbench.iconTheme": "vscode-icons",
+    "workbench.colorTheme": "Community Material Theme Palenight High Contrast",
+    
+=======
     "workbench.iconTheme": "vscode-great-icons",
     "better-comments.multilineComments": true,
     "terminal.integrated.shell.osx": "/usr/local/bin/zsh",
     "workbench.colorTheme": "Dracula",
     "shellcheck.executablePath": "/usr/local/bin/shellcheck",
     "shellcheck.run": "onType"
+>>>>>>> b024cfc0677901c3f276d8dba24b788deeabc6d7
     
 
     }
