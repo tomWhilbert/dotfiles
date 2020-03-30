@@ -8,6 +8,8 @@ fi
 
 export PATH="/usr/local/bin:$PATH"
 export PATH="/usr/local/sbin:$PATH"
+export PATH="$PATH:$HOME/Scripts"
+export PATH="$PATH:$HOME/Scripts/Walk-and-Pull"
 
 #* History
 [ -z "$HISTFILE" ] && HISTFILE="$HOME/.zsh_history"
