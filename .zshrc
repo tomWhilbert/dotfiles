@@ -8,15 +8,9 @@ fi
 
 export PATH="/usr/local/bin:$PATH"
 export PATH="/usr/local/sbin:$PATH"
-<<<<<<< HEAD
 export PATH="$PATH:$HOME/Scripts"
 export PATH="$PATH:$HOME/Scripts/Walk-and-Pull"
-=======
-<<<<<<< HEAD
-export PATH="$PATH:/usr/local/bin/Scripts"
-=======
->>>>>>> b024cfc0677901c3f276d8dba24b788deeabc6d7
->>>>>>> ce8d3eab5dc80c40d1ad8ff68d4768ffd32afba6
+export D=/Volumes/Data  #* Create env var for Data Volume
 
 #* History
 [ -z "$HISTFILE" ] && HISTFILE="$HOME/.zsh_history"
@@ -34,10 +28,6 @@ setopt auto_cd
 setopt auto_pushd
 unsetopt pushd_ignore_dups
 setopt pushdminus
-<<<<<<< HEAD
-setopt extendedglob
-=======
->>>>>>> b024cfc0677901c3f276d8dba24b788deeabc6d7
 
 #* Completions
 setopt dot_glob  #allows for ** globs
@@ -64,14 +54,6 @@ autoload -Uz compinit && compinit
 ZSH=~/.oh-my-zsh
 #ZSH_CUSTOM=$ZSH/custom
 source $ZSH/plugins/z/z.plugin.zsh
-<<<<<<< HEAD
-source $ZSH/lib/directories.zsh  # Adds the 'd' show recent directories
-# fpath+=$ZSH/plugins/ dir path not needed....
-# git -C $ZSH pull  ***Uncomment and source .zshrc to upate OMZ
-
-setopt prompt_subst
-source ~/.zshrc_aliases
-=======
 source $ZSH/lib/directories.zsh 
  # Adds the 'd' show recent directories
 # fpath+=$ZSH/plugins/ dir path not needed....
@@ -82,7 +64,6 @@ setopt prompt_subst
 source ~/.zshrc_aliases
 #source ~/scripts/zsh-syntax-highlighting/zsh-syntax-highlighting.plugin.zsh
 # source ~/.plugins/fast-syntax-highlighting/fast-syntax-highlighting.plugin.zsh
->>>>>>> b024cfc0677901c3f276d8dba24b788deeabc6d7
 source ~/.plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source ~/.plugins/zsh-history-substring-search/zsh-history-substring-search.plugin.zsh
 source ~/.plugins/zsh-completions/zsh-completions.plugin.zsh
@@ -95,11 +76,5 @@ source ~/.powerlevel10k/powerlevel10k.zsh-theme
 bindkey '^[[A' history-substring-search-up
 bindkey '^[[B' history-substring-search-down
 
-<<<<<<< HEAD
-# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
-
-=======
->>>>>>> b024cfc0677901c3f276d8dba24b788deeabc6d7
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 
