@@ -46,7 +46,8 @@
     "terminal.integrated.shell.osx": "/usr/local/bin/zsh",
     "workbench.colorTheme": "Dracula",
     "shellcheck.executablePath": "/usr/local/bin/shellcheck",
-    "shellcheck.run": "onType"
+    "shellcheck.run": "onType",
+    "vsnotes.defaultNotePath": "/Volumes/Data/VSNotes"
     
 
     }

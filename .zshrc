@@ -11,6 +11,7 @@ export PATH="/usr/local/sbin:$PATH"
 export PATH="$PATH:$HOME/Scripts"
 export PATH="$PATH:$HOME/Scripts/Walk-and-Pull"
 export D=/Volumes/Data  #* Create env var for Data Volume
+export RCLONE_PASSWORD_COMMAND="security find-generic-password -a $USER -s rclone -w"
 
 #* History
 [ -z "$HISTFILE" ] && HISTFILE="$HOME/.zsh_history"
@@ -53,9 +54,8 @@ autoload -Uz compinit && compinit
 #* source OMZ
 ZSH=~/.oh-my-zsh
 #ZSH_CUSTOM=$ZSH/custom
-source $ZSH/plugins/z/z.plugin.zsh
-source $ZSH/lib/directories.zsh 
- # Adds the 'd' show recent directories
+source $ZSH/plugins/z/z.plugin.zsh    #* Frecency plugin
+source $ZSH/lib/directories.zsh       #* Adds the 'd' show recent directories
 # fpath+=$ZSH/plugins/ dir path not needed....
 # git -C $ZSH pull  ***Uncomment and source .zshrc to upate OMZ
 
