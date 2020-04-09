@@ -3,21 +3,15 @@
 #* alias and function source file
 
 alias ll='ls -alh'
-alias mss='mysql.server start'
-alias msss='mysql.server stop'
 alias buu='brew update && brew upgrade && brew cask upgrade'
-alias py='python3'
-alias stoc='stat -f %Mp%Lp'
 alias rmf='rm -rf'
 alias srz='source .zshrc'
-alias adk='ssh-add -K ~/.ssh/id_rsa'  # add key to keychain
 alias ls='lsd'
 alias dkl='diskutil list'
 alias ds='diskutil'
 alias hs='history 1'
 alias zbk='$HOME/.dotfiles/launchd-config-files/configBackup.sh'
 alias pbc='pbcopy'
-alias vm='VBoxManage startvm webdev --type headless && ssh lamp'
 alias shut='sudo shutdown -h now'
 alias ip='scutil --nwi | grep address | cut -d':' -f2'
 alias rp='realpath . | pbcopy'
@@ -25,14 +19,13 @@ alias png='ping -c 3'
 alias admin='dseditgroup -o checkmember -m $USER admin'
 
 #* RClone commands 
-#alias rcs='rclone sync OneDrive:ABTech-IT /Users/thomaswhilbert/Data/OneDrive -P'
 alias rclr='rclone listremotes'
 alias rc='rclone'
 alias rcbn='rc copy $D/GoogleDrive/Secure/Boostnote/ gdS:Boostnote -P'
-#alias rcod='rclone copy --max-age 24h --no-traverse $D/OneDrive od: -P'  #* rcodq == rclone onedrive quick
-#alias rcon='rc config --password-command "security find-generic-password -a $USER -s rclone -w"'
+alias rcod='rclone copy --max-age 24h --no-traverse $D/OneDrive od: -P'  
+alias rcgds='rc copy --max-age 24h --no-traverse /Volumes/Data/GoogleDrive/Secure gdS: -P'
    
-### Git aliases ###
+#* Git aliases ###
 alias g='git'
 alias ga='git add'
 alias gaa='git add --all'
@@ -43,8 +36,7 @@ alias gc='git commit -m'
 alias gpo='git push -u origin'
 alias gp='git pull'
 
-
-### Functions ###
+#* Functions ###
 
    	lazyg ()
 		{
@@ -58,7 +50,7 @@ alias gp='git pull'
 		cd "$1"
 		}
 
-### diskutil erase function
+#* diskutil erase function
 	### $1 is the volume name
 	### $2 is the voluem path
 
@@ -70,7 +62,7 @@ alias gp='git pull'
 		diskutil unmountDisk /dev/disk"$1"
 	}
 
-### cheat.sh command dictionary ###
+#* cheat.sh command dictionary ###
 	ch () {
 		curl cht.sh/"$1"
 	}
