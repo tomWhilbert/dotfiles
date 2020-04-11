@@ -1,33 +1,39 @@
 #!/bin/bash  
-#* ^ not a bash script -> enables syntax highlighting in vscode
-# alias and function source file
+#* ^ not a bash script #! enables syntax highlighting in vscode
+
+#* Alias and function source file
 
 alias ll='ls -alh'
-alias mss='mysql.server start'
-alias msss='mysql.server stop'
-alias buu='brew update && brew upgrade && brew cask upgrade'
+alias lld='ls -l | grep '^d''
 alias py='python3'
-alias stoc='stat -f %Mp%Lp'
 alias rmf='rm -rf'
-#alias code='/Applications/Visual\ Studio\ Code.app/Contents/MacOS/./Electron'
 alias srz='source .zshrc'
-alias adk='ssh-add -K ~/.ssh/id_rsa'  # add key to keychain
 alias ls='lsd'
-alias dkl='diskutil list'
-alias ds='diskutil'
 alias hs='history 1'
-alias zbk='$HOME/.dotfiles/launchd-config-files/configBackup.sh'
-alias pcp='pbcopy'
+alias zbk='$HOME/.dotfiles/Scripts/configBackup.sh'
 alias vm='VBoxManage startvm webdev --type headless && ssh lamp'
-alias bye='sudo shutdown -h now'
-alias ip='scutil --nwi | grep address | cut -d':' -f2'
-alias rp='realpath . | pbcopy'
-alias rcs='rclone sync OneDrive:ABTech-IT /Users/thomaswhilbert/OneDrive-RClone/ -P'
+alias shut='sudo shutdown -h now'
+alias png='ping -c 3'
+
+#* Arch specific aliases
+alias sbz='systemctl start sabnzbd@tom.service'
+alias tr='trizen'
+alias tru='trizen -Syu'
+alias sup='sudo pacman'
+alias reflect='sudo reflector --verbose --latest 5 --sort rate --save /etc/pacman.d/mirrorlist'
+alias sudo='sudo ' #* allows sudo to accept an alias as an argument
+alias sc='systemctl'
+alias rp='realpath . | wl-copy'
+alias lastpac="expac --timefmt='%Y-%m-%d %T' '%l\t%n' | sort | tail -n 20"
+
+
+#* rclone aliases
+alias rcs='rclone sync OneDrive:ABTech-IT /$HOME/OneDrive-RClone/ -P'
 alias rclr='rclone listremotes'
 alias rc='rclone'
+alias rcod='rclone copy --max-age 24h --no-traverse /$HOME/OneDrive-RClone/ od: -P'  
 
-
-### Git aliases ###
+#* Git aliases 
 alias g='git'
 alias ga='git add'
 alias gaa='git add --all'
@@ -37,7 +43,6 @@ alias gst='git status'
 alias gc='git commit -m'
 alias gpo='git push -u origin'
 alias gp='git pull'
-
 
 ### Functions ###
 
@@ -53,18 +58,6 @@ alias gp='git pull'
 		cd "$1"
 		}
 
-### diskutil erase function
-	### $1 is the volume name
-	### $2 is the voluem path
-
-	de () {
-		diskutil eraseDisk HFS+ "$1" /dev/disk"$2"
-		}
-
-	dku () {
-		diskutil unmountDisk /dev/disk"$1"
-	}
-
 
 ### cheat.sh command dictionary ###
 	ch () {
@@ -76,7 +69,7 @@ alias gp='git pull'
 	}
 
 	wp () {
-		cd /Users/thomaswhilbert/Scripts/Walk-and-Pull/
+		cd $HOME/Scripts/Walk-and-Pull/
 		./walk-and-pull.sh
 		cd ~
 	}

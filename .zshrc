@@ -1,3 +1,4 @@
+#!/bin/bash
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
 # confirmations, etc.) must go above this block, everything else may go below.
@@ -5,8 +6,10 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
+
 export PATH="/usr/local/bin:$PATH"
 export PATH="/usr/local/sbin:$PATH"
+
 
 #* History
 [ -z "$HISTFILE" ] && HISTFILE="$HOME/.zsh_history"
@@ -51,13 +54,14 @@ ZSH=~/.oh-my-zsh
 #ZSH_CUSTOM=$ZSH/custom
 source $ZSH/plugins/z/z.plugin.zsh
 source $ZSH/lib/directories.zsh  # Adds the 'd' show recent directories
+#source $ZSH/plugins/systemd/systemd.plugin.zsh
+
 # fpath+=$ZSH/plugins/ dir path not needed....
 # git -C $ZSH pull  ***Uncomment and source .zshrc to upate OMZ
 
 setopt prompt_subst
 source ~/.zshrc_aliases
-#source ~/scripts/zsh-syntax-highlighting/zsh-syntax-highlighting.plugin.zsh
-source ~/.plugins/fast-syntax-highlighting/fast-syntax-highlighting.plugin.zsh
+source ~/.plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.plugin.zsh
 source ~/.plugins/zsh-history-substring-search/zsh-history-substring-search.plugin.zsh
 source ~/.plugins/zsh-completions/zsh-completions.plugin.zsh
 source ~/.powerlevel10k/powerlevel10k.zsh-theme
@@ -68,3 +72,7 @@ source ~/.powerlevel10k/powerlevel10k.zsh-theme
 #* zsh history substring search bindkeys
 bindkey '^[[A' history-substring-search-up
 bindkey '^[[B' history-substring-search-down
+
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
