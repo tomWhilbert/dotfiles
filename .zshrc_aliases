@@ -18,6 +18,7 @@ alias rp='realpath . | pbcopy'
 alias png='ping -c 3'
 alias admin='dseditgroup -o checkmember -m $USER admin'
 alias lsh="ls -a | grep '^\.'"
+alias lct='launchctl'
 
 #* RClone commands 
 alias rclr='rclone listremotes'
@@ -72,3 +73,10 @@ alias gp='git pull'
 		cp "$1" "$1".bak
 	}
    
+#* SSH GitHub authentication fix
+	ghssh () {
+		eval 'ssh-agent -s'
+		ssh-add -D
+		cd $HOME/.SSH/
+		ssh-add mbpGitHub
+	}
