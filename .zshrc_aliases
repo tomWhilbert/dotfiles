@@ -5,7 +5,7 @@
 alias ll='ls -alh'
 alias buu='brew update && brew upgrade && brew cask upgrade'
 alias rmf='rm -rf'
-alias srz='source .zshrc'
+alias srz='exec zsh'
 alias ls='lsd'
 alias dkl='diskutil list'
 alias ds='diskutil'
@@ -13,7 +13,6 @@ alias hs='history 1'
 alias zbk='$HOME/.dotfiles/launchd-config-files/configBackup.sh'
 alias pbc='pbcopy'
 alias shut='sudo shutdown -h now'
-alias ip='scutil --nwi | grep address | cut -d':' -f2'
 alias rp='realpath . | pbcopy'
 alias png='ping -c 3'
 alias admin='dseditgroup -o checkmember -m $USER admin'
@@ -79,4 +78,10 @@ alias gp='git pull'
 		ssh-add -D
 		cd $HOME/.SSH/
 		ssh-add mbpGitHub
+	}
+	ip () {
+		public=$(curl -s -w '\n' ifconfig.me)
+		private=$(scutil --nwi | grep address | cut -d':' -f2)
+		echo "Public IP: $public"
+		echo "Private IP: $private"
 	}
