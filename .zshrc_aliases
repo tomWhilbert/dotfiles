@@ -23,15 +23,16 @@ alias sup='sudo pacman'
 alias reflect='sudo reflector --verbose --latest 5 --sort rate --save /etc/pacman.d/mirrorlist'
 alias sudo='sudo ' #* allows sudo to accept an alias as an argument
 alias sc='systemctl'
-alias rp='realpath . | wl-copy'
-alias lastpac="expac --timefmt='%Y-%m-%d %T' '%l\t%n' | sort | tail -n 20"
-
+alias rp='realpath . | wl-copy' #*Wayland specific - X uses xclip
+alias lastpac="expac --timefmt='%Y-%m-%d %T' '%l\t%n' | sort | tail -n"$1""
+alias chk='checkupdates'
 
 #* rclone aliases
 alias rcs='rclone sync OneDrive:ABTech-IT /$HOME/OneDrive-RClone/ -P'
 alias rclr='rclone listremotes'
 alias rc='rclone'
 alias rcod='rclone copy --max-age 24h --no-traverse /$HOME/OneDrive-RClone/ od: -P'  
+alias rcgds='rc copy --max-age 24h --no-traverse /$HOME/Data/GoogleDrive/Secure gdS: -P'
 
 #* Git aliases 
 alias g='git'
@@ -44,7 +45,7 @@ alias gc='git commit -m'
 alias gpo='git push -u origin'
 alias gp='git pull'
 
-### Functions ###
+#* Functions ###
 
    	lazyg ()
 		{
@@ -59,7 +60,7 @@ alias gp='git pull'
 		}
 
 
-### cheat.sh command dictionary ###
+#* cheat.sh command dictionary ###
 	ch () {
 		curl cht.sh/"$1"
 	}
@@ -72,4 +73,13 @@ alias gp='git pull'
 		cd $HOME/Scripts/Walk-and-Pull/
 		./walk-and-pull.sh
 		cd ~
+	}
+
+#* Resolve Github SSH Linux Issue - See github for explanation
+#* Needs name of a key added @ github account
+
+	ghssh () {
+		eval "$(ssh-agent -s)"
+		cd $HOME/.ssh
+		ssh-add "$1"   
 	}
