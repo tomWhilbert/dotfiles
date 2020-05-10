@@ -26,6 +26,9 @@ alias sc='systemctl'
 alias rp='realpath . | wl-copy' #*Wayland specific - X uses xclip
 alias lastpac="expac --timefmt='%Y-%m-%d %T' '%l\t%n' | sort | tail -n"$1""
 alias chk='checkupdates'
+alias wgu='nmcli connection up mullvad-us128'
+alias wgd='nmcli connection down mullvad-us128'
+
 
 #* rclone aliases
 alias rcs='rclone sync OneDrive:ABTech-IT /$HOME/OneDrive-RClone/ -P'
