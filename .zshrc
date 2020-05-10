@@ -7,8 +7,9 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
 fi
 
 
-export PATH="/usr/local/bin:$PATH"
-export PATH="/usr/local/sbin:$PATH"
+#export PATH="/usr/local/bin:$PATH"
+#export PATH="/usr/local/sbin:$PATH"
+export PATH=$PATH:"/home/tom/Scripts/Walk-and-Pull"
 
 
 #* History
@@ -75,4 +76,3 @@ bindkey '^[[B' history-substring-search-down
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
-

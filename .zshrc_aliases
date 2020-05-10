@@ -15,7 +15,7 @@ alias vm='VBoxManage startvm webdev --type headless && ssh lamp'
 alias shut='sudo shutdown -h now'
 alias png='ping -c 3'
 
-#* Arch specific aliases
+#* Arch/Linux specific aliases
 alias sbz='systemctl start sabnzbd@tom.service'
 alias tr='trizen'
 alias tru='trizen -Syu'
@@ -28,6 +28,7 @@ alias lastpac="expac --timefmt='%Y-%m-%d %T' '%l\t%n' | sort | tail -n"$1""
 alias chk='checkupdates'
 alias wgu='nmcli connection up mullvad-us128'
 alias wgd='nmcli connection down mullvad-us128'
+alias lsip='$HOME/Scripts/Get-IP/Get-IP-Linux.sh'
 
 
 #* rclone aliases
