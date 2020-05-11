@@ -55,7 +55,7 @@ alias gp='git pull'
 		{
 		git add .
 		git commit -a -m "$1"
-		git push -u origin master
+		git push -u origin "$2"
 		}
 
 	mkd () {
@@ -85,5 +85,6 @@ alias gp='git pull'
 	ghssh () {
 		eval "$(ssh-agent -s)"
 		cd $HOME/.ssh
-		ssh-add "$1"   
+		ssh-add "$1" 
+		cd $OLDPWD  
 	}
