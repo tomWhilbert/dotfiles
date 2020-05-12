@@ -18,6 +18,10 @@ alias png='ping -c 3'
 alias admin='dseditgroup -o checkmember -m $USER admin'
 alias lsh="ls -a | grep '^\.'"
 alias lct='launchctl'
+alias lsdir="ls -lah | grep '^d'"
+alias dig='dig +nocmd +noall +answer'
+alias ip='Get-IP.sh'
+alias stoc='stat -f %Mp%Lp'
 
 #* RClone commands 
 alias rclr='rclone listremotes'
@@ -54,7 +58,6 @@ alias gp='git pull'
 #* diskutil erase function
 	### $1 is the volume name
 	### $2 is the voluem path
-
 	de () {
 		diskutil eraseDisk HFS+ "$1" /dev/disk"$2"
 		}
@@ -78,10 +81,11 @@ alias gp='git pull'
 		ssh-add -D
 		cd $HOME/.SSH/
 		ssh-add mbpGitHub
+		cd $OLDPWD
 	}
-	ip () {
-		public=$(curl -s -w '\n' ifconfig.me)
-		private=$(scutil --nwi | grep address | cut -d':' -f2)
-		echo "Public IP: $public"
-		echo "Private IP: $private"
-	}
+	# ip () {
+	# 	public=$(curl -s -w '\n' ifconfig.me)
+	# 	private=$(scutil --nwi | grep address | cut -d':' -f2)
+	# 	echo "Public IP: $public"
+	# 	echo "Private IP: $private"
+	# }
