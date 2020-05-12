@@ -20,7 +20,7 @@ alias lsh="ls -a | grep '^\.'"
 alias lct='launchctl'
 alias lsdir="ls -lah | grep '^d'"
 alias dig='dig +nocmd +noall +answer'
-alias ip='Get-IP.sh'
+alias ip='Get-IP-macOS.sh'
 alias stoc='stat -f %Mp%Lp'
 
 #* RClone commands 
