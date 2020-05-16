@@ -89,3 +89,8 @@ alias gp='git pull'
 	# 	echo "Public IP: $public"
 	# 	echo "Private IP: $private"
 	# }
+
+	#* Disk Usage, Sorted by Size
+	dus () {
+		du -sh "$1"/* | sort -h
+	}
