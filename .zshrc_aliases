@@ -10,7 +10,7 @@ alias rmf='rm -rf'
 alias srz='source .zshrc'
 alias ls='lsd'
 alias hs='history 1'
-alias zbk='$HOME/.dotfiles/Scripts/configBackup.sh'
+alias zbk='~/.dotfiles/Scripts/configBackup.sh'
 alias vm='VBoxManage startvm webdev --type headless && ssh lamp'
 alias shut='sudo shutdown -h now'
 alias png='ping -c 3'
@@ -28,15 +28,15 @@ alias lastpac="expac --timefmt='%Y-%m-%d %T' '%l\t%n' | sort | tail -n"$1""
 alias chk='checkupdates'
 alias wgu='nmcli connection up mullvad-us128'
 alias wgd='nmcli connection down mullvad-us128'
-alias lsip='$HOME/Scripts/Get-IP/Get-IP-Linux.sh'
-
+alias vip='~/Scripts/Get-IP/Get-IP-Linux.sh'
+alias sucode='sudo code --user-data-dir="~/.vscode-root"'
 
 #* rclone aliases
 alias rcs='rclone sync OneDrive:ABTech-IT /$HOME/OneDrive-RClone/ -P'
 alias rclr='rclone listremotes'
 alias rc='rclone'
 alias rcod='rclone copy --max-age 24h --no-traverse /$HOME/OneDrive-RClone/ od: -P'  
-alias rcgds='rc copy --max-age 24h --no-traverse /$HOME/Data/GoogleDrive/Secure gdS: -P'
+alias rcgds='rclone copy --max-age 24h --no-traverse /$HOME/Data/GoogleDrive/Secure gdS: -P'
 
 #* Git aliases 
 alias g='git'
@@ -80,7 +80,7 @@ alias gp='git pull'
 	}
 
 #* Resolve Github SSH Linux Issue - See github for explanation
-#* Needs name of a key added @ github account
+#* Needs name of a key added @ github account for $1
 
 	ghssh () {
 		eval "$(ssh-agent -s)"
