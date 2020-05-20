@@ -11,7 +11,7 @@ export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/sbin:$HOME/
 # export PATH="/usr/local/sbin:$PATH"
 # export PATH="$PATH:$HOME/Scripts"
 # export PATH="$PATH:$HOME/Scripts/Walk-and-Pull"
-export D=/Volumes/Data  #* Create env var for Data Volume
+# export D=/Volumes/Data  #* Create env var for Data Volume
 export RCLONE_PASSWORD_COMMAND="security find-generic-password -a $USER -s rclone -w"
 
 #* History
@@ -45,7 +45,7 @@ zstyle ':completion::complete:*' cache-path
 zstyle ':completion:*' list-colors ''
 zstyle ':completion:*:*:kill:*:processes' list-colors '=(#b) #([0-9]#) ([0-9a-z-]#)*=01;34=0=01'
 
-#* added git completions
+#* Add git completions
 
 zstyle ':completion:*:*:git:*' script ~/.zsh/git-completion.bash
 fpath=(~/.zsh $fpath)

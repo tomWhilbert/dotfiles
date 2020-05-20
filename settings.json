@@ -44,7 +44,7 @@
     "workbench.iconTheme": "vscode-great-icons",
     "better-comments.multilineComments": true,
     "terminal.integrated.shell.osx": "/usr/local/bin/zsh",
-    "workbench.colorTheme": "New Moon",
+    "workbench.colorTheme": "Nord",
     "shellcheck.executablePath": "/usr/local/bin/shellcheck",
     "shellcheck.run": "onType",
     "vsnotes.defaultNotePath": "/Volumes/Data/VSNotes",
