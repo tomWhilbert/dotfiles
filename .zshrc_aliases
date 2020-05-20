@@ -80,7 +80,7 @@ alias gp='git pull'
 		eval 'ssh-agent -s'
 		ssh-add -D
 		cd $HOME/.SSH/
-		ssh-add mbpGitHub
+		ssh-add "$1"
 		cd $OLDPWD
 	}
 	# ip () {
