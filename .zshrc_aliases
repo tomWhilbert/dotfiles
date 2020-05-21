@@ -10,7 +10,7 @@ alias ls='lsd'
 alias dkl='diskutil list'
 alias ds='diskutil'
 alias hs='history 1'
-alias zbk='$HOME/.dotfiles/launchd-config-files/configBackup.sh'
+alias zbk='/Users/thomaswhilbert/Scripts/configBackup.sh'
 alias pbc='pbcopy'
 alias shut='sudo shutdown -h now'
 alias rp='realpath . | pbcopy'
@@ -41,56 +41,3 @@ alias gc='git commit -m'
 alias gpo='git push -u origin'
 alias gp='git pull'
 
-#* Functions ###
-
-   	lazyg ()
-		{
-		git add .
-		git commit -m "$1"
-		git push -u origin "$2"
-		}
-
-	mkd () {
-		mkdir "$1"
-		cd "$1"
-		}
-
-#* diskutil erase function
-	### $1 is the volume name
-	### $2 is the voluem path
-	de () {
-		diskutil eraseDisk HFS+ "$1" /dev/disk"$2"
-		}
-
-	dku () {
-		diskutil unmountDisk /dev/disk"$1"
-	}
-
-#* cheat.sh command dictionary ###
-	ch () {
-		curl cht.sh/"$1"
-	}
-
-	bak () {
-		cp "$1" "$1".bak
-	}
-   
-#* SSH GitHub authentication fix
-	ghssh () {
-		eval 'ssh-agent -s'
-		ssh-add -D
-		cd $HOME/.SSH/
-		ssh-add "$1"
-		cd $OLDPWD
-	}
-	# ip () {
-	# 	public=$(curl -s -w '\n' ifconfig.me)
-	# 	private=$(scutil --nwi | grep address | cut -d':' -f2)
-	# 	echo "Public IP: $public"
-	# 	echo "Private IP: $private"
-	# }
-
-	#* Disk Usage, Sorted by Size
-	dus () {
-		du -sh "$1"/* | sort -h
-	}

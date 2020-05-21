@@ -12,6 +12,7 @@ export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/sbin:$HOME/
 # export PATH="$PATH:$HOME/Scripts"
 # export PATH="$PATH:$HOME/Scripts/Walk-and-Pull"
 # export D=/Volumes/Data  #* Create env var for Data Volume
+
 export RCLONE_PASSWORD_COMMAND="security find-generic-password -a $USER -s rclone -w"
 
 #* History
@@ -62,9 +63,10 @@ source $ZSH/lib/directories.zsh       #* Adds the 'd' show recent directories
 
 
 setopt prompt_subst
+
 source ~/.zshrc_aliases
-#source ~/scripts/zsh-syntax-highlighting/zsh-syntax-highlighting.plugin.zsh
-# source ~/.plugins/fast-syntax-highlighting/fast-syntax-highlighting.plugin.zsh
+source ~/.zshrc_functions
+
 source ~/.plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source ~/.plugins/zsh-history-substring-search/zsh-history-substring-search.plugin.zsh
 source ~/.plugins/zsh-completions/zsh-completions.plugin.zsh
