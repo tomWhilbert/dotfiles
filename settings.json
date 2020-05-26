@@ -47,7 +47,7 @@
     "terminal.integrated.shell.osx": "/usr/local/bin/zsh",
     "shellcheck.executablePath": "/usr/local/bin/shellcheck",
     "shellcheck.run": "onType",
-    "vsnotes.defaultNotePath": "/Volumes/Data/VSNotes",
+    "vsnotes.defaultNotePath": "$USER/Dodcuments",
     "files.defaultLanguage": "markdown",
     "markdownConverter.ConversionType": [
         "HTML",

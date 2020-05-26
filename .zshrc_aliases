@@ -26,9 +26,9 @@ alias stoc='stat -f %Mp%Lp'
 #* RClone commands 
 alias rclr='rclone listremotes'
 alias rc='rclone'
-alias rcbn='rc copy $D/GoogleDrive/Secure/Boostnote/ gdS:Boostnote -P'
-alias rcod='rclone copy --max-age 24h --no-traverse $D/OneDrive od: -P'  
-alias rcgds='rc copy --max-age 24h --no-traverse /Volumes/Data/GoogleDrive/Secure gdS: -P'
+# alias rcbn='rc copy $D/GoogleDrive/Secure/Boostnote/ gdS:Boostnote -P'
+alias rcod='rclone copy --max-age 24h --no-traverse /Users/thomaswhilbert/One-Drive od: -P'  
+alias rcgds='rc copy --max-age 24h --no-traverse /Users/thomaswhilbert/G-Drive-Secure gdS: -P'
    
 #* Git aliases ###
 alias g='git'
