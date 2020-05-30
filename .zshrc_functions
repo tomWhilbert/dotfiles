@@ -1,0 +1,43 @@
+#!/bin/bash
+#* Zsh Function File
+#* Functions ###
+
+   	lazyg ()
+		{
+		git add .
+		git commit -m "$1"
+		git push -u origin "$2"
+		}
+
+	mkd () {
+		mkdir "$1"
+		cd "$1"
+		}
+
+#* cheat.sh command dictionary ###
+	ch () {
+		curl cht.sh/"$1"
+	}
+
+	bak () {
+		cp "$1" "$1".bak
+	}
+   
+#* SSH GitHub authentication fix
+	ghssh () {
+		eval 'ssh-agent -s'
+		ssh-add -D
+		cd $HOME/.SSH/
+		ssh-add "$1"
+		cd $OLDPWD
+	}
+
+	#* Disk Usage, Sorted by Size
+	dus () {
+		du -sh "$1"/* | sort -h
+	}
+
+	#* Realpath a file
+	rpf () {
+		realpath "$1" | wl-copy
+	}

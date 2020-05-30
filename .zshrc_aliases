@@ -5,6 +5,7 @@
 
 alias ll='ls -alh'
 alias lld='ls -l | grep '^d''
+alias llf='ls -l | grep '^.''
 alias py='python3'
 alias rmf='rm -rf'
 alias srz='source .zshrc'
@@ -49,42 +50,4 @@ alias gc='git commit -m'
 alias gpo='git push -u origin'
 alias gp='git pull'
 
-#* Functions ###
 
-   	lazyg ()
-		{
-		git add .
-		git commit -a -m "$1"
-		git push -u origin "$2"
-		}
-
-	mkd () {
-		mkdir "$1"
-		cd "$1"
-		}
-
-
-#* cheat.sh command dictionary ###
-	ch () {
-		curl cht.sh/"$1"
-	}
-
-	bak () {
-		cp "$1" "$1".bak
-	}
-
-	wp () {
-		cd $HOME/Scripts/Walk-and-Pull/
-		./walk-and-pull.sh
-		cd ~
-	}
-
-#* Resolve Github SSH Linux Issue - See github for explanation
-#* Needs name of a key added @ github account for $1
-
-	ghssh () {
-		eval "$(ssh-agent -s)"
-		cd $HOME/.ssh
-		ssh-add "$1" 
-		cd $OLDPWD  
-	}

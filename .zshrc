@@ -62,6 +62,8 @@ source $ZSH/lib/directories.zsh  # Adds the 'd' show recent directories
 
 setopt prompt_subst
 source ~/.zshrc_aliases
+source ~/.zshrc_functions
+
 source ~/.plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.plugin.zsh
 source ~/.plugins/zsh-history-substring-search/zsh-history-substring-search.plugin.zsh
 source ~/.plugins/zsh-completions/zsh-completions.plugin.zsh
