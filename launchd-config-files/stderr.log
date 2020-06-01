@@ -89,3 +89,7 @@ cp: cp: cp: /Users/thomaswhilbert/Brewfile: No such file or directory/Users/thom
 /Users/thomaswhilbert/.dotfiles/launchd-config-files/configBackup.sh: line 14: `<<<<<<< HEAD'
 /Users/thomaswhilbert/.dotfiles/launchd-config-files/configBackup.sh: line 14: syntax error near unexpected token `<<<'
 /Users/thomaswhilbert/.dotfiles/launchd-config-files/configBackup.sh: line 14: `<<<<<<< HEAD'
+cp: /Users/thomaswhilbert/Brewfile: No such file or directory
+cp: /Users/thomaswhilbert/Brewfile: No such file or directory
+cp: /Users/thomaswhilbert/Brewfile: No such file or directory
+/Users/thomaswhilbert/.dotfiles/launchd-config-files/configBackup.sh: line 15: ghssh: command not found

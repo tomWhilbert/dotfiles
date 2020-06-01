@@ -42,7 +42,7 @@
     "telemetry.enableCrashReporter": false,
     "scm.diffDecorations": "none",
     "local-history.daysLimit": 10,
-    "workbench.iconTheme": "vscode-great-icons",
+    "workbench.iconTheme": "vscode-icons",
     "better-comments.multilineComments": true,
     "terminal.integrated.shell.osx": "/usr/local/bin/zsh",
     "shellcheck.executablePath": "/usr/local/bin/shellcheck",
@@ -52,6 +52,7 @@
     "markdownConverter.ConversionType": [
         "HTML",
         "PDF"
-    ]
+    ],
+    "workbench.colorTheme": "Dracula Soft"
 
     }

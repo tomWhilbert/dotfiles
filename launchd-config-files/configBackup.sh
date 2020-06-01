@@ -11,10 +11,11 @@ cp /Users/thomaswhilbert/.p10k.zsh $target
 
 sleep 1
 
-# cd $target || exit
-# git add .
-# git commit -m  "Dotfiles Backup"
-# git push origin macOS
+cd $target || exit
+ghssh ~/.ssh/github
+git add .
+git commit -m  "Dotfiles Backup"
+git push origin macOS
 exit
 
 

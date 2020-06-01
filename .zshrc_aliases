@@ -28,7 +28,10 @@ alias rclr='rclone listremotes'
 alias rc='rclone'
 # alias rcbn='rc copy $D/GoogleDrive/Secure/Boostnote/ gdS:Boostnote -P'
 alias rcod='rclone copy --max-age 24h --no-traverse /Users/thomaswhilbert/One-Drive od: -P'  
-alias rcgds='rc copy --max-age 24h --no-traverse /Users/thomaswhilbert/G-Drive-Secure gdS: -P'
+alias rcgds='rc copy --max-age 24h --no-traverse /Users/thomaswhilbert/GoogleDrive/Secure gdS: -P'
+alias rcmgds='rc mount gdS: /Users/thomaswhilbert/mnt/gDriveSecure'
+#alias rclone sync --fast-list gdS: /Users/thomaswhilbert/GoogleDrive/Secure -P
+
    
 #* Git aliases ###
 alias g='git'
