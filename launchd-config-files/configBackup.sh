@@ -8,7 +8,8 @@ cp /Users/thomaswhilbert/.zshrc $target
 cp /Users/thomaswhilbert/.zshrc_aliases $target
 cp /Users/thomaswhilbert/.zshrc_functions $target
 cp /Users/thomaswhilbert/.dotfiles/Brewfile $target
-cp /Users/thomaswhilbert/.p10k.zsh $target
+cp /Users/thomaswhilbert/.hushlogin $target
+
 
 sleep 1
 
