@@ -21,7 +21,7 @@ cd $target || exit
 
 git add .
 git commit -m  "Dotfiles Backup"
-git push origin macOS
+git push origin master
 exit
 
 
