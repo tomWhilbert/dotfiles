@@ -13,7 +13,12 @@ cp /Users/thomaswhilbert/.p10k.zsh $target
 sleep 1
 
 cd $target || exit
-ghssh ~/.ssh/github
+	eval 'ssh-agent -s'
+	ssh-add -D
+	cd $HOME/.SSH/
+	ssh-add github
+	cd $OLDPWD
+
 git add .
 git commit -m  "Dotfiles Backup"
 git push origin macOS
