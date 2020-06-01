@@ -15,3 +15,6 @@ SSH_AGENT_PID=51388; export SSH_AGENT_PID;
 echo Agent pid 51388;
 [master 785a7db] Dotfiles Backup
  3 files changed, 11 insertions(+), 1 deletion(-)
+SSH_AUTH_SOCK=/var/folders/tr/frt778g15fzfjjdynmbmv73r0000gp/T//ssh-CG9BnbpMMP8N/agent.1792; export SSH_AUTH_SOCK;
+SSH_AGENT_PID=1803; export SSH_AGENT_PID;
+echo Agent pid 1803;
