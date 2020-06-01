@@ -95,3 +95,6 @@ cp: /Users/thomaswhilbert/Brewfile: No such file or directory
 /Users/thomaswhilbert/.dotfiles/launchd-config-files/configBackup.sh: line 15: ghssh: command not found
 error: src refspec macOS does not match any
 error: failed to push some refs to 'git@github.com:tomWhilbert/.dotfiles.git'
+cp: /Users/thomaswhilbert/.dotFiles/Brewfile and /Users/thomaswhilbert/.dotfiles/Brewfile are identical (not copied).
+All identities removed.
+Identity added: github (github)
