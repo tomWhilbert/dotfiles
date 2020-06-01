@@ -93,3 +93,5 @@ cp: /Users/thomaswhilbert/Brewfile: No such file or directory
 cp: /Users/thomaswhilbert/Brewfile: No such file or directory
 cp: /Users/thomaswhilbert/Brewfile: No such file or directory
 /Users/thomaswhilbert/.dotfiles/launchd-config-files/configBackup.sh: line 15: ghssh: command not found
+error: src refspec macOS does not match any
+error: failed to push some refs to 'git@github.com:tomWhilbert/.dotfiles.git'

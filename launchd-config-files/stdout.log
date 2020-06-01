@@ -25,3 +25,6 @@
  2 files changed, 4 insertions(+)
 [macOS 8390204] Dotfiles Backup
  5 files changed, 310 insertions(+), 282 deletions(-)
+[master 7ceaa43] Dotfiles Backup
+ 4 files changed, 16 insertions(+), 7 deletions(-)
+ rename configBackup.sh => launchd-config-files/configBackup.sh (77%)
