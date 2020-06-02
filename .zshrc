@@ -10,7 +10,7 @@ fi
 #export PATH="/usr/local/bin:$PATH"
 #export PATH="/usr/local/sbin:$PATH"
 export PATH=$PATH:"/home/tom/Scripts/Walk-and-Pull"
-
+export EDITOR=/usr/bin/vim
 
 #* History
 [ -z "$HISTFILE" ] && HISTFILE="$HOME/.zsh_history"
