@@ -15,6 +15,8 @@ alias zbk='~/.dotfiles/Scripts/configBackup.sh'
 alias vm='VBoxManage startvm webdev --type headless && ssh lamp'
 alias shut='sudo shutdown -h now'
 alias png='ping -c 3'
+alias -g G='| grep -i'
+alias -s {yml,yaml,sh,conf,md,txt}=code
 
 #* Arch/Linux specific aliases
 alias sbz='systemctl start sabnzbd@tom.service'
