@@ -17,7 +17,7 @@ cd $target || exit
 	eval 'ssh-agent -s'
 	ssh-add -D
 	cd $HOME/.SSH/
-	ssh-add github
+	ssh-add gitHubVader
 	cd $OLDPWD
 
 git add .
