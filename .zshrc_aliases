@@ -22,6 +22,8 @@ alias lsdir="ls -lah | grep '^d'"
 alias dig='dig +nocmd +noall +answer'
 alias ip='Get-IP-macOS.sh'
 alias stoc='stat -f %Mp%Lp'
+alias -g G='| grep -i'
+alias -s {yml,yaml,sh,conf,md,txt}=code
 
 #* RClone commands 
 alias rclr='rclone listremotes'
