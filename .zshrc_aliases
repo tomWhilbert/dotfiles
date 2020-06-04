@@ -10,31 +10,29 @@ alias ls='lsd'
 alias dkl='diskutil list'
 alias ds='diskutil'
 alias hs='history 1'
-alias zbk='/Users/thomaswhilbert/Scripts/configBackup.sh'
-alias pbc='pbcopy'
 alias shut='sudo shutdown -h now'
 alias rp='realpath . | pbcopy'
 alias png='ping -c 3'
 alias admin='dseditgroup -o checkmember -m $USER admin'
 alias lsh="ls -a | grep '^\.'"
-alias lct='launchctl'
 alias lsdir="ls -lah | grep '^d'"
 alias dig='dig +nocmd +noall +answer'
 alias ip='Get-IP-macOS.sh'
 alias stoc='stat -f %Mp%Lp'
 alias -g G='| grep -i'
-alias -s {yml,yaml,sh,conf,md,txt}=code
+alias -s {yml,yaml,conf,md,txt}=code
+alias zrc='code $HOME/.zshrc'
+alias zra='code $HOME/.zshrc_aliases'
+alias zrf='code $HOME/.zshrc_functions'
 
 #* RClone commands 
 alias rclr='rclone listremotes'
 alias rc='rclone'
-# alias rcbn='rc copy $D/GoogleDrive/Secure/Boostnote/ gdS:Boostnote -P'
 alias rcod='rclone copy --max-age 24h --no-traverse /Users/thomaswhilbert/One-Drive od: -P'  
 alias rcgds='rc copy --max-age 24h --no-traverse /Users/thomaswhilbert/GoogleDrive/Secure gdS: -P'
 alias rcmgds='rc mount --vfs-cache-mode full gdS: /Users/thomaswhilbert/mnt/gDriveSecure'
 #alias rclone sync --fast-list gdS: /Users/thomaswhilbert/GoogleDrive/Secure -P
 
-   
 #* Git aliases ###
 alias g='git'
 alias ga='git add'
