@@ -27,7 +27,7 @@
 	ghssh () {
 		eval 'ssh-agent -s'
 		ssh-add -D
-		cd $HOME/.SSH/
+		cd $HOME/.ssh/
 		ssh-add gnArch
 		cd $OLDPWD
 	}
