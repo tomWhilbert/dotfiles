@@ -52,3 +52,8 @@
 	rpf () {
 		realpath "$1" | pbcopy
 	}
+
+	#* RClone Functions
+	rcld () {
+		rclone lsd "$1"
+	}
