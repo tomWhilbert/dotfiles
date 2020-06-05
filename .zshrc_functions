@@ -57,3 +57,6 @@
 	rcld () {
 		rclone lsd "$1"
 	}
+	rclf () {
+		rclone lsf "$1"
+	}
