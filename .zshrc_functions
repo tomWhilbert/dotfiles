@@ -39,5 +39,5 @@
 
 	#* Realpath a file
 	rpf () {
-		realpath "$1" | wl-copy
+		realpath "$1" | wl-copy -n
 	}
