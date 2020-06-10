@@ -39,7 +39,7 @@ alias rcs='rclone sync OneDrive:ABTech-IT /$HOME/OneDrive-RClone/ -P'
 alias rclr='rclone listremotes'
 alias rc='rclone'
 alias rcod='rclone copy --max-age 24h --no-traverse /$HOME/OneDrive-RClone/ od: -P'  
-alias rcgds='rclone copy --max-age 24h --no-traverse /$HOME/Data/GoogleDrive/Secure gdS: -P'
+alias rcgds='rclone copy --max-age 24h --no-traverse /$HOME/GoogleDrive/Secure gdS: -P'
 
 #* Git aliases 
 alias g='git'
