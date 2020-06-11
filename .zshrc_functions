@@ -6,9 +6,7 @@
 		{
 		eval 'ssh-agent -s'
 		ssh-add -D
-		cd $HOME/.SSH
-		ssh-add github
-		cd $OLDPWD
+		ssh-add $HOME/.SSH/github
 
 		git add --all
 		git commit -m "$1"
