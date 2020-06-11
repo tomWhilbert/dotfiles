@@ -7,7 +7,7 @@
 	
 	<key>ProgramArguments</key>
 	<array>
-		<string>/Users/thomaswhilbert/.dotfiles/launchd-config-files/configBackup.sh</string>	
+		<string>/Users/thomaswhilbert/Scripts/configBackup.sh</string>	
 								
 	</array>
 	<key>RunAtLoad</key>
