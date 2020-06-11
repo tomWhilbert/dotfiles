@@ -4,6 +4,12 @@
 
    	lazyg ()
 		{
+		eval 'ssh-agent -s'
+		ssh-add -D
+		cd $HOME/.SSH
+		ssh-add github
+		cd $OLDPWD
+
 		git add --all
 		git commit -m "$1"
 		git push -u origin "$2"
