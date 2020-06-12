@@ -25,11 +25,13 @@ alias zrc='code $HOME/.zshrc'
 alias zra='code $HOME/.zshrc_aliases'
 alias zrf='code $HOME/.zshrc_functions'
 alias grep='grep --color'
+alias zed='code $HOME/zsh.code-workspace'
+
 
 #* RClone commands 
 alias rclr='rclone listremotes'
 alias rc='rclone'
-alias rcod='rclone copy --max-age 24h --no-traverse /Users/thomaswhilbert/One-Drive od: -P'  
+alias rcod='rclone copy --max-age 24h --no-traverse /Users/thomaswhilbert/OneDrive od: -P'  
 alias rcgds='rc copy --max-age 24h --no-traverse /Users/thomaswhilbert/GoogleDrive/Secure gdS: -P'
 alias rcmgds='rc mount --vfs-cache-mode full gdS: /Users/thomaswhilbert/mnt/gDriveSecure'
 #alias rclone sync --fast-list gdS: /Users/thomaswhilbert/GoogleDrive/Secure -P
