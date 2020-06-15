@@ -17,6 +17,7 @@ alias shut='sudo shutdown -h now'
 alias png='ping -c 3'
 alias -g G='| grep -i'
 alias -s {yml,yaml,conf,md,txt}=code
+alias grep='grep --color'
 
 #* Arch/Linux specific aliases
 alias sbz='systemctl start sabnzbd@tom.service'
