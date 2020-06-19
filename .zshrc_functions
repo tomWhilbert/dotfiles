@@ -9,13 +9,13 @@
 		ssh-add $HOME/.SSH/github
 
 		git add --all
-		git commit -m "$1"
-		git push -u origin "$2"
+		git commit -m "$@"
+		git push -u origin "$@"
 		}
 
 	mkd () {
-		mkdir "$1"
-		cd "$1"
+		mkdir "$@"
+		cd "$@"
 		}
 
 #* diskutil erase function
