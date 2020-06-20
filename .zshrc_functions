@@ -9,15 +9,16 @@
 		ssh-add $HOME/.SSH/github
 
 		git add --all
-		git commit -m "$@"
-		git push -u origin "$@"
+		git commit -m "$1"
+		git push -u origin "$2"
 		}
 
 	mkd () {
-		mkdir "$@"
-		cd "$@"
+		mkdir "$1"
+		cd "$1"
 		}
 
+	
 #* diskutil erase function
 	### $1 is the volume name
 	### $2 is the voluem path
