@@ -26,6 +26,7 @@ alias zra='code $HOME/.zshrc_aliases'
 alias zrf='code $HOME/.zshrc_functions'
 alias grep='grep --color'
 alias zed='code $HOME/zsh.code-workspace'
+alias nos='code $HOME/NOS-220.code-workspace'
 
 
 #* RClone commands 
