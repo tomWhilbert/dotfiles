@@ -14,6 +14,7 @@ alias hs='history 1'
 alias zbk='~/.dotfiles/Scripts/configBackup.sh'
 alias vm='VBoxManage startvm webdev --type headless && ssh lamp'
 alias shut='sudo shutdown -h now'
+alias reboo='sudo shutdown -r now'
 alias png='ping -c 3'
 alias -g G='| grep -i'
 alias -s {yml,yaml,conf,md,txt}=code
