@@ -606,3 +606,8 @@ echo Agent pid 2979;
 SSH_AUTH_SOCK=/var/folders/1s/h47l80y93m7g147dxxx8vcdh0000gp/T//ssh-oJZPa1gzvJVR/agent.852; export SSH_AUTH_SOCK;
 SSH_AGENT_PID=893; export SSH_AGENT_PID;
 echo Agent pid 893;
+[master 3b4671f] Dotfiles Backup
+ 2 files changed, 16 insertions(+)
+SSH_AUTH_SOCK=/var/folders/1s/h47l80y93m7g147dxxx8vcdh0000gp/T//ssh-yxUMQ8OxtEnm/agent.8530; export SSH_AUTH_SOCK;
+SSH_AGENT_PID=8531; export SSH_AGENT_PID;
+echo Agent pid 8531;
