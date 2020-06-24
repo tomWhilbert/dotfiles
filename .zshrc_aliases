@@ -27,6 +27,7 @@ alias zrf='code $HOME/.zshrc_functions'
 alias grep='grep --color'
 alias zed='code $HOME/zsh.code-workspace'
 alias nos='code $HOME/NOS-220.code-workspace'
+alias Nos='cd /Users/thomaswhilbert/Nextcloud/NOS-220-Linux-II'
 
 
 #* RClone commands 
