@@ -7,11 +7,6 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
 fi
 
 export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/sbin:$HOME/Scripts:$HOME/Scripts/Get-IP:$HOME/Scripts/Walk-and-Pull:"
-# export PATH="/usr/local/bin:$PATH"
-# export PATH="/usr/local/sbin:$PATH"
-# export PATH="$PATH:$HOME/Scripts"
-# export PATH="$PATH:$HOME/Scripts/Walk-and-Pull"
-# export D=/Volumes/Data  #* Create env var for Data Volume
 
 export RCLONE_PASSWORD_COMMAND="security find-generic-password -a $USER -s rclone -w"
 
@@ -70,6 +65,7 @@ source ~/.zshrc_functions
 source ~/.plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source ~/.plugins/zsh-history-substring-search/zsh-history-substring-search.plugin.zsh
 source ~/.plugins/zsh-completions/zsh-completions.plugin.zsh
+source ~/.plugins/zsh-autosuggestions/zsh-autosuggestions.plugin.zsh
 source ~/.powerlevel10k/powerlevel10k.zsh-theme
 
 #* To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
@@ -78,6 +74,7 @@ source ~/.powerlevel10k/powerlevel10k.zsh-theme
 #* zsh history substring search bindkeys
 bindkey '^[[A' history-substring-search-up
 bindkey '^[[B' history-substring-search-down
+bindkey '`' autosuggest-accept
 
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 
