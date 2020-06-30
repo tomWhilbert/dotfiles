@@ -3,7 +3,7 @@
     "workbench.fontAliasing": "antialiased",
     "workbench.settings.useSplitJSON": true,
     "editor.fontSize": 16,
-    "window.zoomLevel": 1,
+    "window.zoomLevel": 0,
     "editor.formatOnPaste": true,
     "editor.multiCursorModifier": "ctrlCmd",
     "editor.snippetSuggestions": "top",
