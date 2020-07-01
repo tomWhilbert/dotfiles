@@ -11,6 +11,8 @@ fi
 #export PATH="/usr/local/sbin:$PATH"
 export PATH=$PATH:"/home/tom/Scripts/Walk-and-Pull"
 export EDITOR=/usr/bin/vim
+export RCLONE_CONFIG_PASS=%jMrsNt2ndtJ^d
+
 
 #* History
 [ -z "$HISTFILE" ] && HISTFILE="$HOME/.zsh_history"
