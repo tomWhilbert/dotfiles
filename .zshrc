@@ -11,7 +11,8 @@ fi
 #export PATH="/usr/local/sbin:$PATH"
 export PATH=$PATH:"/home/tom/Scripts/Walk-and-Pull"
 export EDITOR=/usr/bin/vim
-export RCLONE_CONFIG_PASS=%jMrsNt2ndtJ^d
+#export RCLONE_CONFIG_PASS=%jMrsNt2ndtJ^d
+export RCLONE_CONFIG_PASS="pass rclone.org/rclone"
 
 
 #* History
@@ -87,3 +88,9 @@ eval $(ssh-agent)
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
+
+if [ -n "$DESKTOP_SESSION" ];then
+    eval $(gnome-keyring-daemon --start)
+    export SSH_AUTH_SOCK
+fi
