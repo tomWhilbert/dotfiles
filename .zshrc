@@ -6,9 +6,6 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
-
-#export PATH="/usr/local/bin:$PATH"
-#export PATH="/usr/local/sbin:$PATH"
 export PATH=$PATH:"/home/tom/Scripts/Walk-and-Pull"
 export EDITOR=/usr/bin/vim
 export RCLONE_PASSWORD_COMMAND="pass rclone-config"    #* See https://rclone.org/docs/#configuration-encryption
