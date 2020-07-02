@@ -11,9 +11,7 @@ fi
 #export PATH="/usr/local/sbin:$PATH"
 export PATH=$PATH:"/home/tom/Scripts/Walk-and-Pull"
 export EDITOR=/usr/bin/vim
-export RCLONE_CONFIG_PASS=%jMrsNt2ndtJ^d
-#export RCLONE_CONFIG_PASS="pass rclone-config"
-export RCLONE_PASSWORD_COMMAND="pass rclone-config"
+export RCLONE_PASSWORD_COMMAND="pass rclone-config"    #* See https://rclone.org/docs/#configuration-encryption
 
 #* History
 [ -z "$HISTFILE" ] && HISTFILE="$HOME/.zsh_history"
