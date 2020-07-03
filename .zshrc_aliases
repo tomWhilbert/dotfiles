@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 #!/bin/bash  
 #* ^ not a bash script #! enables syntax highlighting in vscode
 
@@ -10,58 +9,8 @@ alias llf='find . -maxdepth 1 -type f'
 alias py='python3'
 alias rmf='rm -rf'
 alias srz='source .zshrc'
-=======
-#!/bin/bash
-#* SheBang here enables syntax highlighting in vscode
-#* alias and function source file
-
-alias ll='ls -alh'
-alias buu='brew update && brew upgrade && brew cask upgrade'
-alias rmf='rm -rf'
-alias srz='exec zsh'
->>>>>>> 268f63a37eeda80e4cfd3c5a7ee984033e656d2e
 alias ls='lsd'
 alias hs='history 1'
-<<<<<<< HEAD
-alias zbk='~/.dotfiles/Scripts/configBackup.sh'
-alias vm='VBoxManage startvm webdev --type headless && ssh lamp'
-alias shut='sudo shutdown -h now'
-alias reboo='sudo shutdown -r now'
-alias png='ping -c 3'
-alias -g G='| grep -i'
-alias -s {yml,yaml,conf,md,txt}=code
-alias grep='grep --color'
-alias nos='code nos.code-workspace'
-
-#* Arch/Linux specific aliases
-alias sbz='systemctl start sabnzbd@tom.service'
-alias tr='trizen'
-alias tru='trizen -Syu'
-alias sup='sudo pacman'
-alias reflect='sudo reflector --verbose --latest 5 --sort rate --save /etc/pacman.d/mirrorlist'
-alias sudo='sudo ' #* allows sudo to accept an alias as an argument
-alias sc='systemctl'
-alias rp='realpath . | wl-copy' #*Wayland specific - X uses xclip
-alias lastpac="expac --timefmt='%Y-%m-%d %T' '%l\t%n' | sort | tail -n"$1""
-alias chk='checkupdates'
-alias wgu='nmcli connection up mullvad-us128'
-alias wgd='nmcli connection down mullvad-us128'
-alias vip='~/Scripts/Get-IP/Get-IP-Linux.sh'
-alias sucode='sudo code --user-data-dir="~/.vscode-root"'
-alias wp='$HOME/Scripts/linux/Walk-and-Pull/./wp.sh'
-
-
-#* rclone aliases
-alias rcs='rclone sync OneDrive:ABTech-IT /$HOME/OneDrive-RClone/ -P'
-alias rclr='rclone listremotes'
-alias rc='rclone'
-alias rcod='rclone copy --max-age 24h --no-traverse /$HOME/OneDrive-RClone/ od: -P'  
-alias rcgds='rclone copy --max-age 24h --no-traverse /$HOME/GoogleDrive/Secure gdS: -P'
-alias rcld='rclone lsd'
-alias rclsf='rclone lsf --max-depth'
-
-#* Git aliases 
-=======
 alias shut='sudo shutdown -h now'
 alias rp='realpath . | pbcopy'
 alias png='ping -c 3'
@@ -79,19 +28,18 @@ alias zrf='code $HOME/.zshrc_functions'
 alias grep='grep --color'
 alias zed='code $HOME/zsh.code-workspace'
 alias nos='code $HOME/NOS-220.code-workspace'
-alias Nos='cd /Users/thomaswhilbert/Nextcloud/NOS-220-Linux-II'
+alias Nos='cd $HOME/Nextcloud/NOS-220-Linux-II'
 
 
 #* RClone commands 
 alias rclr='rclone listremotes'
 alias rc='rclone'
-alias rcods='rclone copy --max-age 24h --no-traverse /Users/thomaswhilbert/OneDrive odS: -P'  
-alias rcgds='rc copy --max-age 24h --no-traverse /Users/thomaswhilbert/GoogleDrive/Secure gdS: -P'
-alias rcmgds='rc mount --vfs-cache-mode full gdS: /Users/thomaswhilbert/mnt/gDriveSecure'
-#alias rclone sync --fast-list gdS: /Users/thomaswhilbert/GoogleDrive/Secure -P
+alias rcods='rclone copy --max-age 24h --no-traverse $HOME/OneDrive odS: -P'  
+alias rcgds='rc copy --max-age 24h --no-traverse $HOME/GoogleDrive/Secure gdS: -P'
+alias rcmgds='rc mount --vfs-cache-mode full gdS: $HOME/mnt/gDriveSecure'
+#alias rclone sync --fast-list gdS: $HOME/GoogleDrive/Secure -P
 
 #* Git aliases ###
->>>>>>> 268f63a37eeda80e4cfd3c5a7ee984033e656d2e
 alias g='git'
 alias ga='git add'
 alias gaa='git add --all'
@@ -102,7 +50,3 @@ alias gc='git commit -m'
 alias gpo='git push -u origin'
 alias gp='git pull'
 
-<<<<<<< HEAD
-
-=======
->>>>>>> 268f63a37eeda80e4cfd3c5a7ee984033e656d2e
