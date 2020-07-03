@@ -36,6 +36,8 @@ alias wgu='nmcli connection up mullvad-us128'
 alias wgd='nmcli connection down mullvad-us128'
 alias vip='~/Scripts/Get-IP/Get-IP-Linux.sh'
 alias sucode='sudo code --user-data-dir="~/.vscode-root"'
+alias wp='$HOME/Scripts/linux/Walk-and-Pull/./wp.sh'
+
 
 #* rclone aliases
 alias rcs='rclone sync OneDrive:ABTech-IT /$HOME/OneDrive-RClone/ -P'
