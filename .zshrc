@@ -6,15 +6,9 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
-<<<<<<< HEAD
 export PATH=$PATH:"$HOME/Scripts/linux/"
 export EDITOR=/usr/bin/vim
 export RCLONE_PASSWORD_COMMAND="pass rclone-config"    #* See https://rclone.org/docs/#configuration-encryption
-=======
-export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/sbin:$HOME/Scripts/Get-IP:$HOME/Scripts/Walk-and-Pull:$HOME/Scripts/macOS"
-
-export RCLONE_PASSWORD_COMMAND="security find-generic-password -a $USER -s rclone -w"
->>>>>>> 268f63a37eeda80e4cfd3c5a7ee984033e656d2e
 
 #* History
 [ -z "$HISTFILE" ] && HISTFILE="$HOME/.zsh_history"
@@ -47,7 +41,7 @@ zstyle ':completion::complete:*' cache-path
 zstyle ':completion:*' list-colors ''
 zstyle ':completion:*:*:kill:*:processes' list-colors '=(#b) #([0-9]#) ([0-9a-z-]#)*=01;34=0=01'
 
-#* Add git completions
+#* added git completions
 
 zstyle ':completion:*:*:git:*' script ~/.zsh/git-completion.bash
 fpath=(~/.zsh $fpath)
@@ -57,28 +51,17 @@ autoload -Uz compinit && compinit
 #* source OMZ
 ZSH=~/.oh-my-zsh
 #ZSH_CUSTOM=$ZSH/custom
-<<<<<<< HEAD
 source $ZSH/plugins/z/z.plugin.zsh
 source $ZSH/lib/directories.zsh  # Adds the 'd' show recent directories
 #source $ZSH/plugins/systemd/systemd.plugin.zsh
 
-=======
-source $ZSH/plugins/z/z.plugin.zsh    #* Frecency plugin
-source $ZSH/lib/directories.zsh       #* Adds the 'd' show recent directories
->>>>>>> 268f63a37eeda80e4cfd3c5a7ee984033e656d2e
 # fpath+=$ZSH/plugins/ dir path not needed....
 # git -C $ZSH pull  ***Uncomment and source .zshrc to upate OMZ
 
-
 setopt prompt_subst
-
 source ~/.zshrc_aliases
 source ~/.zshrc_functions
 
-<<<<<<< HEAD
-=======
-source ~/.plugins/zsh-autosuggestions/zsh-autosuggestions.plugin.zsh
->>>>>>> 268f63a37eeda80e4cfd3c5a7ee984033e656d2e
 source ~/.plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.plugin.zsh
 source ~/.plugins/zsh-history-substring-search/zsh-history-substring-search.plugin.zsh
 source ~/.plugins/zsh-completions/zsh-completions.plugin.zsh
@@ -88,10 +71,8 @@ source ~/.powerlevel10k/powerlevel10k.zsh-theme
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 #* zsh history substring search bindkeys
-bindkey '`' autosuggest-accept
 bindkey '^[[A' history-substring-search-up
 bindkey '^[[B' history-substring-search-down
-<<<<<<< HEAD
 bindkey -e
 bindkey '^R' history-incremental-search-backward
 
@@ -108,8 +89,3 @@ if [ -n "$DESKTOP_SESSION" ];then
     eval $(gnome-keyring-daemon --start)
     export SSH_AUTH_SOCK
 fi
-=======
-
-test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
-
->>>>>>> 268f63a37eeda80e4cfd3c5a7ee984033e656d2e

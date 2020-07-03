@@ -4,15 +4,7 @@
 
    	lazyg ()
 		{
-<<<<<<< HEAD
 		git add .
-=======
-		eval 'ssh-agent -s'
-		ssh-add -D
-		ssh-add $HOME/.SSH/github
-
-		git add --all
->>>>>>> 268f63a37eeda80e4cfd3c5a7ee984033e656d2e
 		git commit -m "$1"
 		git push -u origin "$2"
 		}
@@ -22,21 +14,6 @@
 		cd "$1"
 		}
 
-<<<<<<< HEAD
-=======
-	
-#* diskutil erase function
-	### $1 is the volume name
-	### $2 is the voluem path
-	de () {
-		diskutil eraseDisk HFS+ "$1" /dev/disk"$2"
-		}
-
-	dku () {
-		diskutil unmountDisk /dev/disk"$1"
-	}
-
->>>>>>> 268f63a37eeda80e4cfd3c5a7ee984033e656d2e
 #* cheat.sh command dictionary ###
 	ch () {
 		curl cht.sh/"$1"
@@ -50,13 +27,8 @@
 	ghssh () {
 		eval 'ssh-agent -s'
 		ssh-add -D
-<<<<<<< HEAD
 	        cd $HOME/.ssh/
 		ssh-add gnArch
-=======
-		cd $HOME/.SSH/
-		ssh-add github
->>>>>>> 268f63a37eeda80e4cfd3c5a7ee984033e656d2e
 		cd $OLDPWD
 	}
 
@@ -67,18 +39,5 @@
 
 	#* Realpath a file
 	rpf () {
-<<<<<<< HEAD
 		realpath "$1" | wl-copy -n
 	}
-=======
-		realpath "$1" | pbcopy
-	}
-
-	#* RClone Functions
-	rcld () {
-		rclone lsd "$1"
-	}
-	rclf () {
-		rclone lsf "$1"
-	}
->>>>>>> 268f63a37eeda80e4cfd3c5a7ee984033e656d2e
