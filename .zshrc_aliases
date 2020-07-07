@@ -1,56 +1,45 @@
-#!/bin/bash  
-#* ^ not a bash script #! enables syntax highlighting in vscode
-
-#* Alias and function source file
+#!/bin/bash
+#* SheBang here enables syntax highlighting in vscode
+#* alias and function source file
 
 alias ll='ls -alh'
-alias lld='ls -l | grep '^d''
-alias llf='find . -maxdepth 1 -type f'
-alias py='python3'
+alias buu='brew update && brew upgrade && brew cask upgrade'
 alias rmf='rm -rf'
-alias srz='source .zshrc'
+alias srz='exec zsh'
 alias ls='lsd'
+alias dkl='diskutil list'
+alias ds='diskutil'
 alias hs='history 1'
-alias zbk='~/.dotfiles/Scripts/configBackup.sh'
-alias vm='VBoxManage startvm webdev --type headless && ssh lamp'
 alias shut='sudo shutdown -h now'
-alias reboo='sudo shutdown -r now'
+alias rp='realpath . | pbcopy'
 alias png='ping -c 3'
+alias admin='dseditgroup -o checkmember -m $USER admin'
+alias lsh="ls -a | grep '^\.'"
+alias lsdir="ls -lah | grep '^d'"
+alias dig='dig +nocmd +noall +answer'
+alias ip='Get-IP-macOS.sh'
+alias stoc='stat -f %Mp%Lp'
 alias -g G='| grep -i'
 alias -s {yml,yaml,conf,md,txt}=code
-alias grep='grep --color'
-alias nos='code nos.code-workspace'
+alias zcode='code /$HOME/.dotfiles/zsh.code-workspace'
 alias zrc='code $HOME/.zshrc'
 alias zra='code $HOME/.zshrc_aliases'
 alias zrf='code $HOME/.zshrc_functions'
-alias rp='realpath . | xclip'
-
-#* Arch/Linux specific aliases
-alias sbz='systemctl start sabnzbd@tom.service'
-alias tr='trizen'
-alias tru='trizen -Syu'
-alias sup='sudo pacman'
-alias reflect='sudo reflector --verbose --latest 5 --sort rate --save /etc/pacman.d/mirrorlist'
-alias sudo='sudo ' #* allows sudo to accept an alias as an argument
-alias sc='systemctl'
-alias rp='realpath . | wl-copy' #*Wayland specific - X uses xclip
-alias lastpac="expac --timefmt='%Y-%m-%d %T' '%l\t%n' | sort | tail -n"$1""
-alias chk='checkupdates'
-alias wgu='nmcli connection up mullvad-us128'
-alias wgd='nmcli connection down mullvad-us128'
-alias vip='~/Scripts/Get-IP/Get-IP-Linux.sh'
-alias sucode='sudo code --user-data-dir="~/.vscode-root"'
-alias wp='$HOME/Scripts/linux/Walk-and-Pull/./wp.sh'
+alias grep='grep --color'
+alias zed='code $HOME/zsh.code-workspace'
+alias nos='code $HOME/.dotfiles/NOS-220.code-workspace'
+alias Nos='cd /Users/thomaswhilbert/Nextcloud/NOS-220-Linux-II'
 
 
-#* rclone aliases
+#* RClone commands 
 alias rclr='rclone listremotes'
 alias rc='rclone'
-alias rcgds='rclone copy --max-age 24h --no-traverse /$HOME/GoogleDrive/Secure gdS: -P'
-alias rcld='rclone lsd'
-alias rclsf='rclone lsf --max-depth'
+alias rcods='rclone copy --max-age 24h --no-traverse /Users/thomaswhilbert/OneDrive odS: -P'  
+alias rcgds='rc copy --max-age 24h --no-traverse /Users/thomaswhilbert/GoogleDrive/Secure gdS: -P'
+alias rcmgds='rc mount --vfs-cache-mode full gdS: /Users/thomaswhilbert/mnt/gDriveSecure'
+#alias rclone sync --fast-list gdS: /Users/thomaswhilbert/GoogleDrive/Secure -P
 
-#* Git aliases 
+#* Git aliases ###
 alias g='git'
 alias ga='git add'
 alias gaa='git add --all'
@@ -60,5 +49,4 @@ alias gst='git status'
 alias gc='git commit -m'
 alias gpo='git push -u origin'
 alias gp='git pull'
-
 
