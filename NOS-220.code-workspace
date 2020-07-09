@@ -1,8 +1,7 @@
 {
 	"folders": [
 		{
-			"path": "Nextcloud/NOS-220-Linux-II"
+			"path": "../Nextcloud/NOS-220-Linux-II"
 		}
-	],
-	"settings": {}
+	]
 }
