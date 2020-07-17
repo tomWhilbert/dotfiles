@@ -24,6 +24,8 @@ alias -s {yml,yaml,conf,md,txt}=code
 alias zrc='code $HOME/.zshrc'
 alias zra='code $HOME/.zshrc_aliases'
 alias zrf='code $HOME/.zshrc_functions'
+alias wp='$HOME/Scripts/macOS/Walk-and-Pull'
+
 
 #* RClone commands 
 alias rclr='rclone listremotes'
