@@ -34,14 +34,14 @@ alias reflect='sudo reflector --verbose --latest 5 --sort rate --save /etc/pacma
 alias sudo='sudo ' #* allows sudo to accept an alias as an argument
 alias sc='systemctl'
 alias rp='realpath . | wl-copy' #*Wayland specific - X uses xclip
-alias lastpac="expac --timefmt='%Y-%m-%d %T' '%l\t%n' | sort | tail -n"$1""
+alias lspac="expac --timefmt='%Y-%m-%d %T' '%l\t%n' | sort | tail -n"
 alias chk='checkupdates'
 alias wgu='nmcli connection up mullvad-us128'
 alias wgd='nmcli connection down mullvad-us128'
 alias vip='~/Scripts/Get-IP/Get-IP-Linux.sh'
 alias sucode='sudo code --user-data-dir="~/.vscode-root"'
 alias wp='$HOME/Scripts/linux/Walk-and-Pull/./wp.sh'
-alias 
+alias vmon='vim-cmd vmsvc/power.on'  #* for info only - works on esxi cli
 
 
 #* rclone aliases
