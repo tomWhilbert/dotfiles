@@ -6,7 +6,7 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
-export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/sbin:$HOME/Scripts:$HOME/Scripts/Get-IP:$HOME/Scripts/Walk-and-Pull:"
+export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/sbin:$HOME/Scripts/macOS/Get-IP:$HOME/Scripts/macOS/Walk-and-Pull:"
 
 export RCLONE_PASSWORD_COMMAND="security find-generic-password -a $USER -s rclone -w"
 
