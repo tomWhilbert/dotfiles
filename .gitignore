@@ -1,3 +1,8 @@
 .DS_Store
+<<<<<<< HEAD
 launchd-config-files/stderr.log
 launchd-config-files/stdout.log
+=======
+launchd-config-files/stdout.log
+launchd-config-files/stderr.log
+>>>>>>> 7aa89148ea833f17c881c68417018e7fb4a35bde
