@@ -1,1 +1,3 @@
 .DS_Store
+launchd-config-files/stderr.log
+launchd-config-files/stdout.log
