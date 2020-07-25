@@ -65,3 +65,9 @@
 	rclf () {
 		rclone lsf "$1"
 	}
+
+	#* Nmap get all ips on local network
+	ips () {
+		nmap -sn 192.168.0.0/24 | awk '/Nmap scan/{gsub(/[()]/,"",$NF); print $NF > "nmap_scanned_ips"}'
+		cat nmap_scanned_ips
+	}

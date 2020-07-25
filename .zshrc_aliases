@@ -50,3 +50,4 @@ alias gc='git commit -m'
 alias gpo='git push -u origin'
 alias gp='git pull'
 
+
