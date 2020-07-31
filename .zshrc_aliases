@@ -19,7 +19,7 @@ alias png='ping -c 3'
 alias -g G='| grep -i'
 alias -s {yml,yaml,conf,md,txt}=code
 alias grep='grep --color'
-alias nos='code nos.code-workspace'
+alias nos='code $HOME/nos.code-workspace'
 alias zrc='code $HOME/.zshrc'
 alias zra='code $HOME/.zshrc_aliases'
 alias zrf='code $HOME/.zshrc_functions'
@@ -42,6 +42,7 @@ alias vip='~/Scripts/Get-IP/Get-IP-Linux.sh'
 alias sucode='sudo code --user-data-dir="~/.vscode-root"'
 alias wp='$HOME/Scripts/linux/Walk-and-Pull/./wp.sh'
 alias vmon='vim-cmd vmsvc/power.on'  #* for info only - works on esxi cli
+alias runn='systemctl list-units -t service --state running'
 
 
 #* rclone aliases
@@ -61,5 +62,6 @@ alias gst='git status'
 alias gc='git commit -m'
 alias gpo='git push -u origin'
 alias gp='git pull'
+
 
 

@@ -1,10 +1,13 @@
 #!/bin/bash
 #* Zsh Function File
 #* Functions ###
-
-   	lazyg ()
+lazyg ()
 		{
-		git add .
+		eval 'ssh-agent -s'
+		ssh-add -D
+		ssh-add $HOME/.ssh/github
+
+		git add --all
 		git commit -m "$1"
 		git push -u origin "$2"
 		}
@@ -20,14 +23,14 @@
 	}
 
 	bak () {
-		cp "$1" "$1".bak
+		sudo cp "$1" "$1".bak
 	}
    
 #* SSH GitHub authentication fix
 	ghssh () {
 		eval 'ssh-agent -s'
 		ssh-add -D
-	        cd $HOME/.ssh/
+	    cd $HOME/.ssh/
 		ssh-add gnArch
 		cd $OLDPWD
 	}
@@ -39,5 +42,29 @@
 
 	#* Realpath a file
 	rpf () {
-		realpath "$1" | wl-copy -n
+		realpath "$1" | xclip
 	}
+
+	#* RClone Functions
+	rcld () {
+		rclone lsd "$1"
+	}
+	rclf () {
+		rclone lsf "$1"
+	}
+
+	#* Nmap get all ips on local network
+	ips () {
+		nmap -sn 192.168.0.0/24 | awk '/Nmap scan/{gsub(/[()]/,"",$NF); print $NF > "nmap_scanned_ips"}'
+		cat nmap_scanned_ips
+
+#* Add color to less
+man() {
+    LESS_TERMCAP_md=$'\e[01;31m' \
+    LESS_TERMCAP_me=$'\e[0m' \
+    LESS_TERMCAP_se=$'\e[0m' \
+    LESS_TERMCAP_so=$'\e[01;44;33m' \
+    LESS_TERMCAP_ue=$'\e[0m' \
+    LESS_TERMCAP_us=$'\e[01;32m' \
+    command man "$@"
+}
