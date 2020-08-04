@@ -5,19 +5,13 @@
 
 alias ll='ls -alh'
 alias lld='ls -l | grep '^d''
-alias llf='find . -maxdepth 1 -type f'
-alias py='python3'
 alias rmf='rm -rf'
 alias srz='source .zshrc'
 alias ls='lsd'
 alias hs='history 1'
-alias zbk='~/.dotfiles/Scripts/configBackup.sh'
-alias vm='VBoxManage startvm webdev --type headless && ssh lamp'
 alias shut='sudo shutdown -h now'
-alias reboo='sudo shutdown -r now'
+alias reboot='sudo shutdown -r now'
 alias png='ping -c 3'
-alias -g G='| grep -i'
-alias -s {yml,yaml,conf,md,txt}=code
 alias grep='grep --color'
 alias nos='code $HOME/nos.code-workspace'
 alias zrc='code $HOME/.zshrc'
@@ -27,13 +21,10 @@ alias rp='realpath . | xclip'
 
 #* Arch/Linux specific aliases
 alias sbz='systemctl start sabnzbd@tom.service'
-alias tr='trizen'
-alias tru='trizen -Syu'
 alias sup='sudo pacman'
 alias reflect='sudo reflector --verbose --latest 5 --sort rate --save /etc/pacman.d/mirrorlist'
 alias sudo='sudo ' #* allows sudo to accept an alias as an argument
 alias sc='systemctl'
-alias rp='realpath . | wl-copy' #*Wayland specific - X uses xclip
 alias lspac="expac --timefmt='%Y-%m-%d %T' '%l\t%n' | sort | tail -n"
 alias chk='checkupdates'
 alias wgu='nmcli connection up mullvad-us128'

@@ -46,9 +46,9 @@ lazyg ()
 	}
 
 	#* RClone Functions
-	rcld () {
-		rclone lsd "$1"
-	}
+	# rcld () {
+	# 	rclone lsd "$1"
+	# }
 	rclf () {
 		rclone lsf "$1"
 	}
@@ -57,6 +57,7 @@ lazyg ()
 	ips () {
 		nmap -sn 192.168.0.0/24 | awk '/Nmap scan/{gsub(/[()]/,"",$NF); print $NF > "nmap_scanned_ips"}'
 		cat nmap_scanned_ips
+	}
 
 #* Add color to less
 man() {
