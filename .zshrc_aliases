@@ -34,8 +34,8 @@ alias Nos='cd /Users/thomaswhilbert/Nextcloud/NOS-220-Linux-II'
 #* RClone commands 
 alias rclr='rclone listremotes'
 alias rc='rclone'
-alias rcods='rclone copy --max-age 24h --no-traverse /Users/thomaswhilbert/OneDrive odS: -P'  
-alias rcgds='rc copy --max-age 24h --no-traverse /Users/thomaswhilbert/GoogleDrive/Secure gdS: -P'
+# alias rcods='rclone copy --max-age 24h --no-traverse /Users/thomaswhilbert/OneDrive odS: -P'  #*Moved to a function
+# alias rcgds='rc copy --max-age 24h --no-traverse /Users/thomaswhilbert/GoogleDrive/Secure gdS: -P' #*Moved to a function
 alias rcmgds='rc mount --vfs-cache-mode full gdS: /Users/thomaswhilbert/mnt/gDriveSecure'
 #alias rclone sync --fast-list gdS: /Users/thomaswhilbert/GoogleDrive/Secure -P
 

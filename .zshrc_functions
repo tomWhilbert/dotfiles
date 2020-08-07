@@ -82,3 +82,13 @@
     LESS_TERMCAP_us=$'\e[01;32m' \
     command man "$@"
 }
+
+#* rclone 
+
+rcco () {
+	rclone copy --max-age "$1" --no-traverse /Users/thomaswhilbert/OneDrive odS: -P
+}
+
+rccg () {
+rc copy --max-age "$1" --no-traverse /Users/thomaswhilbert/GoogleDrive/Secure gdS: -P
+}
