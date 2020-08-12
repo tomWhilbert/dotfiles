@@ -4,10 +4,6 @@
 
    	lazyg ()
 		{
-		eval 'ssh-agent -s'
-		ssh-add -D
-		ssh-add $HOME/.SSH/github
-
 		git add --all
 		git commit -m "$1"
 		git push -u origin "$2"
@@ -18,7 +14,6 @@
 		cd "$1"
 		}
 
-	
 #* diskutil erase function
 	### $1 is the volume name
 	### $2 is the voluem path
@@ -44,7 +39,7 @@
 		eval 'ssh-agent -s'
 		ssh-add -D
 		cd $HOME/.SSH/
-		ssh-add github
+		ssh-add gitHubVader
 		cd $OLDPWD
 	}
 
@@ -56,12 +51,4 @@
 	#* Realpath a file
 	rpf () {
 		realpath "$1" | pbcopy
-	}
-
-	#* RClone Functions
-	rcld () {
-		rclone lsd "$1"
-	}
-	rclf () {
-		rclone lsf "$1"
 	}

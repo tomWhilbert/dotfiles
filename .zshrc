@@ -6,15 +6,9 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
-<<<<<<< HEAD
-export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/sbin:$HOME/Scripts/macOS/Get-IP:$HOME/Scripts/macOS/Walk-and-Pull:"
-=======
-export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/sbin:$HOME/Scripts/macOS/Get-IP:$HOME/Scripts/macOS/Walk-and-Pull:$HOME/Scripts/macOS"
->>>>>>> 7aa89148ea833f17c881c68417018e7fb4a35bde
+export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/sbin:$HOME/SCRIPTS:$HOME/Scripts/Get-IP:$HOME/Scripts/Walk-and-Pull:"
 
 export RCLONE_PASSWORD_COMMAND="security find-generic-password -a $USER -s rclone -w"
-
-export DOTFILES=$HOME/.dotfiles
 
 #* History
 [ -z "$HISTFILE" ] && HISTFILE="$HOME/.zsh_history"
@@ -68,8 +62,7 @@ setopt prompt_subst
 source ~/.zshrc_aliases
 source ~/.zshrc_functions
 
-source ~/.plugins/zsh-autosuggestions/zsh-autosuggestions.plugin.zsh
-source ~/.plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.plugin.zsh
+source ~/.plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source ~/.plugins/zsh-history-substring-search/zsh-history-substring-search.plugin.zsh
 source ~/.plugins/zsh-completions/zsh-completions.plugin.zsh
 source ~/.plugins/zsh-autosuggestions/zsh-autosuggestions.plugin.zsh
@@ -79,7 +72,6 @@ source ~/.powerlevel10k/powerlevel10k.zsh-theme
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 #* zsh history substring search bindkeys
-bindkey '`' autosuggest-accept
 bindkey '^[[A' history-substring-search-up
 bindkey '^[[B' history-substring-search-down
 bindkey '`' autosuggest-accept
