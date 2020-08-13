@@ -6,13 +6,15 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
+<<<<<<< HEAD
 export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/sbin:$HOME/Scripts:$HOME/Scripts/Get-IP:$HOME/Scripts/Walk-and-Pull:"
 
 #* HOME/Scripts/Get-IP:$HOME/Scripts/Walk-and-Pull: remove and test
+=======
+export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/sbin:$HOME/SCRIPTS:$HOME/Scripts/Get-IP:$HOME/Scripts/Walk-and-Pull:"
+>>>>>>> 3f87bb1f9c3aa7d767b798099b36ab7867293480
 
 export RCLONE_PASSWORD_COMMAND="security find-generic-password -a $USER -s rclone -w"
-
-export DOTFILES=$HOME/.dotfiles
 
 #* History
 [ -z "$HISTFILE" ] && HISTFILE="$HOME/.zsh_history"
@@ -66,19 +68,19 @@ setopt prompt_subst
 source ~/.zshrc_aliases
 source ~/.zshrc_functions
 
-source ~/.plugins/zsh-autosuggestions/zsh-autosuggestions.plugin.zsh
-source ~/.plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.plugin.zsh
+source ~/.plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source ~/.plugins/zsh-history-substring-search/zsh-history-substring-search.plugin.zsh
 source ~/.plugins/zsh-completions/zsh-completions.plugin.zsh
+source ~/.plugins/zsh-autosuggestions/zsh-autosuggestions.plugin.zsh
 source ~/.powerlevel10k/powerlevel10k.zsh-theme
 
 #* To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 #* zsh history substring search bindkeys
-bindkey '`' autosuggest-accept
 bindkey '^[[A' history-substring-search-up
 bindkey '^[[B' history-substring-search-down
+bindkey '`' autosuggest-accept
 
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 

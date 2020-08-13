@@ -21,21 +21,23 @@ alias ip='Get-IP-macOS.sh'
 alias stoc='stat -f %Mp%Lp'
 alias -g G='| grep -i'
 alias -s {yml,yaml,conf,md,txt}=code
-alias zcode='code /$HOME/.dotfiles/zsh.code-workspace'
 alias zrc='code $HOME/.zshrc'
 alias zra='code $HOME/.zshrc_aliases'
 alias zrf='code $HOME/.zshrc_functions'
-alias grep='grep --color'
-alias zed='code $HOME/zsh.code-workspace'
-alias nos='code $HOME/.dotfiles/NOS-220.code-workspace'
-alias Nos='cd /Users/thomaswhilbert/Nextcloud/NOS-220-Linux-II'
+alias wp='$HOME/Scripts/macOS/Walk-and-Pull'
+alias op='lsof -PiTCP -sTCP:LISTEN'
 
 
 #* RClone commands 
 alias rclr='rclone listremotes'
 alias rc='rclone'
+<<<<<<< HEAD
 # alias rcods='rclone copy --max-age 24h --no-traverse /Users/thomaswhilbert/OneDrive odS: -P'  #*Moved to a function
 # alias rcgds='rc copy --max-age 24h --no-traverse /Users/thomaswhilbert/GoogleDrive/Secure gdS: -P' #*Moved to a function
+=======
+alias rcod='rclone copy --max-age 24h --no-traverse /Users/thomaswhilbert/One-Drive od: -P'  
+alias rcgds='rc copy --max-age 24h --no-traverse /Users/thomaswhilbert/GoogleDrive/Secure gdS: -P'
+>>>>>>> 3f87bb1f9c3aa7d767b798099b36ab7867293480
 alias rcmgds='rc mount --vfs-cache-mode full gdS: /Users/thomaswhilbert/mnt/gDriveSecure'
 #alias rclone sync --fast-list gdS: /Users/thomaswhilbert/GoogleDrive/Secure -P
 
@@ -49,5 +51,4 @@ alias gst='git status'
 alias gc='git commit -m'
 alias gpo='git push -u origin'
 alias gp='git pull'
-
 
