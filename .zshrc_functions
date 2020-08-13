@@ -4,6 +4,10 @@
 
    	lazyg ()
 		{
+		eval 'ssh-agent -s'
+		ssh-add -D
+		ssh-add $HOME/.SSH/github
+
 		git add --all
 		git commit -m "$1"
 		git push -u origin "$2"
@@ -14,6 +18,7 @@
 		cd "$1"
 		}
 
+	
 #* diskutil erase function
 	### $1 is the volume name
 	### $2 is the voluem path
@@ -39,7 +44,7 @@
 		eval 'ssh-agent -s'
 		ssh-add -D
 		cd $HOME/.SSH/
-		ssh-add gitHubVader
+		ssh-add github
 		cd $OLDPWD
 	}
 
@@ -51,7 +56,6 @@
 	#* Realpath a file
 	rpf () {
 		realpath "$1" | pbcopy
-<<<<<<< HEAD
 	}
 
 	#* RClone Functions
@@ -88,6 +92,3 @@ rcco () {
 rccg () {
 rc copy --max-age "$1" --no-traverse /Users/thomaswhilbert/GoogleDrive/Secure gdS: -P
 }
-=======
-	}
->>>>>>> 3f87bb1f9c3aa7d767b798099b36ab7867293480
