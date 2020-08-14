@@ -29,9 +29,9 @@ alias lspac="expac --timefmt='%Y-%m-%d %T' '%l\t%n' | sort | tail -n"
 alias chk='checkupdates'
 alias wgu='nmcli connection up mullvad-us128'
 alias wgd='nmcli connection down mullvad-us128'
-alias vip='~/Scripts/Get-IP/Get-IP-Linux.sh'
+#alias gip='$HOME/bin/gip.sh'
 alias sucode='sudo code --user-data-dir="~/.vscode-root"'
-alias wp='$HOME/Scripts/linux/Walk-and-Pull/./wp.sh'
+#alias wp='$HOME/bin/walk-and-pull/./wp.sh'
 alias vmon='vim-cmd vmsvc/power.on'  #* for info only - works on esxi cli
 alias runn='systemctl list-units -t service --state running'
 

@@ -5,7 +5,7 @@ lazyg ()
 		{
 		eval 'ssh-agent -s'
 		ssh-add -D
-		ssh-add $HOME/.ssh/github
+		ssh-add $HOME/.ssh/gnArch
 
 		git add --all
 		git commit -m "$1"
