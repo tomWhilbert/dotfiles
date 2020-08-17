@@ -72,6 +72,7 @@ source ~/.powerlevel10k/powerlevel10k.zsh-theme
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 #* zsh history substring search bindkeys
+bindkey '`' autosuggest-accept
 bindkey '^[[A' history-substring-search-up
 bindkey '^[[B' history-substring-search-down
 bindkey -e
