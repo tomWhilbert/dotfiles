@@ -11,6 +11,7 @@ export PATH=$PATH:$HOME/bin/
 export EDITOR=/usr/bin/vim
 export RCLONE_PASSWORD_COMMAND="pass rclone"    #* See https://rclone.org/docs/#configuration-encryption
 
+
 #* History
 [ -z "$HISTFILE" ] && HISTFILE="$HOME/.zsh_history"
 HISTSIZE=50000
@@ -22,7 +23,7 @@ setopt hist_ignore_space
 setopt inc_append_history
 setopt share_history
 
-#* Changing directories
+#* Changing directoriesuse pass to provide ssh key passphrase
 setopt auto_cd
 setopt auto_pushd
 unsetopt pushd_ignore_dups
@@ -72,7 +73,6 @@ source ~/.powerlevel10k/powerlevel10k.zsh-theme
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 #* zsh history substring search bindkeys
-bindkey '`' autosuggest-accept
 bindkey '^[[A' history-substring-search-up
 bindkey '^[[B' history-substring-search-down
 bindkey -e
@@ -80,7 +80,7 @@ bindkey '^R' history-incremental-search-backward
 
 #* Test out keybindings see: https://wiki.archlinux.org/index.php/Zsh#Key_bindings
 
-#* Set SSH Env Var
+#* Set SSH Env Var and passphrases
 eval $(ssh-agent)
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
