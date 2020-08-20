@@ -11,7 +11,6 @@ export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/sbin:$HOME/
 #* HOME/Scripts/Get-IP:$HOME/Scripts/Walk-and-Pull: remove and test
 
 export RCLONE_PASSWORD_COMMAND="security find-generic-password -a $USER -s rclone -w"
-
 export DOTFILES=$HOME/.dotfiles
 
 #* History
