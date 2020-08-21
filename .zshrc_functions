@@ -4,9 +4,9 @@
 
    	lazyg ()
 		{
-		# eval 'ssh-agent -s'
-		# ssh-add -D
-		# ssh-add $HOME/.SSH/github
+		eval 'ssh-agent -s'
+		ssh-add -D
+		ssh-add -K /Users/thomaswhilbert/.ssh/github
 		git add --all
 		git commit -m "$1"
 		git push -u origin "$2"
@@ -16,7 +16,6 @@
 		mkdir "$1"
 		cd "$1"
 		}
-
 	
 #* diskutil erase function
 	### $1 is the volume name
