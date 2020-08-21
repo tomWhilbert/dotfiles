@@ -7,7 +7,6 @@
 		# eval 'ssh-agent -s'
 		# ssh-add -D
 		# ssh-add $HOME/.SSH/github
-
 		git add --all
 		git commit -m "$1"
 		git push -u origin "$2"

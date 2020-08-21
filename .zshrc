@@ -7,11 +7,9 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
 fi
 
 export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/sbin:$HOME/Scripts:$HOME/Scripts/Get-IP:$HOME/Scripts/Walk-and-Pull:"
-
-#* HOME/Scripts/Get-IP:$HOME/Scripts/Walk-and-Pull: remove and test
-
 export RCLONE_PASSWORD_COMMAND="security find-generic-password -a $USER -s rclone -w"
 export DOTFILES=$HOME/.dotfiles
+
 
 #* History
 [ -z "$HISTFILE" ] && HISTFILE="$HOME/.zsh_history"
@@ -58,7 +56,6 @@ source $ZSH/plugins/z/z.plugin.zsh    #* Frecency plugin
 source $ZSH/lib/directories.zsh       #* Adds the 'd' show recent directories
 # fpath+=$ZSH/plugins/ dir path not needed....
 # git -C $ZSH pull  ***Uncomment and source .zshrc to upate OMZ
-
 
 setopt prompt_subst
 
