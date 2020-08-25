@@ -67,6 +67,7 @@ source ~/.zshrc_functions
 source ~/.plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.plugin.zsh
 source ~/.plugins/zsh-history-substring-search/zsh-history-substring-search.plugin.zsh
 source ~/.plugins/zsh-completions/zsh-completions.plugin.zsh
+source ~/.plugins/zsh-autosuggestions/zsh-autosuggestions.plugin.zsh
 source ~/.powerlevel10k/powerlevel10k.zsh-theme
 
 #* To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
