@@ -51,3 +51,4 @@ alias gpo='git push -u origin'
 alias gp='git pull'
 
 
+alias vbls='VBoxManage list vms'
