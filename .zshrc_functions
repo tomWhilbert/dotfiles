@@ -41,7 +41,7 @@
 	ghssh () {
 		eval 'ssh-agent -s'
 		ssh-add -D
-		cd $HOME/.SSH/
+		cd $HOME/.ssh/
 		ssh-add github
 		cd $OLDPWD
 	}
@@ -89,4 +89,12 @@ rcco () {
 
 rccg () {
 rc copy --max-age "$1" --no-traverse /Users/thomaswhilbert/GoogleDrive/Secure gdS: -P
+}
+
+#* Virtual Box
+
+vmh () {
+	 VBoxManage list vms
+	 read -r vm
+	 VBoxHeadless -s "$vm" &
 }
