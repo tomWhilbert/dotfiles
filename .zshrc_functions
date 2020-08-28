@@ -94,8 +94,18 @@ rc copy --max-age "$1" --no-traverse /Users/thomaswhilbert/GoogleDrive/Secure gd
 #* Virtual Box
 
 vmh () {
-	 VBoxManage list vms | nl
+	 VBoxManage list vms
 	 read -r vm
-	 grep -o '" "'
 	 VBoxHeadless -s "$vm" &
+}
+
+vmh2 () {
+	vm1=$(VBoxManage list vms | cut -d \" -f2)
+    echo $vm1 | nl
+	read -r choice 
+	
+
+	VBoxHeadless -s "$vm" &
+	#* echo out more than one and then leat read pick the choice and pass to 
+	#* vboxheadless
 }
