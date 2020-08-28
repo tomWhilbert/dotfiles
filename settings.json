@@ -55,9 +55,8 @@
     ],
     "workbench.colorTheme": "Darcula",
     "markdown-preview-enhanced.automaticallyShowPreviewOfMarkdownBeingEdited": true,
-    "markdown-preview-enhanced.codeBlockTheme": "darcula.css",
+    "markdown-preview-enhanced.codeBlockTheme": "atom-dark.css",
     "markdown-preview-enhanced.mermaidTheme": "dark",
-    "markdown-preview-enhanced.previewTheme": "solarized-dark.css",
-    "markdown.styles": [],
+    "markdown-preview-enhanced.previewTheme": "atom-material.css",
 
     }
