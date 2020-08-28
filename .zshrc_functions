@@ -96,6 +96,6 @@ rc copy --max-age "$1" --no-traverse /Users/thomaswhilbert/GoogleDrive/Secure gd
 vmh () {
 	 VBoxManage list vms | nl
 	 read -r vm
-	 grep '$vm'
+	 grep -o '" "'
 	 VBoxHeadless -s "$vm" &
 }
