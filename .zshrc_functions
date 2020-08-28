@@ -100,12 +100,14 @@ vmh () {
 }
 
 vmh2 () {
-	vm1=$(VBoxManage list vms | cut -d \" -f2)
-    echo $vm1 | nl
+	VBoxManage list vms | nl
 	read -r choice 
+	if [ $choice == 1 ] ; then
+		vm=$(awk 'FNR == 1')
+	elif $choice == $choice++
+		vm$(awk 'FNR == 2')
+}
 	
 
-	VBoxHeadless -s "$vm" &
-	#* echo out more than one and then leat read pick the choice and pass to 
-	#* vboxheadless
-}
+	
+
