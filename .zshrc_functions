@@ -94,23 +94,12 @@ rc copy --max-age "$1" --no-traverse /Users/thomaswhilbert/GoogleDrive/Secure gd
 #* Virtual Box
 
 vmh () {
-	 VBoxManage list vms
-	 read -r vm
-	 VBoxHeadless -s "$vm" &
-}
-
-vmh2 () {
-	vmz=$(VBoxManage list vms | nl)
-	cat vmz
-	# echo 'Choose a VM #' 
-	read -p "choose a vm" numd
-	vm=$(awk "NR==$num" <<< vmz)
-	echo $vm
-
-	# awk 'NR==1' numline
-	# awk 'NR == 1 {print}'
-	# vm=$(cut -d \" -f2 < $num)
-	# VBoxHeadless -s "$vm" &
+	VBoxManage list vms | nl
+	printf "\n"
+	echo '     Choose a VM #' 
+	read -r num
+	vm=$(head -n $num vmz | cut -d \" -f 2)
+	VBoxHeadless -s "$vm" &
 }
 	
 
