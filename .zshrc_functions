@@ -100,13 +100,17 @@ vmh () {
 }
 
 vmh2 () {
-	VBoxManage list vms | nl > vmz
+	vmz=$(VBoxManage list vms | nl)
 	cat vmz
-	echo 'Choose a VM #' 
-	read -r num
-	awk 'NR == 1 {print}'
-	vm=$(cut -d \" -f2 < $num)
-	VBoxHeadless -s "$vm" &
+	# echo 'Choose a VM #' 
+	read -p "choose a vm" numd
+	vm=$(awk "NR==$num" <<< vmz)
+	echo $vm
+
+	# awk 'NR==1' numline
+	# awk 'NR == 1 {print}'
+	# vm=$(cut -d \" -f2 < $num)
+	# VBoxHeadless -s "$vm" &
 }
 	
 
