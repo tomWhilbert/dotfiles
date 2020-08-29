@@ -100,12 +100,13 @@ vmh () {
 }
 
 vmh2 () {
-	VBoxManage list vms | nl
-	read -r choice 
-	if [ $choice == 1 ] ; then
-		vm=$(awk 'FNR == 1')
-	elif $choice == $choice++
-		vm$(awk 'FNR == 2')
+	VBoxManage list vms | nl > vmz
+	cat vmz
+	echo 'Choose a VM #' 
+	read -r num
+	awk 'NR == 1 {print}'
+	vm=$(cut -d \" -f2 < $num)
+	VBoxHeadless -s "$vm" &
 }
 	
 
