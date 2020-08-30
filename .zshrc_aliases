@@ -26,7 +26,6 @@ alias zrc='code $HOME/.zshrc'
 alias zra='code $HOME/.zshrc_aliases'
 alias zrf='code $HOME/.zshrc_functions'
 alias grep='grep --color'
-alias zed='code $HOME/zsh.code-workspace'
 alias nos='code $HOME/.dotfiles/NOS-220.code-workspace'
 alias Nos='cd /Users/thomaswhilbert/Nextcloud/NOS-220-Linux-II'
 
