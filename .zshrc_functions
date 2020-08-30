@@ -81,8 +81,7 @@
     command man "$@"
 }
 
-#* rclone 
-
+#* RClone 
 rcco () {
 	rclone copy --max-age "$1" --no-traverse /Users/thomaswhilbert/OneDrive odS: -P
 }
@@ -92,19 +91,19 @@ rc copy --max-age "$1" --no-traverse /Users/thomaswhilbert/GoogleDrive/Secure gd
 }
 
 #* Virtual Box
-
 vmh () {
 	VBoxManage list vms | nl
 	VBoxManage list vms | nl > vmz
 	printf "\n"
 	echo '     Choose a VM #' 
 	read -r num
-	vm=$(head -n"$num" vmz | cut -d \" -f 2)
+	vm=$(awk -v num=$num 'NR==num {print}' < vmz | cut -d \" -f 2)
 	VBoxHeadless -s "$vm" &
 }
-#* head -n$num vmz
-# num=$num awk 'FNR == ENVIRON["num"] {print $2}' 
-# Don't use $city, with awk -v c=$city, you must use variable c inside awk instead. Your best choice should be passing through environment variable c=$city awk ... then inside awk, use ENVIRON["c"] – cuonglm Jul 28 '15 at 6:21
+
+#* See Stack Exchange: https://unix.stackexchange.com/questions/218753/how-to-pass-variables-to-awk-command-with-conditions
+#* pass variable to awk was the key to getting it to work
+
 
 
 	
