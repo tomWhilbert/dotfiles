@@ -97,8 +97,10 @@ vmh () {
 	printf "\n"
 	echo '     Choose a VM #' 
 	read -r num
-	vm=$(awk -v num=$num 'NR==num {print}' < vmz | cut -d \" -f 2)
+	vm=$(awk -v num="$num" 'NR==num {print}' < vmz | cut -d \" -f 2)
 	VBoxHeadless -s "$vm" &
+	sleep 1
+	printf "\n"
 }
 
 #* See Stack Exchange: https://unix.stackexchange.com/questions/218753/how-to-pass-variables-to-awk-command-with-conditions
