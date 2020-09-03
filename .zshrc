@@ -30,6 +30,7 @@ unsetopt pushd_ignore_dups
 setopt pushdminus
 
 #* Completions
+autoload -U zmv
 setopt dot_glob  #allows for ** globs
 setopt auto_menu
 setopt always_to_end

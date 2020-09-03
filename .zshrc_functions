@@ -42,7 +42,7 @@ lazyg ()
 
 	#* Realpath a file
 	rpf () {
-		realpath "$1" | xclip
+		realpath "$1" |  xclip -sel clip
 	}
 
 	#* RClone Functions

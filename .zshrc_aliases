@@ -15,10 +15,11 @@ alias png='ping -c 3'
 alias grep='grep --color'
 alias nos='code $HOME/nos.code-workspace'
 alias notes='code $HOME/notes.code-workspace'
+alias sec=' code $HOME/sec.code-workspace'
 alias zrc='code $HOME/.zshrc'
 alias zra='code $HOME/.zshrc_aliases'
 alias zrf='code $HOME/.zshrc_functions'
-alias rp='realpath . | xclip'
+alias rp='realpath . | xclip -sel clip'
 
 #* Arch/Linux specific aliases
 alias sbz='systemctl start sabnzbd@tom.service'
