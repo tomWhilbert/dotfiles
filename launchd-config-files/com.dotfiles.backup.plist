@@ -13,9 +13,9 @@
 	<key>RunAtLoad</key>
 	<true/>
 	<key>StandardErrorPath</key>
-	<string>/Users/thomaswhilbert/.dotFiles/launchd-config-files/stderr.log</string>
+	<string>/Volumes/BKUP/logs/dotfiles/stderr.log</string>
 	<key>StandardOutPath</key>
-	<string>/Users/thomaswhilbert/.dotFiles/launchd-config-files/stdout.log</string>
+	<string>/Volumes/BKUP/logs/dotfiles/stdout.log</string>
 	<key>StartInterval</key>
 		<integer>3600</integer>
 	</dict>

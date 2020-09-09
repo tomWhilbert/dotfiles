@@ -3,20 +3,20 @@
 <plist version="1.0">
 <dict>
 	<key>Label</key>
-	<string>com.dotfile.backup.plist</string>
+	<string>com.nextcloud.backup.plist</string>
 	
 	<key>ProgramArguments</key>
 	<array>
-		<string>/Users/thomaswhilbert/Scripts/misc/configBackup.sh</string>	
+		<string>/Users/thomaswhilbert/Scripts/rsync/nc-bkup.sh</string>	
 								
 	</array>
 	<key>RunAtLoad</key>
 	<true/>
 	<key>StandardErrorPath</key>
-	<string>/Volumes/BKUP/logs/dotfiles/stderr.log</string>
+	<string>/Volumes/BKUP/logs/nextcloud/stderr.log</string>
 	<key>StandardOutPath</key>
-	<string>/Volumes/BKUP/logs/dotfiles/stdout.log</string>
+	<string>/Volumes/BKUP/logs/nextcloud/stdout.log</string>
 	<key>StartInterval</key>
-		<integer>3600</integer>
+		<integer>1800</integer>
 	</dict>
 </plist>
