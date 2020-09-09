@@ -2,8 +2,13 @@
     "workbench.settings.editor": "json",
     "workbench.fontAliasing": "antialiased",
     "workbench.settings.useSplitJSON": true,
+<<<<<<< HEAD
     "editor.fontSize": 12,
     "window.zoomLevel": 1,
+=======
+    "editor.fontSize": 14,
+    "window.zoomLevel": 0,
+>>>>>>> 2581bf7bbf6d4f1b244487397e8692b1faf19665
     "editor.formatOnPaste": true,
     "editor.multiCursorModifier": "ctrlCmd",
     "editor.snippetSuggestions": "top",
@@ -14,9 +19,14 @@
     "editor.matchBrackets": true,
     "editor.wordWrap": "on",
     "terminal.integrated.fontSize": 12,
+<<<<<<< HEAD
     "terminal.integrated.fontFamily": "MesloLGS NF, Menlo",
+=======
+    "terminal.integrated.fontFamily": "Hack Regular Nerd Font",
+    // "terminal.integrated.fontFamily": "Roboto Mono for Powerline",
+>>>>>>> 2581bf7bbf6d4f1b244487397e8692b1faf19665
     "explorer.confirmDelete": false,
-    "workbench.statusBar.visible": false,
+    "workbench.statusBar.visible": true,
     "explorer.openEditors.visible": 0,
     "workbench.activityBar.visible": false,
     "explorer.confirmDragAndDrop": false,
