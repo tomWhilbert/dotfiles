@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>Label</key>
-	<string>com.dotfile.backup.plist</string>
+	<string>local.dotfile.backup.plist</string>
 	
 	<key>ProgramArguments</key>
 	<array>
