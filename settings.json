@@ -48,6 +48,8 @@
     "workbench.settings.enableNaturalLanguageSearch": false,
     "workbench.iconTheme": "vscode-icons",
     "workbench.colorTheme": "Dracula Soft",
+    "markdown-preview-enhanced.AccessKey": "P",
+    "markdown-preview-enhanced.previewTheme": "solarized-dark.css",
     
     
 
