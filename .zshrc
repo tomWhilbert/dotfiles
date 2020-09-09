@@ -11,6 +11,7 @@ export PATH=$PATH:$HOME/bin/
 export EDITOR=/usr/bin/vim
 export RCLONE_PASSWORD_COMMAND="pass rclone"    #* See https://rclone.org/docs/#configuration-encryption
 
+source $HOME/.zlogin
 
 #* History
 [ -z "$HISTFILE" ] && HISTFILE="$HOME/.zsh_history"
@@ -79,6 +80,8 @@ bindkey '^[[A' history-substring-search-up
 bindkey '^[[B' history-substring-search-down
 bindkey -e
 bindkey '^R' history-incremental-search-backward
+bindkey "^[[1;5D" backward-word
+bindkey "^[[1;5C" forward-word
 
 #* Test out keybindings see: https://wiki.archlinux.org/index.php/Zsh#Key_bindings
 
@@ -87,5 +90,6 @@ eval $(ssh-agent)
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
 
 
