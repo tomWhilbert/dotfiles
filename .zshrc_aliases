@@ -3,7 +3,7 @@
 #* alias and function source file
 
 alias ll='ls -alh'
-alias buu='brew update && brew upgrade && brew cask upgrade'
+alias buu='brew update && brew upgrade && brew upgrade --cask'
 alias rmf='rm -rf'
 alias srz='exec zsh'
 alias ls='lsd'
