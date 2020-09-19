@@ -5,7 +5,7 @@ lazyg ()
 		{
 		eval 'ssh-agent -s'
 		ssh-add -D
-		ssh-add $HOME/.ssh/gnArch
+		ssh-add "$HOME"/.ssh/gnArch
 
 		git add --all
 		git commit -m "$1"
@@ -14,7 +14,7 @@ lazyg ()
 
 	mkd () {
 		mkdir "$1"
-		cd "$1"
+		cd "$1" || exit
 		}
 
 #* cheat.sh command dictionary ###
@@ -30,9 +30,9 @@ lazyg ()
 	ghssh () {
 		eval 'ssh-agent -s'
 		ssh-add -D
-	    cd $HOME/.ssh/
+	    cd "$HOME"/.ssh/ || exit
 		ssh-add gnArch
-		cd $OLDPWD
+		cd "$OLDPWD" || exit
 	}
 
 	#* Disk Usage, Sorted by Size
@@ -42,16 +42,16 @@ lazyg ()
 
 	#* Realpath a file
 	rpf () {
-		realpath "$1" |  xclip -sel clip
+		realpath "$1" |  wl-copy
 	}
 
 	#* RClone Functions
-	# rcld () {
-	# 	rclone lsd "$1"
+	# # rcld () {
+	# # 	rclone lsd "$1"
+	# # }
+	# rclf () {
+	# 	rclone lsf "$1"
 	# }
-	rclf () {
-		rclone lsf "$1"
-	}
 
 	#* Nmap get all ips on local network
 	ips () {

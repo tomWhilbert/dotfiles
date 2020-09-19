@@ -15,7 +15,7 @@ source $HOME/.zlogin
 
 #* History
 [ -z "$HISTFILE" ] && HISTFILE="$HOME/.zsh_history"
-HISTSIZE=50000
+HISTSIZE=10000
 SAVEHIST=10000
 setopt extended_history
 setopt hist_expire_dups_first
@@ -71,6 +71,9 @@ source ~/.plugins/zsh-history-substring-search/zsh-history-substring-search.plug
 source ~/.plugins/zsh-completions/zsh-completions.plugin.zsh
 source ~/.plugins/zsh-autosuggestions/zsh-autosuggestions.plugin.zsh
 source ~/.powerlevel10k/powerlevel10k.zsh-theme
+
+source ~/.dotfiles/rc-completions.zsh
+
 
 #* To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
