@@ -55,7 +55,6 @@
         "HTML",
         "PDF"
     ],
-    "workbench.colorTheme": "Darcula",
     "markdown-preview-enhanced.automaticallyShowPreviewOfMarkdownBeingEdited": true,
     "markdown-preview-enhanced.codeBlockTheme": "atom-dark.css",
     "markdown-preview-enhanced.mermaidTheme": "dark",
