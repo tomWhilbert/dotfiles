@@ -3,33 +3,41 @@
 #* alias and function source file
 
 alias ll='ls -alh'
-alias buu='brew update && brew upgrade && brew cask upgrade'
+alias buu='brew update && brew upgrade && brew upgrade --cask'
 alias rmf='rm -rf'
 alias srz='exec zsh'
 alias ls='lsd'
 alias dkl='diskutil list'
 alias ds='diskutil'
 alias hs='history 1'
-alias zbk='$HOME/.dotfiles/launchd-config-files/configBackup.sh'
-alias pbc='pbcopy'
 alias shut='sudo shutdown -h now'
 alias rp='realpath . | pbcopy'
 alias png='ping -c 3'
 alias admin='dseditgroup -o checkmember -m $USER admin'
 alias lsh="ls -a | grep '^\.'"
-alias lct='launchctl'
 alias lsdir="ls -lah | grep '^d'"
 alias dig='dig +nocmd +noall +answer'
 alias ip='Get-IP-macOS.sh'
 alias stoc='stat -f %Mp%Lp'
+alias -g G='| grep -i'
+alias -s {yml,yaml,conf,md,txt}=code
+alias zcode='code /$HOME/.dotfiles/zsh.code-workspace'
+alias zrc='code $HOME/.zshrc'
+alias zra='code $HOME/.zshrc_aliases'
+alias zrf='code $HOME/.zshrc_functions'
+alias grep='grep --color'
+alias nos='code $HOME/.dotfiles/NOS-220.code-workspace'
+alias sec='code $HOME/.dotfiles/sec.code-workspace'
+
 
 #* RClone commands 
 alias rclr='rclone listremotes'
 alias rc='rclone'
-alias rcbn='rc copy $D/GoogleDrive/Secure/Boostnote/ gdS:Boostnote -P'
-alias rcod='rclone copy --max-age 24h --no-traverse $D/OneDrive od: -P'  
-alias rcgds='rc copy --max-age 24h --no-traverse /Volumes/Data/GoogleDrive/Secure gdS: -P'
-   
+# alias rcods='rclone copy --max-age 24h --no-traverse /Users/thomaswhilbert/OneDrive odS: -P'  #*Moved to a function
+# alias rcgds='rc copy --max-age 24h --no-traverse /Users/thomaswhilbert/GoogleDrive/Secure gdS: -P' #*Moved to a function
+alias rcmgds='rc mount --vfs-cache-mode full gdS: /Users/thomaswhilbert/mnt/gDriveSecure'
+#alias rclone sync --fast-list gdS: /Users/thomaswhilbert/GoogleDrive/Secure -P
+
 #* Git aliases ###
 alias g='git'
 alias ga='git add'
@@ -40,57 +48,4 @@ alias gst='git status'
 alias gc='git commit -m'
 alias gpo='git push -u origin'
 alias gp='git pull'
-
-#* Functions ###
-
-   	lazyg ()
-		{
-		git add .
-		git commit -m "$1"
-		git push -u origin "$2"
-		}
-
-	mkd () {
-		mkdir "$1"
-		cd "$1"
-		}
-
-#* diskutil erase function
-	### $1 is the volume name
-	### $2 is the voluem path
-	de () {
-		diskutil eraseDisk HFS+ "$1" /dev/disk"$2"
-		}
-
-	dku () {
-		diskutil unmountDisk /dev/disk"$1"
-	}
-
-#* cheat.sh command dictionary ###
-	ch () {
-		curl cht.sh/"$1"
-	}
-
-	bak () {
-		cp "$1" "$1".bak
-	}
-   
-#* SSH GitHub authentication fix
-	ghssh () {
-		eval 'ssh-agent -s'
-		ssh-add -D
-		cd $HOME/.SSH/
-		ssh-add mbpGitHub
-		cd $OLDPWD
-	}
-	# ip () {
-	# 	public=$(curl -s -w '\n' ifconfig.me)
-	# 	private=$(scutil --nwi | grep address | cut -d':' -f2)
-	# 	echo "Public IP: $public"
-	# 	echo "Private IP: $private"
-	# }
-
-	#* Disk Usage, Sorted by Size
-	dus () {
-		du -sh "$1"/* | sort -h
-	}
+alias vbls='VBoxManage list vms'

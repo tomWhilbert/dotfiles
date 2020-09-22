@@ -6,13 +6,9 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
-export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/sbin:$HOME/Scripts:$HOME/Scripts/Get-IP:$HOME/Scripts/Walk-and-Pull:"
-# export PATH="/usr/local/bin:$PATH"
-# export PATH="/usr/local/sbin:$PATH"
-# export PATH="$PATH:$HOME/Scripts"
-# export PATH="$PATH:$HOME/Scripts/Walk-and-Pull"
-export D=/Volumes/Data  #* Create env var for Data Volume
+export PATH="/usr/local/opt/gnu-sed/libexec/gnubin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/sbin:$HOME/Scripts:$HOME/Scripts/Get-IP:$HOME/Scripts/Walk-and-Pull:"
 export RCLONE_PASSWORD_COMMAND="security find-generic-password -a $USER -s rclone -w"
+export DOTFILES=$HOME/.dotfiles
 
 #* History
 [ -z "$HISTFILE" ] && HISTFILE="$HOME/.zsh_history"
@@ -45,7 +41,7 @@ zstyle ':completion::complete:*' cache-path
 zstyle ':completion:*' list-colors ''
 zstyle ':completion:*:*:kill:*:processes' list-colors '=(#b) #([0-9]#) ([0-9a-z-]#)*=01;34=0=01'
 
-#* added git completions
+#* Add git completions
 
 zstyle ':completion:*:*:git:*' script ~/.zsh/git-completion.bash
 fpath=(~/.zsh $fpath)
@@ -57,23 +53,25 @@ ZSH=~/.oh-my-zsh
 #ZSH_CUSTOM=$ZSH/custom
 source $ZSH/plugins/z/z.plugin.zsh    #* Frecency plugin
 source $ZSH/lib/directories.zsh       #* Adds the 'd' show recent directories
-# fpath+=$ZSH/plugins/ dir path not needed....
-# git -C $ZSH pull  ***Uncomment and source .zshrc to upate OMZ
-
+source $ZSH/plugins/brew/brew.plugin.zsh
 
 setopt prompt_subst
+
 source ~/.zshrc_aliases
-#source ~/scripts/zsh-syntax-highlighting/zsh-syntax-highlighting.plugin.zsh
-# source ~/.plugins/fast-syntax-highlighting/fast-syntax-highlighting.plugin.zsh
-source ~/.plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source ~/.zshrc_functions
+
+source ~/.plugins/zsh-autosuggestions/zsh-autosuggestions.plugin.zsh
+source ~/.plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.plugin.zsh
 source ~/.plugins/zsh-history-substring-search/zsh-history-substring-search.plugin.zsh
 source ~/.plugins/zsh-completions/zsh-completions.plugin.zsh
 source ~/.powerlevel10k/powerlevel10k.zsh-theme
+
 
 #* To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 #* zsh history substring search bindkeys
+bindkey '`' autosuggest-accept
 bindkey '^[[A' history-substring-search-up
 bindkey '^[[B' history-substring-search-down
 

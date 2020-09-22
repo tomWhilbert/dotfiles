@@ -89,3 +89,10 @@ cp: cp: cp: /Users/thomaswhilbert/Brewfile: No such file or directory/Users/thom
 /Users/thomaswhilbert/.dotfiles/launchd-config-files/configBackup.sh: line 14: `<<<<<<< HEAD'
 /Users/thomaswhilbert/.dotfiles/launchd-config-files/configBackup.sh: line 14: syntax error near unexpected token `<<<'
 /Users/thomaswhilbert/.dotfiles/launchd-config-files/configBackup.sh: line 14: `<<<<<<< HEAD'
+fatal: Unable to create '/Users/thomaswhilbert/.dotFiles/.git/index.lock': File exists.
+
+Another git process seems to be running in this repository, e.g.
+an editor opened by 'git commit'. Please make sure all processes
+are terminated then try again. If it still fails, a git process
+may have crashed in this repository earlier:
+remove the file manually to continue.
