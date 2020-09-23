@@ -98,3 +98,5 @@ may have crashed in this repository earlier:
 remove the file manually to continue.
 Aborting commit due to empty commit message.
 Everything up-to-date
+error: src refspec master does not match any
+error: failed to push some refs to 'git@github.com:tomWhilbert/.dotfiles.git'
