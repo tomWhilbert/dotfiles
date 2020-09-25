@@ -188,3 +188,13 @@ may have crashed in this repository earlier:
 remove the file manually to continue.
 error: src refspec master does not match any
 error: failed to push some refs to 'git@github.com:tomWhilbert/.dotfiles.git'
+fatal: cannot lock ref 'HEAD': is at e0e18c809cd9b0e9295109a5c08cae24823a0c57 but expected 86027993f05e173f2cdbf1e12b050d474597e6ff
+error: src refspec master does not match any
+error: failed to push some refs to 'git@github.com:tomWhilbert/.dotfiles.git'
+fatal: Unable to create '/Users/thomaswhilbert/.dotFiles/.git/index.lock': File exists.
+
+Another git process seems to be running in this repository, e.g.
+an editor opened by 'git commit'. Please make sure all processes
+are terminated then try again. If it still fails, a git process
+may have crashed in this repository earlier:
+remove the file manually to continue.
