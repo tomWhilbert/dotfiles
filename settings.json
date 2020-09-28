@@ -61,5 +61,8 @@
     "markdown-preview-enhanced.previewTheme": "atom-material.css",
     "python.languageServer": "Microsoft",
     "workbench.colorTheme": "One Dark Pro",
+    "cSpell.userWords": [
+        "Nextcloud"
+    ],
 
     }
