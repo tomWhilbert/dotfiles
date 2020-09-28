@@ -49,6 +49,8 @@
 	#* Disk Usage, Sorted by Size
 	dus () {
 		du -sh "$1"/* | sort -h
+		printf "\n"
+		echo "Total Size" "$(du -sh | cut -f 1)" 
 	}
 
 	#* Realpath a file
@@ -83,7 +85,7 @@
 
 #* RClone 
 rcco () {
-	rclone copy --max-age "$1" --no-traverse /Users/thomaswhilbert/OneDrive od: -P
+	rclone copy --max-age "$1" --no-traverse /Users/thomaswhilbert/OneDrive odS: -P
 }
 
 rccg () {

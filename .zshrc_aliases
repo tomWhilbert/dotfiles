@@ -5,7 +5,7 @@
 alias ll='ls -alh'
 alias buu='brew update && brew upgrade && brew upgrade --cask'
 alias rmf='rm -rf'
-alias srz='exec zsh'
+alias srz='cd ~ && exec zsh'
 alias ls='lsd'
 alias dkl='diskutil list'
 alias ds='diskutil'
@@ -17,7 +17,7 @@ alias admin='dseditgroup -o checkmember -m $USER admin'
 alias lsh="ls -a | grep '^\.'"
 alias lsdir="ls -lah | grep '^d'"
 alias dig='dig +nocmd +noall +answer'
-alias ip='/Users/thomaswhilbert/Scripts/get-ip/Get-IP-macOS.sh'
+alias ip='Get-IP-macOS.sh'
 alias stoc='stat -f %Mp%Lp'
 alias -g G='| grep -i'
 alias -s {yml,yaml,conf,md,txt}=code
@@ -28,7 +28,7 @@ alias zrf='code $HOME/.zshrc_functions'
 alias grep='grep --color'
 alias nos='code $HOME/.dotfiles/NOS-220.code-workspace'
 alias sec='code $HOME/.dotfiles/sec.code-workspace'
-alias wp='$HOME/Scripts/walk-and-pull/wp.sh'
+alias notes='code $HOME/.dotfiles/notes.code-workspace'
 
 #* RClone commands 
 alias rclr='rclone listremotes'
@@ -48,4 +48,6 @@ alias gst='git status'
 alias gc='git commit -m'
 alias gpo='git push -u origin'
 alias gp='git pull'
+
+
 alias vbls='VBoxManage list vms'

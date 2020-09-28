@@ -6,9 +6,10 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
-export PATH="/usr/local/opt/gnu-sed/libexec/gnubin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/sbin"
+export PATH="/usr/local/opt/gnu-sed/libexec/gnubin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/sbin:$HOME/Scripts:$HOME/Scripts/Get-IP:$HOME/Scripts/Walk-and-Pull:"
 export RCLONE_PASSWORD_COMMAND="security find-generic-password -a $USER -s rclone -w"
 export DOTFILES=$HOME/.dotfiles
+
 
 #* History
 [ -z "$HISTFILE" ] && HISTFILE="$HOME/.zsh_history"
@@ -53,7 +54,8 @@ ZSH=~/.oh-my-zsh
 #ZSH_CUSTOM=$ZSH/custom
 source $ZSH/plugins/z/z.plugin.zsh    #* Frecency plugin
 source $ZSH/lib/directories.zsh       #* Adds the 'd' show recent directories
-source $ZSH/plugins/brew/brew.plugin.zsh
+# fpath+=$ZSH/plugins/ dir path not needed....
+# git -C $ZSH pull  ***Uncomment and source .zshrc to upate OMZ
 
 setopt prompt_subst
 
@@ -65,7 +67,7 @@ source ~/.plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.plugin.zsh
 source ~/.plugins/zsh-history-substring-search/zsh-history-substring-search.plugin.zsh
 source ~/.plugins/zsh-completions/zsh-completions.plugin.zsh
 source ~/.powerlevel10k/powerlevel10k.zsh-theme
-
+source /usr/local/share/zsh/site-functions/_rclone
 
 #* To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
