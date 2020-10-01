@@ -90,6 +90,7 @@ bindkey "^[[1;5C" forward-word
 
 #* Set SSH Env Var and passphrases
 eval $(ssh-agent)
+# ssh-add "$HOME"/.ssh/gnArch $(read -r $(pass gnArch))
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
