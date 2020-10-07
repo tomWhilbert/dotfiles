@@ -10,7 +10,6 @@ export PATH="/usr/local/opt/gnu-sed/libexec/gnubin:/usr/local/bin:/usr/bin:/bin:
 export RCLONE_PASSWORD_COMMAND="security find-generic-password -a $USER -s rclone -w"
 export DOTFILES=$HOME/.dotfiles
 
-
 #* History
 [ -z "$HISTFILE" ] && HISTFILE="$HOME/.zsh_history"
 HISTSIZE=50000
