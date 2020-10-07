@@ -85,7 +85,7 @@
 
 #* RClone 
 rcco () {
-	rclone copy --max-age "$1" --no-traverse /Users/thomaswhilbert/OneDrive odS: -P
+	rclone copy --max-age "$1" --no-traverse /Users/thomaswhilbert/OneDrive od: -P
 }
 
 rccg () {
