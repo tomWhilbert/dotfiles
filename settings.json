@@ -56,9 +56,9 @@
         "PDF"
     ],
     "markdown-preview-enhanced.automaticallyShowPreviewOfMarkdownBeingEdited": true,
-    "markdown-preview-enhanced.codeBlockTheme": "atom-dark.css",
+    "markdown-preview-enhanced.codeBlockTheme": "darcula.css",
     "markdown-preview-enhanced.mermaidTheme": "dark",
-    "markdown-preview-enhanced.previewTheme": "atom-material.css",
+    "markdown-preview-enhanced.previewTheme": "solarized-dark.css",
     "python.languageServer": "Microsoft",
     "workbench.colorTheme": "One Dark Pro",
     "cSpell.userWords": [
