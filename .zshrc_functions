@@ -100,6 +100,7 @@ vmh () {
 	echo '     Choose a VM #' 
 	read -r num
 	vm=$(awk -v num="$num" 'NR==num {print}' < vmz | cut -d \" -f 2)
+	rm vmz
 	VBoxHeadless -s "$vm" &
 	sleep 1
 	printf "\n"
