@@ -1,5 +1,5 @@
 #!/bin/bash
-#* SheBang here enables syntax highlighting in vscode
+#* ShaBang here enables syntax highlighting in vscode
 #* alias and function source file
 
 alias ll='ls -alh'
@@ -30,6 +30,7 @@ alias nos='code $HOME/.dotfiles/NOS-220.code-workspace'
 alias sec='code $HOME/.dotfiles/sec.code-workspace'
 alias notes='code $HOME/.dotfiles/notes.code-workspace'
 alias wp='/Users/thomaswhilbert/Scripts/walk-pull/wp'
+alias duf='duf -theme dark max output width'
 
 #* RClone commands 
 alias rclr='rclone listremotes'
