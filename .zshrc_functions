@@ -46,12 +46,15 @@ lazyg ()
 	}
 
 	#* RClone Functions
-	# # rcld () {
-	# # 	rclone lsd "$1"
-	# # }
-	# rclf () {
-	# 	rclone lsf "$1"
-	# }
+	
+	rcco () {
+		rclone copy --max-age "$1" --no-traverse /Users/thomaswhilbert/OneDrive odS: -P
+	}
+
+	rccg () {
+	rc copy --max-age "$1" --no-traverse /Users/thomaswhilbert/GoogleDrive/Secure gdS: -P
+	}
+
 
 	#* Nmap get all ips on local network
 	ips () {
