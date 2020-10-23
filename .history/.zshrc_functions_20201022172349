@@ -48,11 +48,12 @@ lazyg ()
 	#* RClone Functions
 	
 	rcco () {
-		rclone copy --max-age "$1" --no-traverse /home/tom/OneDrive od: -P
+		rclone copy --max-age "$1" --no-traverse /home/tom/OneDrive
+odS: -P
 	}
 
 	rccg () {
-	rc copy --max-age "$1" --no-traverse /home/tom/GoogleDrive/Secure gdS: -P
+	rc copy --max-age "$1" --no-traverse /Users/thomaswhilbert/GoogleDrive/Secure gdS: -P
 	}
 
 
