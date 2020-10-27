@@ -73,9 +73,9 @@ man() {
     command man "$@"
 }
 
-#* Transform a file name
-
+#* replaces whitespaces with a dash
 dash() {
-	for file in $1; do mv "$1" "$(echo "$1" | tr '_' '-')" ; done
+	
+	for file in *; do mv "$file" "$(echo "$file" | tr ' ' '-')" ; done
 }
 
