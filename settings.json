@@ -16,7 +16,7 @@
     "terminal.integrated.fontSize": 12,
     "terminal.integrated.fontFamily": "MesloLGS NF, Menlo",
     "explorer.confirmDelete": false,
-    "workbench.statusBar.visible": false,
+    "workbench.statusBar.visible": true,
     "explorer.openEditors.visible": 0,
     "workbench.activityBar.visible": false,
     "explorer.confirmDragAndDrop": false,
