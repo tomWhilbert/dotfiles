@@ -72,3 +72,10 @@ man() {
     LESS_TERMCAP_us=$'\e[01;32m' \
     command man "$@"
 }
+
+#* Transform a file name
+
+dash() {
+	for file in $1; do mv "$1" "$(echo "$1" | tr '_' '-')" ; done
+}
+
