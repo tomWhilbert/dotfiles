@@ -47,7 +47,7 @@
     "workbench.enableExperiments": false,
     "workbench.settings.enableNaturalLanguageSearch": false,
     "workbench.iconTheme": "vscode-icons",
-    "workbench.colorTheme": "Atom One Dark",
+    "workbench.colorTheme": "Community Material Theme",
     "markdown-preview-enhanced.AccessKey": "P",
     "markdown-preview-enhanced.previewTheme": "solarized-dark.css",
     "cSpell.userWords": [
