@@ -21,6 +21,7 @@ alias zra='code $HOME/.zshrc_aliases'
 alias zrf='code $HOME/.zshrc_functions'
 alias rp='realpath . | wl-copy'
 alias wesync='ssh -L 8385:localhost:8384 we'
+alias cat='bat'
 
 #* Arch/Linux specific aliases
 alias sbz='systemctl start sabnzbd@tom.service'
@@ -60,3 +61,4 @@ alias gp='git pull'
 
 
 
+alias lt='ls --tree'
