@@ -7,8 +7,6 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
 fi
 
 export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/sbin"
-#export RCLONE_PASSWORD_COMMAND="security find-generic-password -a $USER -s rclone -w"
-export DOTFILES=$HOME/.dotfiles
 
 #* History
 [ -z "$HISTFILE" ] && HISTFILE="$HOME/.zsh_history"
@@ -28,7 +26,7 @@ unsetopt pushd_ignore_dups
 setopt pushdminus
 
 #* Completions
-setopt dot_glob  #allows for ** globs
+setopt dot_glob  #*allows for ** globs
 setopt auto_menu
 setopt always_to_end
 setopt complete_in_word
@@ -48,13 +46,11 @@ fpath=(~/.zsh $fpath)
 autoload -Uz compinit && compinit
 
 #* Aliases, Themes and plugins
-#* source OMZ
+
 ZSH=~/bin/ohmyzsh/
 #ZSH_CUSTOM=$ZSH/custom
 source $ZSH/plugins/z/z.plugin.zsh    #* Frecency plugin
 source $ZSH/lib/directories.zsh       #* Adds the 'd' show recent directories
-# fpath+=$ZSH/plugins/ dir path not needed....
-# git -C $ZSH pull  ***Uncomment and source .zshrc to upate OMZ
 
 setopt prompt_subst
 
@@ -65,16 +61,14 @@ source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zs
 source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 source /usr/share/zsh/plugins/zsh-history-substring-search/zsh-history-substring-search.zsh
 source /usr/share/zsh/site-functions  #* sources the completion functions
-
-#source /usr/local/share/zsh/site-functions/_rclone
+source /usr/share/zsh/vendor-completions/_rclone  
 
 #* To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 #* zsh history substring search bindkeys
-bindkey '`' autosuggest-accept
-bindkey '^[[A' history-substring-search-up
-bindkey '^[[B' history-substring-search-down
-
-#test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
-
+# bindkey '`' autosuggest-accept
+# bindkey '^[[A' history-substring-search-up
+# bindkey '^[[B' history-substring-search-down
+# bindkey '^[[1;5D' #* jump a word back 
+# bindkey '^[[1;5C'   #* jump a word forward

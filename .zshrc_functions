@@ -5,7 +5,7 @@ lazyg ()
 		{
 		eval 'ssh-agent -s'
 		ssh-add -D
-		ssh-add "$HOME"/.ssh/gnArch
+		ssh-add "$HOME"/.ssh/github
 
 		git add --all
 		git commit -m "$1"
@@ -31,7 +31,7 @@ lazyg ()
 		eval 'ssh-agent -s'
 		ssh-add -D
 	    cd "$HOME"/.ssh/ || exit
-		ssh-add gnArch
+		ssh-add github
 		cd "$OLDPWD" || exit
 	}
 
