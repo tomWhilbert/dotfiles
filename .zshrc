@@ -6,16 +6,13 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
-export PATH=$PATH:$HOME/bin/
-#:$HOME/bin/linux/walk-and-pull
-export EDITOR=/usr/bin/vim
-export RCLONE_PASSWORD_COMMAND="pass rclone"    #* See https://rclone.org/docs/#configuration-encryption
-
-source $HOME/.zlogin
+export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/sbin"
+#export RCLONE_PASSWORD_COMMAND="security find-generic-password -a $USER -s rclone -w"
+export DOTFILES=$HOME/.dotfiles
 
 #* History
 [ -z "$HISTFILE" ] && HISTFILE="$HOME/.zsh_history"
-HISTSIZE=10000
+HISTSIZE=50000
 SAVEHIST=10000
 setopt extended_history
 setopt hist_expire_dups_first
@@ -24,14 +21,13 @@ setopt hist_ignore_space
 setopt inc_append_history
 setopt share_history
 
-#* Changing directoriesuse pass to provide ssh key passphrase
+#* Changing directories
 setopt auto_cd
 setopt auto_pushd
 unsetopt pushd_ignore_dups
 setopt pushdminus
 
 #* Completions
-autoload -U zmv
 setopt dot_glob  #allows for ** globs
 setopt auto_menu
 setopt always_to_end
@@ -45,7 +41,7 @@ zstyle ':completion::complete:*' cache-path
 zstyle ':completion:*' list-colors ''
 zstyle ':completion:*:*:kill:*:processes' list-colors '=(#b) #([0-9]#) ([0-9a-z-]#)*=01;34=0=01'
 
-#* added git completions
+#* Add git completions
 
 zstyle ':completion:*:*:git:*' script ~/.zsh/git-completion.bash
 fpath=(~/.zsh $fpath)
@@ -53,47 +49,32 @@ autoload -Uz compinit && compinit
 
 #* Aliases, Themes and plugins
 #* source OMZ
-ZSH=~/.oh-my-zsh
+ZSH=~/bin/ohmyzsh/
 #ZSH_CUSTOM=$ZSH/custom
-source $ZSH/plugins/z/z.plugin.zsh
-source $ZSH/lib/directories.zsh  # Adds the 'd' show recent directories
-#source $ZSH/plugins/systemd/systemd.plugin.zsh
-
+source $ZSH/plugins/z/z.plugin.zsh    #* Frecency plugin
+source $ZSH/lib/directories.zsh       #* Adds the 'd' show recent directories
 # fpath+=$ZSH/plugins/ dir path not needed....
 # git -C $ZSH pull  ***Uncomment and source .zshrc to upate OMZ
 
 setopt prompt_subst
+
 source ~/.zshrc_aliases
 source ~/.zshrc_functions
+source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
+source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
+source /usr/share/zsh/plugins/zsh-history-substring-search/zsh-history-substring-search.zsh
+source /usr/share/zsh/site-functions  #* sources the completion functions
 
-source ~/.plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.plugin.zsh
-source ~/.plugins/zsh-history-substring-search/zsh-history-substring-search.plugin.zsh
-source ~/.plugins/zsh-completions/zsh-completions.plugin.zsh
-source ~/.plugins/zsh-autosuggestions/zsh-autosuggestions.plugin.zsh
-source ~/.powerlevel10k/powerlevel10k.zsh-theme
-
-source ~/.dotfiles/rc-completions.zsh
-
+#source /usr/local/share/zsh/site-functions/_rclone
 
 #* To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 #* zsh history substring search bindkeys
+bindkey '`' autosuggest-accept
 bindkey '^[[A' history-substring-search-up
 bindkey '^[[B' history-substring-search-down
-bindkey -e
-bindkey '^R' history-incremental-search-backward
-bindkey "^[[1;5D" backward-word
-bindkey "^[[1;5C" forward-word
 
-#* Test out keybindings see: https://wiki.archlinux.org/index.php/Zsh#Key_bindings
-
-#* Set SSH Env Var and passphrases
-eval $(ssh-agent)
-# ssh-add "$HOME"/.ssh/gnArch $(read -r $(pass gnArch))
-
-# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
-
-
+#test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 
