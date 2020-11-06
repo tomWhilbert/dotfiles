@@ -8,7 +8,6 @@ fi
 
 export PATH="/usr/local/opt/coreutils/libexec/gnubin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/sbin"
 export RCLONE_PASSWORD_COMMAND="security find-generic-password -a $USER -s rclone -w"
-export DOTFILES=$HOME/.dotfiles
 
 #* History
 [ -z "$HISTFILE" ] && HISTFILE="$HOME/.zsh_history"
