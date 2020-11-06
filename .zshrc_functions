@@ -109,8 +109,7 @@ vmh () {
 #* See Stack Exchange: https://unix.stackexchange.com/questions/218753/how-to-pass-variables-to-awk-command-with-conditions
 #* pass variable to awk was the key to getting it to work
 
-digab () {
-	dig @10.60.20.20 "$1".asheville.cc.nc.us
-}
+
+
 	
 
