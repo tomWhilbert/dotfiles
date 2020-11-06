@@ -102,7 +102,7 @@ vmh () {
 	vm=$(awk -v num="$num" 'NR==num {print}' < vmz | cut -d \" -f 2)
 	rm vmz
 	VBoxHeadless -s "$vm" &
-	sleep 15
+	sleep 5
 	printf "\n"
 }
 

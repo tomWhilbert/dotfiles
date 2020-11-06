@@ -58,6 +58,9 @@
         "sconfig",
         "vcenter"
     ],
+    "cSpell.enableFiletypes": [
+        "!scss"
+    ],
     
     
 
