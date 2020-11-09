@@ -41,26 +41,11 @@ zstyle ':completion::complete:*' cache-path
 zstyle ':completion:*' list-colors ''
 zstyle ':completion:*:*:kill:*:processes' list-colors '=(#b) #([0-9]#) ([0-9a-z-]#)*=01;34=0=01'
 
-#* Add git completions
-
 zstyle ':completion:*:*:git:*' script ~/.zsh/git-completion.bash
 fpath=(~/.zsh $fpath)
 
-
-#* Aliases, Themes and plugins
-#* source OMZ
-#ZSH=~/.oh-my-zsh
-#ZSH_CUSTOM=$ZSH/custom
-#source $ZSH/plugins/z/z.plugin.zsh    #* Frecency plugin
-source ~/ohmyzsh/lib/directories.zsh       #* Adds the 'd' show recent directories
-# fpath+=$ZSH/plugins/ dir path not needed....
-# git -C $ZSH pull  ***Uncomment and source .zshrc to upate OMZ
-
-setopt prompt_subst
-
 source ~/.zshrc_aliases
 source ~/.zshrc_functions
-
 source ~/.plugins/zsh-autosuggestions/zsh-autosuggestions.plugin.zsh
 source ~/.plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.plugin.zsh
 source ~/.plugins/zsh-history-substring-search/zsh-history-substring-search.plugin.zsh
@@ -70,9 +55,13 @@ source /usr/local/share/zsh/site-functions/_rclone
 source ~/.plugins/zsh-z/zsh-z.plugin.zsh  #* testing agkozak/zsh-z
 
 autoload -Uz compinit && compinit
-compinit
 
-#* To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+#** Moved lines 49 - 58 above the OMZ sourcing to fix compdef error 11-9-20
+
+source ~/ohmyzsh/lib/directories.zsh       #* Adds the 'd' show recent directories must be after 
+
+setopt prompt_subst
+
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 #* zsh history substring search bindkeys
