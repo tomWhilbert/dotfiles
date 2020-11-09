@@ -54,6 +54,7 @@
         "ESET",
         "Ubiquiti",
         "Unifi",
+        "journald",
         "nmap",
         "sconfig",
         "vcenter"
