@@ -54,6 +54,8 @@
         "ESET",
         "Ubiquiti",
         "Unifi",
+        "bootloaders",
+        "filesystems",
         "journald",
         "nmap",
         "sconfig",
