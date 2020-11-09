@@ -6,6 +6,7 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
+#typeset -g POWERLEVEL9K_INSTANT_PROMPT=quiet
 export PATH="/usr/local/opt/coreutils/libexec/gnubin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/sbin"
 export RCLONE_PASSWORD_COMMAND="security find-generic-password -a $USER -s rclone -w"
 
@@ -44,14 +45,14 @@ zstyle ':completion:*:*:kill:*:processes' list-colors '=(#b) #([0-9]#) ([0-9a-z-
 
 zstyle ':completion:*:*:git:*' script ~/.zsh/git-completion.bash
 fpath=(~/.zsh $fpath)
-autoload -Uz compinit && compinit
+
 
 #* Aliases, Themes and plugins
 #* source OMZ
-ZSH=~/.oh-my-zsh
+#ZSH=~/.oh-my-zsh
 #ZSH_CUSTOM=$ZSH/custom
-source $ZSH/plugins/z/z.plugin.zsh    #* Frecency plugin
-source $ZSH/lib/directories.zsh       #* Adds the 'd' show recent directories
+#source $ZSH/plugins/z/z.plugin.zsh    #* Frecency plugin
+source ~/ohmyzsh/lib/directories.zsh       #* Adds the 'd' show recent directories
 # fpath+=$ZSH/plugins/ dir path not needed....
 # git -C $ZSH pull  ***Uncomment and source .zshrc to upate OMZ
 
@@ -66,6 +67,10 @@ source ~/.plugins/zsh-history-substring-search/zsh-history-substring-search.plug
 source ~/.plugins/zsh-completions/zsh-completions.plugin.zsh
 source ~/.powerlevel10k/powerlevel10k.zsh-theme
 source /usr/local/share/zsh/site-functions/_rclone
+source ~/.plugins/zsh-z/zsh-z.plugin.zsh  #* testing agkozak/zsh-z
+
+autoload -Uz compinit && compinit
+compinit
 
 #* To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
