@@ -3,5 +3,8 @@
 		{
 			"path": "../Nextcloud/SEC-160"
 		}
-	]
+	],
+	"settings": {
+		"cSpell.enabled": false
+	}
 }
