@@ -6,7 +6,7 @@
 alias ll='ls -alh'
 alias lld='lsd -l | grep '^d''
 alias rmf='rm -rf'
-alias srz='source .zshrc'
+alias srz='exec zsh'
 alias ls='lsd'
 alias hs='history 1'
 alias shut='sudo shutdown -h now'
@@ -33,7 +33,7 @@ alias sbz='systemctl start sabnzbd@tom.service'
 alias sup='sudo pacman'
 alias reflector='sudo reflector --verbose --latest 5 --sort rate --save /etc/pacman.d/mirrorlist'
 alias sudo='sudo ' #* allows sudo to accept an alias as an argument
-alias sc='systemctl'
+alias status='systemctl status'
 alias lspac="expac --timefmt='%Y-%m-%d %T' '%l\t%n' | sort | tail -n"
 alias chk='checkupdates'
 alias sucode='sudo code --user-data-dir="~/.vscode-root"'

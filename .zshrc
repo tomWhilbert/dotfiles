@@ -6,7 +6,7 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
-export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/sbin"
+export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/sbin:$HOME/Scripts"
 
 #* History
 [ -z "$HISTFILE" ] && HISTFILE="$HOME/.zsh_history"
@@ -54,6 +54,7 @@ source $ZSH/lib/directories.zsh       #* Adds the 'd' show recent directories
 
 setopt prompt_subst
 
+#* Deviation from previous locations - On Linux, plugins are installed via AUR so no walk-pull needed...
 source ~/.zshrc_aliases
 source ~/.zshrc_functions
 source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
@@ -66,9 +67,10 @@ source /usr/share/zsh/vendor-completions/_rclone
 #* To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
-#* zsh history substring search bindkeys
-# bindkey '`' autosuggest-accept
-# bindkey '^[[A' history-substring-search-up
-# bindkey '^[[B' history-substring-search-down
-# bindkey '^[[1;5D' #* jump a word back 
-# bindkey '^[[1;5C'   #* jump a word forward
+#* zsh bindkeys
+bindkey '`' autosuggest-accept
+bindkey "^[[1;5D" backward-word
+bindkey "^[[1;5C" forward-word
+bindkey -M emacs '^P' history-substring-search-up
+bindkey -M emacs '^N' history-substring-search-down
+bindkey "^[[3~" delete-char
