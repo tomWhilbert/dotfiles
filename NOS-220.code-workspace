@@ -1,7 +1,15 @@
 {
 	"folders": [
 		{
-			"path": "../Nextcloud/NOS-220-Linux-II"
+			"path": "../Nextcloud/Learn/NOS-120"
+		},
+		{
+			"path": "../Nextcloud/Learn/NOS-220"
 		}
-	]
+	],
+	"settings": {
+		"cSpell.words": [
+			"rwxrwxrwx"
+		]
+	}
 }
