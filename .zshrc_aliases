@@ -1,11 +1,11 @@
 #!/bin/bash
-#* ShaBang here enables syntax highlighting in vscode
+#* SheBang here enables syntax highlighting in vscode
 #* alias and function source file
 
 alias ll='ls -alh'
 alias buu='brew update && brew upgrade && brew upgrade --cask'
 alias rmf='rm -rf'
-alias srz='cd ~ && exec zsh'
+alias srz='exec zsh'
 alias ls='lsd'
 alias dkl='diskutil list'
 alias ds='diskutil'
@@ -28,9 +28,8 @@ alias zrf='code $HOME/.zshrc_functions'
 alias grep='grep --color'
 alias nos='code $HOME/.dotfiles/NOS-220.code-workspace'
 alias sec='code $HOME/.dotfiles/sec.code-workspace'
-alias notes='code $HOME/.dotfiles/notes.code-workspace'
 alias wp='/Users/thomaswhilbert/Scripts/walk-pull/wp'
-alias duf='duf -theme dark max output width'
+alias cat='bat'
 
 #* RClone commands 
 alias rclr='rclone listremotes'
@@ -50,6 +49,4 @@ alias gst='git status'
 alias gc='git commit -m'
 alias gpo='git push -u origin'
 alias gp='git pull'
-
-
 alias vbls='VBoxManage list vms'

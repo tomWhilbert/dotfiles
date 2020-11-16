@@ -6,9 +6,9 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
-#typeset -g POWERLEVEL9K_INSTANT_PROMPT=quiet
-export PATH="/usr/local/opt/coreutils/libexec/gnubin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/sbin"
+export PATH="/usr/local/opt/gnu-sed/libexec/gnubin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/sbin"
 export RCLONE_PASSWORD_COMMAND="security find-generic-password -a $USER -s rclone -w"
+export DOTFILES=$HOME/.dotfiles
 
 #* History
 [ -z "$HISTFILE" ] && HISTFILE="$HOME/.zsh_history"
@@ -41,27 +41,33 @@ zstyle ':completion::complete:*' cache-path
 zstyle ':completion:*' list-colors ''
 zstyle ':completion:*:*:kill:*:processes' list-colors '=(#b) #([0-9]#) ([0-9a-z-]#)*=01;34=0=01'
 
+#* Add git completions
+
 zstyle ':completion:*:*:git:*' script ~/.zsh/git-completion.bash
 fpath=(~/.zsh $fpath)
+autoload -Uz compinit && compinit
+
+#* Aliases, Themes and plugins
+#* source OMZ
+ZSH=~/.oh-my-zsh
+#ZSH_CUSTOM=$ZSH/custom
+source $ZSH/plugins/z/z.plugin.zsh    #* Frecency plugin
+source $ZSH/lib/directories.zsh       #* Adds the 'd' show recent directories
+source $ZSH/plugins/brew/brew.plugin.zsh
+
+setopt prompt_subst
 
 source ~/.zshrc_aliases
 source ~/.zshrc_functions
+
 source ~/.plugins/zsh-autosuggestions/zsh-autosuggestions.plugin.zsh
 source ~/.plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.plugin.zsh
 source ~/.plugins/zsh-history-substring-search/zsh-history-substring-search.plugin.zsh
 source ~/.plugins/zsh-completions/zsh-completions.plugin.zsh
 source ~/.powerlevel10k/powerlevel10k.zsh-theme
-source /usr/local/share/zsh/site-functions/_rclone
-source ~/.plugins/zsh-z/zsh-z.plugin.zsh  #* testing agkozak/zsh-z
 
-autoload -Uz compinit && compinit
 
-#** Moved lines 49 - 58 above the OMZ sourcing to fix compdef error 11-9-20
-
-source ~/ohmyzsh/lib/directories.zsh       #* Adds the 'd' show recent directories must be after 
-
-setopt prompt_subst
-
+#* To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 #* zsh history substring search bindkeys
@@ -70,3 +76,4 @@ bindkey '^[[A' history-substring-search-up
 bindkey '^[[B' history-substring-search-down
 
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
+
