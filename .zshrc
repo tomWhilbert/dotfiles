@@ -1,12 +1,12 @@
 #!/bin/bash
-# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
-# Initialization code that may require console input (password prompts, [y/n]
-# confirmations, etc.) must go above this block, everything else may go below.
+#* Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
+#* Initialization code that may require console input (password prompts, [y/n]
+#* confirmations, etc.) must go above this block, everything else may go below.
 if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
-export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/sbin:$HOME/Scripts"
+export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/sbin:$HOME/bin/Scripts"
 
 #* History
 [ -z "$HISTFILE" ] && HISTFILE="$HOME/.zsh_history"
@@ -40,9 +40,8 @@ zstyle ':completion:*' list-colors ''
 zstyle ':completion:*:*:kill:*:processes' list-colors '=(#b) #([0-9]#) ([0-9a-z-]#)*=01;34=0=01'
 
 #* Add git completions
-
-zstyle ':completion:*:*:git:*' script ~/.zsh/git-completion.bash
-fpath=(~/.zsh $fpath)
+# zstyle ':completion:*:*:git:*' script ~/.zsh/git-completion.bash
+# fpath=(~/.zsh $fpath)
 autoload -Uz compinit && compinit
 
 #* Aliases, Themes and plugins
