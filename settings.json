@@ -63,8 +63,10 @@
         "vcenter"
     ],
     "cSpell.enableFiletypes": [
-        "!scss"
+        "!scss",
+        "shellscript"
     ],
+    "cSpell.enabled": false,
     
     
 
