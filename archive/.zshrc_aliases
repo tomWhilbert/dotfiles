@@ -4,9 +4,9 @@
 #* Alias and function source file
 
 alias ll='ls -alh'
-alias lld='lsd -l | grep '^d''
+alias lld='ls -l | grep '^d''
 alias rmf='rm -rf'
-alias srz='exec zsh'
+alias srz='source .zshrc'
 alias ls='lsd'
 alias hs='history 1'
 alias shut='sudo shutdown -h now'
@@ -22,30 +22,24 @@ alias zrf='code $HOME/.zshrc_functions'
 alias rp='realpath . | wl-copy'
 alias wesync='ssh -L 8385:localhost:8384 we'
 alias cat='bat'
-alias lt='lsd --tree'
-alias nos='code $HOME/.dotfiles/NOS-220.code-workspace'
-alias sec='code $HOME/.dotfiles/sec.code-workspace'
-alias notes='code $HOME/.dotfiles/notes.code-workspace'
-alias duf='duf -theme dark max output width'
 
 #* Arch/Linux specific aliases
 alias sbz='systemctl start sabnzbd@tom.service'
 alias sup='sudo pacman'
 alias reflector='sudo reflector --verbose --latest 5 --sort rate --save /etc/pacman.d/mirrorlist'
 alias sudo='sudo ' #* allows sudo to accept an alias as an argument
-alias status='systemctl status'
+alias sc='systemctl'
 alias lspac="expac --timefmt='%Y-%m-%d %T' '%l\t%n' | sort | tail -n"
 alias chk='checkupdates'
-alias sucode='sudo code --user-data-dir=".vscode-root"'
-alias vmon='vim-cmd vmsvc/power.on'  #* for info only - works on esxi cli
-alias runn='systemctl list-units -t service --state running'
-alias getdns='getent ahostsv4'
-
-#* Network Manager 
-alias ntu='nmcli c up NETTECH'
-alias ntd='nmcli c down NETTECH'
 alias wgu='nmcli connection up mullvad-us128'
 alias wgd='nmcli connection down mullvad-us128'
+#alias gip='$HOME/bin/gip.sh'
+alias sucode='sudo code --user-data-dir="~/.vscode-root"'
+#alias wp='$HOME/bin/walk-and-pull/./wp.sh'
+alias vmon='vim-cmd vmsvc/power.on'  #* for info only - works on esxi cli
+alias runn='systemctl list-units -t service --state running'
+alias ntu='nmcli c up NETTECH'
+alias ntd='nmcli c down NETTECH'
 
 #* rclone aliases
 alias rclr='rclone listremotes'
@@ -67,3 +61,4 @@ alias gp='git pull'
 
 
 
+alias lt='ls --tree'
