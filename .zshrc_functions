@@ -111,10 +111,7 @@ vmh () {
 #* See Stack Exchange: https://unix.stackexchange.com/questions/218753/how-to-pass-variables-to-awk-command-with-conditions
 #* pass variable to awk was the key to getting it to work
 
-#* macOS only:  Output bundle id
-getid () {
-	osascript -e "id of app '$1'"
-}
+
 
 	
 
