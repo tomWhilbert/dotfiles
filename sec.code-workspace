@@ -5,6 +5,7 @@
 		}
 	],
 	"settings": {
-		"cSpell.enabled": false
+		"cSpell.enabled": false,
+		"workbench.settings.useSplitJSON": true
 	}
 }
