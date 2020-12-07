@@ -5,6 +5,7 @@
 
 alias ll='ls -alh'
 alias lld='lsd -l | grep '^d''
+alias li='command ls -li'
 alias rmf='rm -rf'
 alias srz='exec zsh'
 alias ls='lsd'
