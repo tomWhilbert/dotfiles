@@ -49,7 +49,7 @@
     "workbench.iconTheme": "vscode-icons",
     "workbench.colorTheme": "One Dark Pro",
     "markdown-preview-enhanced.AccessKey": "P",
-    "markdown-preview-enhanced.previewTheme": "solarized-dark.css",
+    "markdown-preview-enhanced.previewTheme": "one-dark.css",
     "workbench.editor.pinnedTabSizing": "shrink",
     "cSpell.userWords": [
         "ESET",
