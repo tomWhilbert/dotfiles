@@ -46,7 +46,7 @@
     "terminal.integrated.shell.linux": "/bin/bash",
     "workbench.enableExperiments": false,
     "workbench.settings.enableNaturalLanguageSearch": false,
-    "workbench.iconTheme": "vscode-icons",
+    "workbench.iconTheme": "material-icon-theme",
     "workbench.colorTheme": "One Dark Pro",
     "markdown-preview-enhanced.AccessKey": "P",
     "markdown-preview-enhanced.previewTheme": "one-dark.css",
