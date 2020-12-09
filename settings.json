@@ -1,4 +1,5 @@
 {
+<<<<<<< HEAD
     "workbench.settings.editor": "json",
     "workbench.fontAliasing": "antialiased",
     "workbench.settings.useSplitJSON": true,
@@ -7,26 +8,36 @@
     "editor.formatOnPaste": true,
     "editor.multiCursorModifier": "alt",
     "editor.snippetSuggestions": "top",
+=======
+>>>>>>> 6bf33c57405277dbf75d5e68f14b5e4a64e42dc5
     "editor.minimap.enabled": false,
-    "workbench.editor.enablePreview": false,
-    "editor.lineHeight": 25,
-    "html.autoClosingTags": false,
-    "editor.matchBrackets": true,
-    "editor.wordWrap": "on",
-    "terminal.integrated.fontSize": 12,
-    "terminal.integrated.fontFamily": "MesloLGS NF, Menlo",
-    "explorer.confirmDelete": false,
-    "workbench.statusBar.visible": true,
-    "explorer.openEditors.visible": 0,
+    "workbench.statusBar.visible": false,
     "workbench.activityBar.visible": false,
+<<<<<<< HEAD
     "explorer.confirmDragAndDrop": false,
     "terminal.integrated.shell.osx": "/bin/bash",
     "extensions.ignoreRecommendations": true,
     "workbench.startupEditor": "newUntitledFile",
+=======
+    "editor.lineHeight": 22,
+    "editor.fontFamily": "Fira Code, Menlo, Monaco, 'Courier New', monospace",
+    "editor.fontSize": 15,
+    "editor.fontLigatures": null,
+    "workbench.fontAliasing": "auto",
+    "workbench.colorTheme": "One Dark Pro",
+    "launch": {
+
+        "configurations": [],
+        "compounds": []
+    },
+    "markdown.preview.fontFamily": "Fira Code, BlinkMacSystemFont, 'Segoe WPC', 'Segoe UI', system-ui, 'Ubuntu', 'Droid Sans', sans-serif",
+    "markdown.preview.fontSize": 10,
+    "workbench.settings.useSplitJSON": true,
+>>>>>>> 6bf33c57405277dbf75d5e68f14b5e4a64e42dc5
     "files.autoSave": "afterDelay",
-    "php.suggest.basic": false,
     "editor.suggestSelection": "first",
     "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+<<<<<<< HEAD
     "java.configuration.checkProjectSettingsExclusions": false,
     "java.errors.incompleteClasspath.severity": "ignore",
     "breadcrumbs.enabled": true,
@@ -65,9 +76,15 @@
     "cSpell.enableFiletypes": [
         "!scss",
         "shellscript"
+=======
+    "python.languageServer": "Microsoft",
+    "workbench.editorAssociations": [
+        {
+            "viewType": "jupyter.notebook.ipynb",
+            "filenamePattern": "*.ipynb"
+        }
+>>>>>>> 6bf33c57405277dbf75d5e68f14b5e4a64e42dc5
     ],
-    "cSpell.enabled": false,
-    
-    
-
-    }
+    "terminal.integrated.fontFamily": "MesloLGS NF",
+    "terminal.integrated.fontSize": 14
+}
