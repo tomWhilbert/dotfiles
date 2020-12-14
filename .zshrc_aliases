@@ -2,7 +2,7 @@
 #* ShaBang here enables syntax highlighting in vscode
 #* alias and function source file
 
-alias ll='ls -alh'
+alias l='lsd -alh'
 alias buu='brew update && brew upgrade && brew upgrade --cask'
 alias rmf='rm -rf'
 alias srz='cd ~ && exec zsh'

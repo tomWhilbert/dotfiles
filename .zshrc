@@ -44,7 +44,7 @@ zstyle ':completion:*:*:kill:*:processes' list-colors '=(#b) #([0-9]#) ([0-9a-z-
 zstyle ':completion:*:*:git:*' script ~/.zsh/git-completion.bash
 fpath=(~/.zsh $fpath)
 
-#source ~/.zshrc_aliases
+source ~/.zshrc_aliases
 source ~/.zshrc_functions
 source ~/.plugins/zsh-autosuggestions/zsh-autosuggestions.plugin.zsh
 source ~/.plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.plugin.zsh
