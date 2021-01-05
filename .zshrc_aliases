@@ -2,7 +2,7 @@
 #* SheBang here enables syntax highlighting in vscode
 #* alias and function source file
 
-alias ll='ls -alh'
+alias l='ls -alh'
 alias ls='lsd'
 alias buu='brew update && brew upgrade && brew upgrade --cask'
 alias rmf='rm -rf'
@@ -28,9 +28,11 @@ alias zrf='code $HOME/.zshrc_functions'
 alias grep='grep --color'
 alias nos='code $HOME/.dotfiles/NOS-220.code-workspace'
 alias sec='code $HOME/.dotfiles/sec.code-workspace'
+alias boring='code $HOME/.dotfiles/boring.code-workspace'
 alias wp='/Users/thomaswhilbert/bin/Scripts/walk-pull/wp'
 alias cat='bat'
 alias py='python3'
+alias vmarch='vmrun -T fusion start "/Users/thomaswhilbert/Virtual Machines.localized/Arch.vmwarevm/Arch.vmx" nogui'
 
 #* RClone commands 
 alias rclr='rclone listremotes'

@@ -106,8 +106,6 @@ vmh () {
 	printf "\n"
 }
 
-
-
 digab () {
 	dig @10.60.20.20 "$1".asheville.cc.nc.us
 }
