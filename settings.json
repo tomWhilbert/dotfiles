@@ -20,7 +20,7 @@
     "explorer.openEditors.visible": 0,
     "workbench.activityBar.visible": false,
     "explorer.confirmDragAndDrop": false,
-    "terminal.integrated.shell.osx": "/bin/bash",
+    "terminal.integrated.shell.osx": "/usr/local/bin/zsh",
     "extensions.ignoreRecommendations": true,
     "workbench.startupEditor": "newUntitledFile",
     "files.autoSave": "afterDelay",
