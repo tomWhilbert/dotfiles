@@ -4,5 +4,7 @@
 			"path": "../Nextcloud/Learn/ITvPro-Linux+"
 		}
 	],
-	"settings": {}
+	"settings": {
+		"cSpell.enabled": true
+	}
 }
