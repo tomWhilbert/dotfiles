@@ -32,9 +32,14 @@ alias notes='code $HOME/.dotfiles/notes.code-workspace'
 alias wp='/Users/thomaswhilbert/Scripts/walk-pull/wp'
 alias duf='duf -theme dark max output width'
 alias cat='bat'
-alias vmarch='vmrun -T fusion start "/Users/thomaswhilbert/Virtual Machines.localized/ArchLinux.vmwarevm/ArchLinux.vmx" nogui'
+
+#* Vmware Launchers
 #* Add `/Applications/VMware Fusion.app/Contents/Public` to $PATH
+
+alias vmarch='vmrun -T fusion start "/Users/thomaswhilbert/Virtual Machines.localized/ArchLinux.vmwarevm/ArchLinux.vmx" nogui'
 alias vmubuntu='vmrun -T fusion start "/Users/thomaswhilbert/Virtual Machines.localized/Ubuntu 64-bit.vmwarevm/Ubuntu 64-bit.vmx" nogui'
+alias vmcentos='vmrun -T fusion start "/Users/thomaswhilbert/Virtual Machines.localized/CentOS 6 64-bit.vmwarevm/CentOS 6 64-bit.vmx" nogui'
+
 
 #* RClone commands 
 alias rclr='rclone listremotes'
