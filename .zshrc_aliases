@@ -25,6 +25,7 @@ alias zcode='code /$HOME/.dotfiles/zsh.code-workspace'
 alias zrc='code $HOME/.zshrc'
 alias zra='code $HOME/.zshrc_aliases'
 alias zrf='code $HOME/.zshrc_functions'
+alias sconf='code $HOME/.ssh/config'
 alias grep='grep --color'
 alias nos='code $HOME/.dotfiles/NOS-220.code-workspace'
 alias sec='code $HOME/.dotfiles/sec.code-workspace'
@@ -38,8 +39,8 @@ alias cat='bat'
 
 alias vmarch='vmrun -T fusion start "/Users/thomaswhilbert/Virtual Machines.localized/ArchLinux.vmwarevm/ArchLinux.vmx" nogui'
 alias vmubuntu='vmrun -T fusion start "/Users/thomaswhilbert/Virtual Machines.localized/Ubuntu 64-bit.vmwarevm/Ubuntu 64-bit.vmx" nogui'
-alias vmcentos='vmrun -T fusion start "/Users/thomaswhilbert/Virtual Machines.localized/CentOS 6 64-bit.vmwarevm/CentOS 6 64-bit.vmx" nogui'
-
+alias vmcentos6='vmrun -T fusion start "/Users/thomaswhilbert/Virtual Machines.localized/CentOS 6 64-bit.vmwarevm/CentOS 6 64-bit.vmx" nogui'
+alias vmcentos8='vmrun -T fusion start "/Users/thomaswhilbert/Virtual Machines.localized/CentOS 8 64-bit.vmwarevm/CentOS 8 64-bit.vmx" nogui'
 
 #* RClone commands 
 alias rclr='rclone listremotes'
