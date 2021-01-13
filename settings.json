@@ -5,7 +5,7 @@
     "editor.fontSize": 12,
     "window.zoomLevel": 1,
     "editor.formatOnPaste": true,
-    "editor.multiCursorModifier": "alt",
+    "editor.multiCursorModifier": "ctrlCmd",
     "editor.snippetSuggestions": "top",
     "editor.minimap.enabled": false,
     "workbench.editor.enablePreview": false,
