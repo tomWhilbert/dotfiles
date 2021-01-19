@@ -6,9 +6,9 @@
 alias ll='ls -alh'
 alias lld='lsd -l | grep '^d''
 alias li='command ls -li'
+alias ls='lsd'
 alias rmf='rm -rf'
 alias srz='exec zsh'
-alias ls='lsd'
 alias hs='history 1'
 alias shut='sudo shutdown -h now'
 alias reboot='sudo shutdown -r now'
@@ -25,28 +25,43 @@ alias wesync='ssh -L 8385:localhost:8384 we'
 alias cat='bat'
 alias lt='lsd --tree'
 alias nos='code $HOME/.dotfiles/NOS-220.code-workspace'
+alias plus='code $HOME/.dotfiles/plus.code-workspace'
 alias sec='code $HOME/.dotfiles/sec.code-workspace'
 alias notes='code $HOME/.dotfiles/notes.code-workspace'
 alias duf='duf -theme dark max output width'
 
 #* Arch/Linux specific aliases
 alias sbz='systemctl start sabnzbd@tom.service'
-alias sup='sudo pacman'
+alias pac='sudo pacman'
 alias reflector='sudo reflector --verbose --latest 5 --sort rate --save /etc/pacman.d/mirrorlist'
 alias sudo='sudo ' #* allows sudo to accept an alias as an argument
-alias status='systemctl status'
 alias lspac="expac --timefmt='%Y-%m-%d %T' '%l\t%n' | sort | tail -n"
 alias chk='checkupdates'
 alias sucode='sudo code --user-data-dir=".vscode-root"'
 alias vmon='vim-cmd vmsvc/power.on'  #* for info only - works on esxi cli
-alias runn='systemctl list-units -t service --state running'
+
 alias getdns='getent ahostsv4'
+#alias pacs='sudo pacman -Ss' #* replaced with pacs function
+alias pacin='sudo pacman -S'
+alias sc='systemctl'
+alias netnice='nmcli -p device show'
+
+#* systemd
+alias status="systemctl status"
+alias start="systemctl start"
+alias stop="systemctl stop"
+alias restart="systemctl restart"
+alias senable="systemctl enable"
+alias disable="systemctl disable"
+alias list="systemctl list-unit-files"
+alias reload="systemctl reload"
+alias runn='systemctl list-units -t service --state running'
 
 #* Network Manager 
 alias ntu='nmcli c up NETTECH'
 alias ntd='nmcli c down NETTECH'
-alias wgu='nmcli connection up mullvad-us128'
-alias wgd='nmcli connection down mullvad-us128'
+alias wguku='nmcli con up mlvd-gb4'
+alias wgukd='nmcli con down mlvd-gb4'
 
 #* rclone aliases
 alias rclr='rclone listremotes'

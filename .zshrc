@@ -6,8 +6,10 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
-export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/sbin:$HOME/bin/Scripts"
+export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/sbin:$HOME/bin/Scripts:/home/tom/.cargo/bin"
 export RCLONE_PASSWORD_COMMAND="pass rclone"    #* See https://rclone.org/docs/#configuration-encryption
+export BAT_THEME="Dracula"
+
 
 #* History
 [ -z "$HISTFILE" ] && HISTFILE="$HOME/.zsh_history"
@@ -57,7 +59,7 @@ setopt prompt_subst
 #* Deviation from previous locations - On Linux, plugins are installed via AUR so no walk-pull needed...
 source ~/.zshrc_aliases
 source ~/.zshrc_functions
-source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
+source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme #* Installed via Yay
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 source /usr/share/zsh/plugins/zsh-history-substring-search/zsh-history-substring-search.zsh
@@ -74,3 +76,4 @@ bindkey "^[[1;5C" forward-word
 bindkey -M emacs '^P' history-substring-search-up
 bindkey -M emacs '^N' history-substring-search-down
 bindkey "^[[3~" delete-char
+

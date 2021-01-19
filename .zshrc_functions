@@ -37,7 +37,11 @@ lazyg ()
 
 	#* Disk Usage, Sorted by Size
 	dus () {
+		RED='\033[0;31m'
+		total=$(du -sh "$1")
 		du -sh "$1"/* | sort -h
+		printf "\n"
+		echo -e "$RED "Total Size: $total""
 	}
 
 	#* Realpath a file
@@ -79,3 +83,13 @@ dash() {
 	for file in *; do mv "$file" "$(echo "$file" | tr ' ' '-')" ; done
 }
 
+#* show ip type: static or dynamic
+iptype () {
+	nmcli -f ipv4.method  con show "$(nmcli con show | awk 'NR==2' | cut -d' ' -f1,2,3)"
+}
+
+#* pacman search, match only the term
+
+pacs () {
+	pacman -Ss ^"$1"$
+}
