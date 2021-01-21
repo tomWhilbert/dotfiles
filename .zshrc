@@ -6,9 +6,6 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
-
-
-
 #typeset -g POWERLEVEL9K_INSTANT_PROMPT=quiet
 export PATH="/usr/local/opt/coreutils/libexec/gnubin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/sbin:/Applications/VMware Fusion.app/Contents/Public"
 export RCLONE_PASSWORD_COMMAND="security find-generic-password -a $USER -s rclone -w"
