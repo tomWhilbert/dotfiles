@@ -34,6 +34,8 @@ alias wp='/Users/thomaswhilbert/Scripts/walk-pull/wp'
 alias duf='duf -theme dark max output width'
 alias cat='bat'
 
+#* gnu Coreutils
+#alias dd='/usr/local/Cellar/coreutils/8.32/libexec/gnubin/gdd'
 #* Vmware Launchers
 #* Add `/Applications/VMware Fusion.app/Contents/Public` to $PATH
 
