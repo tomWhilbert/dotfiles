@@ -31,7 +31,6 @@ alias nos='code $HOME/.dotfiles/NOS-220.code-workspace'
 alias sec='code $HOME/.dotfiles/sec.code-workspace'
 alias notes='code $HOME/.dotfiles/notes.code-workspace'
 alias wp='/Users/thomaswhilbert/Scripts/walk-pull/wp'
-alias duf='duf -theme dark max output width'
 alias cat='bat'
 
 #* gnu Coreutils
