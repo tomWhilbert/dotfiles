@@ -2,10 +2,13 @@
 	"folders": [
 		{
 			"path": "../Nextcloud/Learn/SEC-160"
+		},
+		{
+			"path": "../Nextcloud/Learn/SEC-285"
 		}
 	],
 	"settings": {
-		"cSpell.enabled": true,
+		"cSpell.enabled": false,
 		"workbench.settings.useSplitJSON": true
 	}
 }
