@@ -37,7 +37,6 @@ alias cat='bat'
 #alias dd='/usr/local/Cellar/coreutils/8.32/libexec/gnubin/gdd'
 #* Vmware Launchers
 #* Add `/Applications/VMware Fusion.app/Contents/Public` to $PATH
-
 alias vmarch='vmrun -T fusion start "/Users/thomaswhilbert/Virtual Machines.localized/ArchLinux.vmwarevm/ArchLinux.vmx" nogui'
 alias vmubuntu='vmrun -T fusion start "/Users/thomaswhilbert/Virtual Machines.localized/Ubuntu 64-bit.vmwarevm/Ubuntu 64-bit.vmx" nogui'
 alias vmcentos6='vmrun -T fusion start "/Users/thomaswhilbert/Virtual Machines.localized/CentOS 6 64-bit.vmwarevm/CentOS 6 64-bit.vmx" nogui'
