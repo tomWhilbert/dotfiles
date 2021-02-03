@@ -49,7 +49,11 @@
     "workbench.iconTheme": "material-icon-theme",
     "workbench.colorTheme": "One Dark Pro",
     "markdown-preview-enhanced.AccessKey": "P",
-    "markdown-preview-enhanced.previewTheme": "one-dark.css",
+    "markdown-preview-enhanced.previewTheme": "solarized-dark.css",
+    "markdown-preview-enhanced.codeBlockTheme": "darcula.css",
+    "markdown.preview.fontSize": 12,
+    "markdown.preview.lineHeight": 1.4,
+    "markdown.preview.fontFamily": "Menlo for Powerline",
     "workbench.editor.pinnedTabSizing": "normal",
     "cSpell.userWords": [
         "ESET",
@@ -67,7 +71,7 @@
         "shellscript"
     ],
     "cSpell.enabled": false,
-    
+
     
 
     }
