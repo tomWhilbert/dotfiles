@@ -5,7 +5,7 @@
 		}
 	],
 	"settings": {
-		"cSpell.enabled": true,
+		"cSpell.enabled": false,
 		"workbench.settings.useSplitJSON": true,
 		"cSpell.words": [
 			"Deciso",
