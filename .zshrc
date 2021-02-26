@@ -1,4 +1,3 @@
-#!/bin/bash
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
 # confirmations, etc.) must go above this block, everything else may go below.
@@ -44,6 +43,16 @@ zstyle ':completion:*:*:kill:*:processes' list-colors '=(#b) #([0-9]#) ([0-9a-z-
 zstyle ':completion:*:*:git:*' script ~/.zsh/git-completion.bash
 fpath=(~/.zsh $fpath)
 
+<<<<<<< HEAD
+=======
+# if type brew &>/dev/null; then
+#     FPATH=$(brew --prefix)/share/zsh-completions:$FPATH
+#     autoload -Uz compinit
+#     compinit
+# fi
+
+# Source paths for aliases and functions
+>>>>>>> macOS-new
 source ~/.zshrc_aliases
 source ~/.zshrc_functions
 source ~/.plugins/zsh-autosuggestions/zsh-autosuggestions.plugin.zsh

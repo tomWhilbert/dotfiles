@@ -2,7 +2,8 @@
 #* ShaBang here enables syntax highlighting in vscode
 #* alias and function source file
 
-alias l='lsd -alh'
+alias l='ls -alh'
+alias ls='lsd'
 alias buu='brew update && brew upgrade && brew upgrade --cask'
 alias rmf='rm -rf'
 alias srz='cd ~ && exec zsh'
@@ -29,6 +30,7 @@ alias sconf='code $HOME/.ssh/config'
 alias grep='grep --color'
 alias nos='code $HOME/.dotfiles/NOS-220.code-workspace'
 alias sec='code $HOME/.dotfiles/sec.code-workspace'
+<<<<<<< HEAD
 alias notes='code $HOME/.dotfiles/notes.code-workspace'
 alias wp='/Users/thomaswhilbert/Scripts/walk-pull/wp'
 alias cat='bat'
@@ -41,6 +43,13 @@ alias vmarch='vmrun -T fusion start "/Users/thomaswhilbert/Virtual Machines.loca
 alias vmubuntu='vmrun -T fusion start "/Users/thomaswhilbert/Virtual Machines.localized/Ubuntu 64-bit.vmwarevm/Ubuntu 64-bit.vmx" nogui'
 alias vmcentos6='vmrun -T fusion start "/Users/thomaswhilbert/Virtual Machines.localized/CentOS 6 64-bit.vmwarevm/CentOS 6 64-bit.vmx" nogui'
 alias vmcentos8='vmrun -T fusion start "/Users/thomaswhilbert/Virtual Machines.localized/CentOS 8 64-bit.vmwarevm/CentOS 8 64-bit.vmx" nogui'
+=======
+alias boring='code $HOME/.dotfiles/boring.code-workspace'
+alias wp='/Users/thomaswhilbert/bin/Scripts/walk-pull/wp'
+alias cat='bat'
+alias py='python3'
+alias vmarch='vmrun -T fusion start "/Users/thomaswhilbert/Virtual Machines.localized/Arch.vmwarevm/Arch.vmx" nogui'
+>>>>>>> macOS-new
 
 #* RClone commands 
 alias rclr='rclone listremotes'
