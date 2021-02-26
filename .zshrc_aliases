@@ -83,3 +83,4 @@ alias gp='git pull'
 
 
 
+alias wh=where

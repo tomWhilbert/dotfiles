@@ -9,6 +9,8 @@ fi
 export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/sbin:$HOME/bin/Scripts:/home/tom/.cargo/bin"
 export RCLONE_PASSWORD_COMMAND="pass rclone"    #* See https://rclone.org/docs/#configuration-encryption
 export BAT_THEME="Dracula"
+export EDITOR=vim
+export VISUAL=vi
 
 
 #* History
@@ -70,10 +72,15 @@ source /usr/share/zsh/vendor-completions/_rclone
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 #* zsh bindkeys
-bindkey '`' autosuggest-accept
+bindkey -e  #* Sets line edit behavior to emacs (ctrl+e beginning of line etc.)
+
+# bindkey '`' autosuggest-accept
 bindkey "^[[1;5D" backward-word
 bindkey "^[[1;5C" forward-word
-bindkey -M emacs '^P' history-substring-search-up
-bindkey -M emacs '^N' history-substring-search-down
-bindkey "^[[3~" delete-char
 
+# bindkey -M emacs '^P' history-substring-search-up
+# bindkey -M emacs '^N' history-substring-search-down
+# bindkey "^[[3~" delete-char
+
+
+source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
