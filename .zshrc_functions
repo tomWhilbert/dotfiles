@@ -85,7 +85,11 @@ dash() {
 
 #* show ip type: static or dynamic
 iptype () {
-	nmcli -f ipv4.method  con show "$(nmcli con show | awk 'NR==2' | cut -d' ' -f1,2,3)"
+	#nmcli -f ipv4.method  con show "$(nmcli con show | awk 'NR==2' | cut -d' ' -f1,2,3)"
+	nmcli con show
+	echo -e '\n' "Enter the Connection Name (case sensitive) "
+	read -r name
+	nmcli -f ipv4.method  con show "$name"
 }
 
 #* pacman search, match only the term
