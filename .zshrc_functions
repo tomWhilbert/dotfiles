@@ -97,3 +97,13 @@ iptype () {
 pacs () {
 	pacman -Ss ^"$1"$
 }
+
+#* Can use to eliminate need for Oh My Zsh D plugin
+d () {
+	if [[ -n $1 ]]
+	then
+		dirs "$@"
+	else
+		dirs -v | head -10
+	fi
+}

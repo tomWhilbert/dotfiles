@@ -12,7 +12,6 @@ export BAT_THEME="Dracula"
 export EDITOR=vim
 export VISUAL=vi
 
-
 #* History
 [ -z "$HISTFILE" ] && HISTFILE="$HOME/.zsh_history"
 HISTSIZE=50000
@@ -26,9 +25,9 @@ setopt share_history
 
 #* Changing directories
 setopt auto_cd
-setopt auto_pushd
-unsetopt pushd_ignore_dups
-setopt pushdminus
+#setopt auto_pushd #*duplicated in $ZSH/lib/directories.zsh
+#setopt pushdminus #*duplicated in $ZSH/lib/directories.zsh
+#unsetopt pushd_ignore_dups #*duplicated in $ZSH/lib/directories.zsh
 
 #* Completions
 setopt dot_glob  #*allows for ** globs
