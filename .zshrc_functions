@@ -49,8 +49,6 @@
 	#* Disk Usage, Sorted by Size
 	dus () {
 		du -sh "$1"/* | sort -h
-		printf "\n"
-		echo "Total Size" "$(du -sh | cut -f 1)" 
 	}
 
 	#* Realpath a file
@@ -83,18 +81,18 @@
     command man "$@"
 }
 
-
-
 #* RClone 
 rcco () {
 	rclone copy --max-age "$1" --no-traverse /Users/thomaswhilbert/OneDrive od: -P
 }
 
 rccg () {
-rc copy --max-age "$1" --no-traverse /Users/thomaswhilbert/GoogleDrive/gdS gdS: -P
+rc copy --max-age "$1" --no-traverse /Users/thomaswhilbert/GoogleDrive/Secure gdS: -P
 }
 
 #* Virtual Box
+#* See Stack Exchange: https://unix.stackexchange.com/questions/218753/how-to-pass-variables-to-awk-command-with-conditions
+#* pass variable to awk was the key to getting it to work
 vmh () {
 	VBoxManage list vms | nl
 	VBoxManage list vms | nl > vmz
@@ -104,14 +102,9 @@ vmh () {
 	vm=$(awk -v num="$num" 'NR==num {print}' < vmz | cut -d \" -f 2)
 	rm vmz
 	VBoxHeadless -s "$vm" &
-	sleep 5
+	sleep 1
 	printf "\n"
 }
-
-#* See Stack Exchange: https://unix.stackexchange.com/questions/218753/how-to-pass-variables-to-awk-command-with-conditions
-#* pass variable to awk was the key to getting it to work
-
-
 
 digab () {
 	dig @10.60.20.20 "$1".asheville.cc.nc.us
