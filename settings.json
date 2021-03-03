@@ -2,14 +2,32 @@
     "editor.minimap.enabled": false,
     "workbench.statusBar.visible": false,
     "workbench.activityBar.visible": false,
-    "window.zoomLevel": 1,
-    "workbench.iconTheme": "vscode-icons",
-    "explorer.confirmDragAndDrop": false,
-    "files.autoSave": "afterDelay",
-    "editor.tabSize": 3,
-    "terminal.integrated.fontFamily": "'MesloLGS NF'",
-    "markdown.preview.fontSize": 12,
+    "editor.lineHeight": 30,
+    "editor.fontFamily": "Fira Code, Menlo, Monaco, 'Courier New', monospace",
+    "editor.fontSize": 15,
+    "editor.fontLigatures": null,
+    "workbench.fontAliasing": "auto",
     "workbench.colorTheme": "One Dark Pro",
-    "editor.inlineHints.fontFamily": "'MesloLGS NF',Menlo, Monaco, 'Courier New', monospace",
-    "editor.fontWeight": null
+    "launch": {
+
+        "configurations": [],
+        "compounds": []
+    },
+    "markdown.preview.fontFamily": "Fira Code, BlinkMacSystemFont, 'Segoe WPC', 'Segoe UI', system-ui, 'Ubuntu', 'Droid Sans', sans-serif",
+    "markdown.preview.fontSize": 10,
+    "workbench.settings.useSplitJSON": true,
+    "files.autoSave": "afterDelay",
+    "editor.suggestSelection": "first",
+    "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+    "python.languageServer": "Microsoft",
+    "workbench.editorAssociations": [
+        {
+            "viewType": "jupyter.notebook.ipynb",
+            "filenamePattern": "*.ipynb"
+        }
+    ],
+    "terminal.integrated.fontFamily": "MesloLGS NF",
+    "terminal.integrated.fontSize": 14,
+    "editor.multiCursorModifier": "ctrlCmd",
+    "workbench.iconTheme": "vscode-icons"
 }
