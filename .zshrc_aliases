@@ -3,20 +3,15 @@
 
 #* Alias and function source file
 
-alias ll='ls -alh'
+alias ll='ls -lah'
 alias lld='lsd -l | grep '^d''
-alias li='command ls -li'
+alias li='lsd -li'
 alias ls='lsd'
 alias rmf='rm -rf'
 alias srz='exec zsh'
 alias hs='history 1'
-alias shut='sudo shutdown -h now'
-alias reboot='sudo shutdown -r now'
 alias png='ping -c 3'
 alias grep='grep --color'
-alias nos='code $HOME/nos.code-workspace'
-alias notes='code $HOME/notes.code-workspace'
-alias sec=' code $HOME/sec.code-workspace'
 alias zrc='code $HOME/.zshrc'
 alias zra='code $HOME/.zshrc_aliases'
 alias zrf='code $HOME/.zshrc_functions'
@@ -24,6 +19,9 @@ alias rp='realpath . | wl-copy'
 alias wesync='ssh -L 8385:localhost:8384 we'
 alias cat='bat'
 alias lt='lsd --tree'
+alias wh=where
+
+#* VSCode Workspaces
 alias nos='code $HOME/.dotfiles/NOS-220.code-workspace'
 alias plus='code $HOME/.dotfiles/plus.code-workspace'
 alias sec='code $HOME/.dotfiles/sec.code-workspace'
@@ -32,29 +30,21 @@ alias notes='code $HOME/.dotfiles/notes.code-workspace'
 #* Arch/Linux specific aliases
 alias sbz='systemctl start sabnzbd@tom.service'
 alias pac='sudo pacman'
+alias pacin='sudo pacman -S'
 alias reflector='sudo reflector --verbose --latest 5 --sort rate --save /etc/pacman.d/mirrorlist'
 alias sudo='sudo ' #* allows sudo to accept an alias as an argument
 alias lspac="expac --timefmt='%Y-%m-%d %T' '%l\t%n' | sort | tail -n"
 alias chk='checkupdates | nl'
 alias sucode='sudo code --user-data-dir=".vscode-root"'
 alias vmon='vim-cmd vmsvc/power.on'  #* for info only - works on esxi cli
-
 alias getdns='getent ahostsv4'
-#alias pacs='sudo pacman -Ss' #* replaced with pacs function
-alias pacin='sudo pacman -S'
-alias sc='systemctl'
 alias netnice='nmcli -p device show'
 
 #* systemd
-alias status="systemctl status"
-alias start="systemctl start"
-alias stop="systemctl stop"
-alias restart="systemctl restart"
-alias senable="systemctl enable"
-alias disable="systemctl disable"
-alias list="systemctl list-unit-files"
-alias reload="systemctl reload"
-alias runn='systemctl list-units -t service --state running'
+alias sc='systemctl'
+alias scst="systemctl status"
+alias scrn='systemctl list-units -t service --state running'
+alias scen='systemctl list-unit-files --state enabled'
 
 #* Network Manager 
 alias ntu='nmcli c up NETTECH'
@@ -83,4 +73,3 @@ alias gp='git pull'
 
 
 
-alias wh=where

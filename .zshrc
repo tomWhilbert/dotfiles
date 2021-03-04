@@ -23,13 +23,9 @@ setopt hist_ignore_space
 setopt inc_append_history
 setopt share_history
 
-#* Changing directories
-setopt auto_cd
-#setopt auto_pushd #*duplicated in $ZSH/lib/directories.zsh
-#setopt pushdminus #*duplicated in $ZSH/lib/directories.zsh
-#unsetopt pushd_ignore_dups #*duplicated in $ZSH/lib/directories.zsh
-
 #* Completions
+setopt prompt_subst
+setopt auto_cd
 setopt dot_glob  #*allows for ** globs
 setopt auto_menu
 setopt always_to_end
@@ -43,19 +39,13 @@ zstyle ':completion::complete:*' cache-path
 zstyle ':completion:*' list-colors ''
 zstyle ':completion:*:*:kill:*:processes' list-colors '=(#b) #([0-9]#) ([0-9a-z-]#)*=01;34=0=01'
 
-#* Add git completions
-# zstyle ':completion:*:*:git:*' script ~/.zsh/git-completion.bash
-# fpath=(~/.zsh $fpath)
 autoload -Uz compinit && compinit
 
 #* Aliases, Themes and plugins
 
-ZSH=~/bin/ohmyzsh/
-#ZSH_CUSTOM=$ZSH/custom
-source $ZSH/plugins/z/z.plugin.zsh    #* Frecency plugin
-source $ZSH/lib/directories.zsh       #* Adds the 'd' show recent directories
-
-setopt prompt_subst
+ZDOTDIR=$HOME/.zdots
+source $ZDOTDIR/z/z.plugin.zsh  #* copied from omz
+source $ZDOTDIR/directories.zsh #* copied from omz
 
 #* Deviation from previous locations - On Linux, plugins are installed via AUR so no walk-pull needed...
 source ~/.zshrc_aliases
@@ -66,20 +56,13 @@ source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 source /usr/share/zsh/plugins/zsh-history-substring-search/zsh-history-substring-search.zsh
 source /usr/share/zsh/site-functions  #* sources the completion functions
 source /usr/share/zsh/vendor-completions/_rclone  
+source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
 
 #* To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 #* zsh bindkeys
 bindkey -e  #* Sets line edit behavior to emacs (ctrl+e beginning of line etc.)
-
-# bindkey '`' autosuggest-accept
 bindkey "^[[1;5D" backward-word
 bindkey "^[[1;5C" forward-word
 
-# bindkey -M emacs '^P' history-substring-search-up
-# bindkey -M emacs '^N' history-substring-search-down
-# bindkey "^[[3~" delete-char
-
-
-source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
