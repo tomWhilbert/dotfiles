@@ -98,6 +98,10 @@ pacs () {
 	pacman -Ss ^"$1"$
 }
 
+yays () {
+	yay -Ss "$1"
+}
+
 #* Can use to eliminate need for Oh My Zsh D plugin
 d () {
 	if [[ -n $1 ]]

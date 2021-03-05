@@ -6,15 +6,34 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
+#* Enivronment Variables 
+
 export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/sbin:$HOME/bin/Scripts:/home/tom/.cargo/bin"
 export RCLONE_PASSWORD_COMMAND="pass rclone"    #* See https://rclone.org/docs/#configuration-encryption
 export BAT_THEME="Dracula"
 export EDITOR=vim
 export VISUAL=vi
 
+#export $_Z_DATA=$ZDOTDIR/.z #* causes intermittent errors...
+
+autoload -Uz compinit && compinit
+
+#* Aliases, Themes and plugins
+#* Original Method: Used .plugins cloned from git repos. Now they are installed via AUR, no walk-pull needed.
+
+source $ZDOTDIR/z/z.plugin.zsh  #* copied from omz
+source $ZDOTDIR/directories.zsh #* copied from omz
+source $ZDOTDIR/.zshrc_aliases
+source $ZDOTDIR/.zshrc_functions
+source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme #* Installed via Yay
+source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
+source /usr/share/zsh/plugins/zsh-history-substring-search/zsh-history-substring-search.zsh
+source /usr/share/zsh/site-functions  #* sources the completion functions
+
 #* History
-[ -z "$HISTFILE" ] && HISTFILE="$HOME/.zsh_history"
-HISTSIZE=50000
+#[ -z "$HISTFILE" ] && HISTFILE="$ZDOTDIR/.zsh_history"
+HISTSIZE=10000
 SAVEHIST=10000
 setopt extended_history
 setopt hist_expire_dups_first
@@ -38,25 +57,6 @@ zstyle ':completion::complete:*' use-cache 1
 zstyle ':completion::complete:*' cache-path
 zstyle ':completion:*' list-colors ''
 zstyle ':completion:*:*:kill:*:processes' list-colors '=(#b) #([0-9]#) ([0-9a-z-]#)*=01;34=0=01'
-
-autoload -Uz compinit && compinit
-
-#* Aliases, Themes and plugins
-
-ZDOTDIR=$HOME/.zdots
-source $ZDOTDIR/z/z.plugin.zsh  #* copied from omz
-source $ZDOTDIR/directories.zsh #* copied from omz
-
-#* Deviation from previous locations - On Linux, plugins are installed via AUR so no walk-pull needed...
-source ~/.zshrc_aliases
-source ~/.zshrc_functions
-source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme #* Installed via Yay
-source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
-source /usr/share/zsh/plugins/zsh-history-substring-search/zsh-history-substring-search.zsh
-source /usr/share/zsh/site-functions  #* sources the completion functions
-source /usr/share/zsh/vendor-completions/_rclone  
-source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
 
 #* To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
