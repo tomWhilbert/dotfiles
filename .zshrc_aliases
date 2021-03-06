@@ -3,7 +3,8 @@
 
 #* Alias and function source file
 
-alias ll='ls -lah'
+alias l='ls -lah'
+alias ll='ls -lh'
 alias lld='lsd -l | grep '^d''
 alias li='lsd -li'
 alias ls='lsd'
@@ -12,9 +13,7 @@ alias srz='exec zsh'
 alias hs='history 1'
 alias png='ping -c 3'
 alias grep='grep --color'
-alias zrc='code $ZDOTDIRz/.zshrc'
-alias zra='code $ZDOTDIR/.zshrc_aliases'
-alias zrf='code $ZDOTDIR/.zshrc_functions'
+alias zed='code $ZDOTDIR/.'
 alias rp='realpath . | wl-copy'
 alias wesync='ssh -L 8385:localhost:8384 we'
 alias cat='bat'
