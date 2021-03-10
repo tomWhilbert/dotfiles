@@ -1,2 +1,2 @@
-set number
 syntax on
+set number
