@@ -1,2 +1,2 @@
-syntax on
 set number
+syntax on
