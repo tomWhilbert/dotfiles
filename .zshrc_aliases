@@ -54,9 +54,6 @@ alias gpo='git push -u origin'
 alias gp='git pull'
 alias vbls='VBoxManage list vms'
 
-#* Linux Upskill AWS SSH
-alias luc='ssh -i /Users/thomaswhilbert/bin/LinuxUpSkill.pem ubuntu@ec2-3-85-172-104.compute-1.amazonaws.com'
-
 
 #* Super grep for IP addresses
 #* grep "root" /var/log/auth.log | grep -o "[0-9]\{1,3\}\.[0-9]\{1,3\}\.[0-9]\{1,3\}\.[0-9]\{1,3\}" | sort | uniq
