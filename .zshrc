@@ -14,6 +14,8 @@ HISTSIZE=10000
 SAVEHIST=10000
 setopt autocd beep extendedglob nomatch notify hist_ignore_dups hist_ignore_space
 bindkey -e
+
+
 # End of lines configured by zsh-newuser-install
 
 # The following lines were added by compinstall
