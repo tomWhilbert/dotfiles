@@ -19,6 +19,8 @@ alias wesync='ssh -L 8385:localhost:8384 we'
 alias cat='bat'
 alias lt='lsd --tree'
 alias wh=where
+alias crontab='export VISUAL=vim; crontab'
+alias tree='tree -L 2 -C'
 
 #* VSCode Workspaces
 alias nos='code $HOME/.dotfiles/NOS-220.code-workspace'
@@ -74,4 +76,6 @@ alias gp='git pull'
 alias network.ports='netstat -a -n | grep -i "LISTEN "'
 alias network.connections='lsof -l -i +L -R -V'
 alias network.established='lsof -l -i +L -R -V | grep ESTABLISHED'
+
+
 

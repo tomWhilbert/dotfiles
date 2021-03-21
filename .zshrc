@@ -8,13 +8,11 @@ fi
 
 #* Enivronment Variables 
 
-export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/sbin:$HOME/bin/Scripts:/home/tom/.cargo/bin"
-export RCLONE_PASSWORD_COMMAND="pass rclone"    #* See https://rclone.org/docs/#configuration-encryption
+export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/sbin:$HOME/bin/Scripts:$HOME/bin/Scripts/misc:/home/tom/.cargo/bin"
+#export RCLONE_PASSWORD_COMMAND="pass rclone"    #* See https://rclone.org/docs/#configuration-encryption
 export BAT_THEME="Dracula"
-export EDITOR=vim
-export VISUAL=vi
-
-#export $_Z_DATA=$ZDOTDIR/.z #* causes intermittent errors...
+export EDITOR=/usr/bin/vim
+export VISUAL=/usr/bin/vim
 
 autoload -Uz compinit && compinit
 

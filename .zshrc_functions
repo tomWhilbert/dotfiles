@@ -111,3 +111,7 @@ d () {
 		dirs -v | head -10
 	fi
 }
+
+pub () {
+	curl -w "\n" ifconfig.me
+}
