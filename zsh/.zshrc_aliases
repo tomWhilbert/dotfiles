@@ -1,0 +1,81 @@
+#!/bin/bash  
+#* ^ not a bash script #! enables syntax highlighting in vscode
+
+#* Alias and function source file
+
+alias l='ls -lah'
+alias ll='ls -lh'
+alias lld='lsd -l | grep '^d''
+alias li='lsd -li'
+alias ls='lsd'
+alias rmf='rm -rf'
+alias srz='exec zsh'
+alias hs='history 1'
+alias png='ping -c 3'
+alias grep='grep --color'
+alias zed='code $ZDOTDIR/.'
+alias rp='realpath . | wl-copy'
+alias wesync='ssh -L 8385:localhost:8384 we'
+alias cat='bat'
+alias lt='lsd --tree'
+alias wh=where
+alias crontab='export VISUAL=vim; crontab'
+alias tree='tree -L 2 -C'
+
+#* VSCode Workspaces
+alias nos='code $HOME/.dotfiles/NOS-220.code-workspace'
+alias plus='code $HOME/.dotfiles/plus.code-workspace'
+alias sec='code $HOME/.dotfiles/sec.code-workspace'
+alias notes='code $HOME/.dotfiles/notes.code-workspace'
+
+#* Arch/Linux specific aliases
+alias sbz='systemctl start sabnzbd@tom.service'
+alias pac='sudo pacman'
+alias pacin='sudo pacman -S'
+alias reflector='sudo reflector --verbose --latest 5 --sort rate --save /etc/pacman.d/mirrorlist'
+alias sudo='sudo ' #* allows sudo to accept an alias as an argument
+alias lspac="expac --timefmt='%Y-%m-%d %T' '%l\t%n' | sort | tail -n"
+alias chk='checkupdates | nl'
+alias sucode='sudo code --user-data-dir=".vscode-root"'
+alias vmon='vim-cmd vmsvc/power.on'  #* for info only - works on esxi cli
+alias getdns='getent ahostsv4'
+alias netnice='nmcli -p device show'
+
+#* systemd
+alias sc='systemctl'
+alias scst="systemctl status"
+alias scrn='systemctl list-units -t service --state running'
+alias scen='systemctl list-unit-files --state enabled'
+
+#* Network Manager 
+alias ntu='nmcli c up NETTECH'
+alias ntd='nmcli c down NETTECH'
+alias wguku='nmcli con up mlvd-gb4'
+alias wgukd='nmcli con down mlvd-gb4'
+alias ncs='nmcli connection show'
+
+#* rclone aliases
+alias rclr='rclone listremotes'
+alias rc='rclone'
+alias rcgds='rclone copy --max-age 24h --no-traverse /$HOME/GoogleDrive/Secure gdS: -P'
+alias rcld='rclone lsd'
+alias rclsf='rclone lsf --max-depth'
+
+#* Git aliases 
+alias g='git'
+alias ga='git add'
+alias gaa='git add --all'
+alias gb='git branch'
+alias gco='git checkout'
+alias gst='git status'
+alias gc='git commit -m'
+alias gpo='git push -u origin'
+alias gp='git pull'
+
+# Network utils
+alias network.ports='netstat -a -n | grep -i "LISTEN "'
+alias network.connections='lsof -l -i +L -R -V'
+alias network.established='lsof -l -i +L -R -V | grep ESTABLISHED'
+
+
+

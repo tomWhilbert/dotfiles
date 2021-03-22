@@ -1,0 +1,117 @@
+#!/bin/bash
+#* Zsh Function File
+#* Functions ###
+lazyg ()
+		{
+		eval 'ssh-agent -s'
+		ssh-add -D
+		ssh-add "$HOME"/.ssh/github
+
+		git add --all
+		git commit -m "$1"
+		git push -u origin "$2"
+		}
+
+	mkd () {
+		mkdir "$1"
+		cd "$1" || exit
+		}
+
+#* cheat.sh command dictionary ###
+	ch () {
+		curl cht.sh/"$1"
+	}
+
+	bak () {
+		sudo cp "$1" "$1".bak
+	}
+   
+#* SSH GitHub authentication fix
+	ghssh () {
+		eval 'ssh-agent -s'
+		ssh-add -D
+	    cd "$HOME"/.ssh/ || exit
+		ssh-add github
+		cd "$OLDPWD" || exit
+	}
+
+	#* Disk Usage, Sorted by Size
+	dus () {
+		RED='\033[0;31m'
+		total=$(du -sh "$1")
+		du -sh "$1"/* | sort -h
+		printf "\n"
+		echo -e "$RED "Total Size: $total""
+	}
+
+	#* Realpath a file
+	rpf () {
+		realpath "$1" |  wl-copy
+	}
+
+	#* RClone Functions
+	
+	rcco () {
+		rclone copy --max-age "$1" --no-traverse /home/tom/OneDrive od: -P
+	}
+
+	rccg () {
+	rc copy --max-age "$1" --no-traverse /home/tom/GoogleDrive/Secure gdS: -P
+	}
+
+
+	#* Nmap get all ips on local network
+	ips () {
+		nmap -sn 192.168.0.0/24 | awk '/Nmap scan/{gsub(/[()]/,"",$NF); print $NF > "nmap_scanned_ips"}'
+		cat nmap_scanned_ips
+	}
+
+#* Add color to less
+man() {
+    LESS_TERMCAP_md=$'\e[01;31m' \
+    LESS_TERMCAP_me=$'\e[0m' \
+    LESS_TERMCAP_se=$'\e[0m' \
+    LESS_TERMCAP_so=$'\e[01;44;33m' \
+    LESS_TERMCAP_ue=$'\e[0m' \
+    LESS_TERMCAP_us=$'\e[01;32m' \
+    command man "$@"
+}
+
+#* replaces whitespaces with a dash
+dash() {
+	
+	for file in *; do mv "$file" "$(echo "$file" | tr ' ' '-')" ; done
+}
+
+#* show ip type: static or dynamic
+iptype () {
+	#nmcli -f ipv4.method  con show "$(nmcli con show | awk 'NR==2' | cut -d' ' -f1,2,3)"
+	nmcli con show
+	echo -e '\n' "Enter the Connection Name (case sensitive) "
+	read -r name
+	nmcli -f ipv4.method  con show "$name"
+}
+
+#* pacman search, match only the term
+
+pacs () {
+	pacman -Ss ^"$1"$
+}
+
+yays () {
+	yay -Ss "$1"
+}
+
+#* Can use to eliminate need for Oh My Zsh D plugin
+d () {
+	if [[ -n $1 ]]
+	then
+		dirs "$@"
+	else
+		dirs -v | head -10
+	fi
+}
+
+pub () {
+	curl -w "\n" ifconfig.me
+}
