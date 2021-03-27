@@ -63,4 +63,4 @@ zstyle ':completion:*:*:kill:*:processes' list-colors '=(#b) #([0-9]#) ([0-9a-z-
 bindkey -e  #* Sets line edit behavior to emacs (ctrl+e beginning of line etc.)
 bindkey "^[[1;5D" backward-word
 bindkey "^[[1;5C" forward-word
-
+bindkey "^[[3~" delete-char
