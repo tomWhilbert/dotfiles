@@ -115,3 +115,8 @@ d () {
 pub () {
 	curl -w "\n" ifconfig.me
 }
+
+ipg ()
+{
+curl http://api.db-ip.com/v2/free/"$1"
+}
