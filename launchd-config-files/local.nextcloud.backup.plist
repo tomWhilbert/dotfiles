@@ -13,9 +13,9 @@
 	<key>RunAtLoad</key>
 	<true/>
 	<key>StandardErrorPath</key>
-	<string>/Volumes/BKUP/logs/nextcloud/stderr.log</string>
+	<string>/Volumes/Stash/logs/nextcloud/stderr.log</string>
 	<key>StandardOutPath</key>
-	<string>/Volumes/BKUP/logs/nextcloud/stdout.log</string>
+	<string>/Volumes/Stash/logs/nextcloud/stdout.log</string>
 	<key>StartInterval</key>
 		<integer>1800</integer>
 	</dict>
