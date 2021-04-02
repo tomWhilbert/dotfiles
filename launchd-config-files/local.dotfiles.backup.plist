@@ -13,9 +13,9 @@
 	<key>RunAtLoad</key>
 	<true/>
 	<key>StandardErrorPath</key>
-	<string>/Volumes/BKUP/logs/dotfiles/stderr.log</string>
+	<string>/Volumes/Stash/logs/dotfiles/stderr.log</string>
 	<key>StandardOutPath</key>
-	<string>/Volumes/BKUP/logs/dotfiles/stdout.log</string>
+	<string>/Volumes/Stash/logs/dotfiles/stdout.log</string>
 	<key>StartInterval</key>
 		<integer>3600</integer>
 	</dict>

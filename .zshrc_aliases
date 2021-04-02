@@ -54,8 +54,3 @@ alias gpo='git push -u origin'
 alias gp='git pull'
 alias vbls='VBoxManage list vms'
 
-
-#* Super grep for IP addresses
-#* grep "root" /var/log/auth.log | grep -o "[0-9]\{1,3\}\.[0-9]\{1,3\}\.[0-9]\{1,3\}\.[0-9]\{1,3\}" | sort | uniq
-
-alias grip='grep -o "[0-9]\{1,3\}\.[0-9]\{1,3\}\.[0-9]\{1,3\}\.[0-9]\{1,3\}"'
