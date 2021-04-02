@@ -25,7 +25,7 @@ compinit
 
 # Source paths for zsh plugins
 
-ZSH=$HOME/bin/ohmyzsh
+ZSH=$HOME/.config/ohmyzsh
 source $ZSH/lib/directories.zsh #* enables 'd' directory stack
 source $ZSH/plugins/z/z.plugin.zsh
 source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
