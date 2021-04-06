@@ -110,4 +110,9 @@ digab () {
 	dig @10.60.20.20 "$1".asheville.cc.nc.us
 }
 	
+ytd ()	{
+	echo "Paste URL.. "
+	read -r "target"
+	youtube-dl "$target"
+}
 
