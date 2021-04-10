@@ -77,3 +77,4 @@ alias network.established='lsof -l -i +L -R -V | grep ESTABLISHED'
 
 
 
+alias boring='code boring.code-workspace'
