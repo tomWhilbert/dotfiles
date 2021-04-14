@@ -41,6 +41,7 @@ alias sucode='sudo code --user-data-dir=".vscode-root"'
 alias vmon='vim-cmd vmsvc/power.on'  #* for info only - works on esxi cli
 alias getdns='getent ahostsv4'
 alias netnice='nmcli -p device show'
+alias inform='sudo informant'
 
 #* systemd
 alias sc='systemctl'
