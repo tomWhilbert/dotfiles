@@ -9,7 +9,7 @@ fi
 #* Enivronment Variables 
 
 export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/sbin:$HOME/bin/Scripts:$HOME/bin/Scripts/misc:/home/tom/.cargo/bin"
-#export RCLONE_PASSWORD_COMMAND="pass rclone"    #* See https://rclone.org/docs/#configuration-encryption
+export RCLONE_PASSWORD_COMMAND="pass rclone"    #* See https://rclone.org/docs/#configuration-encryption
 export BAT_THEME="Dracula"
 export EDITOR=/usr/bin/vim
 export VISUAL=/usr/bin/vim
@@ -63,4 +63,4 @@ zstyle ':completion:*:*:kill:*:processes' list-colors '=(#b) #([0-9]#) ([0-9a-z-
 bindkey -e  #* Sets line edit behavior to emacs (ctrl+e beginning of line etc.)
 bindkey "^[[1;5D" backward-word
 bindkey "^[[1;5C" forward-word
-
+bindkey "^[[3~" delete-char
