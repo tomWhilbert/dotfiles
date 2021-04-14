@@ -59,6 +59,9 @@ lazyg ()
 	rc copy --max-age "$1" --no-traverse /home/tom/GoogleDrive/Secure gdS: -P
 	}
 
+	rcmnt () {
+		rclone mount --vfs-cache-mode full gdS: ~/mounts
+	}
 
 	#* Nmap get all ips on local network
 	ips () {
