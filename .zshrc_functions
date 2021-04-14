@@ -81,9 +81,14 @@
     command man "$@"
 }
 
-#* RClone 
-rcco () {
-	rclone copy --max-age "$1" --no-traverse /Users/thomaswhilbert/OneDrive od: -P
+#* RClone
+
+odpush () {
+	rclone copy --max-age "$1" --no-traverse "$HOME"/OneDrive od: -P
+}
+
+odpull () {
+	rclone copy --max-age 1d --no-traverse od: "$HOME"/OneDrive -P
 }
 
 rccg () {
