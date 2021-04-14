@@ -37,12 +37,12 @@ lazyg ()
 
 	#* Disk Usage, Sorted by Size
 	dus () {
-		RED='\033[0;31m'
-		total=$(du -sh "$1")
-		du -sh "$1"/* | sort -h
-		printf "\n"
-		echo -e "$RED "Total Size: $total""
-	}
+  	    RED='\033[0;31m'
+       total=$(du -sh "$1" | cut -f1)
+       du -sh "$1"/* | sort -h
+       printf "\n"
+       echo -e "$RED Total Size: $total in $(readlink -f "$1")"
+   }
 
 	#* Realpath a file
 	rpf () {
