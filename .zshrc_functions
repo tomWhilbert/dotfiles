@@ -52,7 +52,7 @@ lazyg ()
 	#* RClone Functions
 	
 	rcco () {
-		rclone copy --max-age "$1" --no-traverse /home/tom/OneDrive od: -P
+		rclone copy --max-age "$1" --no-traverse "$HOME"/OneDrive od: -P
 	}
 
 	rccg () {
