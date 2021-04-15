@@ -56,7 +56,7 @@ lazyg ()
 	}
 
 	rccg () {
-	rc copy --max-age "$1" --no-traverse /home/tom/GoogleDrive/Secure gdS: -P
+	rc copy --max-age "$1" --no-traverse "$HOME"/GoogleDrive/Secure gdS: -P
 	}
 
 
