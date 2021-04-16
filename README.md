@@ -43,7 +43,7 @@ _**Public Users: You will not have access to set an SSH key in this repo. Skip t
     ```
 17. `cp ~/.dotfiles/.zshrc .zshrc_aliases .p10k.zsh ~/`d
     
-18. *** Use 'lsd' utility replaced by 'exa' in .zshrc_aliases.***
+18. *** Use of 'lsd' utility replaced by 'exa' in .zshrc_aliases.***
 	* Add colors to shell output:  `brew install lsd`  
     
 19. Install the Fonts, 
