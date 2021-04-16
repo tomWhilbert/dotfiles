@@ -115,10 +115,10 @@ modified on 11/3/19
 16. ```
     git clone https://github.com/tomWhilbert/.dotfiles.git
     ```
-17. `cp ~/.dotfiles/.zshrc .zshrc_aliases .p10k.zsh ~/`d
- 
+17. `cp ~/.dotfiles/.zshrc .zshrc_aliases .p10k.zsh ~/`
+     
 18. ***'lsd' has been deprecated and replaced by 'exa' plus options in the alias file.***
-    * Add colors to shell output:  `brew install lsd`  
+       * add colors to shell output:  `brew install lsd`  
     
 19. Install the Fonts, 
         `cd ~/.dotfiles && open MesloLGS NF Regular.ttf`  this should open in Font Book, click install.
