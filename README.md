@@ -117,6 +117,8 @@ modified on 11/3/19
     ```
 17. `cp ~/.dotfiles/.zshrc .zshrc_aliases .p10k.zsh ~/`d
     
+
+*** 'lsd' has been deprecated and replaced by 'exa' plus options in the alias file. ***
 18. Add colors to shell output:  `brew install lsd`  
     
 19. Install the Fonts, 
