@@ -5,11 +5,12 @@
 
 #* Perhaps its time to retire 'lsd'
 alias ls='exa'
-alias l='exa --long --all'
+alias l='exa --long --all --icons'
 alias lsh="ls -a | grep '^\.'"
-alias lsd="ls -lah | grep '^d'"
-alias lt='exa --tree --level=2 --long'
+alias lsd="l -D"
+alias ltr='exa --tree --level=2 --long'
 alias lr='exa --recurse'
+alias lt='exa --long --all --time=modified'
 # alias l='ls -alh'
 # alias ls='lsd'
 
