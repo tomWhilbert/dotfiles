@@ -133,6 +133,5 @@ ytd () {
 
 inc () {
  	sudo informant check
-	 printf "\n"
-    checkupdates | nl
+	checkupdates | nl
 }
