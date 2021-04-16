@@ -2,24 +2,29 @@
 #* SheBang here enables syntax highlighting in vscode
 #* alias and function source file
 
-alias l='ls -alh'
-alias ls='lsd'
+
+#* Perhaps its time to retire 'lsd'
+alias ls='exa'
+alias l='exa --long --all'
+alias lsh="ls -a | grep '^\.'"
+alias lsd="ls -lah | grep '^d'"
+alias lt='exa --tree --level=2 --long'
+alias lr='exa --recurse'
+# alias l='ls -alh'
+# alias ls='lsd'
+
 alias buu='brew update && brew upgrade && brew upgrade --cask'
 alias rmf='rm -rf'
 alias srz='exec zsh'
 alias dkl='diskutil list'
 alias ds='diskutil'
 alias hs='history 1'
-alias shut='sudo shutdown -h now'
 alias rp='realpath . | pbcopy'
 alias png='ping -c 3'
 alias admin='dseditgroup -o checkmember -m $USER admin'
-alias lsh="ls -a | grep '^\.'"
-alias lsdir="ls -lah | grep '^d'"
-alias dig='dig +nocmd +noall +answer'
 alias ip='/Users/thomaswhilbert/bin/Scripts/get-ip/Get-IP-macOS.sh'
 alias stoc='stat -f %Mp%Lp'
-alias -g G='| grep -i'
+alias grep='grep -i'
 alias -s {yml,yaml,conf,md,txt}=code
 alias zcode='code /$HOME/.dotfiles/zsh.code-workspace'
 alias zrc='code $HOME/.zshrc'
