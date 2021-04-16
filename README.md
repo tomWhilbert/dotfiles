@@ -1,6 +1,8 @@
 # ZSH Setup and Configuration # 
 ### Install Instructions assume macOS 10.15+ or Linux  
-modified on 11/3/19
+
+Modified on 4-16-21
+Modified on 11-3-19
  
 1. In terminal _for now_ Install Homebrew 
 2. `/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"`
@@ -41,7 +43,8 @@ _**Public Users: You will not have access to set an SSH key in this repo. Skip t
     ```
 17. `cp ~/.dotfiles/.zshrc .zshrc_aliases .p10k.zsh ~/`d
     
-18. Add colors to shell output:  `brew install lsd`  
+18. *** Use 'lsd' utility replaced by 'exa' in .zshrc_aliases.***
+	* Add colors to shell output:  `brew install lsd`  
     
 19. Install the Fonts, 
         `cd ~/.dotfiles && open MesloLGS NF Regular.ttf`  this should open in Font Book, click install.
