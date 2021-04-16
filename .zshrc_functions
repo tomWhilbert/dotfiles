@@ -130,3 +130,7 @@ ytd () {
 	youtube-dl "$target"
 
 }
+
+inc () {
+	
+}
