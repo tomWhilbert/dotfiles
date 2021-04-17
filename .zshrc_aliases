@@ -51,7 +51,7 @@ alias inform='sudo informant'
 
 #* systemd
 alias sc='systemctl'
-alias scst="systemctl status"
+alias scs="systemctl status"
 alias scrn='systemctl list-units -t service --state running'
 alias scen='systemctl list-unit-files --state enabled'
 
