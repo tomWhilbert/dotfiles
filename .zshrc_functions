@@ -1,12 +1,12 @@
 #!/bin/bash
 #* Zsh Function File
 #* Functions ###
-
-   	lazyg ()
+lazyg ()
 		{
 		eval 'ssh-agent -s'
 		ssh-add -D
-		ssh-add -K /Users/thomaswhilbert/.ssh/github
+		ssh-add "$HOME"/.ssh/github
+
 		git add --all
 		git commit -m "$1"
 		git push -u origin "$2"
@@ -14,19 +14,8 @@
 
 	mkd () {
 		mkdir "$1"
-		cd "$1"
+		cd "$1" || exit
 		}
-	
-#* diskutil erase function
-	### $1 is the volume name
-	### $2 is the voluem path
-	de () {
-		diskutil eraseDisk HFS+ "$1" /dev/disk"$2"
-		}
-
-	dku () {
-		diskutil unmountDisk /dev/disk"$1"
-	}
 
 #* cheat.sh command dictionary ###
 	ch () {
@@ -34,16 +23,16 @@
 	}
 
 	bak () {
-		cp "$1" "$1".bak
+		sudo cp "$1" "$1".bak
 	}
    
 #* SSH GitHub authentication fix
 	ghssh () {
 		eval 'ssh-agent -s'
 		ssh-add -D
-		cd $HOME/.ssh/
+	    cd "$HOME"/.ssh/ || exit
 		ssh-add github
-		cd $OLDPWD
+		cd "$OLDPWD" || exit
 	}
 
 	#* Disk Usage, Sorted by Size
@@ -57,16 +46,19 @@
 
 	#* Realpath a file
 	rpf () {
-		realpath "$1" | pbcopy
+		realpath "$1" |  pbcopy
 	}
 
 	#* RClone Functions
-	rcld () {
-		rclone lsd "$1"
+	
+	rcco () {
+		rclone copy --max-age "$1" --no-traverse "$HOME"/OneDrive od: -P
 	}
-	rclf () {
-		rclone lsf "$1"
+
+	rccg () {
+	rc copy --max-age "$1" --no-traverse "$HOME"/GoogleDrive/Secure gdS: -P
 	}
+
 
 	#* Nmap get all ips on local network
 	ips () {
@@ -74,8 +66,8 @@
 		cat nmap_scanned_ips
 	}
 
-	#* Add Color to man pages
-	man() {
+#* Add color to less
+man() {
     LESS_TERMCAP_md=$'\e[01;31m' \
     LESS_TERMCAP_me=$'\e[0m' \
     LESS_TERMCAP_se=$'\e[0m' \
@@ -85,46 +77,15 @@
     command man "$@"
 }
 
-#* RClone 
-rcco () {
-	rclone copy --max-age "$1" --no-traverse /Users/thomaswhilbert/OneDrive od: -P
-}
-
-rccg () {
-rc copy --max-age "$1" --no-traverse /Users/thomaswhilbert/GoogleDrive/Secure gdS: -P
-}
-
-#* Virtual Box
-#* See Stack Exchange: https://unix.stackexchange.com/questions/218753/how-to-pass-variables-to-awk-command-with-conditions
-#* pass variable to awk was the key to getting it to work
-vmh () {
-	VBoxManage list vms | nl
-	VBoxManage list vms | nl > vmz
-	printf "\n"
-	echo '     Choose a VM #' 
-	read -r num
-	vm=$(awk -v num="$num" 'NR==num {print}' < vmz | cut -d \" -f 2)
-	rm vmz
-	VBoxHeadless -s "$vm" &
-	sleep 1
-	printf "\n"
-}
-
-digab () {
-	dig @10.60.20.20 "$1".asheville.cc.nc.us
-}
-	
-ytd ()	{
-	echo "Paste URL.. "
-	read -r "target"
-	youtube-dl "$target"
-}
 #* replaces whitespaces with a dash
-#* Caution loops over all files in current dir
+#* Caution loops over all files in current dir 
 #* Change * to $1 to target a single file
- dash() {
-         for file in *;
-         do mv "$file" "$(echo "$file" | tr ' ' '-')" ;
-         done
- }
+dash() {
+		for file in *; 
+		do mv "$file" "$(echo "$file" | tr ' ' '-')" ; 
+		done
+}
 
+pub () {
+	curl -w "\n" ifconfig.me
+}
