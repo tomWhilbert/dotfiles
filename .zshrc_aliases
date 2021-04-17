@@ -36,9 +36,8 @@ alias nos='code $HOME/.dotfiles/NOS-220.code-workspace'
 alias sec='code $HOME/.dotfiles/sec.code-workspace'
 alias boring='code $HOME/.dotfiles/boring.code-workspace'
 alias wp='/Users/thomaswhilbert/bin/Scripts/walk-pull/wp'
-alias tree='tree -C'
 alias cat='bat'
-alias py='python3'
+alias python='/usr/local/bin/python3'
 alias vmarch='vmrun -T fusion start "/Users/thomaswhilbert/Virtual Machines.localized/Arch.vmwarevm/Arch.vmx" nogui'
 
 #* RClone commands 
@@ -61,8 +60,3 @@ alias gpo='git push -u origin'
 alias gp='git pull'
 alias vbls='VBoxManage list vms'
 
-
-#* Super grep for IP addresses
-#* grep "root" /var/log/auth.log | grep -o "[0-9]\{1,3\}\.[0-9]\{1,3\}\.[0-9]\{1,3\}\.[0-9]\{1,3\}" | sort | uniq
-
-alias grip='grep -o "[0-9]\{1,3\}\.[0-9]\{1,3\}\.[0-9]\{1,3\}\.[0-9]\{1,3\}"'
