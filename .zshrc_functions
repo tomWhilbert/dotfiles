@@ -95,3 +95,9 @@ ytd () {
        read -r "target"
        youtube-dl "$target"
 }
+
+getInstaller () {
+	cd /Users/thomaswhilbert/OneDrive/macAdmin/Scripts/fetch-installer-pkg/ || exit
+	./run-fetch-clean.sh
+}
+
