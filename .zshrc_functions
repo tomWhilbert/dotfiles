@@ -89,3 +89,9 @@ dash() {
 pub () {
 	curl -w "\n" ifconfig.me
 }
+
+ytd () {
+       echo "Paste URL.. "
+       read -r "target"
+       youtube-dl "$target"
+}
