@@ -19,7 +19,7 @@ autoload -Uz compinit && compinit
 #* Aliases, Themes and plugins
 #* Original Method: Used .plugins cloned from git repos. Now they are installed via AUR, no walk-pull needed.
 
-source $ZDOTDIR/z/z.plugin.zsh  #* copied from omz
+source $ZDOTDIR/z.plugin.zsh  #* copied from omz
 source $ZDOTDIR/directories.zsh #* copied from omz
 source $ZDOTDIR/.zshrc_aliases
 source $ZDOTDIR/.zshrc_functions

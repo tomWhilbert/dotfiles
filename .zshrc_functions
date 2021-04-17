@@ -83,7 +83,9 @@ man() {
 #* replaces whitespaces with a dash
 dash() {
 	
-	for file in *; do mv "$file" "$(echo "$file" | tr ' ' '-')" ; done
+	for file in $1;
+	do mv "$file" "$(echo "$file" | tr ' ' '-')" ; 
+	done
 }
 
 #* show ip type: static or dynamic
