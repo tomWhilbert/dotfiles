@@ -1,12 +1,12 @@
 #!/bin/bash
 #* Zsh Function File
 #* Functions ###
-lazyg ()
+
+   	lazyg ()
 		{
 		eval 'ssh-agent -s'
 		ssh-add -D
-		ssh-add "$HOME"/.ssh/github
-
+		ssh-add -K /Users/thomaswhilbert/.ssh/github
 		git add --all
 		git commit -m "$1"
 		git push -u origin "$2"
@@ -14,8 +14,19 @@ lazyg ()
 
 	mkd () {
 		mkdir "$1"
-		cd "$1" || exit
+		cd "$1"
 		}
+	
+#* diskutil erase function
+	### $1 is the volume name
+	### $2 is the voluem path
+	de () {
+		diskutil eraseDisk HFS+ "$1" /dev/disk"$2"
+		}
+
+	dku () {
+		diskutil unmountDisk /dev/disk"$1"
+	}
 
 #* cheat.sh command dictionary ###
 	ch () {
@@ -23,42 +34,39 @@ lazyg ()
 	}
 
 	bak () {
-		sudo cp "$1" "$1".bak
+		cp "$1" "$1".bak
 	}
    
 #* SSH GitHub authentication fix
 	ghssh () {
 		eval 'ssh-agent -s'
 		ssh-add -D
-	    cd "$HOME"/.ssh/ || exit
+		cd $HOME/.ssh/
 		ssh-add github
-		cd "$OLDPWD" || exit
+		cd $OLDPWD
 	}
 
 	#* Disk Usage, Sorted by Size
 	dus () {
-		RED='\033[0;31m'
-		total=$(du -sh "$1")
-		du -sh "$1"/* | sort -h
-		printf "\n"
-		echo -e "$RED "Total Size: $total""
-	}
+  	    RED='\033[0;31m'
+       total=$(du -sh "$1" | cut -f1)
+       du -sh "$1"/* | sort -h
+       printf "\n"
+       echo -e "$RED Total Size: $total in $(readlink -f "$1")"
+   }
 
 	#* Realpath a file
 	rpf () {
-		realpath "$1" |  wl-copy
+		realpath "$1" | pbcopy
 	}
 
 	#* RClone Functions
-	
-	rcco () {
-		rclone copy --max-age "$1" --no-traverse "$HOME"/OneDrive od: -P
+	rcld () {
+		rclone lsd "$1"
 	}
-
-	rccg () {
-	rc copy --max-age "$1" --no-traverse "$HOME"/GoogleDrive/Secure gdS: -P
+	rclf () {
+		rclone lsf "$1"
 	}
-
 
 	#* Nmap get all ips on local network
 	ips () {
@@ -66,8 +74,8 @@ lazyg ()
 		cat nmap_scanned_ips
 	}
 
-#* Add color to less
-man() {
+	#* Add Color to man pages
+	man() {
     LESS_TERMCAP_md=$'\e[01;31m' \
     LESS_TERMCAP_me=$'\e[0m' \
     LESS_TERMCAP_se=$'\e[0m' \
@@ -77,41 +85,46 @@ man() {
     command man "$@"
 }
 
-#* replaces whitespaces with a dash
-dash() {
+#* RClone 
+rcco () {
+	rclone copy --max-age "$1" --no-traverse /Users/thomaswhilbert/OneDrive od: -P
+}
+
+rccg () {
+rc copy --max-age "$1" --no-traverse /Users/thomaswhilbert/GoogleDrive/Secure gdS: -P
+}
+
+#* Virtual Box
+#* See Stack Exchange: https://unix.stackexchange.com/questions/218753/how-to-pass-variables-to-awk-command-with-conditions
+#* pass variable to awk was the key to getting it to work
+vmh () {
+	VBoxManage list vms | nl
+	VBoxManage list vms | nl > vmz
+	printf "\n"
+	echo '     Choose a VM #' 
+	read -r num
+	vm=$(awk -v num="$num" 'NR==num {print}' < vmz | cut -d \" -f 2)
+	rm vmz
+	VBoxHeadless -s "$vm" &
+	sleep 1
+	printf "\n"
+}
+
+digab () {
+	dig @10.60.20.20 "$1".asheville.cc.nc.us
+}
 	
-	for file in *; do mv "$file" "$(echo "$file" | tr ' ' '-')" ; done
+ytd ()	{
+	echo "Paste URL.. "
+	read -r "target"
+	youtube-dl "$target"
 }
+#* replaces whitespaces with a dash
+#* Caution loops over all files in current dir
+#* Change * to $1 to target a single file
+ dash() {
+         for file in *;
+         do mv "$file" "$(echo "$file" | tr ' ' '-')" ;
+         done
+ }
 
-#* show ip type: static or dynamic
-iptype () {
-	#nmcli -f ipv4.method  con show "$(nmcli con show | awk 'NR==2' | cut -d' ' -f1,2,3)"
-	nmcli con show
-	echo -e '\n' "Enter the Connection Name (case sensitive) "
-	read -r name
-	nmcli -f ipv4.method  con show "$name"
-}
-
-#* pacman search, match only the term
-
-pacs () {
-	pacman -Ss ^"$1"$
-}
-
-yays () {
-	yay -Ss "$1"
-}
-
-#* Can use to eliminate need for Oh My Zsh D plugin
-d () {
-	if [[ -n $1 ]]
-	then
-		dirs "$@"
-	else
-		dirs -v | head -10
-	fi
-}
-
-pub () {
-	curl -w "\n" ifconfig.me
-}
