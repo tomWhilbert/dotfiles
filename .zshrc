@@ -14,20 +14,17 @@ HISTSIZE=10000
 SAVEHIST=10000
 setopt autocd beep extendedglob nomatch notify hist_ignore_dups hist_ignore_space
 bindkey -e
-
-
 # End of lines configured by zsh-newuser-install
 
 # The following lines were added by compinstall
 zstyle :compinstall filename '/Users/thomaswhilbert/.zshrc'
-
 autoload -Uz compinit
 compinit 
 # End of lines added by compinstall
 
 # Source paths for zsh plugins
 
-ZSH=$HOME/.config/ohmyzsh
+ZSH=$HOME/bin/ohmyzsh
 source $ZSH/lib/directories.zsh #* enables 'd' directory stack
 source $ZSH/plugins/z/z.plugin.zsh
 source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh

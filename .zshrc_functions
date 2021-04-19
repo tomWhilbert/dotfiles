@@ -46,7 +46,7 @@ lazyg ()
 
 	#* Realpath a file
 	rpf () {
-		realpath "$1" |  wl-copy
+		realpath "$1" |  pbcopy
 	}
 
 	#* RClone Functions
@@ -78,40 +78,26 @@ man() {
 }
 
 #* replaces whitespaces with a dash
+#* Caution loops over all files in current dir 
+#* Change * to $1 to target a single file
 dash() {
-	
-	for file in *; do mv "$file" "$(echo "$file" | tr ' ' '-')" ; done
-}
-
-#* show ip type: static or dynamic
-iptype () {
-	#nmcli -f ipv4.method  con show "$(nmcli con show | awk 'NR==2' | cut -d' ' -f1,2,3)"
-	nmcli con show
-	echo -e '\n' "Enter the Connection Name (case sensitive) "
-	read -r name
-	nmcli -f ipv4.method  con show "$name"
-}
-
-#* pacman search, match only the term
-
-pacs () {
-	pacman -Ss ^"$1"$
-}
-
-yays () {
-	yay -Ss "$1"
-}
-
-#* Can use to eliminate need for Oh My Zsh D plugin
-d () {
-	if [[ -n $1 ]]
-	then
-		dirs "$@"
-	else
-		dirs -v | head -10
-	fi
+		for file in *; 
+		do mv "$file" "$(echo "$file" | tr ' ' '-')" ; 
+		done
 }
 
 pub () {
 	curl -w "\n" ifconfig.me
 }
+
+ytd () {
+       echo "Paste URL.. "
+       read -r "target"
+       youtube-dl "$target"
+}
+
+getInstaller () {
+	cd /Users/thomaswhilbert/OneDrive/macAdmin/Scripts/fetch-installer-pkg/ || exit
+	./run-fetch-clean.sh
+}
+
