@@ -15,11 +15,12 @@ Modified on 11-3-19
 9.  Authenticate, then close `terminal` and open `iterm2`.
 10. oh-my-zsh: [OMZ repo](~https://github.com/robbyrussell/oh-my-zsh~)
 11. 
-    **In $HOME**     `git clone https://github.com/robbyrussell/oh-my-zsh.git .oh-my-zsh`
+    **In $HOME**     `git clone https://github.com/ohmyzsh/ohmyzsh.git`
 
 12. pk10: [p10k repo](~https://github.com/romkatv/powerlevel10k~)
     
-    **IN $HOME**     `git clone https://github.com/romkatv/powerlevel10k.git .powerlevel10k`
+    **IN $HOME**  `git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ~/powerlevel10k`
+    `echo 'source ~/powerlevel10k/powerlevel10k.zsh-theme' >>~/.zshrc`
 
 13. Plugins: **copy and paste this block in your terminal:**
     ```
