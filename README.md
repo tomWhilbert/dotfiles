@@ -19,7 +19,7 @@ Modified on 11-3-19
 
 12. pk10: [p10k repo](~https://github.com/romkatv/powerlevel10k~)
     
-    **IN $HOME/bin/**  `git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ~/powerlevel10k`
+    **IN $HOME/bin/**  `git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ~/bin/powerlevel10k`
     `echo 'source ~/powerlevel10k/powerlevel10k.zsh-theme' >>~/.zshrc`
 
 13. Plugins: **copy and paste this block in your terminal:**
