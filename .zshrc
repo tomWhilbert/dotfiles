@@ -41,7 +41,7 @@ source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source ~/.zshrc_aliases
 source ~/.zshrc_functions
 
-source ~/powerlevel10k/powerlevel10k.zsh-theme
+source ~/bin/powerlevel10k/powerlevel10k.zsh-theme
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
