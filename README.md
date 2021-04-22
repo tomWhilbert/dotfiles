@@ -13,38 +13,34 @@ Modified on 11-3-19
 7. `sudo vim /etc/shells`  and append to the end of the file  `/usr/local/bin/zsh`
 8. `chsh -s $(which zsh)`
 9.  Authenticate, then close `terminal` and open `iterm2`.
-10. oh-my-zsh: [OMZ repo](~https://github.com/robbyrussell/oh-my-zsh~)
-11. 
+10. OMZ
     **In $HOME/bin/**     `git clone https://github.com/ohmyzsh/ohmyzsh.git`
 
-12. pk10: [p10k repo](~https://github.com/romkatv/powerlevel10k~)
-    
+11. Powerlevel10k    
     **IN $HOME/bin/**  `git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ~/bin/powerlevel10k`
-    `echo 'source ~/powerlevel10k/powerlevel10k.zsh-theme' >>~/.zshrc`
+   Add to `.zshrc` `source ~/powerlevel10k/powerlevel10k.zsh-theme`
 
-13. Plugins: **copy and paste this block in your terminal:**
+12. Plugins: Use the plugins available in Brew. No longer clone the ones below.
     ```
     mkdir .plugins && cd .plugins
     git clone https://github.com/zsh-users/zsh-completions 
     git clone https://github.com/zsh-users/zsh-history-substring-search 
     git clone https://github.com/zdharma/fast-syntax-highlighting
-    cd ..
     ```
 
 _**Public Users: You will not have access to set an SSH key in this repo. Skip to Clone option #15 to clone**_
 
-14. **mkdir .ssh/** then  `ssh-keygen -t rsa -b 4096`  next  `cat ~/.ssh/id_rsa.pub | pbcopy`   
-    and paste key to github ssh keys
+1.  Generate a Github SSH key pair and copy the `.pub` file to Github
 
-15. ```
+2.  ```
      git init && git remote add origin git@github.com:tomWhilbert/.dotfiles.git && git pull origin macOS
     ```
-16. ```
+3.  ```
     git clone https://github.com/tomWhilbert/.dotfiles.git
     ```
-17. `cp ~/.dotfiles/.zshrc .zshrc_aliases .p10k.zsh ~/`d
+4.  `cp ~/.dotfiles/.zshrc .zshrc_aliases .p10k.zsh ~/`d
     
-18. *** Use of 'lsd' utility replaced by 'exa' in .zshrc_aliases.***
+5.  *** Use of 'lsd' utility replaced by 'exa' in .zshrc_aliases.***
 	* Add colors to shell output:  `brew install lsd`  
     
 19. Install the Fonts, 
