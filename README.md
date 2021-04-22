@@ -15,7 +15,7 @@ Modified on 11-3-19
 9.  Authenticate, then close `terminal` and open `iterm2`.
 10. oh-my-zsh: [OMZ repo](~https://github.com/robbyrussell/oh-my-zsh~)
 11. 
-    **In $HOME**     `https://github.com/ohmyzsh/ohmyzsh.git`
+    **In $HOME**     `git clone https://github.com/ohmyzsh/ohmyzsh.git`
 
 12. pk10: [p10k repo](~https://github.com/romkatv/powerlevel10k~)
     
