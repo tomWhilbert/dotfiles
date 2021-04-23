@@ -1,22 +1,23 @@
 # ZSH Setup and Configuration # 
 ### Install Instructions assume macOS 10.15+ or Linux  
-Alternate method explored on 4-22-21
-
+Alternate method explored on 4-22-21 on clean install of macOS 11
  
-1. `/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"`
-2. 
-3. `brew install zsh`
-4. `brew cask install iterm2`
-5. `which zsh`  to confirm that  `/usr/local/bin/zsh` brew version is installed
-6. `sudo vim /etc/shells`  and append to the end of the file  `/usr/local/bin/zsh`
-7. `chsh -s $(which zsh)`
-8.  Authenticate, then close `terminal` and open `iterm2`.
+1. Install Brew: 
+    `/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"`
+2. Create new SSH keypair.  Upload `.pub` to Github.
+3. Clone `.dotfiles` from GitHub
+4. `brew install zsh`
+5. `brew cask install iterm2`
+6. `which zsh`  to confirm that  `/usr/local/bin/zsh` brew version is installed
+7. `sudo vim /etc/shells`  and append to the end of the file  `/usr/local/bin/zsh`
+8. `chsh -s $(which zsh)`
+9.  Authenticate, then close `terminal` and open `iterm2`.
     
-9.  OMZ
+10. OMZ
     **In $HOME/bin/**     `git clone https://github.com/ohmyzsh/ohmyzsh.git`
     Only use for 'd' directory pop/push and 'z' frecency.
 
-10. Powerlevel10k    
+11. Powerlevel10k    
     **IN $HOME/bin/**  `git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ~/bin/powerlevel10k`
    Add to `.zshrc` `source ~/powerlevel10k/powerlevel10k.zsh-theme`
 
