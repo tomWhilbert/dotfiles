@@ -38,10 +38,11 @@ lazyg ()
 	#* Disk Usage, Sorted by Size
 	dus () {
   	    RED='\033[0;31m'
+		BLUE='\033[0;34m'
        total=$(du -sh "$1" | cut -f1)
        du -sh "$1"/* | sort -h
        printf "\n"
-       echo -e "$RED Total Size: $total in $(readlink -f "$1")"
+       echo -e "$BLUE Total Size: $RED $total $BLUE in $RED $(readlink -f "$1")"
    }
 
 	#* Realpath a file
@@ -80,8 +81,7 @@ man() {
 #* replaces whitespaces with a dash
 #* Caution loops over all files in current dir 
 #* Change * to $1 to target a single file
-#* Make a single line for $1 and reserver for loop for multi-targets
-dashadd() {
+dash() {
 		for file in *; 
 		do mv "$file" "$(echo "$file" | tr ' ' '-')" ; 
 		done
