@@ -34,10 +34,10 @@ alias nos='code $HOME/.dotfiles/NOS-220.code-workspace'
 alias sec='code $HOME/.dotfiles/sec.code-workspace'
 alias boring='code $HOME/.dotfiles/boring.code-workspace'
 alias wp='/Users/thomaswhilbert/bin/Scripts/walk-pull/wp'
-alias tree='tree -C'
 alias cat='bat'
 alias py='python3'
 alias vmarch='vmrun -T fusion start "/Users/thomaswhilbert/Virtual Machines.localized/Arch.vmwarevm/Arch.vmx" nogui'
+alias 
 
 #* RClone commands 
 alias rclr='rclone listremotes'
