@@ -41,6 +41,7 @@ alias cat='bat'
 alias py='python3'
 alias vmarch='vmrun -T fusion start "/Users/thomaswhilbert/Virtual Machines.localized/Arch.vmwarevm/Arch.vmx" nogui'
 alias sed='/usr/local/bin/gsed'
+alias co='code .'
 
 #* RClone commands 
 alias rclr='rclone listremotes'

@@ -81,7 +81,7 @@ man() {
 #* replaces whitespaces with a dash
 #* Caution loops over all files in current dir 
 #* Change * to $1 to target a single file
-dash() {
+s2d () {
 		for file in *; 
 		do mv "$file" "$(echo "$file" | tr ' ' '-')" ; 
 		done
