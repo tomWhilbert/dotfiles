@@ -8,7 +8,7 @@ alias lsh="ls -a | grep '^\.'"
 alias ltr='exa --tree --level=2 --long'
 alias lr='exa --recurse'
 alias lt='exa --long --all -snew'
-alias lx='exa --all'
+alias lw='exa --all'
 #alias lsd="l -D"
 # alias l='ls -alh'
 # alias ls='lsd'
