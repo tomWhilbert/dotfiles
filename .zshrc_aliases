@@ -11,6 +11,7 @@ alias lsd="l -D"
 alias ltr='exa --tree --level=2 --long --icons'
 alias lr='exa --recurse'
 alias lt='exa --long --all -snew'
+alias lw='exa --all'
 # alias l='ls -alh'
 # alias ls='lsd'
 
