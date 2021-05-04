@@ -44,6 +44,7 @@ alias vmarch='vmrun -T fusion start "/Users/thomaswhilbert/Virtual Machines.loca
 alias sed='/usr/local/bin/gsed'
 alias co='code .'
 
+
 #* RClone commands 
 alias rclr='rclone listremotes'
 alias rc='rclone'

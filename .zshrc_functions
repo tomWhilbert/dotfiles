@@ -102,3 +102,6 @@ getInstaller () {
 	python3 fetch-installer-pkg.py
 }
 
+stat () {
+	/usr/bin/stat -f %A "$1"
+}
