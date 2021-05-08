@@ -38,30 +38,28 @@ lazyg ()
 	#* Disk Usage, Sorted by Size
 	dus () {
   	    RED='\033[0;31m'
+		BLUE='\033[0;34m'
        total=$(du -sh "$1" | cut -f1)
        du -sh "$1"/* | sort -h
        printf "\n"
-       echo -e "$RED Total Size: $total in $(readlink -f "$1")"
+       echo -e "$BLUE Total Size: $RED $total $BLUE in $RED $(readlink -f "$1")"
    }
 
 	#* Realpath a file
 	rpf () {
-		realpath "$1" |  wl-copy
+		realpath "$1" |  pbcopy
 	}
 
 	#* RClone Functions
 	
 	rcco () {
-		rclone copy --max-age "$1" --no-traverse /home/tom/OneDrive od: -P
+		rclone copy --max-age "$1" --no-traverse "$HOME"/OneDrive od: -P
 	}
 
 	rccg () {
-	rc copy --max-age "$1" --no-traverse /home/tom/GoogleDrive/Secure gdS: -P
+	rc copy --max-age "$1" --no-traverse "$HOME"/GoogleDrive/Secure gdS: -P
 	}
 
-	rcmnt () {
-		rclone mount --vfs-cache-mode full gdS: ~/mounts
-	}
 
 	#* Nmap get all ips on local network
 	ips () {
@@ -81,60 +79,26 @@ man() {
 }
 
 #* replaces whitespaces with a dash
-dash() {
-	
-	for file in $1;
-	do mv "$file" "$(echo "$file" | tr ' ' '-')" ; 
-	done
-}
-
-#* show ip type: static or dynamic
-iptype () {
-	#nmcli -f ipv4.method  con show "$(nmcli con show | awk 'NR==2' | cut -d' ' -f1,2,3)"
-	nmcli con show
-	echo -e '\n' "Enter the Connection Name (case sensitive) "
-	read -r name
-	nmcli -f ipv4.method  con show "$name"
-}
-
-#* pacman search, match only the term
-
-pacs () {
-	pacman -Ss ^"$1"$
-}
-
-yays () {
-	yay -Ss "$1"
-}
-
-#* Can use to eliminate need for Oh My Zsh D plugin
-d () {
-	if [[ -n $1 ]]
-	then
-		dirs "$@"
-	else
-		dirs -v | head -10
-	fi
+#* Caution loops over all files in current dir 
+#* Change * to $1 to target a single file
+s2d () {
+		for file in *; 
+		do mv "$file" "$(echo "$file" | tr ' ' '-')" ; 
+		done
 }
 
 pub () {
 	curl -w "\n" ifconfig.me
 }
 
-ipg ()
-{
-curl http://api.db-ip.com/v2/free/"$1"
-}
-
 ytd () {
-	echo "Enter the target URL...and press ENTER "
-	read -r target
-	youtube-dl "$target"
-
+       echo "Paste URL.. "
+       read -r "target"
+       youtube-dl "$target"
 }
 
-inc () {
- 	sudo informant check
-	printf "\n"
-	checkupdates | nl
+getInstaller () {
+	cd /Users/thomaswhilbert/OneDrive/macAdmin/Scripts/fetch-installer-pkg/ || exit
+	python3 fetch-installer-pkg.py
 }
+
