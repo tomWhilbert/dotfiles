@@ -78,11 +78,8 @@ man() {
     command man "$@"
 }
 
-#* replaces whitespaces with a dash
-#* Caution loops over all files in current dir 
-#* Change * to $1 to target a single file
-s2d () {
-		for file in *; 
+s2d() {
+		for file in $1; 
 		do mv "$file" "$(echo "$file" | tr ' ' '-')" ; 
 		done
 }
@@ -99,9 +96,6 @@ ytd () {
 
 getInstaller () {
 	cd /Users/thomaswhilbert/OneDrive/macAdmin/Scripts/fetch-installer-pkg/ || exit
-	python3 fetch-installer-pkg.py
+	./run-fetch-clean.sh
 }
 
-stat () {
-	/usr/bin/stat -f %A "$1"
-}
