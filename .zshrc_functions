@@ -4,11 +4,12 @@
 lg ()
 		{
 		BLUE='\033[0;34m'
+		RED='\033[0;31m'
 		echo -e "$BLUE Input your commit comments "
 		read -r comment
 		git add --all
 		git commit -m "$comment"
-		echo -e "$BLUE Input the branch name "
+		echo -e "$RED Input the branch name "
 		read -r branch
 		git push -u origin "$branch"
 		}
@@ -20,7 +21,7 @@ lg ()
 
 #* cheat.sh command dictionary ###
 	ch () {
-		curl cht.sh/"$1"
+		curl cht.sh/"$1"d
 	}
 
 	bak () {
