@@ -1,15 +1,15 @@
 #!/bin/bash
 #* Zsh Function File
 #* Functions ###
-lazyg ()
+lg ()
 		{
-		eval 'ssh-agent -s'
-		ssh-add -D
-		ssh-add "$HOME"/.ssh/github
-
+		echo -e "Input your commit comments "
+		read -r comment
 		git add --all
-		git commit -m "$1"
-		git push -u origin "$2"
+		git commit -m "$comment"
+		echo -e "Input the branch name "
+		read -r branch
+		git push -u origin "$branch"
 		}
 
 	mkd () {
