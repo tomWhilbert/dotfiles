@@ -3,11 +3,12 @@
 #* Functions ###
 lg ()
 		{
-		echo -e "Input your commit comments "
+		BLUE='\033[0;34m'
+		echo -e "$BLUE Input your commit comments "
 		read -r comment
 		git add --all
 		git commit -m "$comment"
-		echo -e "Input the branch name "
+		echo -e "$BLUE Input the branch name "
 		read -r branch
 		git push -u origin "$branch"
 		}
