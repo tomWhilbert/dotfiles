@@ -1,3 +1,2 @@
 SHELL=/usr/bin/bash
-0 * * * * /home/tom/bin/Scripts/backups/backup-dotfiles > $HOME/logs/dots/out.log 2>&1
-0 20 * * * /home/tom/bin/Scripts/backups/backup-home-rclone > /home/tom/logs/rclone/out.log 2>&1
+0 * * * * /home/tom/bin/Scripts/backups/backup-dotfiles > $HOME/logs/backup-dotfiles/out.log 2>&1
