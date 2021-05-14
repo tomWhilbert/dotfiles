@@ -38,6 +38,7 @@ alias wp='/Users/thomaswhilbert/bin/Scripts/walk-pull/wp'
 alias cat='bat'
 alias py='python3'
 alias vmarch='vmrun -T fusion start "/Users/thomaswhilbert/Virtual Machines.localized/Arch.vmwarevm/Arch.vmx" nogui'
+alias vmdeb='vmrun -T fusion start "/Users/thomaswhilbert/Virtual-Machines/Debian 10.x 64-bit.vmwarevm/Debian 10.x 64-bit.vmx" nogui'
 alias lspid='sudo lsof -PiTCP -sTCP:LISTEN'
 
 #* RClone commands 
