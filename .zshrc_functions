@@ -1,15 +1,17 @@
 #!/bin/bash
 #* Zsh Function File
 #* Functions ###
-lazyg ()
+lg ()
 		{
-		eval 'ssh-agent -s'
-		ssh-add -D
-		ssh-add "$HOME"/.ssh/github
-
+		BLUE='\033[0;34m'
+		RED='\033[0;31m'
+		echo -e "$BLUE Input your commit comments "
+		read -r comment
 		git add --all
-		git commit -m "$1"
-		git push -u origin "$2"
+		git commit -m "$comment"
+		echo -e "$RED Input the branch name "
+		read -r branch
+		git push -u origin "$branch"
 		}
 
 	mkd () {
@@ -19,7 +21,7 @@ lazyg ()
 
 #* cheat.sh command dictionary ###
 	ch () {
-		curl cht.sh/"$1"
+		curl cht.sh/"$1"d
 	}
 
 	bak () {
