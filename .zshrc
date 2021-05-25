@@ -43,3 +43,4 @@ source ~/bin/powerlevel10k/powerlevel10k.zsh-theme
 
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 
+typeset -g POWERLEVEL9K_INSTANT_PROMPT=quiet
