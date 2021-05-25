@@ -40,6 +40,7 @@ alias py='python3'
 alias vmarch='vmrun -T fusion start "/Users/thomaswhilbert/Virtual Machines.localized/Arch.vmwarevm/Arch.vmx" nogui'
 alias lspid='sudo lsof -PiTCP -sTCP:LISTEN'
 
+
 #* RClone commands 
 alias rclr='rclone listremotes'
 alias rc='rclone'

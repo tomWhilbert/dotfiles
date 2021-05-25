@@ -99,3 +99,19 @@ getInstaller () {
 	./run-fetch-clean.sh
 }
 
+nslu () {
+	
+	targetHost="$1"
+
+	echo "Enter 1 for Stu, 2 for Abtech?"
+	read -r "targetDomain"
+
+	if [[ $targetDomain == 1 ]]
+		then
+			nslookup "$targetHost".stu.asheville.cc.nc.us
+		else
+			nslookup "$targetHost".asheville.cc.nc.us
+	fi
+	
+
+}
