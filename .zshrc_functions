@@ -53,7 +53,9 @@ lazyg ()
 	#* RClone Functions
 	
 	rcco () {
-		rclone copy --max-age "$1" --no-traverse "$HOME"/OneDrive od: -P
+		cd "$HOME"/OneDrive/macAdmin || exit
+		rclone copy --max-age "$1" --no-traverse --exclude-from=rclone-excludes.txt "$HOME"/OneDrive od: -P
+		#rclone copy --max-age "$1" --no-traverse "$HOME"/OneDrive od: -P
 	}
 
 	rccg () {
