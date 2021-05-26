@@ -13,6 +13,11 @@ lg () #* use awk to parse out the branches as a choice??
 		read -r branch
 		git push -u origin "$branch"
 		}
+ #* Run the line below in the '.git' directory
+ #* awk '/branch/{ print $0 }' config | awk -F '"' '{print $2}'  **Grabs macOS and linux from git config**
+
+
+
 
 	mkd () {
 		mkdir "$1"
