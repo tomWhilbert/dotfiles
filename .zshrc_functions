@@ -1,7 +1,7 @@
 #!/bin/bash
 #* Zsh Function File
 #* Functions ###
-lg ()
+lg () #* use awk to parse out the branches as a choice??
 		{
 		BLUE='\033[0;34m'
 		RED='\033[0;31m'
