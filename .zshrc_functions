@@ -81,10 +81,9 @@ man() {
 }
 
 #* replaces whitespaces with a dash
-s2d() {
-	
+s2d() {	
 	for file in $1;
-	do mv "$file" "$(echo "$file" | tr ' ' '-')" ; 
+		do mv "$file" "$(echo "$file" | tr ' ' '-')" ; 
 	done
 }
 
