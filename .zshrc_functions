@@ -3,13 +3,15 @@
 #* Functions ###
 lg () #* use awk to parse out the branches as a choice??
 		{
-		eval 'ssh-agent -s'
-		ssh-add -D
-		ssh-add "$HOME"/.ssh/github
-
+		BLUE='\033[0;34m'
+		RED='\033[0;31m'
+		echo -e "$BLUE Input your commit comments "
+		read -r comment
 		git add --all
-		git commit -m "$1"
-		git push -u origin "$2"
+		git commit -m "$comment"
+		echo -e "$RED Input the branch name "
+		read -r branch
+		git push -u origin "$branch"
 		}
  #* Run the line below in the '.git' directory
  #* awk '/branch/{ print $0 }' config | awk -F '"' '{print $2}'  **Grabs macOS and linux from git config**
@@ -24,7 +26,7 @@ lg () #* use awk to parse out the branches as a choice??
 
 #* cheat.sh command dictionary ###
 	ch () {
-		curl cht.sh/"$1"
+		curl cht.sh/"$1"d
 	}
 
 	bak () {
@@ -58,9 +60,7 @@ lg () #* use awk to parse out the branches as a choice??
 	#* RClone Functions
 	
 	rcco () {
-		cd "$HOME"/OneDrive/macAdmin || exit
-		rclone copy --max-age "$1" --no-traverse --exclude-from=rclone-excludes.txt "$HOME"/OneDrive od: -P
-		#rclone copy --max-age "$1" --no-traverse "$HOME"/OneDrive od: -P
+		rclone copy --max-age "$1" --no-traverse "$HOME"/OneDrive od: -P
 	}
 
 	rccg () {
@@ -86,7 +86,7 @@ man() {
 }
 
 s2d() {
-		for file in "$1"; 
+		for file in $1; 
 		do mv "$file" "$(echo "$file" | tr ' ' '-')" ; 
 		done
 }
@@ -106,19 +106,3 @@ getInstaller () {
 	./run-fetch-clean.sh
 }
 
-nslu () {
-	
-	targetHost="$1"
-
-	echo "Enter 1 for Stu, 2 for Abtech?"
-	read -r "targetDomain"
-
-	if [[ $targetDomain == 1 ]]
-		then
-			nslookup "$targetHost".stu.asheville.cc.nc.us
-		else
-			nslookup "$targetHost".asheville.cc.nc.us
-	fi
-	
-
-}

@@ -7,7 +7,6 @@ fi
 
 export RCLONE_PASSWORD_COMMAND="security find-generic-password -a $USER -s rclone -w"
 export PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
-export BAT_THEME="zenburn"
 
 # Lines configured by zsh-newuser-install
 HISTFILE=~/.histfile
@@ -24,7 +23,6 @@ compinit
 # End of lines added by compinstall
 
 # Source paths for zsh plugins
-
 ZSH=$HOME/bin/ohmyzsh
 source $ZSH/lib/directories.zsh #* enables 'd' directory stack
 source $ZSH/plugins/z/z.plugin.zsh
@@ -35,12 +33,10 @@ source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 # Source paths for aliases and functions
 source ~/.zshrc_aliases
 source ~/.zshrc_functions
-
 source ~/bin/powerlevel10k/powerlevel10k.zsh-theme
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
-
-typeset -g POWERLEVEL9K_INSTANT_PROMPT=quiet
+# ssh-add -A
