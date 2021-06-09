@@ -3,5 +3,13 @@
 		{
 			"path": "../Nextcloud/Learn/BoringStuff"
 		}
-	]
+	],
+	"settings": {
+		"python.pythonPath": "/usr/bin/python",
+		"spellright.language": [],
+		"spellright.documentTypes": [
+			"latex",
+			"plaintext"
+		]
+	}
 }
