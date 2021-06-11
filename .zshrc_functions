@@ -17,7 +17,16 @@ lg () #* use awk to parse out the branches as a choice??
  #* awk '/branch/{ print $0 }' config | awk -F '"' '{print $2}'  **Grabs macOS and linux from git config**
 
 
+#* diskutil erase function
+	### $1 is the volume name
+	### $2 is the voluem path
+	de () {
+		diskutil eraseDisk HFS+ "$1" /dev/disk"$2"
+		}
 
+	dku () {
+		diskutil unmountDisk /dev/disk"$1"
+	}
 
 	mkd () {
 		mkdir "$1"
@@ -106,3 +115,28 @@ getInstaller () {
 	./run-fetch-clean.sh
 }
 
+#* Virtual Box  ** Keeping for reference **
+#* See Stack Exchange: https://unix.stackexchange.com/questions/218753/how-to-pass-variables-to-awk-command-with-conditions
+#* pass variable to awk was the key to getting it to work
+# vmh () {
+# 	VBoxManage list vms | nl
+# 	VBoxManage list vms | nl > vmz
+# 	printf "\n"
+# 	echo '     Choose a VM #' 
+# 	read -r num
+# 	vm=$(awk -v num="$num" 'NR==num {print}' < vmz | cut -d \" -f 2)
+# 	rm vmz
+# 	VBoxHeadless -s "$vm" &
+# 	sleep 1
+# 	printf "\n"
+# }
+
+digab () {
+	dig @10.60.20.20 "$1".asheville.cc.nc.us
+}
+	
+getInstaller () {
+	cd /Users/thomaswhilbert/OneDrive/macAdmin/Scripts/fetch-installer-pkg/ || exit
+	./run-fetch-clean.sh
+
+}
