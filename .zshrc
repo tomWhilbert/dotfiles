@@ -25,9 +25,12 @@ source $ZDOTDIR/.zshrc_aliases
 source $ZDOTDIR/.zshrc_functions
 source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme #* Installed via Yay
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
+#source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
+source $ZDOTDIR/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
+
 source /usr/share/zsh/plugins/zsh-history-substring-search/zsh-history-substring-search.zsh
 source /usr/share/zsh/site-functions  #* sources the completion functions
+
 
 #* History
 #[ -z "$HISTFILE" ] && HISTFILE="$ZDOTDIR/.zsh_history"
