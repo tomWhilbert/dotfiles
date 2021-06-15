@@ -2,6 +2,9 @@
 	"folders": [
 		{
 			"path": "../Nextcloud/Learn/SEC"
+		},
+		{
+			"path": "../Nextcloud/Learn/Nettech/Security"
 		}
 	],
 	"settings": {
