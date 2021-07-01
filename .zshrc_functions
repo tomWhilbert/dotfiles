@@ -53,13 +53,13 @@ lg () #* use awk to parse out the branches as a choice??
 
 	#* Disk Usage, Sorted by Size
 	dus () {
-  	    RED='\033[0;31m'
-		BLUE='\033[0;34m'
-       total=$(du -sh "$1" | cut -f1)
-       du -sh "$1"/* | sort -h
-       printf "\n"
-       echo -e "$BLUE Total Size: $RED $total $BLUE in $RED $(readlink -f "$1")"
-   }
+  	    	RED='\033[0;31m'
+			BLUE='\033[0;34m'
+       		total=$(du -sh "$1" | cut -f1)
+       		du -sh "$1"/* | sort -h
+       		printf "\n"
+       		echo -e "$BLUE Total Size: $RED $total $BLUE in $RED $(readlink -f "$1")"
+   		} 2> /dev/null
 
 	#* Realpath a file
 	rpf () {
