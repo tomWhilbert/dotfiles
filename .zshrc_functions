@@ -81,7 +81,7 @@ man() {
 }
 
 #* replaces whitespaces with a dash
-s2d() {	
+sd() {	
 	for file in $1;
 		do mv "$file" "$(echo "$file" | tr ' ' '-')" ; 
 	done
@@ -126,7 +126,7 @@ curl http://api.db-ip.com/v2/free/"$1"
 }
 
 ytd () {
-	echo "Enter the target URL...and press ENTER "
+	echo "Paste the target URL...and press ENTER "
 	read -r target
 	youtube-dl "$target"
 
