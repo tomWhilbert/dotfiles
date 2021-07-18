@@ -39,4 +39,4 @@ source ~/bin/powerlevel10k/powerlevel10k.zsh-theme
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
-ssh-add -A 2&>1 /dev/null
+ssh-add -A > /dev/null 2>&1 
