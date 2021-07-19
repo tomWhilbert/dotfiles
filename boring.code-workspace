@@ -10,6 +10,7 @@
 		"spellright.documentTypes": [
 			"latex",
 			"plaintext"
-		]
+		],
+		"files.defaultLanguage": "python"
 	}
 }
