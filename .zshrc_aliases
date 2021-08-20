@@ -3,7 +3,7 @@
 #* alias and function source file
 
 #* Perhaps its time to retire 'lsd'
-# alias ls='exa'
+alias ls='exa'
 alias l='exa --long --all --icons'
 alias lsh="ls -a | grep '^\.'"
 alias lsd="l -D"
@@ -11,7 +11,6 @@ alias ltr='exa --tree --level=2 --long'
 alias lr='exa --recurse'
 alias lt='exa --long --all -snew'
 alias lw='exa --all'
-alias lS='exa --long --all --icons -s=size'
 # alias l='ls -alh'
 # alias ls='lsd'
 
@@ -21,7 +20,7 @@ alias srz='exec zsh'
 alias dkl='diskutil list'
 alias ds='diskutil'
 alias hs='history 1'
-alias rp='realpath . | pbcopy'  #* Copy's the Working Directory to the clipboard
+alias rp='realpath . | pbcopy'
 alias png='ping -c 3'
 alias admin='dseditgroup -o checkmember -m $USER admin'
 alias ip='/Users/thomaswhilbert/bin/Scripts/get-ip/Get-IP-macOS.sh'
@@ -31,7 +30,7 @@ alias zcode='code /$HOME/.dotfiles/zsh.code-workspace'
 alias zrc='code $HOME/.zshrc'
 alias zra='code $HOME/.zshrc_aliases'
 alias zrf='code $HOME/.zshrc_functions'
-alias grep='grep -i --color'
+alias grep='grep --color'
 alias nos='code $HOME/.dotfiles/NOS-220.code-workspace'
 alias sec='code $HOME/.dotfiles/sec.code-workspace'
 alias boring='code $HOME/.dotfiles/boring.code-workspace'
@@ -42,7 +41,6 @@ alias vmarch='vmrun -T fusion start "/Users/thomaswhilbert/Virtual Machines.loca
 alias vmdeb='vmrun -T fusion start "/Users/thomaswhilbert/Virtual-Machines/Debian 10.x 64-bit.vmwarevm/Debian 10.x 64-bit.vmx" nogui'
 alias lspid='sudo lsof -PiTCP -sTCP:LISTEN'
 alias tldr='tldr --color always'
-alias sad='su administrator'
 
 #* RClone commands 
 alias rclr='rclone listremotes'

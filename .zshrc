@@ -7,7 +7,6 @@ fi
 
 export RCLONE_PASSWORD_COMMAND="security find-generic-password -a $USER -s rclone -w"
 export PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
-export PATH="/usr/local/opt/gnu-sed/libexec/gnubin:$PATH"
 
 # Lines configured by zsh-newuser-install
 HISTFILE=~/.histfile
