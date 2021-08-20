@@ -141,7 +141,14 @@ getInstaller () {
 
 }
 
+<<<<<<< HEAD
 hshChk () {
 		echo ""$1"" "$2" | sha256sum --check
 }
 #* param 1 is the file signature, param 2 is the target file
+=======
+#* Transforms uppercase string to lowercase. Parameter 1 is the readfrom file. Parameter 2 is the new file. Add a pipe to 'pbcopy' to send to clipboard.
+uplow () {
+	tr "[:upper:]" "[:lower:]" < "$1" > "$2"
+}
+>>>>>>> 35e5bffb60c0c0cabb51384de70bc353e392270a
