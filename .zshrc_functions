@@ -140,3 +140,8 @@ getInstaller () {
 	./run-fetch-clean.sh
 
 }
+
+hshChk () {
+		echo ""$1"" "$2" | sha256sum --check
+}
+#* param 1 is the file signature, param 2 is the target file
