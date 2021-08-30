@@ -1,0 +1,11 @@
+{
+	"folders": [
+		{
+			"path": "../Nextcloud/Learn/PHP"
+		}
+	],
+	"settings": {
+		"editor.defaultFormatter": "vscode.php-language-features",
+		"files.defaultLanguage": "php"
+	}
+}
