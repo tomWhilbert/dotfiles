@@ -145,3 +145,12 @@ chkSum () {
 		echo "$1" "$2" | sha256sum --check
 }
 #* param 1 is the file signature, param 2 is the target file
+
+
+#* Testing python webOpen map function
+pymap () {
+        cd /Users/thomaswhilbert/Nextcloud/Learn/BoringStuff/Lesson-38 || exit
+        echo "Paste or enter an Address.. "
+        read -r "target"
+        py webOpen.py "$target"
+}
