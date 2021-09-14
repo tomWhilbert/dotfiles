@@ -146,17 +146,7 @@ chkSum () {
 }
 #* param 1 is the file signature, param 2 is the target file
 
-<<<<<<< HEAD
 wp () {
 	cd ~/bin || exit
 	find . -maxdepth 1 -type d \( ! -name . \) -exec bash -c "cd '{}' && git pull" \;
-=======
-
-#* Testing python webOpen map function
-pymap () {
-        cd /Users/thomaswhilbert/Nextcloud/Learn/BoringStuff/Lesson-38 || exit
-        echo "Paste or enter an Address.. "
-        read -r "target"
-        py webOpen.py "$target"
->>>>>>> 896f33fd81ccc1b002ff5e8a2c91d6a9258500a7
 }
