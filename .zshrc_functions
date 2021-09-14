@@ -145,3 +145,8 @@ chkSum () {
 		echo "$1" "$2" | sha256sum --check
 }
 #* param 1 is the file signature, param 2 is the target file
+
+wp () {
+	cd ~/bin || exit
+	find . -maxdepth 1 -type d \( ! -name . \) -exec bash -c "cd '{}' && git pull" \;
+}
