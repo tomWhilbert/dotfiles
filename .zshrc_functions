@@ -148,15 +148,5 @@ chkSum () {
 
 wp () {
 	cd ~/bin || exit
-	# find . -maxdepth 1 -type d \( ! -name . \) -exec bash -c "cd '{}' && git pull" shell {} \;
-	#* corrects issue with the above: https://github.com/koalaman/shellcheck/wiki/SC2156
-	find . -maxdepth 1 -type d \( ! -name . \) -exec bash -c 'cd "$1" && git pull' shell {} \;
-}
-
-#* Testing python webOpen map function
-pymap () {
-        cd /Users/thomaswhilbert/Nextcloud/Learn/BoringStuff/Lesson-38 || exit
-        echo "Paste or enter an Address.. "
-        read -r "target"
-        /usr/bin/python3 webOpen.py "$target"
+	find . -maxdepth 1 -type d \( ! -name . \) -exec bash -c "cd '{}' && git pull" \;
 }
