@@ -120,11 +120,6 @@ pub () {
 	curl -w "\n" ifconfig.me
 }
 
-ipg ()
-{
-curl http://api.db-ip.com/v2/free/"$1"
-}
-
 ytd () {
 	echo "Paste the target URL...and press ENTER "
 	read -r target
