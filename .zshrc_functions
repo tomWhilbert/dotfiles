@@ -150,3 +150,16 @@ wp () {
 	cd ~/bin || exit
 	find . -maxdepth 1 -type d \( ! -name . \) -exec bash -c "cd '{}' && git pull" \;
 }
+
+nfo () {
+	BLUE='\033[0;34m' 
+NC='\033[0m' # No Color
+networksetup -listallnetworkservices 
+printf "\n"
+echo "$BLUE Choose a network service to dislplay more info"
+
+echo "$NC"
+read -r con
+printf "\n"
+networksetup -getinfo "$con"
+}

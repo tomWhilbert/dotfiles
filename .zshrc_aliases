@@ -42,7 +42,7 @@ alias vmarch='vmrun -T fusion start "/Users/thomaswhilbert/Virtual Machines.loca
 alias vmdeb='vmrun -T fusion start "/Users/thomaswhilbert/Virtual-Machines/Debian 10.x 64-bit.vmwarevm/Debian 10.x 64-bit.vmx" nogui'
 alias lspid='sudo lsof -PiTCP -sTCP:LISTEN'
 alias tldr='tldr --color always'
-alias nfo='networksetup -getinfo Wi-Fi'
+#alias nfo='networksetup -getinfo Wi-Fi'  #* replaced with better aliasnfo
 alias sad='su administrator'
 
 #* RClone commands 
