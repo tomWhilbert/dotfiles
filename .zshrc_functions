@@ -132,3 +132,8 @@ inc () {
 	printf "\n"
 	checkupdates | nl
 }
+
+whatprovides () {
+	sudo pacman -Fy
+	pacman -F "$1"
+}
