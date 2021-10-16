@@ -65,7 +65,7 @@ lazyg ()
 
 	#* Nmap get all ips on local network
 	ips () {
-		nmap -sn 192.168.0.0/24 | awk '/Nmap scan/{gsub(/[()]/,"",$NF); print $NF > "nmap_scanned_ips"}'
+		nmap -sn -O 192.168.1.0/24 | awk '/Nmap scan/{gsub(/[()]/,"",$NF); print $NF > "nmap_scanned_ips"}'
 		cat nmap_scanned_ips
 	}
 
@@ -97,7 +97,6 @@ iptype () {
 }
 
 #* pacman search, match only the term
-
 pacs () {
 	pacman -Ss ^"$1"$
 }
@@ -124,7 +123,6 @@ ytd () {
 	echo "Paste the target URL...and press ENTER "
 	read -r target
 	youtube-dl "$target"
-
 }
 
 inc () {
