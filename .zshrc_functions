@@ -163,3 +163,8 @@ read -r con
 printf "\n"
 networksetup -getinfo "$con"
 }
+
+shoc () {
+	stat -c "%a %n" "$1"
+	#* shoc aka show octal for target
+}
