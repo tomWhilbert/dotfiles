@@ -1,10 +1,4 @@
-# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
-# Initialization code that may require console input (password prompts, [y/n]
-# confirmations, etc.) must go above this block; everything else may go below.
-if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
-  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
-fi
-
+# Path and Rclone config
 export RCLONE_PASSWORD_COMMAND="security find-generic-password -a $USER -s rclone -w"
 export PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
 export PATH="/usr/local/opt/gnu-sed/libexec/gnubin:$PATH"
@@ -23,22 +17,27 @@ autoload -Uz compinit
 compinit 
 # End of lines added by compinstall
 
-# Source paths for zsh plugins
-ZSH=$HOME/bin/ohmyzsh
+# Source paths for zsh plugins and theme
+ZSH=$HOME/bin/plugins/ohmyzsh
+PLUGINS=$HOME/bin/plugins
+source $HOME/bin/powerlevel10k/powerlevel10k.zsh-theme
 source $ZSH/lib/directories.zsh #* enables 'd' directory stack
 source $ZSH/plugins/z/z.plugin.zsh
-source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
-source /usr/local/share/zsh-history-substring-search/zsh-history-substring-search.zsh
-source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source $PLUGINS/zsh-autosuggestions/zsh-autosuggestions.zsh
+source $PLUGINS/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source $PLUGINS/zsh-history-substring-search/zsh-history-substring-search.zsh
+
+# Bindkey for substring search navigation
+bindkey '^[[A' history-substring-search-up
+bindkey '^[[B' history-substring-search-down
 
 # Source paths for aliases and functions
 source ~/.zshrc_aliases
 source ~/.zshrc_functions
-source ~/bin/powerlevel10k/powerlevel10k.zsh-theme
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
-test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 #* ssh-add -A > /dev/null 2>&1 
+
 
