@@ -36,6 +36,7 @@ alias plus='code $HOME/.dotfiles/plus.code-workspace'
 alias sec='code $HOME/.dotfiles/sec.code-workspace'
 alias notes='code $HOME/.dotfiles/notes.code-workspace'
 alias boring='code $HOME/Nextcloud/Learn/BoringStuff/BoringStuff.code-workspace'
+alias pp='code pyPractice.code-workspace'
 
 #* Arch/Linux specific aliases
 alias sbz='systemctl start sabnzbd@tom.service'
@@ -50,6 +51,7 @@ alias vmon='vim-cmd vmsvc/power.on'  #* for info only - works on esxi cli
 alias getdns='getent ahostsv4'
 alias netnice='nmcli -p device show'
 alias inform='sudo informant'
+
 
 #* systemd
 alias sc='systemctl'
@@ -92,6 +94,7 @@ alias wgd='sudo wg-quick down /etc/wireguard/mullvad-us167.conf'
 
 #* btrfs
 alias br='sudo btrfs'
+
 
 
 
