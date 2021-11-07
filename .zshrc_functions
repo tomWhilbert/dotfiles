@@ -163,6 +163,5 @@ networksetup -getinfo "$con"
 
 shoc () {
 	stat -c "%a" "$1"
-	#* shoc aka show octal for target
 }
 
