@@ -95,6 +95,9 @@ alias wgd='sudo wg-quick down /etc/wireguard/mullvad-us167.conf'
 #* btrfs
 alias br='sudo btrfs'
 
+#* Virsh
+alias cen='sudo virsh start centos8'
+
 
 
 
