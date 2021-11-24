@@ -97,7 +97,7 @@ alias br='sudo btrfs'
 
 #* Virsh
 alias cen='sudo virsh start centos8'
-
+alias ubu='sudo virsh start ubuntu20.04'
 
 
 
