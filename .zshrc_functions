@@ -102,14 +102,11 @@ pub () {
 }
 
 ytd () {
-       echo "Paste URL.. "
-       read -r "target"
-       youtube-dl "$target"
-}
-
-getInstaller () {
-	cd /Users/thomaswhilbert/OneDrive/macAdmin/Scripts/fetch-installer-pkg/ || exit
-	./run-fetch-clean.sh
+	cd ~/Movies/Tubes || exit
+    echo "Paste URL.. "
+    read -r "target"
+    /usr/local/bin/yt-dlp "$target"
+	rm -rf ./*.part
 }
 
 #* Virtual Box  ** Keeping for reference **
@@ -132,16 +129,11 @@ digab () {
 	dig @10.60.20.20 "$1".asheville.cc.nc.us
 }
 	
-getInstaller () {
-	cd /Users/thomaswhilbert/OneDrive/macAdmin/Scripts/fetch-installer-pkg/ || exit
-	./run-fetch-clean.sh
-
-}
 
 chkSum () {
 		echo "$1" "$2" | sha256sum --check
 }
-#* param 1 is the file signature, param 2 is the target file
+#* param 1 is the file hash sum, param 2 is the target file
 
 wp () {
 	cd ~/bin || exit
@@ -165,3 +157,8 @@ shoc () {
 	stat -c "%a" "$1"
 }
 
+vmfed() {
+	vmrun -T fusion start "/Users/thomaswhilbert/Virtual Machines.localized/Fedora 64-bit.vmwarevm/Fedora 64-bit.vmx" nogui
+	sleep 15
+	ssh fed
+}
