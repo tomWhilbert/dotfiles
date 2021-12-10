@@ -51,7 +51,7 @@ alias vmon='vim-cmd vmsvc/power.on'  #* for info only - works on esxi cli
 alias getdns='getent ahostsv4'
 alias netnice='nmcli -p device show'
 alias inform='sudo informant'
-
+alias pacv="pacman -Qq | fzf --preview 'pacman -Qil {}' --layout=reverse --bind 'enter:execute(pacman -Qil {} | less)'"
 
 #* systemd
 alias sc='systemctl'
