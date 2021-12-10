@@ -29,7 +29,6 @@ source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 source /usr/share/zsh/plugins/zsh-history-substring-search/zsh-history-substring-search.zsh
 source /usr/share/zsh/site-functions  #* sources the completion functions
 
-
 #* History
 #[ -z "$HISTFILE" ] && HISTFILE="$ZDOTDIR/.zsh_history"
 HISTSIZE=10000
