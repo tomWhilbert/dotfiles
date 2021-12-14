@@ -53,6 +53,7 @@ alias netnice='nmcli -p device show'
 alias inform='sudo informant'
 alias pacv="pacman -Qq | fzf --preview 'pacman -Qil {}' --layout=reverse --bind 'enter:execute(pacman -Qil {} | less)'"
 
+
 #* systemd
 alias sc='systemctl'
 alias scs="systemctl status"
