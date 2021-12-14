@@ -46,3 +46,4 @@ source ~/.zshrc_functions
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 #* ssh-add -A > /dev/null 2>&1 
+
