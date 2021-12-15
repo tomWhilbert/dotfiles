@@ -153,13 +153,32 @@ wp () {
 
 nfo () {
 	BLUE='\033[0;34m' 
-NC='\033[0m' # No Color
-networksetup -listallnetworkservices 
-printf "\n"
-echo "$BLUE Choose a network service to dislplay more info"
-
-echo "$NC"
-read -r con
-printf "\n"
-networksetup -getinfo "$con"
+	NC='\033[0m' # No Color
+	networksetup -listallnetworkservices | nl 
+	# networksetup -listallnetworkservices | nl
+	printf "\n" 
+	echo "$BLUE Choose a network service to dislplay more info"
+	read -r num
+	con=$(awk -v num="$num" 'NR==num {print $2, $3}')
+		echo "$NC"
+	read -r con
+	echo $con
+	printf "\n"
+	networksetup -getinfo "$con"
 }
+
+
+# awk -v num="$num" 'NR==num {print $2, $3}' 
+
+#vmh () {
+# 	VBoxManage list vms | nl
+# 	VBoxManage list vms | nl > vmz
+# 	printf "\n"
+# 	echo '     Choose a VM #' 
+# 	read -r num
+# 	vm=$(awk -v num="$num" 'NR==num {print}' < vmz | cut -d \" -f 2)
+# 	rm vmz
+# 	VBoxHeadless -s "$vm" &
+# 	sleep 1
+# 	printf "\n"
+# }

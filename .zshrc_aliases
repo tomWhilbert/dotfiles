@@ -44,6 +44,7 @@ alias lspid='sudo lsof -PiTCP -sTCP:LISTEN'
 alias tldr='tldr --color always'
 #alias nfo='networksetup -getinfo Wi-Fi'  #* replaced with better function
 alias sad='su administrator'
+alias fdns='sudo dscacheutil -flushcache; sudo killall -HUP mDNSResponder'
 
 #* RClone commands 
 alias rclr='rclone listremotes'
