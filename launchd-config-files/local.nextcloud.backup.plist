@@ -3,19 +3,19 @@
 <plist version="1.0">
 <dict>
 	<key>Label</key>
-	<string>local.nextcloud.backup.plist</string>
+	<string>local.rclone-od.backup.plist</string>
 	
 	<key>ProgramArguments</key>
 	<array>
-		<string>/Users/thomaswhilbert/bin/scripts/rsync/nc-bkup.sh</string>								
+		<string>/Users/thomaswhilbert/bin/scripts/rclone/rc-od.sh</string>						
 	</array>
 	<key>RunAtLoad</key>
 	<true/>
 	<key>StandardErrorPath</key>
-	<string>/Volumes/Stash/logs/nextcloud/stderr.log</string>
+	<string>$HOME/logs/rclone/stderr.log</string>
 	<key>StandardOutPath</key>
-	<string>/Volumes/Stash/logs/nextcloud/stdout.log</string>
+	<string>$HOME/logs/rclone/stdout.log</string>
 	<key>StartInterval</key>
-		<integer>1800</integer>
+		<integer>15</integer>
 	</dict>
 </plist>
