@@ -1,5 +1,6 @@
 #!/bin/bash
-
+#* Zsh Function File
+#* Functions ###
 lg () #* use awk to parse out the branches as a choice??
 		{
 		BLUE='\033[0;34m'
@@ -15,13 +16,6 @@ lg () #* use awk to parse out the branches as a choice??
  #* Run the line below in the '.git' directory
  #* awk '/branch/{ print $0 }' config | awk -F '"' '{print $2}'  **Grabs macOS and linux from git config**
 
-#* Testing: parameter expansion for git, gq AKA, git quick.  Works can replace or work as alternative to lg ()
-
-gq () {
-	git add .
-	git commit -m "${1:-update}"
-	git push 
-}
 
 #* diskutil erase function
 	### $1 is the volume name
@@ -48,6 +42,15 @@ gq () {
 		sudo cp "$1" "$1".bak
 	}
    
+#* SSH GitHub authentication fix
+	ghssh () {
+		eval 'ssh-agent -s'
+		ssh-add -D
+	    cd "$HOME"/.ssh/ || exit
+		ssh-add github
+		cd "$OLDPWD" || exit
+	}
+
 	#* Disk Usage, Sorted by Size
 	dus () {
   	    RED='\033[0;31m'
@@ -76,7 +79,7 @@ gq () {
 
 	#* Nmap get all ips on local network
 	ips () {
-		nmap -sn 192.168.1.0/24 | awk '/Nmap scan/{gsub(/[()]/,"",$NF); print $NF > "nmap_scanned_ips"}'
+		nmap -sn 192.168.0.0/24 | awk '/Nmap scan/{gsub(/[()]/,"",$NF); print $NF > "nmap_scanned_ips"}'
 		cat nmap_scanned_ips
 	}
 
@@ -102,11 +105,14 @@ pub () {
 }
 
 ytd () {
-	cd ~/Movies/Tubes || exit
-    echo "Paste URL.. "
-    read -r "target"
-    /usr/local/bin/yt-dlp "$target"
-	rm -rf ./*.part
+       echo "Paste URL.. "
+       read -r "target"
+       youtube-dl "$target"
+}
+
+getInstaller () {
+	cd /Users/thomaswhilbert/OneDrive/macAdmin/Scripts/fetch-installer-pkg/ || exit
+	./run-fetch-clean.sh
 }
 
 #* Virtual Box  ** Keeping for reference **
@@ -129,11 +135,16 @@ digab () {
 	dig @10.60.20.20 "$1".asheville.cc.nc.us
 }
 	
+getInstaller () {
+	cd /Users/thomaswhilbert/OneDrive/macAdmin/Scripts/fetch-installer-pkg/ || exit
+	./run-fetch-clean.sh
+
+}
 
 chkSum () {
 		echo "$1" "$2" | sha256sum --check
 }
-#* param 1 is the file hash sum, param 2 is the target file
+#* param 1 is the file signature, param 2 is the target file
 
 wp () {
 	cd ~/bin || exit
@@ -142,23 +153,33 @@ wp () {
 
 nfo () {
 	BLUE='\033[0;34m' 
-NC='\033[0m' # No Color
-networksetup -listallnetworkservices 
-printf "\n"
-echo "$BLUE Choose a network service to dislplay more info"
-
-echo "$NC"
-read -r con
-printf "\n"
-networksetup -getinfo "$con"
+	NC='\033[0m' # No Color
+	networksetup -listallnetworkservices | nl 
+	# networksetup -listallnetworkservices | nl
+	printf "\n" 
+	echo "$BLUE Choose a network service to dislplay more info"
+	read -r num
+	con=$(awk -v num="$num" 'NR==num {print $2, $3}')
+		echo "$NC"
+	read -r con
+	echo $con
+	printf "\n"
+	networksetup -getinfo "$con"
 }
 
-shoc () {
-	stat -c "%a" "$1"
-}
 
-vmfed() {
-	vmrun -T fusion start "/Users/thomaswhilbert/Virtual Machines.localized/Fedora 64-bit.vmwarevm/Fedora 64-bit.vmx" nogui
-	sleep 15
-	ssh fed
-}
+# awk -v num="$num" 'NR==num {print $2, $3}' 
+
+#vmh () {
+# 	VBoxManage list vms | nl
+# 	VBoxManage list vms | nl > vmz
+# 	printf "\n"
+# 	echo '     Choose a VM #' 
+# 	read -r num
+# 	vm=$(awk -v num="$num" 'NR==num {print}' < vmz | cut -d \" -f 2)
+# 	rm vmz
+# 	VBoxHeadless -s "$vm" &
+# 	sleep 1
+# 	printf "\n"
+# }
+
