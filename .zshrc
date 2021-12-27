@@ -6,8 +6,7 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
 fi
 
 export RCLONE_PASSWORD_COMMAND="security find-generic-password -a $USER -s rclone -w"
-export PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
-export PATH="/usr/local/opt/gnu-sed/libexec/gnubin:$PATH"
+export PATH="/usr/local/opt/gnu-sed/libexec/gnubin:/usr/local/opt/coreutils/libexec/gnubin:$PATH"
 export DOTS=$HOME/.dotfiles
 
 # Lines configured by zsh-newuser-install
@@ -25,7 +24,7 @@ compinit
 # End of lines added by compinstall
 
 # Source paths for zsh plugins
-ZSH=$HOME/bin/ohmyzsh
+ZSH=/Users/thomaswhilbert/bin/plugins/ohmyzsh
 source $ZSH/lib/directories.zsh #* enables 'd' directory stack
 source $ZSH/plugins/z/z.plugin.zsh
 source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
@@ -33,14 +32,9 @@ source /usr/local/share/zsh-history-substring-search/zsh-history-substring-searc
 source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 # Source paths for aliases and functions
-<<<<<<< HEAD
 source $DOTS/.zshrc_aliases
 source $DOTS/.zshrc_functions
-=======
-source ~/.zshrc_aliases
-source ~/.zshrc_functions
 source ~/bin/powerlevel10k/powerlevel10k.zsh-theme
->>>>>>> f4773fca2272c614459d3e416d9e76eb64fda703
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
