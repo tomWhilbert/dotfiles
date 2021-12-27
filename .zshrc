@@ -9,6 +9,7 @@ fi
 export RCLONE_PASSWORD_COMMAND="security find-generic-password -a $USER -s rclone -w"
 export PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
 export PATH="/usr/local/opt/gnu-sed/libexec/gnubin:$PATH"
+export DOTS=$HOME/.dotfiles
 
 # Lines configured by zsh-newuser-install
 HISTFILE=~/.histfile
@@ -39,8 +40,8 @@ bindkey '^[[A' history-substring-search-up
 bindkey '^[[B' history-substring-search-down
 
 # Source paths for aliases and functions
-source ~/.zshrc_aliases
-source ~/.zshrc_functions
+source $DOTS/.zshrc_aliases
+source $DOTS/.zshrc_functions
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
