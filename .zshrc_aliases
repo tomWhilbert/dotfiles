@@ -25,6 +25,8 @@ alias tree='tree -L 2 -C'
 alias tml='tmux ls'
 alias tmn='tmux new-session -t'
 alias py='/usr/bin/python3'
+alias lb='/usr/bin/lsblk'
+alias lbf='/usr/bin/lsblk -f'
 
 #* VSCode Workspaces
 alias nos='code $HOME/.dotfiles/NOS-220.code-workspace'
