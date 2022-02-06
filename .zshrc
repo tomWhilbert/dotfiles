@@ -32,8 +32,8 @@ source /usr/local/share/zsh-history-substring-search/zsh-history-substring-searc
 source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 # Source paths for aliases and functions
-source ~/.zshrc_aliases
-source ~/.zshrc_functions
+source ~/.dotfiles/.zshrc_aliases
+source ~/.dotfiles/.zshrc_functions
 source ~/bin/powerlevel10k/powerlevel10k.zsh-theme
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
@@ -42,5 +42,3 @@ source ~/bin/powerlevel10k/powerlevel10k.zsh-theme
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 #* ssh-add -A > /dev/null 2>&1 
 
-
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
