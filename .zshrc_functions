@@ -27,7 +27,7 @@ gq () {
 	### $1 is the volume name
 	### $2 is the voluem path
 	de () {
-		diskutil eraseDisk HFS+ "$1" /dev/disk"$2"
+		diskutil eraseDisk exFAT "$1" /dev/disk"$2"
 		}
 
 	dku () {

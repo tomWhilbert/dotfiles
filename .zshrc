@@ -42,3 +42,5 @@ source ~/bin/powerlevel10k/powerlevel10k.zsh-theme
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 #* ssh-add -A > /dev/null 2>&1 
 
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
