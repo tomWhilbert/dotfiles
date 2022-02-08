@@ -4,11 +4,12 @@ lg () #* use awk to parse out the branches as a choice??
 		{
 		BLUE='\033[0;34m'
 		RED='\033[0;31m'
+		YELLOW='\033[0;33m'
 		echo -e "$BLUE Input your commit comments "
 		read -r comment
 		git add --all
 		git commit -m "$comment"
-		echo -e "$RED Input the branch name "
+		echo -e "$YELLOW Input the branch name "
 		read -r branch
 		git push -u origin "$branch"
 		}
@@ -19,7 +20,7 @@ lg () #* use awk to parse out the branches as a choice??
 
 gq () {
 	git add .
-	git commit -m "${1:-update}"
+	git commit -m "${1:-update}"  #* recieve param 1 or if no input 'update'
 	git push 
 }
 
@@ -158,7 +159,7 @@ shoc () {
 }
 
 vmfed() {
-	vmrun -T fusion start "/Users/thomaswhilbert/Virtual Machines.localized/Fedora 64-bit.vmwarevm/Fedora 64-bit.vmx" nogui
-	sleep 15
+	vmrun -T fusion start /Users/thomaswhilbert/Virtual\ Machines.localized/Fedora 64-bit.vmwarevm/Fedora\ 64-bit.vmx nogui
+	sleep 10
 	ssh fed
 }
