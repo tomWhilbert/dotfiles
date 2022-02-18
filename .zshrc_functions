@@ -142,16 +142,25 @@ wp () {
 }
 
 nfo () {
-	BLUE='\033[0;34m' 
-NC='\033[0m' # No Color
-networksetup -listallnetworkservices 
-printf "\n"
-echo "$BLUE Choose a network service to dislplay more info"
 
-echo "$NC"
-read -r con
-printf "\n"
-networksetup -getinfo "$con"
+	BLUE='\033[0;34m' 
+	NC='\033[0m' # No Color
+
+    networksetup -listallnetworkservices | nl | tee nfile
+    printf "\n"
+    echo "$BLUE Choose a network service to dislplay more info"
+
+    echo $NC #* clears the coloring
+
+    read -r con
+
+    num=$(grep "$con" nfile | awk 'NR==1 {print}' | cut -c 7-)
+
+    num=$(echo "$num" | xargs)  #* Trim whitepace with xargs
+
+    printf "\n"
+
+   	networksetup -getinfo "$num"
 }
 
 shoc () {
