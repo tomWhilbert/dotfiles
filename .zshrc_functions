@@ -150,7 +150,7 @@ nfo () {
     printf "\n"
     echo "$BLUE Choose a network service to dislplay more info"
 
-    echo $NC #* clears the coloring
+    echo "$NC" #* clears the coloring
 
     read -r con
 
@@ -161,6 +161,8 @@ nfo () {
     printf "\n"
 
    	networksetup -getinfo "$num"
+
+	rm nfile   
 }
 
 shoc () {

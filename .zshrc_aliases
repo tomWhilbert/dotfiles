@@ -2,8 +2,6 @@
 #* SheBang here enables syntax highlighting in vscode
 #* alias and function source file
 
-#* Perhaps its time to retire 'lsd'
-# alias ls='exa'
 alias l='exa --long --all --icons'
 alias lsh="ls -a | grep '^\.'"
 alias lsd="l -D"
@@ -12,8 +10,6 @@ alias lr='exa --recurse'
 alias lt='exa --long --all -snew'
 alias lw='exa --all'
 alias lS='exa --long --all --icons -s=size'
-# alias l='ls -alh'
-# alias ls='lsd'
 
 alias buu='brew update && brew upgrade && brew upgrade --cask'
 alias rmf='rm -rf'
@@ -25,16 +21,12 @@ alias rp='realpath . | pbcopy'  #* Copy's the Working Directory to the clipboard
 alias png='ping -c 3'
 alias admin='dseditgroup -o checkmember -m $USER admin'
 alias ip='/Users/thomaswhilbert/bin/Scripts/get-ip/Get-IP-macOS.sh'
-alias stoc='stat -f %Mp%Lp'
+alias stoc='stat -c "%a"'
 alias zcode='code /$HOME/.dotfiles/zsh.code-workspace'
-alias zrc='code $HOME/.zshrc'
-alias zra='code $HOME/.zshrc_aliases'
-alias zrf='code $HOME/.zshrc_functions'
+alias zrc='code $HOME/.dotfiles/.zshrc'
+alias zra='code $HOME/.dotfiles/.zshrc_aliases'
+alias zrf='code $HOME/.dotfiles/.zshrc_functions'
 alias grep='grep -i --color'
-alias nos='code $HOME/.dotfiles/NOS-220.code-workspace'
-alias sec='code $HOME/.dotfiles/sec.code-workspace'
-alias boring='code $HOME/.dotfiles/boring.code-workspace'
-#alias wp='/Users/thomaswhilbert/bin/Scripts/walk-pull/wp' #* Moved to find cmd in functions
 alias cat='bat'
 alias py='python3'
 alias vmarch='vmrun -T fusion start "/Users/thomaswhilbert/Virtual Machines.localized/Arch.vmwarevm/Arch.vmx" nogui'
@@ -42,17 +34,13 @@ alias vmdeb='vmrun -T fusion start "/Users/thomaswhilbert/Virtual-Machines/Debia
 alias vbls='VBoxManage list vms'
 alias lspid='sudo lsof -PiTCP -sTCP:LISTEN'
 alias tldr='tldr --color always'
-#alias nfo='networksetup -getinfo Wi-Fi'  #* replaced with better function
 alias sad='su administrator'
 alias fdns='sudo dscacheutil -flushcache; sudo killall -HUP mDNSResponder'
 
 #* RClone commands 
 alias rclr='rclone listremotes'
 alias rc='rclone'
-# alias rcods='rclone copy --max-age 24h --no-traverse /Users/thomaswhilbert/OneDrive odS: -P'  #*Moved to a function
-# alias rcgds='rc copy --max-age 24h --no-traverse /Users/thomaswhilbert/GoogleDrive/Secure gdS: -P' #*Moved to a function
 alias rcmgds='rc mount --vfs-cache-mode full gdS: /Users/thomaswhilbert/mnt/gDriveSecure'
-#alias rclone sync --fast-list gdS: /Users/thomaswhilbert/GoogleDrive/Secure -P
 
 #* Git aliases ###
 alias g='git'
@@ -70,6 +58,3 @@ alias gp='git pull'
 #* grep "root" /var/log/auth.log | grep -o "[0-9]\{1,3\}\.[0-9]\{1,3\}\.[0-9]\{1,3\}\.[0-9]\{1,3\}" | sort | uniq
 
 alias grip='grep -o "[0-9]\{1,3\}\.[0-9]\{1,3\}\.[0-9]\{1,3\}\.[0-9]\{1,3\}"'
-
-#* Hugo Aliases
- alias hugogo='hugo server -D'
