@@ -128,7 +128,7 @@ ytd () {
 inc () {
  	sudo informant check
 	printf "\n"
-	checkupdates | nl
+	checkupdates-aur | nl
 }
 
 whatprovides () {
