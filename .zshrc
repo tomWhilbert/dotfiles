@@ -32,8 +32,10 @@ export BAT_THEME="Dracula"
 export EDITOR=/usr/bin/vim
 export VISUAL=/usr/bin/vim
 export PLUGINS=/home/tom/bin/plugins
-export OMZ=/home/tom/bin/plugins/ohmyzsh/
+export OMZ=/home/tom/bin/plugins/omz/
 export DOTS=/home/tom/.dotfiles
+
+
 
 #* Aliases, Themes and plugins - return to git clone and scripted update method
 #* 
@@ -42,8 +44,8 @@ source $HOME/bin/powerlevel10k/powerlevel10k.zsh-theme
 source $PLUGINS/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source $PLUGINS/zsh-autosuggestions/zsh-autosuggestions.zsh
 source $PLUGINS/zsh-history-substring-search/zsh-history-substring-search.zsh
-# source $OMZ/plugins/z/z.plugin.zsh    #* source from omz cloned directory
-# source $OMZ/lib/directories.zsh #* source from omz cloned directory
+source $OMZ/plugins/z/z.plugin.zsh    #* source from omz cloned directory
+source $OMZ/lib/directories.zsh #* source from omz cloned directory
 source $DOTS/.zshrc_aliases
 source $DOTS/.zshrc_functions
 
