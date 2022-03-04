@@ -26,12 +26,14 @@ compinit
 # End of lines added by compinstall
 
 # Source paths for zsh plugins
-ZSH=$HOME/bin/plugins/ohmyzsh
+ZSH=$HOME/bin/plugins/omz
+DOTS=$HOME/.dotfiles
+PLUGINS=$HOME/bin/plugins
 source $ZSH/lib/directories.zsh #* enables 'd' directory stack
 source $ZSH/plugins/z/z.plugin.zsh
-source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
-source /usr/local/share/zsh-history-substring-search/zsh-history-substring-search.zsh
-source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source $PLUGINS/zsh-autosuggestions/zsh-autosuggestions.zsh
+source $PLUGINS/zsh-history-substring-search/zsh-history-substring-search.zsh
+source $PLUGINS/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 # Source paths for aliases and functions
 source ~/.dotfiles/.zshrc_aliases
