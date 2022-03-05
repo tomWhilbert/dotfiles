@@ -26,7 +26,7 @@ compinit
 # End of lines added by compinstall
 
 # Source paths for zsh plugins
-ZSH=$HOME/bin/plugins/omz
+ZSH=$HOME/bin/plugins/ohmyzsh
 PLUGINS=$HOME/bin/plugins
 source $ZSH/lib/directories.zsh #* enables 'd' directory stack
 source $ZSH/plugins/z/z.plugin.zsh
