@@ -8,8 +8,8 @@ fi
 typeset -g POWERLEVEL9K_INSTANT_PROMPT=quiet
 
 export RCLONE_PASSWORD_COMMAND="security find-generic-password -a $USER -s rclone -w"
-export PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
-export PATH="/usr/local/opt/gnu-sed/libexec/gnubin:$PATH"
+export PATH="/opt/homebrew/opt/coreutils/libexec/gnubin:$PATH"
+export PATH="/opt/homebrew/opt/gnu-sed/libexec/gnubin:$PATH"
 
 # Lines configured by zsh-newuser-install
 HISTFILE=~/.histfile
@@ -27,7 +27,6 @@ compinit
 
 # Source paths for zsh plugins
 ZSH=$HOME/bin/plugins/omz
-DOTS=$HOME/.dotfiles
 PLUGINS=$HOME/bin/plugins
 source $ZSH/lib/directories.zsh #* enables 'd' directory stack
 source $ZSH/plugins/z/z.plugin.zsh
