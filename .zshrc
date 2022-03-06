@@ -32,10 +32,8 @@ export BAT_THEME="Dracula"
 export EDITOR=/usr/bin/vim
 export VISUAL=/usr/bin/vim
 export PLUGINS=/home/tom/bin/plugins
-export OMZ=/home/tom/bin/plugins/omz/
+export OMZ=/home/tom/bin/plugins/ohmyzsh
 export DOTS=/home/tom/.dotfiles
-
-
 
 #* Aliases, Themes and plugins - return to git clone and scripted update method
 #* 
