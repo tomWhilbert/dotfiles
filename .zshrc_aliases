@@ -2,11 +2,11 @@
 ###* Alias and function source file ###
 
 alias ls='exa'
-alias l='exa --long --header --all --icons'
+alias l='exa --long --all --icons'
 alias lsh="ls -a | grep '^\.'"
 alias ltr='exa --tree --level=2 --long'
 alias lr='exa --recurse'
-alias lt='exa --long --header --all -snew'
+alias lt='exa --long --all -snew'
 alias lw='exa --all'
 alias lsh='l -d .??*' #* list dot/hidden files
 alias lsd="l -D"st

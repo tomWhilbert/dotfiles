@@ -140,3 +140,8 @@ shoc () {
 	stat -c "%a" "$1"
 	#* shoc aka show octal for target
 }
+
+bsh () {
+	sudo btrfs subvolume snapshot /home $HOME/snapshots/home-$(date +"%Y-%m-%d")
+}
+
