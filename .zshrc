@@ -47,3 +47,5 @@ test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell
 #ssh-add -A > /dev/null 2>&1 
 ssh-add --apple-load-keychain > /dev/null 2>&1 
 
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
