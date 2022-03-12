@@ -95,3 +95,4 @@ alias ubu='sudo virsh start ubuntu20.04'
 
 
 
+alias stoc='stat -c %a'
