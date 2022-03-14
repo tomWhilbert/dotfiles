@@ -46,8 +46,7 @@ source $OMZ/plugins/z/z.plugin.zsh    #* source from omz cloned directory
 source $OMZ/lib/directories.zsh #* source from omz cloned directory
 source $DOTS/.zshrc_aliases
 source $DOTS/.zshrc_functions
-
-
+source $PLUGINS/ohmyzsh/plugins/firewalld/firewalld.plugin.zsh
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
