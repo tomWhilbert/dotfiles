@@ -145,6 +145,7 @@ nfo () {
 
 	BLUE='\033[0;34m' 
 	NC='\033[0m' # No Color
+	public=$(curl -s -w '\n' ifconfig.me)
 
     networksetup -listallnetworkservices | nl | tee nfile
     printf "\n"
@@ -161,6 +162,10 @@ nfo () {
     printf "\n"
 
    	networksetup -getinfo "$num"
+
+	printf "\n"
+
+	echo "$BLUE Public IP: $NC $public"
 
 	rm nfile   
 }
