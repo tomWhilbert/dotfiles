@@ -98,8 +98,8 @@ iptype () {
 
 #* pacman search, match only the term
 pacs () {
-	pacman -Ss ^"$1"$
-}
+	pacman -Ss "^$1$"
+	}
 
 yays () {
 	yay -Ss "$1"
