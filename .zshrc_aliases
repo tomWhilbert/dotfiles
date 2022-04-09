@@ -3,6 +3,7 @@
 
 alias ls='exa'
 alias l='exa --long --all --icons'
+alias lg='l -g'
 alias lsh="ls -a | grep '^\.'"
 alias ltr='exa --tree --level=2 --long'
 alias lr='exa --recurse'
@@ -15,37 +16,23 @@ alias srz='exec zsh'
 alias hs='history 1'
 alias png='ping -c 3'
 alias grep='grep -i --color'
-alias zed='code $HOME/.dotfiles/'
 alias rp='realpath . | wl-copy'
 alias wesync='ssh -L 8385:localhost:8384 we'
 alias cat='bat'
-alias crontab='export VISUAL=vim; crontab'
 alias tree='tree -L 2 -C'
 alias tml='tmux ls'
 alias tmn='tmux new-session -t'
-alias py='/usr/bin/python3'
 alias lb='/usr/bin/lsblk'
 alias lbf='/usr/bin/lsblk -f'
 
-#* VSCode Workspaces
-# alias pp='code pyPractice.code-workspace'
-alias code='codium'
-
 #* Arch/Linux specific aliases
-alias sbz='systemctl start sabnzbd@tom.service'
-alias pac='sudo pacman'
-alias pacin='sudo pacman -S'
 alias reflect='sudo reflector --verbose --latest 5 --sort rate --save /etc/pacman.d/mirrorlist'
 alias sudo='sudo ' #* allows sudo to accept an alias as an argument
 alias lspac="expac --timefmt='%Y-%m-%d %T' '%l\t%n' | sort | tail -n"
-alias chk='checkupdates | nl'
-alias sucode='sudo code --user-data-dir=".vscode-root"'
-alias vmon='vim-cmd vmsvc/power.on'  #* for info only - works on esxi cli
 alias getdns='getent ahostsv4'
-alias netnice='nmcli -p device show'
 alias inform='sudo informant'
 alias pacv="pacman -Qq | fzf --preview 'pacman -Qil {}' --layout=reverse --bind 'enter:execute(pacman -Qil {} | less)'"
-
+alias stoc='stat -c %a'
 
 #* systemd
 alias sc='systemctl'
@@ -59,6 +46,7 @@ alias ntd='nmcli c down NETTECH'
 alias wguku='nmcli con up mlvd-gb4'
 alias wgukd='nmcli con down mlvd-gb4'
 alias ncs='nmcli connection show'
+alias netnice='nmcli -p device show'
 
 #* rclone aliases
 alias rclr='rclone listremotes'
@@ -88,11 +76,3 @@ alias wgd='sudo wg-quick down /etc/wireguard/mullvad-us167.conf'
 
 #* btrfs
 alias br='sudo btrfs'
-
-#* Virsh
-alias cen='sudo virsh start centos8'
-alias ubu='sudo virsh start ubuntu20.04'
-
-
-
-alias stoc='stat -c %a'
