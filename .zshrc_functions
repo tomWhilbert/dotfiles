@@ -138,7 +138,7 @@ chkSum () {
 
 wp () {
 	cd ~/bin || exit
-	find . -maxdepth 2 -type d \( ! -name . \) -exec bash -c "cd '{}' && git pull" \;
+	find . -maxdepth 1 -type d \( ! -name . \) -exec bash -c "cd '{}' && git pull" \;
 }
 
 nfo () {
