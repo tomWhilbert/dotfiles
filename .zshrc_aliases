@@ -3,6 +3,7 @@
 #* alias and function source file
 
 alias l='exa --long --all --icons'
+alias lsg='exa --long --all --icons -g'
 alias lsh="ls -a | grep '^\.'"
 alias lsd="l -D"
 alias ltr='exa --tree --level=2 --long'
