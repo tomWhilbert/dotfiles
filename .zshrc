@@ -1,5 +1,3 @@
-# Fig pre block. Keep at the top of this file.
-. "$HOME/.fig/shell/zshrc.pre.zsh"
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
 # confirmations, etc.) must go above this block; everything else may go below.
@@ -10,6 +8,7 @@ fi
 typeset -g POWERLEVEL9K_INSTANT_PROMPT=quiet
 
 export RCLONE_PASSWORD_COMMAND="security find-generic-password -a $USER -s rclone -w"
+export adminlocal="security find-generic-password -a $USER -s administrator -w"
 export PATH="/opt/homebrew/opt/coreutils/libexec/gnubin:$PATH"
 export PATH="/opt/homebrew/opt/gnu-sed/libexec/gnubin:$PATH"
 
@@ -49,6 +48,3 @@ test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell
 ssh-add --apple-load-keychain > /dev/null 2>&1 
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-
-# Fig post block. Keep at the bottom of this file.
-. "$HOME/.fig/shell/zshrc.post.zsh"

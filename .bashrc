@@ -1,5 +1,3 @@
-# Fig pre block. Keep at the top of this file.
-. "$HOME/.fig/shell/bashrc.pre.bash"
 # ~/.bashrc: executed by bash(1) for non-login shells.
 # see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
 # for examples
@@ -137,6 +135,3 @@ if ! shopt -oq posix; then
     . /etc/bash_completion
   fi
 fi
-
-# Fig post block. Keep at the bottom of this file.
-. "$HOME/.fig/shell/bashrc.post.bash"

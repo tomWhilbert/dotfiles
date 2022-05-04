@@ -106,7 +106,7 @@ ytd () {
 	cd ~/Movies/Tubes || exit
     echo "Paste URL.. "
     read -r "target"
-    /usr/local/bin/yt-dlp "$target"
+    /opt/homebrew/bin/yt-dlp "$target"
 	rm -rf ./*.part
 }
 
@@ -179,3 +179,8 @@ vmfed() {
 	sleep 10
 	ssh fed
 }
+
+psg () {
+	ps aux | grep "$1"
+	}
+	
