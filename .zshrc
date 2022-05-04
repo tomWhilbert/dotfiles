@@ -8,7 +8,6 @@ fi
 typeset -g POWERLEVEL9K_INSTANT_PROMPT=quiet
 
 export RCLONE_PASSWORD_COMMAND="security find-generic-password -a $USER -s rclone -w"
-export adminlocal="security find-generic-password -a $USER -s administrator -w"
 export PATH="/opt/homebrew/opt/coreutils/libexec/gnubin:$PATH"
 export PATH="/opt/homebrew/opt/gnu-sed/libexec/gnubin:$PATH"
 
