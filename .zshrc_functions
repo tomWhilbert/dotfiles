@@ -102,6 +102,7 @@ pub () {
 	curl -w "\n" ifconfig.me
 }
 
+
 ytd () {
 	cd ~/Movies/Tubes || exit
     echo "Paste URL.. "
@@ -136,10 +137,10 @@ chkSum () {
 }
 #* param 1 is the file hash sum, param 2 is the target file
 
-wp () {
-	cd ~/bin || exit
-	find . -maxdepth 1 -type d \( ! -name . \) -exec bash -c "cd '{}' && git pull" \;
-}
+# wp () {
+# 	cd ~/bin || exit
+# 	find . -maxdepth 1 -type d \( ! -name . \) -exec bash -c "cd '{}' && git pull" \;
+# }
 
 nfo () {
 

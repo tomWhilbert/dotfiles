@@ -21,7 +21,7 @@ alias hs='history 1'
 alias rp='realpath . | pbcopy'  #* Copy's the Working Directory to the clipboard
 alias png='ping -c 3'
 alias admin='dseditgroup -o checkmember -m $USER admin'
-alias ip='/Users/thomaswhilbert/bin/Scripts/get-ip/Get-IP-macOS.sh'
+alias ip='/Users/thomaswhilbert/bin/scripts/get-ip/ip-macOS.sh'
 alias stoc='stat -c "%a"'
 alias zcode='code /$HOME/.dotfiles/zsh.code-workspace'
 alias zrc='code $HOME/.dotfiles/.zshrc'
@@ -37,6 +37,7 @@ alias tldr='tldr --color always'
 alias sad='su administrator'
 alias fdns='sudo dscacheutil -flushcache; sudo killall -HUP mDNSResponder'
 alias gitmac='/Users/thomaswhilbert/OneDrive/macAdmin/scripts/fetch-installer-pkg/./fetch-installer-pkg.py'
+alias wp='/Users/thomaswhilbert/bin/scripts/walk-pull/wp'
 
 #* RClone commands 
 alias rclr='rclone listremotes'
