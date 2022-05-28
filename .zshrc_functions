@@ -148,3 +148,8 @@ bsh () {
 brt () {
 	sudo btrfs subvolume snapshot / /snapshots/root-$(date +"%m-%d-%Y")
 }
+
+scg () {
+		systemctl | grep "$1"
+}
+
