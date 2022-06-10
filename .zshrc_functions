@@ -133,7 +133,7 @@ digab () {
 }
 	
 
-chkSum () {
+chks () {
 		echo "$1" "$2" | sha256sum --check
 }
 #* param 1 is the file hash sum, param 2 is the target file

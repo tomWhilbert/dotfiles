@@ -48,3 +48,6 @@ test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell
 ssh-add --apple-load-keychain > /dev/null 2>&1 
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+eval "$(navi widget zsh)"
+
