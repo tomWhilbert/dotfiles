@@ -132,6 +132,9 @@ digab () {
 	
 }
 	
+hostab () {
+	host "$1".asheville.cc.nc.us
+	}
 
 chks () {
 		echo "$1" "$2" | sha256sum --check
