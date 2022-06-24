@@ -1,28 +1,29 @@
 #!/bin/bash
 
-lg () #* use awk to parse out the branches as a choice??
-		{
-		BLUE='\033[0;34m'
-		# RED='\033[0;31m'
-		YELLOW='\033[0;33m'
-		echo -e "$BLUE Input your commit comments "
-		read -r comment
-		git add --all
-		git commit -m "$comment"
-		echo -e "$YELLOW Input the branch name "
-		read -r branch
-		git push -u origin "$branch"
-		}
- #* Run the line below in the '.git' directory
- #* awk '/branch/{ print $0 }' config | awk -F '"' '{print $2}'  **Grabs macOS and linux from git config**
+####* GIT COMMANDS ####
 
-#* Testing: parameter expansion for git, gq AKA, git quick.  Works can replace or work as alternative to lg ()
+	lg () #* use awk to parse out the branches as a choice??
+			{
+			BLUE='\033[0;34m'
+			# RED='\033[0;31m'
+			YELLOW='\033[0;33m'
+			echo -e "$BLUE Input your commit comments "
+			read -r comment
+			git add --all
+			git commit -m "$comment"
+			echo -e "$YELLOW Input the branch name "
+			read -r branch
+			git push -u origin "$branch"
+			}
+	 #* Run the line below in the '.git' directory
+	 #* awk '/branch/{ print $0 }' config | awk -F '"' '{print $2}'  **Grabs macOS and linux from git config**
 
-gq () {
-	git add .
-	git commit -m "${1:-update}"  #* recieve param 1 or if no input 'update'
-	git push 
-}
+	#* Testing: parameter expansion for git, gq AKA, git quick.  Works can replace or work as alternative to lg ()
+	gq () {
+		git add .
+		git commit -m "${1:-update}"  #* recieve param 1 or if no input 'update'
+		git push 
+	}
 
 #* diskutil erase function
 	### $1 is the volume name
