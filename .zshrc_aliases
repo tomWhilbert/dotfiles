@@ -64,4 +64,4 @@ alias grip='grep -o "[0-9]\{1,3\}\.[0-9]\{1,3\}\.[0-9]\{1,3\}\.[0-9]\{1,3\}"'
 
 
 #*** Fun Soundbites
-alias piss='open /Users/thomaswhilbert/Movies/Tubes/Piss-Down-My-Back.m4a'
+alias piss='afplay /Users/thomaswhilbert/Movies/Tubes/Piss-Down-My-Back.m4a'
