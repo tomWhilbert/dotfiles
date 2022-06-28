@@ -61,3 +61,7 @@ alias gp='git pull'
 #* grep "root" /var/log/auth.log | grep -o "[0-9]\{1,3\}\.[0-9]\{1,3\}\.[0-9]\{1,3\}\.[0-9]\{1,3\}" | sort | uniq
 
 alias grip='grep -o "[0-9]\{1,3\}\.[0-9]\{1,3\}\.[0-9]\{1,3\}\.[0-9]\{1,3\}"'
+
+
+#*** Fun Soundbites
+alias piss='open /Users/thomaswhilbert/Movies/Tubes/Piss-Down-My-Back.m4a'
