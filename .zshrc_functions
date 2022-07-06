@@ -134,7 +134,11 @@ digab () {
 }
 	
 hostab () {
-	host "$1".asheville.cc.nc.us
+	BLUE='\033[0;34m'
+	addr=$(host "$1".asheville.cc.nc.us)
+	addr2=$(echo "$addr" | cut -d' ' -f4)
+	printf "\n"
+	echo "$BLUE $addr2"
 	}
 
 chks () {
