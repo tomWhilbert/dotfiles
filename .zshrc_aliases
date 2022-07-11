@@ -39,7 +39,7 @@ alias sad='su administrator'
 alias fdns='sudo dscacheutil -flushcache; sudo killall -HUP mDNSResponder'
 alias gitmac='/Users/thomaswhilbert/OneDrive/macAdmin/scripts/fetch-installer-pkg/./fetch-installer-pkg.py'
 alias wp='/Users/thomaswhilbert/bin/scripts/walk-pull/wp'
-alias pysrv='python -m http.server'
+alias pyrv='python -m http.server'
 
 #* RClone commands 
 alias rclr='rclone listremotes'
