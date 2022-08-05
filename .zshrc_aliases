@@ -37,9 +37,8 @@ alias lspid='sudo lsof -PiTCP -sTCP:LISTEN'
 alias tldr='tldr --color always'
 alias sad='su administrator'
 alias fdns='sudo dscacheutil -flushcache; sudo killall -HUP mDNSResponder'
-alias gitmac='/Users/thomaswhilbert/OneDrive/macAdmin/scripts/fetch-installer-pkg/./fetch-installer-pkg.py'
 alias wp='/Users/thomaswhilbert/bin/scripts/walk-pull/wp'
-alias pyrv='python -m http.server'
+alias pyweb='python -m http.server'
 
 #* RClone commands 
 alias rclr='rclone listremotes'
