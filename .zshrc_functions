@@ -153,3 +153,7 @@ scg () {
 		systemctl | grep "$1"
 }
 
+
+dif () {
+	diff --side-by-side --color "$1" "$2"
+}
