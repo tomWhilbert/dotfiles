@@ -194,3 +194,6 @@ psg () {
 	ps aux | grep "$1"
 	}
 	
+hsg ()  {
+	hs | grep "$1"
+}
