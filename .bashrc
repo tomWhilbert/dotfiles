@@ -135,3 +135,5 @@ if ! shopt -oq posix; then
     . /etc/bash_completion
   fi
 fi
+alias hi='echo We salute you.'
+alias hi='echo We salute you.'
