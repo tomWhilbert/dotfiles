@@ -75,6 +75,9 @@
 	rc copy --max-age "$1" --no-traverse "$HOME"/GoogleDrive/Secure gdS: -P
 	}
 
+	rcod () {
+		rclone copy --max-age "$1" --no-traverse od: "$HOME"/OneDrive -P
+	}
 
 	#* Nmap get all ips on local network
 	ips () {
