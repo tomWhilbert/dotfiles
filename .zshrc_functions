@@ -67,15 +67,11 @@
 
 	#* RClone Functions
 	
-	rcco () {
+	odpush () {
 		rclone copy --max-age "$1" --no-traverse "$HOME"/OneDrive od: -P
 	}
 
-	rccg () {
-	rc copy --max-age "$1" --no-traverse "$HOME"/GoogleDrive/Secure gdS: -P
-	}
-
-	rcod () {
+	odpull () {
 		rclone copy --max-age "$1" --no-traverse od: "$HOME"/OneDrive -P
 	}
 
