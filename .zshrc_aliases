@@ -26,7 +26,7 @@ alias lb='/usr/bin/lsblk'
 alias lbf='/usr/bin/lsblk -f'
 
 #* Arch/Linux specific aliases
-alias reflect='sudo reflector --verbose --latest 5 --sort rate --save /etc/pacman.d/mirrorlist'
+alias reflect='sudo reflector --latest 5 --sort rate --country US --save /etc/pacman.d/mirrorlist' 
 alias sudo='sudo ' #* allows sudo to accept an alias as an argument
 alias lspac="expac --timefmt='%Y-%m-%d %T' '%l\t%n' | sort | tail -n"
 alias getdns='getent ahostsv4'
