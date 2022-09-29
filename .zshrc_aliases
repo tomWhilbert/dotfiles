@@ -62,3 +62,9 @@ alias piss='afplay /Users/thomaswhilbert/Movies/Tubes/Piss-Down-My-Back.m4a'
 
 #* Nmap
 alias loc='nmap -sP 192.168.1.0/24'
+
+
+#* Naviagtion
+alias bin='cd $HOME/bin'
+alias gd='cd $HOME/Drive'
+alias dots='cd $HOME/.dotfiles'
