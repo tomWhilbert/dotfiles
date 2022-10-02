@@ -40,6 +40,7 @@ alias sad='su administrator'
 alias fdns='sudo dscacheutil -flushcache; sudo killall -HUP mDNSResponder'
 alias wp='/Users/thomaswhilbert/bin/scripts/walk-pull/wp'
 alias pyweb='python -m http.server'
+alias lsgroups='dscl . -list /Groups'
 
 #* RClone commands 
 alias rclr='rclone listremotes'

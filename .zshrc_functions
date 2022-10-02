@@ -197,6 +197,14 @@ hsg ()  {
 	hs | grep "$1"
 }
 
-pan () {
+ploc () {
 	 png 192.168.1."$1"
+}
+
+#* Group Membership Lookups
+checkmember () {
+	dseditgroup -o checkmember -m "$1" "$2"
+}
+showmember () {
+	dscacheutil -q group -a name "$1"
 }
