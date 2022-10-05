@@ -75,6 +75,14 @@
 		rclone copy --max-age "$1" --no-traverse od: "$HOME"/OneDrive -P
 	}
 
+	gdpush () {
+		rclone copy --max-age "$1" --no-traverse "$HOME"/Drive gd: -P
+	}
+
+	gdpull () {
+		rclone copy --max-age "$1" --no-traverse gd: "$HOME"/Drive -P
+	}
+
 	#* Nmap get all ips on local network
 	ips () {
 		nmap -sn 192.168.1.0/24 | awk '/Nmap scan/{gsub(/[()]/,"",$NF); print $NF > "nmap_scanned_ips"}'
@@ -151,31 +159,20 @@ chks () {
 # }
 
 nfo () {
-
 	BLUE='\033[0;34m' 
 	NC='\033[0m' # No Color
 	public=$(curl -s -w '\n' ifconfig.me)
-
     networksetup -listallnetworkservices | nl | tee nfile
     printf "\n"
     echo "$BLUE Choose a network service to dislplay more info"
-
     echo "$NC" #* clears the coloring
-
     read -r con
-
     num=$(grep "$con" nfile | awk 'NR==1 {print}' | cut -c 7-)
-
     num=$(echo "$num" | xargs)  #* Trim whitepace with xargs
-
     printf "\n"
-
    	networksetup -getinfo "$num"
-
 	printf "\n"
-
 	echo "$BLUE Public IP: $NC $public"
-
 	rm nfile   
 }
 
@@ -204,7 +201,4 @@ ploc () {
 #* Group Membership Lookups
 checkmember () {
 	dseditgroup -o checkmember -m "$1" "$2"
-}
-showmember () {
-	dscacheutil -q group -a name "$1"
 }
