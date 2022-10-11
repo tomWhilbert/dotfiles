@@ -158,7 +158,7 @@ chks () {
 # 	find . -maxdepth 1 -type d \( ! -name . \) -exec bash -c "cd '{}' && git pull" \;
 # }
 
-ninfo () {
+nets () {
 	BLUE='\033[0;34m' 
 	NC='\033[0m' # No Color
 	public=$(curl -s -w '\n' ifconfig.me)
