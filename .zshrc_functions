@@ -186,6 +186,12 @@ vmfed() {
 	ssh fed
 }
 
+vmcen() {
+	vmrun -T fusion start /Users/thomaswhilbert/Virtual\ Machines.localized/CentosStream9.vmwarevm/CentosStream9.vmx nogui
+	sleep 10
+	#*ssh fed
+}
+
 psg () {
 	ps aux | grep "$1"
 	}
