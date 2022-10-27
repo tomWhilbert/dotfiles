@@ -61,6 +61,7 @@ alias gp='git pull'
 
 #*** Fun Soundbites
 alias piss='afplay /Users/thomaswhilbert/Movies/Tubes/Piss-Down-My-Back.m4a'
+alias off='afplay /Users/thomaswhilbert/Movies/Tubes/GetOffMyLawn.m4a'
 
 #* Nmap
 alias loc='nmap -sP 192.168.1.0/24'

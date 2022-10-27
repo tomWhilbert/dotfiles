@@ -17,7 +17,7 @@ export PATH="/opt/homebrew/opt/gnu-sed/libexec/gnubin:$PATH"
 HISTFILE=~/.histfile
 HISTSIZE=10000
 SAVEHIST=10000
-setopt autocd beep extendedglob nomatch notify hist_ignore_dups hist_ignore_space
+setopt autocd beep extendedglob nomatch notify hist_ignore_dups hist_ignore_space inc_append_history_time
 bindkey -e
 # End of lines configured by zsh-newuser-install
 
