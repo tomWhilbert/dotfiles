@@ -55,4 +55,3 @@ ssh-add --apple-load-keychain > /dev/null 2>&1
 eval "$(oh-my-posh init zsh)"  #* testing this prompt theme
 
 
-(( ! ${+functions[p10k]} )) || p10k finalize
