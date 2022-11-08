@@ -1,11 +1,11 @@
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
 # confirmations, etc.) must go above this block; everything else may go below.
-if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
-  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
-fi
+# if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+#   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+# fi
 
-typeset -g POWERLEVEL9K_INSTANT_PROMPT=quiet
+# typeset -g POWERLEVEL9K_INSTANT_PROMPT=quiet
 
 export RCLONE_PASSWORD_COMMAND="security find-generic-password -a $USER -s rclone -w"
 export PATH="/opt/homebrew/opt/coreutils/libexec/gnubin:$PATH"
@@ -39,7 +39,7 @@ source $PLUGINS/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 # Source paths for aliases and functions
 source ~/.dotfiles/.zshrc_aliases
 source ~/.dotfiles/.zshrc_functions
-source ~/bin/powerlevel10k/powerlevel10k.zsh-theme
+# source ~/bin/powerlevel10k/powerlevel10k.zsh-theme
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
@@ -50,5 +50,9 @@ ssh-add --apple-load-keychain > /dev/null 2>&1
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
-eval "$(navi widget zsh)"
+# eval "$(navi widget zsh)"    #* Not used leave out after next clean install
 
+eval "$(oh-my-posh init zsh)"  #* testing this prompt theme
+
+
+(( ! ${+functions[p10k]} )) || p10k finalize
