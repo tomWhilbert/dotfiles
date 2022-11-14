@@ -42,6 +42,7 @@ alias wp='/Users/thomaswhilbert/bin/scripts/walk-pull/wp'
 alias pyweb='python -m http.server'
 alias lsgroups='dscl . -list /Groups'
 alias getssid='sudo /System/Library/PrivateFrameworks/Apple80211.framework/Versions/A/Resources/airport -I'
+alias bathelp='bat --plain --language=help'
 
 #* RClone commands 
 alias rclr='rclone listremotes'

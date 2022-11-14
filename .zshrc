@@ -11,8 +11,6 @@ export RCLONE_PASSWORD_COMMAND="security find-generic-password -a $USER -s rclon
 export PATH="/opt/homebrew/opt/coreutils/libexec/gnubin:$PATH"
 export PATH="/opt/homebrew/opt/gnu-sed/libexec/gnubin:$PATH"
 
-
-
 # Lines configured by zsh-newuser-install
 HISTFILE=~/.histfile
 HISTSIZE=50000
@@ -50,7 +48,12 @@ ssh-add --apple-load-keychain > /dev/null 2>&1
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
+#* Bat Command help function
+# in your .bashrc/.zshrc/*rc
 
+help() {
+    "$@" --help 2>&1 | bathelp
+}
 
-
-
+#* CDPATH
+export CDPATH=:$HOME/bin/
