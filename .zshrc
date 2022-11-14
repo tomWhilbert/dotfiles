@@ -56,4 +56,4 @@ help() {
 }
 
 #* CDPATH
-export CDPATH=:$HOME/bin/
+export CDPATH=:$HOME:$HOME/bin/
