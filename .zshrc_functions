@@ -76,11 +76,11 @@
 	}
 
 	gdpush () {
-		rclone copy --max-age "$1" --no-traverse "$HOME"/Drive gd: -P
+		rclone copy --max-age "$1" --no-traverse "$HOME"/GoogleDrive gd: -P
 	}
 
 	gdpull () {
-		rclone copy --max-age "$1" --no-traverse gd: "$HOME"/Drive -P
+		rclone copy --max-age "$1" --no-traverse gd: "$HOME"/GoogleDrive -P
 	}
 
 	#* Nmap get all ips on local network

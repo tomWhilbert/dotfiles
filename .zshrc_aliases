@@ -75,3 +75,4 @@ alias dots='cd $HOME/.dotfiles'
 
 alias dust='dust --no-percent-bars'
 alias op='open .'
+alias jr='echo $(security find-generic-password -a thomaswhilbert -s AD -w) | sudo -S jamf recon'
