@@ -47,7 +47,7 @@ alias bathelp='bat --plain --language=help'
 #* RClone commands 
 alias rclr='rclone listremotes'
 alias rc='rclone'
-alias rcmgds='rc mount --vfs-cache-mode full gdS: /Users/thomaswhilbert/mnt/gDriveSecure'
+alias rcmg='rc mount --vfs-cache-mode full --exclude '.DS_Store' gd: /Users/thomaswhilbert/mnt/gd'
 
 #* Git aliases ###
 alias g='git'

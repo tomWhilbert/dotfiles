@@ -59,7 +59,7 @@ help() {
 }
 
 #* CDPATH
-export CDPATH=:$HOME:$HOME/bin/
+# export CDPATH=:$HOME:$HOME/bin/
 
 #* eval "$(starship init zsh)"
 
