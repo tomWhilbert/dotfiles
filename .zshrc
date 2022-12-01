@@ -33,6 +33,7 @@ ZSH=$HOME/bin/plugins/ohmyzsh
 PLUGINS=$HOME/bin/plugins
 source $ZSH/lib/directories.zsh #* enables 'd' directory stack
 source $ZSH/plugins/z/z.plugin.zsh
+source $ZSH/plugins/taskwarrior/taskwarrior.plugin.zsh
 source $PLUGINS/zsh-autosuggestions/zsh-autosuggestions.zsh
 source $PLUGINS/zsh-history-substring-search/zsh-history-substring-search.zsh
 source $PLUGINS/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
