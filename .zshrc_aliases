@@ -76,3 +76,17 @@ alias dots='cd $HOME/.dotfiles'
 alias dust='dust --no-percent-bars'
 alias op='open .'
 alias jr='echo $(security find-generic-password -a thomaswhilbert -s AD -w) | sudo -S jamf recon'
+
+
+#* Taskwarrior
+# General TaskWarrior commands
+alias t='task'
+alias tl='task list'
+alias tn='task next +READY'
+alias tnu="task next urgency \> ${urgencyPrio}"
+alias ta='task add'
+alias tan='task annotate'
+alias tlo='task log'
+alias tac='task active'
+alias tap='task add project:Personal'
+alias taw='task add project:Work'
