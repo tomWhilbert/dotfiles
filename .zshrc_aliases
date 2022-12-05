@@ -72,9 +72,11 @@ alias loc='nmap -sP 192.168.1.0/24'
 alias bin='cd $HOME/bin'
 alias gd='cd $HOME/Drive'
 alias dots='cd $HOME/.dotfiles'
-
-alias dust='dust --no-percent-bars'
 alias op='open .'
+alias lrn='cd /Users/thomaswhilbert/GoogleDrive/Tom/Learn'
+alias dust='dust --no-percent-bars'
+
+#* Jamf
 alias jr='echo $(security find-generic-password -a thomaswhilbert -s AD -w) | sudo -S jamf recon'
 
 

@@ -214,3 +214,9 @@ ploc () {
 checkmember () {
 	dseditgroup -o checkmember -m "$1" "$2"
 }
+
+#* enable bat features while using the help command.
+help() {
+    "$@" --help 2>&1 | bathelp
+}
+

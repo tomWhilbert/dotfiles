@@ -41,10 +41,11 @@ source $PLUGINS/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 # Source paths for aliases and functions
 source ~/.dotfiles/.zshrc_aliases
 source ~/.dotfiles/.zshrc_functions
-source ~/bin/powerlevel10k/powerlevel10k.zsh-theme
 
-# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+#* powerlevel10k prompt theme
+# source ~/bin/powerlevel10k/powerlevel10k.zsh-theme
+#* To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+# [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 
@@ -62,5 +63,6 @@ help() {
 #* CDPATH
 # export CDPATH=:$HOME:$HOME/bin/
 
-#* eval "$(starship init zsh)"
+eval "$(starship init zsh)"
+
 
