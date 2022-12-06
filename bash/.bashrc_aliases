@@ -75,3 +75,4 @@ alias dots='cd $HOME/.dotfiles'
 
 alias dust='dust --no-percent-bars'
 alias op='open .'
+alias 'x=chmod +x'
