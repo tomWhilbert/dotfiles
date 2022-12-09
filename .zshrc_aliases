@@ -74,8 +74,10 @@ alias gd='cd $HOME/Drive'
 alias dots='cd $HOME/.dotfiles'
 alias op='open .'
 alias lrn='cd /Users/thomaswhilbert/GoogleDrive/Tom/Learn'
+alias ma='cd $HOME/Library/CloudStorage/OneDrive-A-BTech.Comm.College/MacAdmin'
 alias dust='dust --no-percent-bars'
 alias conf='cd $HOME/.config'
+
 
 #* Jamf
 alias jr='echo $(security find-generic-password -a thomaswhilbert -s AD -w) | sudo -S jamf recon'
