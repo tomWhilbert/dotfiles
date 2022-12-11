@@ -42,27 +42,21 @@ source $PLUGINS/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source ~/.dotfiles/.zshrc_aliases
 source ~/.dotfiles/.zshrc_functions
 
-#* powerlevel10k prompt theme
+#* powerlevel10k prompt them
 # source ~/bin/powerlevel10k/powerlevel10k.zsh-theme
-#* To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 # [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 
+#* load ssh keys into the macOS ssh agent
 ssh-add --apple-load-keychain > /dev/null 2>&1 
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 #* Bat Command help function
-# in your .bashrc/.zshrc/*rc
-
-help() {
-    "$@" --help 2>&1 | bathelp
-}
 
 #* CDPATH
 # export CDPATH=:$HOME:$HOME/bin/
 
 eval "$(starship init zsh)"
-
 
