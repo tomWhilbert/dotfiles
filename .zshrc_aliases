@@ -12,7 +12,7 @@ alias lt='exa --long --all -snew'
 alias lw='exa --all'
 alias lS='exa --long --all --icons -s=size'
 
-
+alias 'x=chmod +x'
 alias buu='brew update && brew upgrade && brew upgrade --cask'
 alias rmf='rm -rf'
 alias srz='exec zsh'
