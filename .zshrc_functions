@@ -164,12 +164,12 @@ net () {
 	NC='\033[0m' # No Color
 	public=$(curl -s -w '\n' ifconfig.me)
     networksetup -listallnetworkservices | nl | tee nfile
-    num=$(echo "$num" | xargs)  #* Trim whitepace with xargs
     printf "\n"
     echo "$BLUE Choose a network service to dislplay more info"
     echo "$NC" #* clears the coloring
     read -r con
     num=$(grep "$con" nfile | awk 'NR==1 {print}' | cut -c 7-)
+    num=$(echo "$num" | xargs)  #* Trim whitepace with xargs
     printf "\n"
    	networksetup -getinfo "$num"
 	printf "\n"
