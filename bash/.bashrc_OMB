@@ -4,6 +4,14 @@ case $- in
     *) return;;
 esac
 
+if [ -f ~/.bashrc ]; then
+    . ~/.bashrc
+fi
+
+# if [ -f ~/.bash_aliases ]; then
+#       . ~/.bash_aliases
+#   fi
+
 # Path to your oh-my-bash installation.
 export OSH='/Users/thomaswhilbert/.oh-my-bash'
 

@@ -14,10 +14,10 @@ export RCLONE_PASSWORD_COMMAND="security find-generic-password -a $USER -s rclon
 export PATH="/opt/homebrew/opt/coreutils/libexec/gnubin:$PATH"
 export PATH="/opt/homebrew/opt/gnu-sed/libexec/gnubin:$PATH"
 
-#* Pyenv setup
-echo 'export PYENV_ROOT="$HOME/.pyenv"' >> ~/.zshrc
-echo 'command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"' >> ~/.zshrc
-echo 'eval "$(pyenv init -)"' >> ~/.zshrc
+# #* Pyenv setup
+# echo 'export PYENV_ROOT="$HOME/.pyenv"' >> ~/.zshrc
+# echo 'command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"' >> ~/.zshrc
+# echo 'eval "$(pyenv init -)"' >> ~/.zshrc
 
 # Lines configured by zsh-newuser-install
 HISTFILE=~/.histfile
@@ -67,10 +67,3 @@ ssh-add --apple-load-keychain > /dev/null 2>&1
 eval "$(starship init zsh)"
 
 
-
-export PYENV_ROOT="$HOME/.pyenv"
-command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
-eval "$(pyenv init -)"
-export PYENV_ROOT="$HOME/.pyenv"
-command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
-eval "$(pyenv init -)"
