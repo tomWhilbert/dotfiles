@@ -62,6 +62,7 @@ alias gst='git status'
 alias gc='git commit -m'
 alias gpo='git push -u origin'
 alias gp='git pull'
+alias glo='git log -- oneline'
 
 #*** Fun Soundbites
 alias piss='afplay /Users/thomaswhilbert/Movies/Tubes/Piss-Down-My-Back.m4a'
