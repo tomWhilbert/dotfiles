@@ -1,23 +1,7 @@
-#!/usr/bin/env zsh
-
-# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
-# Initialization code that may require console input (password prompts, [y/n]
-# confirmations, etc.) must go above this block; everything else may go below.
-if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
-  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
-fi
-
-# typeset -g POWERLEVEL9K_INSTANT_PROMPT=quiet
-
 #* Add to PATH
 export RCLONE_PASSWORD_COMMAND="security find-generic-password -a $USER -s rclone -w"
 export PATH="/opt/homebrew/opt/coreutils/libexec/gnubin:$PATH"
 export PATH="/opt/homebrew/opt/gnu-sed/libexec/gnubin:$PATH"
-
-# #* Pyenv setup
-# echo 'export PYENV_ROOT="$HOME/.pyenv"' >> ~/.zshrc
-# echo 'command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"' >> ~/.zshrc
-# echo 'eval "$(pyenv init -)"' >> ~/.zshrc
 
 # Lines configured by zsh-newuser-install
 HISTFILE=~/.histfile
@@ -34,6 +18,7 @@ compinit
 # End of lines added by compinstall
 
 # Source paths for zsh plugins
+DOTS=$HOME/.dotfiles
 ZSH=$HOME/bin/plugins/ohmyzsh
 PLUGINS=$HOME/bin/plugins
 source $ZSH/lib/directories.zsh #* enables 'd' directory stack
@@ -44,12 +29,8 @@ source $PLUGINS/zsh-history-substring-search/zsh-history-substring-search.zsh
 source $PLUGINS/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 # Source paths for aliases and functions
-source ~/.dotfiles/.zshrc_aliases
-source ~/.dotfiles/.zshrc_functions
-
-#* powerlevel10k prompt them
-# source ~/bin/powerlevel10k/powerlevel10k.zsh-theme
-# [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+source $DOTS/.zshrc_aliases
+source $DOTS/.zshrc_functions
 
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 
@@ -57,11 +38,6 @@ test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell
 ssh-add --apple-load-keychain > /dev/null 2>&1 
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-
-#* Bat Command help function
-
-#* CDPATH
-# export CDPATH=:$HOME:$HOME/bin/
 
 #* enable starship prompt
 eval "$(starship init zsh)"
