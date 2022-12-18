@@ -82,6 +82,7 @@ alias ma='cd $HOME/Library/CloudStorage/OneDrive-A-BTech.Comm.College/MacAdmin'
 alias dust='dust --no-percent-bars'
 alias conf='cd $HOME/.config'
 alias scr='cd $HOME/bin/scripts'
+alias pycon='cd $HOME/GoogleDrive/Tom/Learn/Code/python/Python-ConEd-Winter-22-23'
 
 
 #* Jamf
