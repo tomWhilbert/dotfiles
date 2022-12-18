@@ -194,7 +194,7 @@ vmcen() {
 }
 
 vmdeb() {
-	vmrun -T fusion start /Users/thomaswhilbert/Virtual\ Machines.localized/Debian\ 11.x\ 64-bit\ Arm.vmwarevm/Debian\ 11.x\ 64-bit\ Arm.vmx nogui
+	vmrun -T fusion start /Users/thomaswhilbert/Virtual\ Machines.localized/Debian\ 11.x\ 64-bit\ Arm.vmwarevm/Debian\ 11.x\ 64-bit\ Arm.vmx nogui > /dev/null 2>&1 
 	sleep 8
 	ssh deb
 }
