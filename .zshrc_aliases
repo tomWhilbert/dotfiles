@@ -1,7 +1,3 @@
-#!/bin/bash
-#* SheBang here enables syntax highlighting in vscode
-#* alias and function source file
-
 alias l='exa --long --all --icons'
 alias lsg='exa --long --all --icons -g'
 alias lsh="ls -a | grep '^\.'"
@@ -22,7 +18,7 @@ alias hs='history 1'
 alias rp='realpath . | pbcopy'  #* Copy's the Working Directory to the clipboard
 alias png='ping -c 3'
 alias admin='dseditgroup -o checkmember -m $USER admin'
-alias ip='/Users/thomaswhilbert/bin/scripts/get-ip/ip-macOS.sh'
+alias ip='/Users/thomaswhilbert/bin/scripts/ip/ip-macOS.sh'
 alias stoc='stat -c "%a"'
 alias zcode='code /$HOME/.dotfiles/zsh.code-workspace'
 alias zrc='code $HOME/.zshrc'
@@ -41,7 +37,7 @@ alias ss='sudo lsof -PiTCP -sTCP:LISTEN'  #* an analog to the linux ss command
 alias tldr='tldr --color always'
 alias sad='su administrator'
 alias fdns='sudo dscacheutil -flushcache; sudo killall -HUP mDNSResponder'
-alias wp='/Users/thomaswhilbert/bin/scripts/walk-pull/wp'
+alias wp='/Users/thomaswhilbert/bin/scripts/pull/wp'
 alias pyweb='python -m http.server'
 alias lsgroups='dscl . -list /Groups'
 alias getssid='sudo /System/Library/PrivateFrameworks/Apple80211.framework/Versions/A/Resources/airport -I'
