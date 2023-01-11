@@ -43,3 +43,5 @@ ssh-add --apple-load-keychain > /dev/null 2>&1
 eval "$(starship init zsh)"
 
 
+export PYENV_ROOT="$HOME/.pyenv"
+eval "$(pyenv init -)"
