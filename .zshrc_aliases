@@ -28,6 +28,7 @@ alias zrf='code $HOME/.dotfiles/.zshrc_functions'
 alias grep='ggrep -i --color'
 alias cat='bat'
 
+
 #* Python
 alias pymf='/Library/ManagedFrameworks/Python/Python3.framework/Versions/3.9/bin/python3.9'
 alias py='python'
@@ -44,6 +45,7 @@ alias lsgroups='dscl . -list /Groups'
 alias getssid='sudo /System/Library/PrivateFrameworks/Apple80211.framework/Versions/A/Resources/airport -I'
 alias dust='dust --no-percent-bars'
 alias bathelp='bat --plain --language=help'
+alias tl='tldr'
 
 #* RClone commands 
 alias rclr='rclone listremotes'
@@ -87,15 +89,3 @@ alias stash='cd /Volumes/Stash'
 alias jr='echo $(security find-generic-password -a thomaswhilbert -s AD -w) | sudo -S jamf recon'
 
 
-#* Taskwarrior
-# General TaskWarrior commands
-alias t='task'
-alias tl='task list'
-alias tn='task next +READY'
-alias tnu="task next urgency \> ${urgencyPrio}"
-alias ta='task add'
-alias tan='task annotate'
-alias tlo='task log'
-alias tac='task active'
-alias tap='task add project:Personal'
-alias taw='task add project:Work'
