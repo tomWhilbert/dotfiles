@@ -78,11 +78,11 @@ alias bin='cd $HOME/bin'
 alias gd='cd $HOME/Drive'
 alias dots='cd $HOME/.dotfiles'
 alias op='open .'
-alias lrn='cd /Users/thomaswhilbert/GoogleDrive/Tom/Learn'
+alias lrn='cd /Users/thomaswhilbert/Google_Drive/Tom/Learn'
 alias ma='cd $HOME/Library/CloudStorage/OneDrive-A-BTech.Comm.College/MacAdmin'
 alias conf='cd $HOME/.config'
 alias scr='cd $HOME/bin/scripts'
-alias pycon='cd $HOME/GoogleDrive/Tom/Learn/Code/python/Python-ConEd-Winter-22-23'
+alias pycon='cd $HOME/Google_Drive/Tom/Learn/Code/Python/Python-ConEd-Winter-22-23'
 alias stash='cd /Volumes/Stash'
 
 
