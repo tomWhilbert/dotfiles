@@ -34,8 +34,12 @@ alias cat='bat'
 alias pymf='/Library/ManagedFrameworks/Python/Python3.framework/Versions/3.9/bin/python3.9'
 alias py='python'
 
+#* Virtual Machines
 #alias vmdeb='vmrun -T fusion start "/Users/thomaswhilbert/Virtual-Machines/Debian 10.x 64-bit.vmwarevm/Debian 10.x 64-bit.vmx" nogui'
 #alias vbls='VBoxManage list vms'
+alias ut='/Applications/UTM.app/Contents/MacOS/utmctl'
+
+#* Misc
 alias ss='sudo lsof -PiTCP -sTCP:LISTEN'  #* an analog to the linux ss command
 alias tldr='tldr --color always'
 alias sad='su administrator'
