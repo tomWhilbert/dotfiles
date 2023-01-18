@@ -37,7 +37,7 @@ alias py='python'
 #* Virtual Machines
 #alias vmdeb='vmrun -T fusion start "/Users/thomaswhilbert/Virtual-Machines/Debian 10.x 64-bit.vmwarevm/Debian 10.x 64-bit.vmx" nogui'
 #alias vbls='VBoxManage list vms'
-alias ut='/Applications/UTM.app/Contents/MacOS/utmctl'
+alias ut='/usr/local/bin/utmctl'
 
 #* Misc
 alias ss='sudo lsof -PiTCP -sTCP:LISTEN'  #* an analog to the linux ss command
