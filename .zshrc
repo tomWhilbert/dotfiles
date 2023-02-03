@@ -1,10 +1,19 @@
+# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
+# Initialization code that may require console input (password prompts, [y/n]
+# confirmations, etc.) must go above this block; everything else may go below.
+if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+fi
+
 #* Add to PATH
 export RCLONE_PASSWORD_COMMAND="security find-generic-password -a $USER -s rclone -w"
 export PATH="/opt/homebrew/opt/coreutils/libexec/gnubin:$PATH"
 export PATH="/opt/homebrew/opt/gnu-sed/libexec/gnubin:$PATH"
+export PATH="$HOME/bin/scripts/macOS:$PATH"
+export PATH="$HOME/Library/Python/3.9/bin:$PATH"
 
 # Lines configured by zsh-newuser-install
-HISTFILE=~/.histfile
+HISTFILE=~/.histfile    
 HISTSIZE=50000
 SAVEHIST=50000
 setopt autocd beep extendedglob nomatch notify hist_ignore_dups hist_ignore_space inc_append_history_time sharehistory
@@ -24,6 +33,7 @@ PLUGINS=$HOME/bin/plugins
 source $ZSH/lib/directories.zsh #* enables 'd' directory stack
 source $ZSH/plugins/z/z.plugin.zsh
 source $ZSH/plugins/taskwarrior/taskwarrior.plugin.zsh
+source $PLUGINS/powerlevel10k/powerlevel10k.zsh-theme
 source $PLUGINS/zsh-autosuggestions/zsh-autosuggestions.zsh
 source $PLUGINS/zsh-history-substring-search/zsh-history-substring-search.zsh
 source $PLUGINS/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
@@ -40,8 +50,11 @@ ssh-add --apple-load-keychain > /dev/null 2>&1
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 #* enable starship prompt
-eval "$(starship init zsh)"
+# eval "$(starship init zsh)"
 
 
-export PYENV_ROOT="$HOME/.pyenv"
-eval "$(pyenv init -)"
+# export PYENV_ROOT="$HOME/.pyenv"
+# eval "$(pyenv init -)"
+
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh

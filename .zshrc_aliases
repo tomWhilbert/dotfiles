@@ -93,4 +93,3 @@ alias stash='cd /Volumes/Stash'
 #* Jamf
 alias jr='echo $(security find-generic-password -a thomaswhilbert -s AD -w) | sudo -S jamf recon'
 
-

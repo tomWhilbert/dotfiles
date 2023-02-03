@@ -43,7 +43,7 @@
 
 #* cheat.sh command dictionary ###
 	ch () {
-		curl cht.sh/"$1"d
+		curl cht.sh/"$1"
 	}
 
 	bak () {
@@ -110,7 +110,6 @@ sd() {
 pub () {
 	curl -w "\n" ifconfig.me
 }
-
 
 ytd () {
 	cd ~/Movies/Tubes || exit
@@ -199,16 +198,13 @@ vmdeb() {
 	sleep 8
 	ssh deb
 }
+
 psg () {
 	ps aux | grep "$1"
 	}
 	
 hsg ()  {
 	hs | grep "$1"
-}
-
-ploc () {
-	 png 192.168.1."$1"
 }
 
 #* Group Membership Lookups
