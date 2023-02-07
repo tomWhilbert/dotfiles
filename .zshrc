@@ -10,7 +10,6 @@ export RCLONE_PASSWORD_COMMAND="security find-generic-password -a $USER -s rclon
 export PATH="/opt/homebrew/opt/coreutils/libexec/gnubin:$PATH"
 export PATH="/opt/homebrew/opt/gnu-sed/libexec/gnubin:$PATH"
 export PATH="$HOME/bin/scripts/macOS:$PATH"
-export PATH="$HOME/Library/Python/3.9/bin:$PATH"
 
 # Lines configured by zsh-newuser-install
 HISTFILE=~/.histfile    
