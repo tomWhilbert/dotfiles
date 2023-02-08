@@ -28,6 +28,7 @@ alias zrf='code $HOME/.dotfiles/.zshrc_functions'
 alias grep='ggrep -i --color'
 alias pgrep='pgrep -i'
 alias cat='bat'
+alias vim='/opt/homebrew/bin/nvim'
 
 
 #* Python
@@ -48,7 +49,6 @@ alias wp='/Users/thomaswhilbert/bin/scripts/pull/wp'
 alias pyweb='python -m http.server'
 alias lsgroups='dscl . -list /Groups'
 alias getssid='sudo /System/Library/PrivateFrameworks/Apple80211.framework/Versions/A/Resources/airport -I'
-alias dust='dust --no-percent-bars'
 alias bathelp='bat --plain --language=help'
 alias tl='tldr'
 
