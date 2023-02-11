@@ -19,7 +19,6 @@ alias hs='history 1'
 alias rp='realpath . | pbcopy'  #* Copy's the Working Directory to the clipboard
 alias png='ping -c 3'
 alias admin='dseditgroup -o checkmember -m $USER admin'
-alias ip='/Users/thomaswhilbert/bin/scripts/ip/ip-macOS.sh'
 alias stoc='stat -c "%a"'
 alias zcode='code /$HOME/.dotfiles/zsh.code-workspace'
 alias zrc='code $HOME/.zshrc'
@@ -29,7 +28,6 @@ alias grep='ggrep -i --color'
 alias pgrep='pgrep -i'
 alias cat='bat'
 alias vim='/opt/homebrew/bin/nvim'
-
 
 #* Python
 alias pymf='/Library/ManagedFrameworks/Python/Python3.framework/Versions/3.9/bin/python3.9'
@@ -45,7 +43,6 @@ alias ss='sudo lsof -PiTCP -sTCP:LISTEN'  #* an analog to the linux ss command
 alias tldr='tldr --color always'
 alias sad='su administrator'
 alias fdns='sudo dscacheutil -flushcache; sudo killall -HUP mDNSResponder'
-alias wp='/Users/thomaswhilbert/bin/scripts/pull/wp'
 alias pyweb='python -m http.server'
 alias lsgroups='dscl . -list /Groups'
 alias getssid='sudo /System/Library/PrivateFrameworks/Apple80211.framework/Versions/A/Resources/airport -I'

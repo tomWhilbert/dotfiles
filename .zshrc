@@ -6,10 +6,12 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
 fi
 
 #* Add to PATH
-export RCLONE_PASSWORD_COMMAND="security find-generic-password -a $USER -s rclone -w"
 export PATH="/opt/homebrew/opt/coreutils/libexec/gnubin:$PATH"
 export PATH="/opt/homebrew/opt/gnu-sed/libexec/gnubin:$PATH"
-export PATH="$HOME/bin/scripts/macOS:$PATH"
+export PATH="$HOME/.local/share:$PATH"
+
+#* Exported Variables
+export RCLONE_PASSWORD_COMMAND="security find-generic-password -a $USER -s rclone -w"
 
 # Lines configured by zsh-newuser-install
 HISTFILE=~/.histfile    
