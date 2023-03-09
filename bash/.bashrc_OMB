@@ -4,6 +4,14 @@ case $- in
     *) return;;
 esac
 
+<<<<<<< Updated upstream
+=======
+
+if [ -f ~/.bash_aliases ]; then
+      . ~/.bash_aliases
+  fi
+
+>>>>>>> Stashed changes
 # Path to your oh-my-bash installation.
 export OSH='/Users/thomaswhilbert/.oh-my-bash'
 
