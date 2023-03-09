@@ -5,7 +5,10 @@ case $- in
 esac
 
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 =======
+=======
+>>>>>>> Stashed changes
 
 if [ -f ~/.bash_aliases ]; then
       . ~/.bash_aliases
