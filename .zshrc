@@ -18,8 +18,12 @@ HISTFILE=~/.histfile
 HISTSIZE=50000
 SAVEHIST=50000
 setopt autocd beep extendedglob nomatch notify hist_ignore_dups hist_ignore_space inc_append_history_time sharehistory
-bindkey -e
+bindkey -e #* use emacs mode for line navigation
 # End of lines configured by zsh-newuser-install
+
+#* Bindkey for line word jump
+bindkey "^[[1;3C" forward-word
+bindkey "^[[1;3D" backward-word
 
 # The following lines were added by compinstall
 zstyle :compinstall filename '$HOME/.zshrc'
