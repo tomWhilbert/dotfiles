@@ -24,6 +24,7 @@ alias tml='tmux ls'
 alias tmn='tmux new-session -t'
 alias lb='/usr/bin/lsblk'
 alias lbf='/usr/bin/lsblk -f'
+alias bathelp='bat --plain --language=help'
 
 #* Arch/Linux specific aliases
 alias reflect='sudo reflector --latest 5 --sort rate --country US --save /etc/pacman.d/mirrorlist' 

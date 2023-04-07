@@ -157,3 +157,7 @@ scg () {
 dif () {
 	diff --side-by-side --color "$1" "$2"
 }
+
+help() {
+    "$@" --help 2>&1 | bathelp
+}
