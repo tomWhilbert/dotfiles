@@ -9,6 +9,7 @@ fi
 #* Add to PATH
 export PATH="/opt/homebrew/opt/coreutils/libexec/gnubin:$PATH"
 export PATH="/opt/homebrew/opt/gnu-sed/libexec/gnubin:$PATH"
+export PATH="/opt/homebrew/opt/gawk/libexec/gnubin:$PATH"
 export PATH="$HOME/.local/share:$PATH"
 
 #* Exported Variables
