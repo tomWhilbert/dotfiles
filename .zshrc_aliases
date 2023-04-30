@@ -16,7 +16,6 @@ alias srz='exec zsh'
 alias dkl='diskutil list'
 alias ds='diskutil'
 alias hs='history 1'
-alias rp='realpath . | pbcopy'  #* Copy's the Working Directory to the clipboard
 alias png='ping -c 3'
 alias admin='dseditgroup -o checkmember -m $USER admin'
 alias stoc='stat -c "%a"'
@@ -50,6 +49,7 @@ alias bathelp='bat --plain --language=help'
 alias tl='tldr'
 alias code='codium'
 alias wake='wakeonlan -i 192.168.20.255 60:f8:1d:cf:81:06'
+alias wr='where'
 
 #* RClone commands 
 alias rclr='rclone listremotes'
@@ -86,4 +86,5 @@ alias stash='cd /Volumes/Stash'
 
 #* Jamf
 alias jr='echo $(security find-generic-password -a thomaswhilbert -s AD -w) | sudo -S jamf recon'
+
 
