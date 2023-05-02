@@ -229,3 +229,8 @@ pysrv () {
 	echo "$NC" 
 	python -m http.server
 }
+
+#* Symmetric file encryption (AES 128 is the default, this increases it to 256), param 1 is the target file:
+gpgsym () {
+	gpg --symmetric --cipher-algo AES256 "$1"
+}

@@ -51,6 +51,7 @@ alias code='codium'
 alias wake='wakeonlan -i 192.168.20.255 60:f8:1d:cf:81:06'
 alias wr='where'
 
+
 #* RClone commands 
 alias rclr='rclone listremotes'
 alias rc='rclone'
@@ -83,6 +84,7 @@ alias conf='cd $HOME/.config'
 alias scr='cd $HOME/bin/scripts'
 alias pycon='cd $HOME/Google_Drive/Tom/Learn/Code/Python/Python-ConEd-Winter-22-23'
 alias stash='cd /Volumes/Stash'
+
 
 #* Jamf
 alias jr='echo $(security find-generic-password -a thomaswhilbert -s AD -w) | sudo -S jamf recon'
