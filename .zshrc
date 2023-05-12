@@ -44,6 +44,7 @@ source $PLUGINS/powerlevel10k/powerlevel10k.zsh-theme
 source $PLUGINS/zsh-autosuggestions/zsh-autosuggestions.zsh
 source $PLUGINS/zsh-history-substring-search/zsh-history-substring-search.zsh
 source $PLUGINS/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source $ZSH/plugins/fzf/fzf.plugin.zsh
 source $ZSH/plugins/nmap/nmap.plugin.zsh
 
 
