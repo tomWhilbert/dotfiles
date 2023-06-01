@@ -47,7 +47,7 @@ alias lsgroups='dscl . -list /Groups'
 alias getssid='sudo /System/Library/PrivateFrameworks/Apple80211.framework/Versions/A/Resources/airport -I'
 alias bathelp='bat --plain --language=help'
 alias tl='tldr'
-alias code='codium'
+# alias code='codium'
 alias wake='wakeonlan -i 192.168.20.255 60:f8:1d:cf:81:06'
 alias wr='where'
 

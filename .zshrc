@@ -47,7 +47,6 @@ source $PLUGINS/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source $ZSH/plugins/fzf/fzf.plugin.zsh
 source $ZSH/plugins/nmap/nmap.plugin.zsh
 
-
 # Source paths for aliases and functions
 source $DOTS/.zshrc_aliases
 source $DOTS/.zshrc_functions
@@ -55,7 +54,7 @@ source $DOTS/.zshrc_functions
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 
 #* load ssh keys into the macOS ssh agent
-ssh-add --apple-load-keychain > /dev/null 2>&1 
+ssh-add --apple-load-keychain 2> /dev/null  
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
@@ -66,6 +65,5 @@ ssh-add --apple-load-keychain > /dev/null 2>&1
 export PYENV_ROOT="$HOME/.pyenv"
 command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init -)"
-
 
 
