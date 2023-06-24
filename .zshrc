@@ -38,7 +38,7 @@ export DOTS=/home/tom/.dotfiles
 #* Aliases, Themes and plugins - return to git clone and scripted update method
 #* 
 
-source $HOME/bin/powerlevel10k/powerlevel10k.zsh-theme
+source $PLUGINS/powerlevel10k/powerlevel10k.zsh-theme
 source $PLUGINS/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source $PLUGINS/zsh-autosuggestions/zsh-autosuggestions.zsh
 source $PLUGINS/zsh-history-substring-search/zsh-history-substring-search.zsh
