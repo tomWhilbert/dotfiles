@@ -34,12 +34,13 @@ alias getdns='getent ahostsv4'
 alias inform='sudo informant'
 alias pacv="pacman -Qq | fzf --preview 'pacman -Qil {}' --layout=reverse --bind 'enter:execute(pacman -Qil {} | less)'"
 alias stoc='stat -c %a'
+alias sub='sudo btrfs '
 
 #* systemd
-alias sc='systemctl'
-alias scs="systemctl status"
-alias scrn='systemctl list-units -t service --state running'
-alias scen='systemctl list-unit-files --state enabled'
+alias sc='sudo systemctl '
+alias scs="sudo systemctl status "
+alias scrn='sudo systemctl list-units -t service --state running '
+alias scen='sudo systemctl list-unit-files --state enabled '
 
 #* Network Manager 
 alias ntu='nmcli c up NETTECH'

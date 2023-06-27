@@ -23,7 +23,7 @@ lazyg ()
 	}
 
 	bak () {
-		sudo cp "$1" "$1".bak
+		sudo cp "$1" "$1"-$(date +"%m-%d-%Y")
 	}
    
 #* SSH GitHub authentication fix
