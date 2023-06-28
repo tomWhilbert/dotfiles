@@ -101,8 +101,8 @@ pacs () {
 	pacman -Ss "^$1$"
 	}
 
-yays () {
-	yay -Ss "$1"
+pars() {
+	paru -Ss "$1"
 }
 
 #* Can use to eliminate need for Oh My Zsh D plugin

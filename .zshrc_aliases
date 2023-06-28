@@ -24,7 +24,6 @@ alias tml='tmux ls'
 alias tmn='tmux new-session -t'
 alias lb='/usr/bin/lsblk'
 alias lbf='/usr/bin/lsblk -f'
-alias bathelp='bat --plain --language=help'
 
 #* Arch/Linux specific aliases
 alias reflect='sudo reflector --latest 5 --sort rate --country US --save /etc/pacman.d/mirrorlist' 
@@ -34,7 +33,11 @@ alias getdns='getent ahostsv4'
 alias inform='sudo informant'
 alias pacv="pacman -Qq | fzf --preview 'pacman -Qil {}' --layout=reverse --bind 'enter:execute(pacman -Qil {} | less)'"
 alias stoc='stat -c %a'
+
+#* btrfs
 alias sub='sudo btrfs '
+alias subv='sudo btrfs subvolume '
+alias subsnap='sudo btrfs subvolume snapshot '
 
 #* systemd
 alias sc='sudo systemctl '
@@ -43,10 +46,6 @@ alias scrn='sudo systemctl list-units -t service --state running '
 alias scen='sudo systemctl list-unit-files --state enabled '
 
 #* Network Manager 
-alias ntu='nmcli c up NETTECH'
-alias ntd='nmcli c down NETTECH'
-alias wguku='nmcli con up mlvd-gb4'
-alias wgukd='nmcli con down mlvd-gb4'
 alias ncs='nmcli connection show'
 alias netnice='nmcli -p device show'
 
@@ -73,8 +72,4 @@ alias network.ports='netstat -a -n | grep -i "LISTEN "'
 alias network.connections='lsof -l -i +L -R -V'
 alias network.established='lsof -l -i +L -R -V | grep ESTABLISHED'
 alias nq='nmap -sn 192.168.0.0/24'
-alias wgu='sudo wg-quick up /etc/wireguard/mullvad-us167.conf'
-alias wgd='sudo wg-quick down /etc/wireguard/mullvad-us167.conf'
 
-#* btrfs
-alias br='sudo btrfs'

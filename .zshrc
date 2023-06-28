@@ -28,7 +28,7 @@ setopt hist_ignore_space
 #* Enivronment Variables 
 export PATH="$PATH:$HOME/bin:/home/tom/bin/scripts/walk-pull"
 export RCLONE_PASSWORD_COMMAND="pass rclone"  
-export BAT_THEME="Dracula"
+export BAT_THEME="Monokai Extended Bright"
 export EDITOR=/usr/bin/vim
 export VISUAL=/usr/bin/vim
 export PLUGINS=/home/tom/bin/plugins
