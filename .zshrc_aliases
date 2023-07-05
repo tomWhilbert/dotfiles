@@ -42,11 +42,9 @@ alias fdns='sudo dscacheutil -flushcache; sudo killall -HUP mDNSResponder'
 alias lsgroups='dscl . -list /Groups'
 alias getssid='sudo /System/Library/PrivateFrameworks/Apple80211.framework/Versions/A/Resources/airport -I'
 alias bathelp='bat --plain --language=help'
-alias tl='tldr'
+
 # alias code='codium'
 alias wake='wakeonlan -i 192.168.20.255 60:f8:1d:cf:81:06'
-alias wr='where'
-
 
 #* RClone commands 
 alias rclr='rclone listremotes'
@@ -63,7 +61,7 @@ alias gst='git status'
 alias gc='git commit -m'
 alias gpo='git push -u origin'
 alias gp='git pull'
-alias glo='git log -- oneline'
+alias gref='git reflog'
 
 #*** Fun Soundbites
 alias piss='afplay /Users/thomaswhilbert/Movies/Tubes/Piss-Down-My-Back.m4a'
@@ -73,14 +71,7 @@ alias off='afplay /Users/thomaswhilbert/Movies/Tubes/GetOffMyLawn.m4a'
 alias bin='cd $HOME/bin'
 alias gd='cd $HOME/Drive'
 alias dots='cd $HOME/.dotfiles'
-alias op='open .'
-alias lrn='cd /Users/thomaswhilbert/Google_Drive/Tom/Learn'
-alias ma='cd $HOME/Library/CloudStorage/OneDrive-A-BTech.Comm.College/MacAdmin'
-alias conf='cd $HOME/.config'
-alias scr='cd $HOME/bin/scripts'
-alias pycon='cd $HOME/Google_Drive/Tom/Learn/Code/Python/Python-ConEd-Winter-22-23'
 alias stash='cd /Volumes/Stash'
-
 
 #* Jamf
 alias jr='echo $(security find-generic-password -a thomaswhilbert -s AD -w) | sudo -S jamf recon'
