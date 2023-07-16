@@ -1,5 +1,4 @@
-#!/bin/bash  
-###* Alias and function source file ###
+ ###* Alias and function source file ###
 
 alias ls='exa'
 alias l='exa --long --all --icons'

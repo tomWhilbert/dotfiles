@@ -17,23 +17,10 @@ lazyg ()
 		cd "$1" || exit
 		}
 
-#* cheat.sh command dictionary ###
-	ch () {
-		curl cht.sh/"$1"
-	}
-
 	bak () {
 		sudo cp "$1" "$1"-$(date +"%m-%d-%Y")
 	}
    
-#* SSH GitHub authentication fix
-	ghssh () {
-		eval 'ssh-agent -s'
-		ssh-add -D
-	    cd "$HOME"/.ssh/ || exit
-		ssh-add github
-		cd "$OLDPWD" || exit
-	}
 
 	#* Disk Usage, Sorted by Size
 	dus () {
@@ -101,10 +88,6 @@ pacs () {
 	pacman -Ss "^$1$"
 	}
 
-pars() {
-	paru -Ss "$1"
-}
-
 #* Can use to eliminate need for Oh My Zsh D plugin
 d () {
 	if [[ -n $1 ]]
@@ -161,3 +144,17 @@ dif () {
 help() {
     "$@" --help 2>&1 | bathelp
 }
+
+hsg() {
+	history 1 | grep "$1"
+}
+
+#* Btrfs Snapshots
+snaphome () {
+	sudo btrfs subv snapshot /home /home/.snapshots_home/"$USER"-$(date +"%m-%d-%Y")
+}
+
+snaproot () {
+	sudo btrfs subv snapshot / /.snapshots/root-$(date +"%m-%d-%Y")
+}
+    
