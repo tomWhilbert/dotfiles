@@ -151,10 +151,11 @@ hsg() {
 
 #* Btrfs Snapshots
 snaphome () {
-	sudo btrfs subv snapshot /home /home/.snapshots_home/"$USER"-$(date +"%m-%d-%Y")
+	sudo btrfs subv snapshot -r /home /.snapshots_home/"$USER"-$(date +"%m-%d-%Y-%H:%M:%S")
 }
 
 snaproot () {
-	sudo btrfs subv snapshot / /.snapshots/root-$(date +"%m-%d-%Y-%H:%M:%S")
+	sudo btrfs subv snapshot -r / /.snapshots/root-$(date +"%m-%d-%Y-%H:%M:%S")
 }
     
+#* add btrfs send recieve to the functions or make a script that sees the most current and sends it??
