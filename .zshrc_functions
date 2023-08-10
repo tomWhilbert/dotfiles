@@ -228,7 +228,7 @@ pysrv () {
 	printf "\n"
 	echo "$BIYellow Control + C to end session"
 	echo "$NC" 
-	python -m http.server
+	python3 -m http.server
 }
 
 #* Symmetric file encryption (AES 128 is the default, this increases it to 256), param 1 is the target file:
