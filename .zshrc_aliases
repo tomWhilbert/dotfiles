@@ -28,7 +28,7 @@ alias cat='bat'
 
 #* Python
 alias pymf='/Library/ManagedFrameworks/Python/Python3.framework/Versions/3.9/bin/python3.9'
-alias py='python'
+alias py='python3'
 
 #* Virtual Machines
 #alias vmdeb='vmrun -T fusion start "/Users/thomaswhilbert/Virtual-Machines/Debian 10.x 64-bit.vmwarevm/Debian 10.x 64-bit.vmx" nogui'
