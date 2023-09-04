@@ -15,7 +15,7 @@ export PATH="/opt/homebrew/bin:$PATH"
 
 #* Exported Variables
 export RCLONE_PASSWORD_COMMAND="security find-generic-password -a $USER -s rclone -w"
-export RESTIC_PASSWORD="security find-generic-password -a $USER -s restic -w"
+# export RESTIC_PASSWORD="security find-generic-password -a $USER -s restic -w"
 
 # Lines configured by zsh-newuser-install
 HISTFILE=~/.histfile    
