@@ -25,6 +25,7 @@ alias grep='ggrep -i --color'
 alias pgrep='pgrep -i'
 alias cat='bat'
 # alias vim='/opt/homebrew/bin/nvim'
+alias wp='$HOME/bin/scripts/walk-pull/wp.sh'
 
 #* Python
 alias pymf='/Library/ManagedFrameworks/Python/Python3.framework/Versions/3.9/bin/python3.9'
