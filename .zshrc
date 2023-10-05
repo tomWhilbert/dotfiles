@@ -36,6 +36,11 @@ autoload -Uz compinit
 compinit 
 # End of lines added by compinstall
 
+#* Pyenv Config (put before ohmyzsh plugin to avoid error)
+export PYENV_ROOT="$HOME/.pyenv"
+export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init --path)"
+
 # Source paths for zsh plugins
 DOTS=$HOME/.dotfiles
 ZSH=$HOME/bin/plugins/ohmyzsh
@@ -43,6 +48,7 @@ PLUGINS=$HOME/bin/plugins
 source $ZSH/lib/directories.zsh #* enables 'd' directory stack
 source $ZSH/plugins/z/z.plugin.zsh
 source $ZSH/plugins/taskwarrior/taskwarrior.plugin.zsh
+source $ZSH/plugins/pyenv/pyenv.plugin.zsh
 source $PLUGINS/powerlevel10k/powerlevel10k.zsh-theme
 source $PLUGINS/zsh-autosuggestions/zsh-autosuggestions.zsh
 source $PLUGINS/zsh-history-substring-search/zsh-history-substring-search.zsh
@@ -63,10 +69,3 @@ ssh-add --apple-load-keychain 2> /dev/null
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
-
-#* Pyenv Config
-export PYENV_ROOT="$HOME/.pyenv"
-command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
-eval "$(pyenv init -)"
-
-
