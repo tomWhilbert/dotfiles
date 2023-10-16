@@ -12,10 +12,7 @@ export PATH="/opt/homebrew/opt/gnu-sed/libexec/gnubin:$PATH"
 export PATH="/opt/homebrew/opt/gawk/libexec/gnubin:$PATH"
 export PATH="$HOME/bin/scripts/:$PATH"
 export PATH="/opt/homebrew/bin:$PATH"
-<<<<<<< HEAD
-=======
 export PATH="/opt/homebrew/sbin:$PATH"
->>>>>>> 6aa37bc5d4c7741c412c6f97d0de7c7b914245c0
 
 #* Exported Variables
 export RCLONE_PASSWORD_COMMAND="security find-generic-password -a $USER -s rclone -w"
