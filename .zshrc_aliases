@@ -1,4 +1,3 @@
-#!/bin/bash
 
 alias l='exa --long --all --icons'
 alias lsg='exa --long --all --icons -g'
@@ -64,3 +63,5 @@ alias gp='git pull'
 
 #* Jamf
 alias jr='echo $(security find-generic-password -a thomaswhilbert -s AD -w) | sudo -S jamf recon'
+
+
