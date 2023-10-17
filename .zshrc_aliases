@@ -1,3 +1,4 @@
+#!/bin/bash
 
 alias l='exa --long --all --icons'
 alias lsg='exa --long --all --icons -g'
@@ -24,15 +25,18 @@ alias zrf='code $HOME/.dotfiles/.zshrc_functions'
 alias grep='ggrep -i --color'
 alias pgrep='pgrep -i'
 alias cat='bat'
-# alias vim='/opt/homebrew/bin/nvim'
-alias wp='/Users/tom/bin/scripts/walk-pull/wp.sh'
+alias vim='/opt/homebrew/bin/nvim'
+alias wp='/Users/thomaswhilbert/bin/scripts/walk-pull/wp.sh'
+
+#* Python
+alias py='python'
 
 #* Virtual Machines
 #alias vmdeb='vmrun -T fusion start "/Users/thomaswhilbert/Virtual-Machines/Debian 10.x 64-bit.vmwarevm/Debian 10.x 64-bit.vmx" nogui'
 #alias vbls='VBoxManage list vms'
 alias ut='/usr/local/bin/utmctl'
 
-#* Misc
+#* Misc macOS 
 alias ss='sudo lsof -PiTCP -sTCP:LISTEN'  #* an analog to the linux ss command
 alias tldr='tldr --color always'
 alias fdns='sudo dscacheutil -flushcache; sudo killall -HUP mDNSResponder'
@@ -40,7 +44,6 @@ alias lsgroups='dscl . -list /Groups'
 alias getssid='sudo /System/Library/PrivateFrameworks/Apple80211.framework/Versions/A/Resources/airport -I'
 alias bathelp='bat --plain --language=help'
 
-# alias code='codium'
 alias wake='wakeonlan -i 192.168.20.255 60:f8:1d:cf:81:06'
 
 #* RClone commands 
@@ -58,17 +61,6 @@ alias gst='git status'
 alias gc='git commit -m'
 alias gpo='git push -u origin'
 alias gp='git pull'
-alias gref='git reflog'
-
-#*** Fun Soundbites
-alias piss='afplay /Users/thomaswhilbert/Movies/Tubes/Piss-Down-My-Back.m4a'
-alias off='afplay /Users/thomaswhilbert/Movies/Tubes/GetOffMyLawn.m4a'
-
-#* Naviagtion
-alias bin='cd $HOME/bin'
-alias gd='cd $HOME/Drive'
-alias dots='cd $HOME/.dotfiles'
-alias stash='cd /Volumes/Stash'
 
 #* Jamf
 alias jr='echo $(security find-generic-password -a thomaswhilbert -s AD -w) | sudo -S jamf recon'
