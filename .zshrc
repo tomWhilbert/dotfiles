@@ -31,7 +31,7 @@ HISTFILE=~/.histfile
 HISTSIZE=50000
 SAVEHIST=50000
 setopt autocd beep extendedglob nomatch notify hist_ignore_dups hist_ignore_space inc_append_history_time sharehistory
-bindkey -e #* use emacs mode for line navigation
+bindkey -v #* use vi mode for line navigation
 # End of lines configured by zsh-newuser-install
 
 #* Bindkey for line word jump
@@ -48,18 +48,14 @@ compinit
 # End of lines added by compinstall
 
 # Source paths for zsh plugins
-DOTS=$HOME/.dotfiles
-ZSH=$HOME/bin/plugins/ohmyzsh
-PLUGINS=$HOME/bin/plugins
-source $ZSH/lib/directories.zsh #* enables 'd' directory stack
-source $ZSH/plugins/z/z.plugin.zsh
-source $ZSH/plugins/taskwarrior/taskwarrior.plugin.zsh
+source $OMZ/lib/directories.zsh #* enables 'd' directory stack
+source $OMZ/plugins/z/z.plugin.zsh
+source $OMZ/plugins/taskwarrior/taskwarrior.plugin.zsh
 source $PLUGINS/powerlevel10k/powerlevel10k.zsh-theme
 source $PLUGINS/zsh-autosuggestions/zsh-autosuggestions.zsh
 source $PLUGINS/zsh-history-substring-search/zsh-history-substring-search.zsh
 source $PLUGINS/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-# source $ZSH/plugins/fzf/fzf.plugin.zsh
-source $ZSH/plugins/nmap/nmap.plugin.zsh
+source $OMZ/plugins/nmap/nmap.plugin.zsh
 
 # Source paths for aliases and functions
 source $DOTS/.zshrc_aliases
@@ -70,8 +66,6 @@ test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell
 #* load ssh keys into the macOS ssh agent
 ssh-add --apple-load-keychain 2> /dev/null  
 
-# [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
@@ -79,18 +73,3 @@ ssh-add --apple-load-keychain 2> /dev/null
 export PYENV_ROOT="$HOME/.pyenv"
 export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init --path)"
-
-# # Source paths for zsh plugins
-
-# source $OMZ/lib/directories.zsh #* enables 'd' directory stack
-# source $OMZ/plugins/z/z.plugin.zsh
-# source $OMZ/plugins/taskwarrior/taskwarrior.plugin.zsh
-# source $OMZ/plugins/pyenv/pyenv.plugin.zsh
-# source $PLUGINS/powerlevel10k/powerlevel10k.zsh-theme
-# source $PLUGINS/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-# source $PLUGINS/zsh-autosuggestions/zsh-autosuggestions.zsh
-# source $PLUGINS/zsh-completions/zsh-completions.plugin.zsh
-# source $PLUGINS/zsh-history-substring-search/zsh-history-substring-search.zsh
-# source $OMZ/plugins/nmap/nmap.plugin.zsh
-
-# # source $OMZ/plugins/fzf/fzf.plugin.zsh
