@@ -6,16 +6,22 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
+#* Declare some path variables
+DOTS=$HOME/.dotfiles
+OMZ=$HOME/bin/plugins/ohmyzsh
+PLUGINS=$HOME/bin/plugins
+
+# Source paths for aliases and functions
+source $DOTS/.zshrc_aliases
+source $DOTS/.zshrc_functions
+
 #* Add to PATH
 export PATH="/opt/homebrew/opt/coreutils/libexec/gnubin:$PATH"
 export PATH="/opt/homebrew/opt/gnu-sed/libexec/gnubin:$PATH"
 export PATH="/opt/homebrew/opt/gawk/libexec/gnubin:$PATH"
 export PATH="$HOME/bin/scripts/:$PATH"
 export PATH="/opt/homebrew/bin:$PATH"
-<<<<<<< HEAD
-=======
 export PATH="/opt/homebrew/sbin:$PATH"
->>>>>>> 6aa37bc5d4c7741c412c6f97d0de7c7b914245c0
 
 #* Exported Variables
 export RCLONE_PASSWORD_COMMAND="security find-generic-password -a $USER -s rclone -w"
@@ -32,6 +38,9 @@ bindkey -e #* use emacs mode for line navigation
 #* Bindkey for line word jump
 bindkey "^[[1;3C" forward-word
 bindkey "^[[1;3D" backward-word
+
+bindkey '^[[A' history-substring-search-up
+bindkey '^[[B' history-substring-search-down
 
 # The following lines were added by compinstall
 zstyle :compinstall filename '$HOME/.zshrc'
@@ -67,9 +76,22 @@ ssh-add --apple-load-keychain 2> /dev/null
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
-#* Pyenv Config
+#* Pyenv Config (put before ohmyzsh plugin to avoid error)
 export PYENV_ROOT="$HOME/.pyenv"
-command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
-eval "$(pyenv init -)"
+export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init --path)"
 
+# Source paths for zsh plugins
 
+source $OMZ/lib/directories.zsh #* enables 'd' directory stack
+source $OMZ/plugins/z/z.plugin.zsh
+source $OMZ/plugins/taskwarrior/taskwarrior.plugin.zsh
+source $OMZ/plugins/pyenv/pyenv.plugin.zsh
+source $PLUGINS/powerlevel10k/powerlevel10k.zsh-theme
+source $PLUGINS/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source $PLUGINS/zsh-autosuggestions/zsh-autosuggestions.zsh
+source $PLUGINS/zsh-completions/zsh-completions.plugin.zsh
+source $PLUGINS/zsh-history-substring-search/zsh-history-substring-search.zsh
+source $OMZ/plugins/nmap/nmap.plugin.zsh
+
+# source $OMZ/plugins/fzf/fzf.plugin.zsh
