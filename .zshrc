@@ -6,6 +6,15 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
+#* Declare some path variables
+DOTS=$HOME/.dotfiles
+OMZ=$HOME/bin/plugins/ohmyzsh
+PLUGINS=$HOME/bin/plugins
+
+# Source paths for aliases and functions
+source $DOTS/.zshrc_aliases
+source $DOTS/.zshrc_functions
+
 #* Add to PATH
 export PATH="/opt/homebrew/opt/coreutils/libexec/gnubin:$PATH"
 export PATH="/opt/homebrew/opt/gnu-sed/libexec/gnubin:$PATH"
@@ -30,35 +39,14 @@ bindkey -e #* use emacs mode for line navigation
 bindkey "^[[1;3C" forward-word
 bindkey "^[[1;3D" backward-word
 
+bindkey '^[[A' history-substring-search-up
+bindkey '^[[B' history-substring-search-down
+
 # The following lines were added by compinstall
 zstyle :compinstall filename '$HOME/.zshrc'
 autoload -Uz compinit
 compinit 
 # End of lines added by compinstall
-
-#* Pyenv Config (put before ohmyzsh plugin to avoid error)
-export PYENV_ROOT="$HOME/.pyenv"
-export PATH="$PYENV_ROOT/bin:$PATH"
-eval "$(pyenv init --path)"
-
-# Source paths for zsh plugins
-DOTS=$HOME/.dotfiles
-ZSH=$HOME/bin/plugins/ohmyzsh
-PLUGINS=$HOME/bin/plugins
-source $ZSH/lib/directories.zsh #* enables 'd' directory stack
-source $ZSH/plugins/z/z.plugin.zsh
-source $ZSH/plugins/taskwarrior/taskwarrior.plugin.zsh
-source $ZSH/plugins/pyenv/pyenv.plugin.zsh
-source $PLUGINS/powerlevel10k/powerlevel10k.zsh-theme
-source $PLUGINS/zsh-autosuggestions/zsh-autosuggestions.zsh
-source $PLUGINS/zsh-history-substring-search/zsh-history-substring-search.zsh
-source $PLUGINS/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-# source $ZSH/plugins/fzf/fzf.plugin.zsh
-source $ZSH/plugins/nmap/nmap.plugin.zsh
-
-# Source paths for aliases and functions
-source $DOTS/.zshrc_aliases
-source $DOTS/.zshrc_functions
 
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 
@@ -69,3 +57,23 @@ ssh-add --apple-load-keychain 2> /dev/null
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
+#* Pyenv Config (put before ohmyzsh plugin to avoid error)
+export PYENV_ROOT="$HOME/.pyenv"
+export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init --path)"
+
+# Source paths for zsh plugins
+
+source $OMZ/lib/directories.zsh #* enables 'd' directory stack
+source $OMZ/plugins/z/z.plugin.zsh
+source $OMZ/plugins/taskwarrior/taskwarrior.plugin.zsh
+source $OMZ/plugins/pyenv/pyenv.plugin.zsh
+source $PLUGINS/powerlevel10k/powerlevel10k.zsh-theme
+source $PLUGINS/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source $PLUGINS/zsh-autosuggestions/zsh-autosuggestions.zsh
+source $PLUGINS/zsh-completions/zsh-completions.plugin.zsh
+source $PLUGINS/zsh-history-substring-search/zsh-history-substring-search.zsh
+source $OMZ/plugins/nmap/nmap.plugin.zsh
+
+# source $OMZ/plugins/fzf/fzf.plugin.zsh
