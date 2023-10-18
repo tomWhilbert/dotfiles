@@ -25,7 +25,7 @@ alias grep='ggrep -i --color'
 alias pgrep='pgrep -i'
 alias cat='bat'
 alias vim='/opt/homebrew/bin/nvim'
-alias wp='/Users/thomaswhilbert/bin/scripts/walk-pull/wp.sh'
+alias wpt='/Users/tom/bin/scripts/walk-pull/wp.sh' #wpt == walk pull tom vs work name
 
 #* Python
 alias py='python'
