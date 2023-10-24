@@ -47,6 +47,11 @@ autoload -Uz compinit
 compinit 
 # End of lines added by compinstall
 
+#* Pyenv Config (put before ohmyzsh plugin to avoid error)
+export PYENV_ROOT="$HOME/.pyenv"
+export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init --path)"
+
 # Source paths for zsh plugins
 source $OMZ/lib/directories.zsh #* enables 'd' directory stack
 source $OMZ/plugins/z/z.plugin.zsh
@@ -69,7 +74,4 @@ ssh-add --apple-load-keychain 2> /dev/null
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
-#* Pyenv Config (put before ohmyzsh plugin to avoid error)
-export PYENV_ROOT="$HOME/.pyenv"
-export PATH="$PYENV_ROOT/bin:$PATH"
-eval "$(pyenv init --path)"
+
