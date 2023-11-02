@@ -63,11 +63,11 @@ source $PLUGINS/zsh-history-substring-search/zsh-history-substring-search.zsh
 source $PLUGINS/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source $OMZ/plugins/nmap/nmap.plugin.zsh
 
-# Source paths for aliases and functions
-source $DOTS/.zshrc_aliases
-source $DOTS/.zshrc_functions
+# # Source paths for aliases and functions
+# source $DOTS/.zshrc_aliases
+# source $DOTS/.zshrc_functions
 
-test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
+# test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 
 #* load ssh keys into the macOS ssh agent
 ssh-add --apple-load-keychain 2> /dev/null  
