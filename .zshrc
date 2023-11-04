@@ -36,17 +36,18 @@ export OMZ=/home/tom/bin/plugins/ohmyzsh
 export DOTS=/home/tom/.dotfiles
 
 #* Aliases, Themes and plugins - return to git clone and scripted update method
-#* 
 
+source $DOTS/.zshrc_aliases
+source $DOTS/.zshrc_functions
 source $PLUGINS/powerlevel10k/powerlevel10k.zsh-theme
 source $PLUGINS/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source $PLUGINS/zsh-autosuggestions/zsh-autosuggestions.zsh
 source $PLUGINS/zsh-history-substring-search/zsh-history-substring-search.zsh
 source $OMZ/plugins/z/z.plugin.zsh    #* source from omz cloned directory
 source $OMZ/lib/directories.zsh #* source from omz cloned directory
-source $DOTS/.zshrc_aliases
-source $DOTS/.zshrc_functions
 source $OMZ/plugins/firewalld/firewalld.plugin.zsh
+
+
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
