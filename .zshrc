@@ -26,22 +26,22 @@ export PATH="/opt/homebrew/sbin:$PATH"
 #* Environment Variables
 export RCLONE_PASSWORD_COMMAND="security find-generic-password -a $USER -s rclone -w"
 export RESTIC_PASSWORD="security find-generic-password -a $USER -s restic -w"
-export BAT_THEME="Monokai Extended Bright"
+export BAT_THEME="gruvbox-dark"
 
 # Lines configured by zsh-newuser-install
 HISTFILE=~/.histfile    
 HISTSIZE=50000
 SAVEHIST=50000
 setopt autocd beep extendedglob nomatch notify hist_ignore_dups hist_ignore_space inc_append_history_time sharehistory
-bindkey -v #* use vi mode for line navigation
+bindkey -e #* use emacs mode for line navigation
 # End of lines configured by zsh-newuser-install
 
 #* Bindkey for line word jump
-bindkey "^[[1;3C" forward-word
-bindkey "^[[1;3D" backward-word
+bindkey "^[^[[C" forward-word
+bindkey "^[^[[D" backward-word
 
-bindkey '^[[A' history-substring-search-up
-bindkey '^[[B' history-substring-search-down
+bindkey '^[^[[A' history-substring-search-up
+bindkey '^[^[[B' history-substring-search-down
 
 # The following lines were added by compinstall
 zstyle :compinstall filename '$HOME/.zshrc'
@@ -57,16 +57,11 @@ eval "$(pyenv init --path)"
 # Source paths for zsh plugins
 source $OMZ/lib/directories.zsh #* enables 'd' directory stack
 source $OMZ/plugins/z/z.plugin.zsh
-source $OMZ/plugins/taskwarrior/taskwarrior.plugin.zsh
+source $OMZ/plugins/nmap/nmap.plugin.zsh
 source $PLUGINS/powerlevel10k/powerlevel10k.zsh-theme
 source $PLUGINS/zsh-autosuggestions/zsh-autosuggestions.zsh
 source $PLUGINS/zsh-history-substring-search/zsh-history-substring-search.zsh
 source $PLUGINS/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-source $OMZ/plugins/nmap/nmap.plugin.zsh
-
-# Source paths for aliases and functions
-source $DOTS/.zshrc_aliases
-source $DOTS/.zshrc_functions
 
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 
