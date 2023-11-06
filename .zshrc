@@ -11,10 +11,6 @@ DOTS=$HOME/.dotfiles
 OMZ=$HOME/bin/plugins/ohmyzsh
 PLUGINS=$HOME/bin/plugins
 
-# Source paths for aliases and functions
-source $DOTS/.zshrc_aliases
-source $DOTS/.zshrc_functions
-
 #* Add to PATH
 export PATH="/opt/homebrew/opt/coreutils/libexec/gnubin:$PATH"
 export PATH="/opt/homebrew/opt/gnu-sed/libexec/gnubin:$PATH"
@@ -72,4 +68,6 @@ ssh-add --apple-load-keychain 2> /dev/null
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
-
+#* Source aliases and functions
+source $DOTS/.zshrc_aliases
+source $DOTS/.zshrc_functions

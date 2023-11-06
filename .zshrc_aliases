@@ -1,4 +1,4 @@
-
+#* ls to exa
 alias l='exa --long --all --icons'
 alias lsg='exa --long --all --icons -g'
 alias lsh="ls -a | grep '^\.'"
@@ -9,6 +9,13 @@ alias lt='exa --long --all -snew'
 alias lw='exa --all'
 alias lS='exa --long --all --icons -s=size'
 
+#* Misc macOS 
+alias ss='sudo lsof -PiTCP -sTCP:LISTEN'  #* an analog to the linux ss command
+alias tldr='tldr --color always'
+alias fdns='sudo dscacheutil -flushcache; sudo killall -HUP mDNSResponder'
+alias lsgroups='dscl . -list /Groups'
+alias getssid='sudo /System/Library/PrivateFrameworks/Apple80211.framework/Versions/A/Resources/airport -I'
+alias bathelp='bat --plain --language=help'
 alias x='chmod +x'
 alias buu='brew update && brew upgrade'
 alias rmf='rm -rf'
@@ -34,14 +41,6 @@ alias py='python'
 #alias vmdeb='vmrun -T fusion start "/Users/thomaswhilbert/Virtual-Machines/Debian 10.x 64-bit.vmwarevm/Debian 10.x 64-bit.vmx" nogui'
 #alias vbls='VBoxManage list vms'
 alias ut='/usr/local/bin/utmctl'
-
-#* Misc macOS 
-alias ss='sudo lsof -PiTCP -sTCP:LISTEN'  #* an analog to the linux ss command
-alias tldr='tldr --color always'
-alias fdns='sudo dscacheutil -flushcache; sudo killall -HUP mDNSResponder'
-alias lsgroups='dscl . -list /Groups'
-alias getssid='sudo /System/Library/PrivateFrameworks/Apple80211.framework/Versions/A/Resources/airport -I'
-alias bathelp='bat --plain --language=help'
 
 alias wake='wakeonlan -i 192.168.20.255 60:f8:1d:cf:81:06'
 
