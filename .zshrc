@@ -59,9 +59,10 @@ source $OMZ/lib/directories.zsh #* enables 'd' directory stack
 source $OMZ/plugins/z/z.plugin.zsh
 source $OMZ/plugins/nmap/nmap.plugin.zsh
 source $PLUGINS/powerlevel10k/powerlevel10k.zsh-theme
+source $PLUGINS/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source $PLUGINS/zsh-autosuggestions/zsh-autosuggestions.zsh
 source $PLUGINS/zsh-history-substring-search/zsh-history-substring-search.zsh
-source $PLUGINS/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
 
 # test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 
