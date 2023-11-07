@@ -28,17 +28,15 @@ setopt hist_ignore_space
 #* Enivronment Variables 
 export PATH="$PATH:$HOME/bin:/home/tom/bin/scripts/walk-pull"
 export RCLONE_PASSWORD_COMMAND="pass rclone/config"  
-#export BAT_THEME="Monokai Extended Bright"
+export BAT_THEME="gruvbox-dark"
 export EDITOR=/usr/bin/vim
 export VISUAL=/usr/bin/vim
 export PLUGINS=/home/tom/bin/plugins
 export OMZ=/home/tom/bin/plugins/ohmyzsh
 export DOTS=/home/tom/.dotfiles
 
-#* Aliases, Themes and plugins - return to git clone and scripted update method
+#* Themes and plugins - return to git clone and scripted update method
 
-source $DOTS/.zshrc_aliases
-source $DOTS/.zshrc_functions
 source $PLUGINS/powerlevel10k/powerlevel10k.zsh-theme
 source $PLUGINS/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source $PLUGINS/zsh-autosuggestions/zsh-autosuggestions.zsh
@@ -57,3 +55,7 @@ bindkey -e  #* Sets line edit behavior to emacs (ctrl+e beginning of line etc.)
 bindkey "^[[1;5D" backward-word
 bindkey "^[[1;5C" forward-word
 bindkey "^[[3~" delete-char
+
+#* Source aliases and functions
+source $DOTS/.zshrc_aliases
+source $DOTS/.zshrc_functions
