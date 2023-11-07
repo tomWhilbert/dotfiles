@@ -11,10 +11,6 @@ DOTS=$HOME/.dotfiles
 OMZ=$HOME/bin/plugins/ohmyzsh
 PLUGINS=$HOME/bin/plugins
 
-# Source paths for aliases and functions
-source $DOTS/.zshrc_aliases
-source $DOTS/.zshrc_functions
-
 #* Add to PATH
 export PATH="/opt/homebrew/opt/coreutils/libexec/gnubin:$PATH"
 export PATH="/opt/homebrew/opt/gnu-sed/libexec/gnubin:$PATH"
@@ -59,9 +55,10 @@ source $OMZ/lib/directories.zsh #* enables 'd' directory stack
 source $OMZ/plugins/z/z.plugin.zsh
 source $OMZ/plugins/nmap/nmap.plugin.zsh
 source $PLUGINS/powerlevel10k/powerlevel10k.zsh-theme
+source $PLUGINS/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source $PLUGINS/zsh-autosuggestions/zsh-autosuggestions.zsh
 source $PLUGINS/zsh-history-substring-search/zsh-history-substring-search.zsh
-source $PLUGINS/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
 
 # test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 
@@ -71,4 +68,6 @@ ssh-add --apple-load-keychain 2> /dev/null
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
-
+#* Source aliases and functions
+source $DOTS/.zshrc_aliases
+source $DOTS/.zshrc_functions
