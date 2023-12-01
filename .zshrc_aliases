@@ -31,7 +31,7 @@ alias zrf='code $HOME/.dotfiles/.zshrc_functions'
 alias grep='ggrep -i --color'
 alias pgrep='pgrep -i'
 alias cat='bat'
-alias vim='/opt/homebrew/bin/nvim'
+# alias vim='/opt/homebrew/bin/nvim'
 alias wp='$HOME/bin/scripts/walk-pull/wp.sh'
 
 #* Python
