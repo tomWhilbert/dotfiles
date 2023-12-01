@@ -18,6 +18,7 @@ export PATH="/opt/homebrew/opt/gawk/libexec/gnubin:$PATH"
 export PATH="$HOME/bin/scripts/:$PATH"
 export PATH="/opt/homebrew/bin:$PATH"
 export PATH="/opt/homebrew/sbin:$PATH"
+export PATH="$HOME/bin/oh-my-bash:$PATH"
 
 #* Environment Variables
 #export RCLONE_PASSWORD_COMMAND="security find-generic-password -a $USER -s rclone -w"
