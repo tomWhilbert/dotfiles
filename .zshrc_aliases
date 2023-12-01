@@ -33,7 +33,7 @@ alias pgrep='pgrep -i'
 alias cat='bat'
 # alias vim='/opt/homebrew/bin/nvim'
 alias wp='$HOME/bin/scripts/walk-pull/wp.sh'
-alias posh='bash --rcfile $HOME/.dotfiles/.bashrc'
+alias posh='bash --rcfile $HOME/.dotfiles/.bashrc_posh'
 alias obash='bash --rcfile $HOME/.dotfiles/archive/.bashrc_OMB'
 
 #* Python
