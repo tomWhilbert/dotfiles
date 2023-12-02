@@ -21,7 +21,7 @@ export PATH="/opt/homebrew/sbin:$PATH"
 export PATH="$HOME/bin/oh-my-bash:$PATH"
 
 #* Environment Variables
-#export RCLONE_PASSWORD_COMMAND="security find-generic-password -a $USER -s rclone -w"
+export RCLONE_PASSWORD_COMMAND="security find-generic-password -a $USER -s rclone -w"
 export RESTIC_PASSWORD="security find-generic-password -a $USER -s restic -w"
 export BAT_THEME="gruvbox-dark"
 
