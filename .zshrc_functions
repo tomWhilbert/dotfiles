@@ -241,7 +241,6 @@ gpgsym () {
 pow4 () {
 	cd /Users/thomaswhilbert/Library/CloudStorage/OneDrive-A-BTech.Comm.College/Documents/Password-scripts/ || exit
 	pwsh four-word-passwords.ps1 > pow4.file
-	sed -n '6,25p' pow4.file > pow4.file.new
+	sed -n '6,25p' pow4.file > pow4.file.new | sort -R
 	awk 'NR==1 {print $1}' pow4.file.new | pbcopy
-	#* use the awk rand() to randomize the line it picks?
 	}
