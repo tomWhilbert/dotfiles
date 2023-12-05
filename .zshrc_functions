@@ -238,8 +238,8 @@ gpgsym () {
 
 
 #* Create a four word password using powershell
-pow4 () {
-	cd /Users/thomaswhilbert/Library/CloudStorage/OneDrive-A-BTech.Comm.College/Documents/Password-scripts/ || exit
+pw4 () {
+	cd /Users/tom/OneDrive/Documents/Password-scripts || exit
 	pwsh four-word-passwords.ps1 > pow4.file
 	sed -n '6,25p' pow4.file > pow4.file.new
 	awk 'NR==1 {print $1}' pow4.file.new | pbcopy
