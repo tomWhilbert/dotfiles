@@ -72,3 +72,5 @@ ssh-add --apple-load-keychain 2> /dev/null
 #* Source aliases and functions
 source $DOTS/.zshrc_aliases
 source $DOTS/.zshrc_functions
+
+
