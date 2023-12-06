@@ -32,6 +32,7 @@ alias getdns='getent ahostsv4'
 alias inform='sudo informant'
 alias pacv="pacman -Qq | fzf --preview 'pacman -Qil {}' --layout=reverse --bind 'enter:execute(pacman -Qil {} | less)'"
 alias stoc='stat -c %a'
+alias yay='sudo paru '
 
 #* btrfs
 alias sub='sudo btrfs '
@@ -72,3 +73,5 @@ alias network.connections='lsof -l -i +L -R -V'
 alias network.established='lsof -l -i +L -R -V | grep ESTABLISHED'
 alias nq='nmap -sn 192.168.0.0/24'
 
+# Sudo
+alias lvm='sudo lvm '
