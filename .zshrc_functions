@@ -241,7 +241,7 @@ gpgsym () {
 pw4 () {
 	cd /Users/tom/OneDrive/Documents/Password-scripts || exit
 	pwsh four-word-passwords.ps1 > pow4.file
-	sed -n '6,25p' pow4.file > pow4.file.new | sort -R
+	sed -n '6,25p' pow4.file > pow4.file.new
 	awk 'NR==1 {print $1}' pow4.file.new | pbcopy
 	echo "The passphrase is now in the clipboard."
 	}
