@@ -23,6 +23,11 @@ alias tml='tmux ls'
 alias tmn='tmux new-session -t'
 alias lb='/usr/bin/lsblk'
 alias lbf='/usr/bin/lsblk -f'
+alias zrc='code $HOME/.dotfiles/.zshrc'
+alias zra='code $HOME/.dotfiles/.zshrc_aliases'
+alias zrf='code $HOME/.dotfiles/.zshrc_functions'
+alias wp='$HOME/bin/scripts/walk-pull/wp'
+
 
 #* Arch/Linux specific aliases
 alias reflect='sudo reflector --latest 5 --sort rate --country US --save /etc/pacman.d/mirrorlist' 
@@ -75,3 +80,4 @@ alias nq='nmap -sn 192.168.0.0/24'
 
 # Sudo
 alias lvm='sudo lvm '
+alias 'dust=dust --no-percent-bars'
