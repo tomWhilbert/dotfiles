@@ -26,7 +26,7 @@ setopt hist_ignore_dups
 setopt hist_ignore_space
 
 #* Enivronment Variables 
-export PATH="$PATH:$HOME/bin:/home/tom/bin/scripts/walk-pull"
+# export PATH="$PATH:$HOME/bin:/home/tom/bin/scripts/walk-pull"
 export RCLONE_PASSWORD_COMMAND="pass rclone/config"  
 export BAT_THEME="gruvbox-dark"
 export EDITOR=/usr/bin/vim
