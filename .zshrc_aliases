@@ -67,3 +67,4 @@ alias gr='git restore'
 alias jr='echo $(security find-generic-password -a thomaswhilbert -s AD -w) | sudo -S jamf recon'
 
 
+

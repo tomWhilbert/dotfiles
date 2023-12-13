@@ -1,3 +1,6 @@
+# zmodload zsh/zprof
+# Enable zmodload at tope and bottom to profile startup time
+
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
 # confirmations, etc.) must go above this block; everything else may go below.
@@ -76,7 +79,9 @@ source $DOTS/.zshrc_functions
 
 
 # The next line updates PATH for the Google Cloud SDK.
-if [ -f '/Users/tom/Downloads/gcloud/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/tom/Downloads/gcloud/google-cloud-sdk/path.zsh.inc'; fi
+if [ -f '/Users/tom/bin/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/tom/bin/google-cloud-sdk/path.zsh.inc'; fi
 
 # The next line enables shell command completion for gcloud.
-if [ -f '/Users/tom/Downloads/gcloud/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/tom/Downloads/gcloud/google-cloud-sdk/completion.zsh.inc'; fi
+if [ -f '/Users/tom/bin/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/tom/bin/google-cloud-sdk/completion.zsh.inc'; fi
+
+# zprof
