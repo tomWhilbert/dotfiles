@@ -32,7 +32,13 @@ export BAT_THEME="gruvbox-dark"
 HISTFILE=~/.histfile    
 HISTSIZE=50000
 SAVEHIST=50000
-setopt autocd beep extendedglob nomatch notify hist_ignore_dups hist_ignore_space inc_append_history_time sharehistory
+setopt autocd beep extendedglob nomatch notify inc_append_history_time sharehistory
+setopt HIST_EXPIRE_DUPS_FIRST
+setopt HIST_IGNORE_DUPS
+setopt HIST_IGNORE_ALL_DUPS
+setopt HIST_IGNORE_SPACE
+setopt HIST_FIND_NO_DUPS
+setopt HIST_SAVE_NO_DUPS
 bindkey -e #* use emacs mode for line navigation
 # End of lines configured by zsh-newuser-install
 
