@@ -40,8 +40,8 @@ setopt HIST_IGNORE_ALL_DUPS
 setopt HIST_IGNORE_SPACE
 setopt HIST_FIND_NO_DUPS
 setopt HIST_SAVE_NO_DUPS
-bindkey -e #* use emacs mode for line navigation
-# End of lines configured by zsh-newuser-install
+bindkey -e #* use emacs mode
+# End of lines configured by zsh-newuser-installd
 
 #* Bindkey for line word jump
 bindkey "^[^[[C" forward-word
@@ -49,6 +49,9 @@ bindkey "^[^[[D" backward-word
 
 bindkey '^[^[[A' history-substring-search-up
 bindkey '^[^[[B' history-substring-search-down
+
+#* Tab Autocomplete
+bindkey '^I' autosuggest-accept
 
 # The following lines were added by compinstall
 zstyle :compinstall filename '$HOME/.zshrc'
