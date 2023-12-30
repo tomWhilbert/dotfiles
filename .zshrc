@@ -44,14 +44,16 @@ bindkey -e #* use emacs mode
 # End of lines configured by zsh-newuser-installd
 
 #* Bindkey for line word jump
+#* Tab Autocomplete
+bindkey '^I' autosuggest-accept
+
 bindkey "^[^[[C" forward-word
 bindkey "^[^[[D" backward-word
 
 bindkey '^[^[[A' history-substring-search-up
 bindkey '^[^[[B' history-substring-search-down
 
-#* Tab Autocomplete
-# bindkey '^I' autosuggest-accept
+
 
 # The following lines were added by compinstall
 zstyle :compinstall filename '$HOME/.zshrc'
