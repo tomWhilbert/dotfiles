@@ -51,7 +51,7 @@ bindkey '^[^[[A' history-substring-search-up
 bindkey '^[^[[B' history-substring-search-down
 
 #* Tab Autocomplete
-bindkey '^I' autosuggest-accept
+# bindkey '^I' autosuggest-accept
 
 # The following lines were added by compinstall
 zstyle :compinstall filename '$HOME/.zshrc'
@@ -74,8 +74,6 @@ source $PLUGINS/zsh-autosuggestions/zsh-autosuggestions.zsh
 source $PLUGINS/zsh-history-substring-search/zsh-history-substring-search.zsh
 
 
-# test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
-
 #* load ssh keys into the macOS ssh agent
 ssh-add --apple-load-keychain 2> /dev/null  
 
@@ -87,11 +85,8 @@ source $DOTS/.zshrc_aliases
 source $DOTS/.zshrc_functions
 
 
-
 # The next line updates PATH for the Google Cloud SDK.
 if [ -f '/Users/tom/bin/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/tom/bin/google-cloud-sdk/path.zsh.inc'; fi
 
 # The next line enables shell command completion for gcloud.
-if [ -f '/Users/tom/bin/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/tom/bin/google-cloud-sdk/completion.zsh.inc'; fi
-
-# zprof
+if [ -f '/Users/tom/bin/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/tom/bin/google-cloud-sdk/completion.zsh.inc'; fi 
