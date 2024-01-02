@@ -66,5 +66,6 @@ alias gr='git restore'
 #* Jamf
 alias jr='echo $(security find-generic-password -a thomaswhilbert -s AD -w) | sudo -S jamf recon'
 
-
+#* Restic Backup
+alias rbak='/Users/tom/bin/scripts/backups/backups_restic/./restic_homedir.sh'
 
