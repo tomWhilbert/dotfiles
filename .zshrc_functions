@@ -241,9 +241,8 @@ gpgsym () {
 pow4 () {
 	cd /Users/thomaswhilbert/Library/CloudStorage/OneDrive-A-BTech.Comm.College/Documents/Password-scripts/ || exit
 	pwsh four-word-passwords.ps1 > pow4.file
-	sed -n '6,25p' pow4.file > pow4.file.new
-	sort -R pow4.file.new #* shuffle the output
-	awk 'NR==1 {print $1}' pow4.file.new | sort -R | pbcopy
+	sed -n '6,25p' pow4.file > pow4.file.new | sort -R
+	awk 'NR==1 {print $1}' pow4.file.new | pbcopy
 	rm pow4*
 	cd "$HOME" || exit
 	}
