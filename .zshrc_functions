@@ -149,7 +149,7 @@ hostab () {
 	}
 
 chks () {
-		echo "$1" "$2" | sha256sum --check
+		echo "$1" "$2" | shasum -a 256
 }
 #* param 1 is the file hash sum, param 2 is the target file
 
@@ -245,4 +245,5 @@ pow4 () {
 	sort -R pow4.file.new #* shuffle the output
 	awk 'NR==1 {print $1}' pow4.file.new | sort -R | pbcopy
 	rm pow4*
+	cd "$HOME" || exit
 	}
