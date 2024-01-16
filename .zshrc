@@ -13,6 +13,7 @@ fi
 DOTS=$HOME/.dotfiles
 OMZ=$HOME/bin/plugins/ohmyzsh
 PLUGINS=$HOME/bin/plugins
+RESTIC_REPO=/Volumes/mbp16/backup/restic/homedir
 
 #* Add to PATH
 export PATH="/opt/homebrew/opt/uutils-coreutils/libexec/uubin:$PATH"

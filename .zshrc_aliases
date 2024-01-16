@@ -35,6 +35,7 @@ alias cat='bat'
 alias wp='$HOME/bin/scripts/walk-pull/wp.sh'
 alias posh='bash --rcfile $HOME/.dotfiles/.bashrc_posh'
 alias omb='bash --rcfile $HOME/.dotfiles/.bashrc_OMB'
+alias ip='/Users/tom/bin/scripts/get-ip/./ip-macOS.sh'
 
 #* Python
 alias py='python'
