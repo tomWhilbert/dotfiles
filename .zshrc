@@ -28,6 +28,7 @@ export PATH="$HOME/bin/oh-my-bash:$PATH"
 export RCLONE_PASSWORD_COMMAND="security find-generic-password -a $USER -s rclone -w"
 export RESTIC_PASSWORD="security find-generic-password -a $USER -s restic -w"
 export BAT_THEME="gruvbox-dark"
+export HOMEBREW_CASK_OPTS="--appdir=$HOME/Applications caskroom=$HOME/Applications"
 
 # Lines configured by zsh-newuser-install
 HISTFILE=~/.histfile    
