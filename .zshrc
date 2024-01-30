@@ -54,8 +54,6 @@ bindkey "^[^[[D" backward-word
 bindkey '^[^[[A' history-substring-search-up
 bindkey '^[^[[B' history-substring-search-down
 
-
-
 # The following lines were added by compinstall
 zstyle :compinstall filename '$HOME/.zshrc'
 autoload -Uz compinit
@@ -76,7 +74,6 @@ source $PLUGINS/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source $PLUGINS/zsh-autosuggestions/zsh-autosuggestions.zsh
 source $PLUGINS/zsh-history-substring-search/zsh-history-substring-search.zsh
 
-
 #* load ssh keys into the macOS ssh agent
 ssh-add --apple-load-keychain 2> /dev/null  
 
@@ -86,7 +83,6 @@ ssh-add --apple-load-keychain 2> /dev/null
 #* Source aliases and functions
 source $DOTS/.zshrc_aliases
 source $DOTS/.zshrc_functions
-
 
 # The next line updates PATH for the Google Cloud SDK.
 if [ -f '/Users/tom/bin/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/tom/bin/google-cloud-sdk/path.zsh.inc'; fi
