@@ -1,13 +1,8 @@
-#* ls to exa
-alias l='exa --long --all --icons'
-alias lsg='exa --long --all --icons -g'
-alias lsh="ls -a | grep '^\.'"
-alias lsd="l -D"
-alias ltr='exa --tree --level=2 --long'
-alias lr='exa --recurse'
-alias lt='exa --long --all -snew'
-alias lw='exa --all'
-alias lS='exa --long --all --icons -s=size'
+#* Replace eza with lsd on 2/17/24
+alias l='lsd -lah --date=+"%a %m/%d %H:%M"'
+alias lS='lsd -lS'
+alias lt='ls --tree'
+
 
 #* Misc macOS 
 alias ss='sudo lsof -PiTCP -sTCP:LISTEN'  #* an analog to the linux ss command
@@ -36,6 +31,7 @@ alias wp='$HOME/bin/scripts/walk-pull/wp.sh'
 alias posh='bash --rcfile $HOME/.dotfiles/.bashrc_posh'
 alias omb='bash --rcfile $HOME/.dotfiles/.bashrc_OMB'
 alias ip='/Users/tom/bin/scripts/get-ip/./ip-macOS.sh'
+alias tailscale='/Applications/Tailscale.app/Contents/MacOS/Tailscale'
 
 #* Python
 alias py='python'
@@ -43,7 +39,6 @@ alias py='python'
 #* Virtual Machines
 #alias vmdeb='vmrun -T fusion start "/Users/thomaswhilbert/Virtual-Machines/Debian 10.x 64-bit.vmwarevm/Debian 10.x 64-bit.vmx" nogui'
 #alias vbls='VBoxManage list vms'
-alias ut='/usr/local/bin/utmctl'
 
 alias wake='wakeonlan -i 192.168.20.255 60:f8:1d:cf:81:06'
 
@@ -64,8 +59,8 @@ alias gpo='git push -u origin'
 alias gp='git pull'
 alias gr='git restore'
 
-#* Jamf
-alias jr='echo $(security find-generic-password -a thomaswhilbert -s AD -w) | sudo -S jamf recon'
+# #* Jamf
+# alias jr='echo $(security find-generic-password -a thomaswhilbert -s AD -w) | sudo -S jamf recon'
 
 #* Restic Backup
 alias rbak='/Users/tom/bin/scripts/backups/restic/./restic-homedir.sh'

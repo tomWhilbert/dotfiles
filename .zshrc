@@ -1,5 +1,5 @@
 # zmodload zsh/zprof
-# Enable zmodload at tope and bottom to profile startup time
+# Enable zmodload at top and bottom to profile startup time
 
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
@@ -13,8 +13,7 @@ fi
 DOTS=$HOME/.dotfiles
 OMZ=$HOME/bin/plugins/ohmyzsh
 PLUGINS=$HOME/bin/plugins
-RESTIC_REPO=/Volumes/mbp16/backup/restic/homedir
-
+#RESTIC_REPO=/Volumes/mbp16/backup/restic/homedir
 #* Add to PATH
 export PATH="/opt/homebrew/opt/uutils-coreutils/libexec/uubin:$PATH"
 export PATH="/opt/homebrew/opt/gnu-sed/libexec/gnubin:$PATH"
@@ -26,9 +25,18 @@ export PATH="$HOME/bin/oh-my-bash:$PATH"
 
 #* Environment Variables
 export RCLONE_PASSWORD_COMMAND="security find-generic-password -a $USER -s rclone -w"
-export RESTIC_PASSWORD="security find-generic-password -a $USER -s restic -w"
+#export RESTIC_PASSWORD="security find-generic-password -a $USER -s restic -w"
 export BAT_THEME="gruvbox-dark"
 export HOMEBREW_CASK_OPTS="--appdir=$HOME/Applications caskroom=$HOME/Applications"
+
+#* brew zsh completions init
+ if type brew &>/dev/null
+ then
+   FPATH="$(brew --prefix)/share/zsh/site-functions:${FPATH}"
+
+   autoload -Uz compinit
+   compinit
+ fi
 
 # Lines configured by zsh-newuser-install
 HISTFILE=~/.histfile    
