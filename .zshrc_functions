@@ -26,7 +26,7 @@
 
 #* diskutil erase function
 	### $1 is the volume name
-	### $2 is the voluem path
+	### $2 is the volume path
 	de () {
 		diskutil eraseDisk exFAT "$1" /dev/disk"$2"
 		}
@@ -41,9 +41,9 @@
 		}
 
 #* cheat.sh command dictionary ###
-	ch () {
-		curl cht.sh/"$1"
-	}
+	# ch () {
+	# 	curl cht.sh/"$1"
+	# }
 
 	bak () {
 		cp "$1" "$1".bak_$(date +%m-%d-%Y)
@@ -78,14 +78,13 @@
 		rclone copy --max-age "$1" --no-traverse "$HOME"/Google_Drive gd: -P
 	}
 
-
 	gdpull () {
 		rclone copy --max-age "$1" --no-traverse gd: "$HOME"/Google_Drive -P
 	}
 
 	#* Nmap get all ips on local network
 	ips () {
-		nmap -sn 192.168.1.0/24 | awk '/Nmap scan/{gsub(/[()]/,"",$NF); print $NF > "nmap_scanned_ips"}'
+		nmap -sn 192.168."$1".0/24 | awk '/Nmap scan/{gsub(/[()]/,"",$NF); print $NF > "nmap_scanned_ips"}'
 		cat nmap_scanned_ips
 	}
 
@@ -112,7 +111,9 @@ pub () {
 }
 
 ytd () {
-	cd ~/Movies/Tubes || exit
+	echo "Enter the output path ... "
+	read -r "outpath"
+	cd "$outpath" || exit
     echo "Paste URL.. "
     read -r "target"
     /opt/homebrew/bin/yt-dlp "$target"
