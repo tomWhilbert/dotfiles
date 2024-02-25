@@ -1,88 +1,43 @@
-
-####* GIT COMMANDS ####
-
-	lg () #* use awk to parse out the branches as a choice??
-			{
-			BLUE='\033[0;34m'
-			# RED='\033[0;31m'
-			YELLOW='\033[0;33m'
-			echo -e "$BLUE Input your commit comments "
-			read -r comment
-			git add --all
-			git commit -m "$comment"
-			echo -e "$YELLOW Input the branch name "
-			read -r branch
-			git push -u origin "$branch"
-			}
-	 #* Run the line below in the '.git' directory
-	 #* awk '/branch/{ print $0 }' config | awk -F '"' '{print $2}'  **Grabs macOS and linux from git config**
-
-	#* Testing: parameter expansion for git, gq AKA, git quick.  Works can replace or work as alternative to lg ()
-	gq () {
-		git add --all .
-		git commit -m "${1:-update}"  #* recieve param 1 or if no input 'update'
-		git push 
+#* Testing: parameter expansion for git, gq AKA, git quick.  Works can replace or work as alternative to lg ()
+gq () {
+	git add --all .
+	git commit -m "${1:-update}"  #* recieve param 1 or if no input 'update'
+	git push 
 	}
 
 #* diskutil erase function
-	### $1 is the volume name
-	### $2 is the volume path
-	de () {
-		diskutil eraseDisk exFAT "$1" /dev/disk"$2"
-		}
-
-	dku () {
-		diskutil unmountDisk /dev/disk"$1"
+de () {
+	diskutil eraseDisk exFAT "$1" /dev/disk"$2"
+	}
+dku () {
+	diskutil unmountDisk /dev/disk"$1"
 	}
 
-	mkd () {
-		mkdir -p "$1"
-		cd "$1" || exit
-		}
+mkd () {
+	mkdir -p "$1"
+	cd "$1" || exit
+	}
 
-#* cheat.sh command dictionary ###
-	# ch () {
-	# 	curl cht.sh/"$1"
-	# }
-
-	bak () {
+bak () {
 		cp "$1" "$1".bak_$(date +%m-%d-%Y)
 	}
    
 	#* Disk Usage, Sorted by Size
-	dus () {
+dus () {
   	    RED='\033[0;31m'
 		BLUE='\033[0;34m'
        total=$(du -sh "$1" | cut -f1)
        du -sh "$1"/* | sort -h
        printf "\n"
        echo -e "$BLUE Total Size: $RED $total $BLUE in $RED $(readlink -f "$1")"
-   }
+   	}
 
 	#* Realpath a file
-	rpf () {
+rpf () {
 		realpath "$1" |  pbcopy
 	}
 
-	#* RClone Functions
-	
-	odpush () {
-		rclone copy --max-age "$1" --no-traverse "$HOME"/OneDrive od: -P
-	}
-
-	odpull () {
-		rclone copy --max-age "$1" --no-traverse od: "$HOME"/OneDrive -P
-	}
-
-	gdpush () {
-		rclone copy --max-age "$1" --no-traverse "$HOME"/Google_Drive gd: -P
-	}
-
-	gdpull () {
-		rclone copy --max-age "$1" --no-traverse gd: "$HOME"/Google_Drive -P
-	}
-
-	#* Nmap get all ips on local network
+				#* Nmap get all ips on local network
 	ips () {
 		nmap -sn 192.168."$1".0/24 | awk '/Nmap scan/{gsub(/[()]/,"",$NF); print $NF > "nmap_scanned_ips"}'
 		cat nmap_scanned_ips
@@ -97,18 +52,18 @@ man() {
     LESS_TERMCAP_ue=$'\e[0m' \
     LESS_TERMCAP_us=$'\e[01;32m' \
     command man "$@"
-}
+	}
 
 #* 'sd' == Space to Dash
 sd() {
 		for file in $1; 
 		do mv "$file" "$(echo "$file" | tr ' ' '-')" ; 
 		done
-}
+	}
 
 pub () {
 	curl -w "\n" ifconfig.me
-}
+	}
 
 ytd () {
 	echo "Enter the output path ... "
@@ -118,47 +73,12 @@ ytd () {
     read -r "target"
     /opt/homebrew/bin/yt-dlp "$target"
 	rm -rf ./*.part
-}
-
-#* Virtual Box  ** Keeping for reference **
-#* See Stack Exchange: https://unix.stackexchange.com/questions/218753/how-to-pass-variables-to-awk-command-with-conditions
-#* pass variable to awk was the key to getting it to work
-# vmh () {
-# 	VBoxManage list vms | nl
-# 	VBoxManage list vms | nl > vmz
-# 	printf "\n"
-# 	echo '     Choose a VM #' 
-# 	read -r num
-# 	vm=$(awk -v num="$num" 'NR==num {print}' < vmz | cut -d \" -f 2)
-# 	rm vmz
-# 	VBoxHeadless -s "$vm" &
-# 	sleep 1
-# 	printf "\n"
-# }
-
-digab () {
-	dig @10.60.20.20 "$1".asheville.cc.nc.us
-	
-}
-	
-hostab () {
-	BLUE='\033[0;34m'
-	addr=$(host "$1".asheville.cc.nc.us)
-	addr2=$(echo "$addr" | cut -d' ' -f4)
-	printf "\n"
-	echo "$BLUE $addr2"
 	}
 
+#* param 1 is the file hash sum, param 2 is the target file
 chks () {
 		echo "$1" "$2" | sha256sum --check
-}
-#* param 1 is the file hash sum, param 2 is the target file
-
-#* Using walk pull script now
-# wp () {
-# 	cd ~/bin || exit
-# 	find . -maxdepth 1 -type d \( ! -name . \) -exec bash -c "cd '{}' && git pull" \;
-# }
+	}
 
 net () {
 	BLUE='\033[0;34m' 
@@ -176,29 +96,11 @@ net () {
 	printf "\n"
 	echo "$BLUE Public IP: $NC $public"
 	rm nfile   
-}
+	}
 
 shoc () {
 	stat -c "%a" "$1"
-}
-
-vmfed() {
-	vmrun -T fusion start /Users/thomaswhilbert/Virtual\ Machines.localized/Fedora 64-bit.vmwarevm/Fedora\ 64-bit.vmx nogui
-	sleep 10
-	ssh fed
-}
-
-vmcen() {
-	vmrun -T fusion start /Users/thomaswhilbert/Virtual\ Machines.localized/CentosStream9.vmwarevm/CentosStream9.vmx nogui
-	sleep 10
-	#*ssh fed
-}
-
-vmdeb() {
-	vmrun -T fusion start /Users/thomaswhilbert/Virtual\ Machines.localized/Debian\ 11.x\ 64-bit\ Arm.vmwarevm/Debian\ 11.x\ 64-bit\ Arm.vmx nogui > /dev/null 2>&1 
-	sleep 8
-	ssh deb
-}
+	}
 
 psg () {
 	ps aux | grep "$1"
@@ -206,17 +108,17 @@ psg () {
 	
 hsg ()  {
 	hs | grep "$1"
-}
+	}
 
 #* Group Membership Lookups
 checkmember () {
 	dseditgroup -o checkmember -m "$1" "$2"
-}
+	}
 
 #* enable bat features while using the help command.
 help() {
     "$@" --help 2>&1 | bathelp
-}
+	}
 
 pysrv () {
 	BLUE='\033[0;34m' 
@@ -230,21 +132,11 @@ pysrv () {
 	echo "$BIYellow Control + C to end session"
 	echo "$NC" 
 	python3 -m http.server
-}
+	}
 
 #* Symmetric file encryption (AES 128 is the default, this increases it to 256), param 1 is the target file:
 gpgsym () {
 	gpg --symmetric --cipher-algo AES256 "$1"
-}
-
-
-#* Create a four word password using powershell
-pw4 () {
-	BIYellow='\033[1;93m'
-	cd $HOME/bin/Password-scripts || exit
-	pwsh four-word-passwords.ps1 > pow4.file
-	sed -n '6,25p' pow4.file > pow4.file.new
-	awk 'NR==1 {print $1}' pow4.file.new | pbcopy
-	echo "$BIYellow The passphrase is now in the clipboard."
-	rm pow*
 	}
+
+
