@@ -91,9 +91,3 @@ ssh-add --apple-load-keychain 2> /dev/null
 #* Source aliases and functions
 source $DOTS/.zshrc_aliases
 source $DOTS/.zshrc_functions
-
-# The next line updates PATH for the Google Cloud SDK.
-if [ -f '/Users/tom/bin/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/tom/bin/google-cloud-sdk/path.zsh.inc'; fi
-
-# The next line enables shell command completion for gcloud.
-if [ -f '/Users/tom/bin/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/tom/bin/google-cloud-sdk/completion.zsh.inc'; fi 
