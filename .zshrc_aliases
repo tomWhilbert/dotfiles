@@ -65,3 +65,5 @@ alias gr='git restore'
 #* Restic Backup
 # alias rbak='/Users/tom/bin/scripts/backups/restic/./restic-homedir.sh'
 
+#* Powershell
+alias psh='cat /Users/tom/.local/share/powershell/PSReadLine/ConsoleHost_history.txt'
