@@ -13,19 +13,16 @@ fi
 DOTS=$HOME/.dotfiles
 OMZ=$HOME/bin/plugins/ohmyzsh
 PLUGINS=$HOME/bin/plugins
-#RESTIC_REPO=/Volumes/mbp16/backup/restic/homedir
+
 #* Add to PATH
-export PATH="/opt/homebrew/opt/uutils-coreutils/libexec/uubin:$PATH"
 export PATH="/opt/homebrew/opt/gnu-sed/libexec/gnubin:$PATH"
 export PATH="/opt/homebrew/opt/gawk/libexec/gnubin:$PATH"
 export PATH="$HOME/bin/scripts/:$PATH"
 export PATH="/opt/homebrew/bin:$PATH"
 export PATH="/opt/homebrew/sbin:$PATH"
-export PATH="$HOME/bin/oh-my-bash:$PATH"
 
 #* Environment Variables
 export RCLONE_PASSWORD_COMMAND="security find-generic-password -a $USER -s rclone -w"
-#export RESTIC_PASSWORD="security find-generic-password -a $USER -s restic -w"
 export BAT_THEME="gruvbox-dark"
 export HOMEBREW_CASK_OPTS="--appdir=$HOME/Applications caskroom=$HOME/Applications"
 
@@ -33,7 +30,6 @@ export HOMEBREW_CASK_OPTS="--appdir=$HOME/Applications caskroom=$HOME/Applicatio
  if type brew &>/dev/null
  then
    FPATH="$(brew --prefix)/share/zsh/site-functions:${FPATH}"
-
    autoload -Uz compinit
    compinit
  fi
@@ -76,7 +72,6 @@ eval "$(pyenv init --path)"
 # Source paths for zsh plugins
 source $OMZ/lib/directories.zsh #* enables 'd' directory stack
 source $OMZ/plugins/z/z.plugin.zsh
-source $OMZ/plugins/nmap/nmap.plugin.zsh
 source $PLUGINS/powerlevel10k/powerlevel10k.zsh-theme
 source $PLUGINS/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source $PLUGINS/zsh-autosuggestions/zsh-autosuggestions.zsh
