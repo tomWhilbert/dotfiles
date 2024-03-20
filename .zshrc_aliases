@@ -1,4 +1,4 @@
-#* Replace eza with lsd on 2/17/24
+ #* Replace eza with lsd on 2/17/24
 alias l='lsd -lah --date=+"%a %m/%d %H:%M"'
 alias lS='lsd -lS'
 alias lt='l -tr'
@@ -32,6 +32,7 @@ alias posh='bash --rcfile $HOME/.dotfiles/.bashrc_posh'
 alias omb='bash --rcfile $HOME/.dotfiles/.bashrc_OMB'
 alias ip='/Users/tom/bin/scripts/get-ip/./ip-macOS.sh'
 alias tailscale='/Applications/Tailscale.app/Contents/MacOS/Tailscale'
+alias wh='where'
 
 #* Python
 alias py='python'
