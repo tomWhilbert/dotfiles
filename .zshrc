@@ -20,11 +20,15 @@ export PATH="/opt/homebrew/opt/gawk/libexec/gnubin:$PATH"
 export PATH="$HOME/bin/scripts/:$PATH"
 export PATH="/opt/homebrew/bin:$PATH"
 export PATH="/opt/homebrew/sbin:$PATH"
+# Created by `pipx` on 2024-04-09 15:09:26
+export PATH="$PATH:/Users/tom/.local/bin"
 
 #* Environment Variables
 export RCLONE_PASSWORD_COMMAND="security find-generic-password -a $USER -s rclone -w"
 export BAT_THEME="gruvbox-dark"
 export HOMEBREW_CASK_OPTS="--appdir=$HOME/Applications caskroom=$HOME/Applications"
+export BORG_PASSCOMMAND="security find-generic-password -a $USER -s borg -w"
+
 
 #* brew zsh completions init
  if type brew &>/dev/null
@@ -86,3 +90,5 @@ ssh-add --apple-load-keychain 2> /dev/null
 #* Source aliases and functions
 source $DOTS/.zshrc_aliases
 source $DOTS/.zshrc_functions
+
+
