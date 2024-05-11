@@ -2,10 +2,12 @@
 alias l='lsd -lah --date=+"%a %m/%d %H:%M"'
 alias lS='lsd -lS'
 alias lt='l -tr'
+alias li='l -i'
 
 
 #* Misc macOS 
 alias ss='sudo lsof -PiTCP -sTCP:LISTEN'  #* an analog to the linux ss command
+alias dig='/opt/homebrew/bin/dig'
 alias tldr='tldr --color always'
 alias fdns='sudo dscacheutil -flushcache; sudo killall -HUP mDNSResponder'
 alias lsgroups='dscl . -list /Groups'
@@ -68,5 +70,5 @@ alias gr='git restore'
 
 #* Powershell
 alias psh='cat /Users/tom/.local/share/powershell/PSReadLine/ConsoleHost_history.txt'
-alias dig='/opt/homebrew/bin/dig'
+
 
