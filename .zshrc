@@ -27,8 +27,6 @@ export PATH="$PATH:/Users/tom/.local/bin"
 export RCLONE_PASSWORD_COMMAND="security find-generic-password -a $USER -s rclone -w"
 export BAT_THEME="gruvbox-dark"
 export HOMEBREW_CASK_OPTS="--appdir=$HOME/Applications caskroom=$HOME/Applications"
-export BORG_PASSCOMMAND="security find-generic-password -a $USER -s borg -w"
-
 
 #* brew zsh completions init
  if type brew &>/dev/null
