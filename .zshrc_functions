@@ -13,15 +13,6 @@ dku () {
 	diskutil unmountDisk /dev/disk"$1"
 	}
 
-mkd () {
-	mkdir -p "$1"
-	cd "$1" || exit
-	}
-
-bak () {
-		cp "$1" "$1".bak_$(date +%m-%d-%Y)
-	}
-   
 	#* Disk Usage, Sorted by Size
 dus () {
   	    RED='\033[0;31m'
@@ -32,17 +23,11 @@ dus () {
        echo -e "$BLUE Total Size: $RED $total $BLUE in $RED $(readlink -f "$1")"
    	}
 
-	#* Realpath a file
-rpf () {
+	#* Grabe absolute path
+rp () {
 		realpath "$1" |  pbcopy
 	}
-
-				#* Nmap get all ips on local network
-	ips () {
-		nmap -sn 192.168."$1".0/24 | awk '/Nmap scan/{gsub(/[()]/,"",$NF); print $NF > "nmap_scanned_ips"}'
-		cat nmap_scanned_ips
-	}
-
+	
 #* Add color to less
 man() {
     LESS_TERMCAP_md=$'\e[01;31m' \
@@ -54,7 +39,7 @@ man() {
     command man "$@"
 	}
 
-#* 'sd' == Space to Dash
+#* Space to Dash
 sd() {
 		for file in $1; 
 		do mv "$file" "$(echo "$file" | tr ' ' '-')" ; 
@@ -118,20 +103,6 @@ checkmember () {
 #* enable bat features while using the help command.
 help() {
     "$@" --help 2>&1 | bathelp
-	}
-
-pysrv () {
-	BLUE='\033[0;34m' 
-	BIGreen='\033[1;92m' 
-	BIYellow='\033[1;93m'
-	NC='\033[0m'
-	ip4=$(scutil --nwi | grep address | cut -d':' -f2)
-	printf "\n"
-	echo "$BLUE Connect @ $BIGreen $ip4:8000"
-	printf "\n"
-	echo "$BIYellow Control + C to end session"
-	echo "$NC" 
-	python3 -m http.server
 	}
 
 #* Symmetric file encryption (AES 128 is the default, this increases it to 256), param 1 is the target file:
