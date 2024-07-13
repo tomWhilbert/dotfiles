@@ -2,11 +2,9 @@
 
 New-Alias -Name ls -Value Get-ChildItem
 
+New-Alias -Name conex Connect-ExchangeOnline -UserPrincipalName thilbert@clinical.law.berkeley.edu
 
-
-
-
-### Sharepoint
+New-Alias -Name  exexit disconnect-ExchangeOnline
 
 New-Alias -Name info -Value Get-PnPSite 
 function spcon {
@@ -28,13 +26,7 @@ function pcopy {
     Get-PnPFile -Url $pageUrl -Path $localPath -FileName "$fname" -AsFile
 }
 
-### Exchange
-function conex {
-    Connect-ExchangeOnline -UserPrincipalName thilbert@clinical.law.berkeley.edu
-}
-function disconex {
-    New-Alias -Name  disconnect-ExchangeOnline
-}
+
 
 
 
