@@ -1,3 +1,5 @@
+#!/usr/bin/env bash
+
 #* Testing: parameter expansion for git, gq AKA, git quick.  Works can replace or work as alternative to lg ()
 gq () {
 	git add --all .
@@ -51,10 +53,8 @@ pub () {
 	}
 
 ytd () {
-	echo "Enter the output path ... "
-	read -r "outpath"
-	cd "$outpath" || exit
-    echo "Paste URL.. "
+	cd "$HOME/Desktop" || exit
+	echo "Paste URL...file will save to the desktop. "
     read -r "target"
     /opt/homebrew/bin/yt-dlp "$target"
 	rm -rf ./*.part

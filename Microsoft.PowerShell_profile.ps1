@@ -2,18 +2,17 @@
 
 New-Alias -Name ls -Value Get-ChildItem
 
-New-Alias -Name conex Connect-ExchangeOnline -UserPrincipalName thilbert@clinical.law.berkeley.edu
-
-New-Alias -Name  exexit disconnect-ExchangeOnline
+New-Alias -Name ga -Value Get-Alias
 
 New-Alias -Name info -Value Get-PnPSite 
+
 function spcon {
       param($site)
       Connect-PnPOnline -Url https://ucblaw.sharepoint.com/sites/"$site" -Interactive
 }
-function spexit {
-    Disconnect-PnPOnline
-}
+
+New-Alias -Name spexit -Value Disconnect-PnPOnline
+
 
 # Download Site Pages
 function pcopy {
@@ -27,7 +26,9 @@ function pcopy {
 }
 
 
+function excon {
+     Connect-ExchangeOnline -UserPrincipalName thilbert@clinical.law.berkeley.edu
+}
 
-
-
+New-Alias -Name  exexit disconnect-ExchangeOnline
 
