@@ -75,4 +75,4 @@ alias rbro='/Users/tom/Applications/Restic-Browser.app/Contents/MacOS/Restic-Bro
 alias psh='cat /Users/tom/.local/share/powershell/PSReadLine/ConsoleHost_history.txt'
 
 
-alias 'sps=cat /Users/tom/.dotfiles/Microsoft.PowerShell_profile.ps1'
+alias sps='cat /Users/tom/.dotfiles/Microsoft.PowerShell_profile.ps1'
