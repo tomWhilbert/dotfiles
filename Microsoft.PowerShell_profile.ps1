@@ -6,6 +6,8 @@ New-Alias -Name ga -Value Get-Alias
 
 New-Alias -Name info -Value Get-PnPSite 
 
+
+
 function spcon {
       param($site)
       Connect-PnPOnline -Url https://ucblaw.sharepoint.com/sites/"$site" -Interactive
@@ -31,4 +33,3 @@ function excon {
 }
 
 New-Alias -Name  exexit disconnect-ExchangeOnline
-

@@ -123,3 +123,12 @@ rcl () {
 	rc copy  "$1" ucod:Clio_Upload/"$1" -P
 }
  
+#* Azure cli find group memberships
+az-groups () {
+		az ad user get-member-groups --id "$1@clinical.law.berkeley.edu" --query '[].displayName' --output table
+}
+
+#* User python module to unzip to target directory
+uz () {
+	python -m zipfile -e "$1" "$2"
+}
