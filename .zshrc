@@ -30,6 +30,11 @@ export RESTIC_PASSWORD=$(security find-generic-password -a $USER -s restic -w)
 export BAT_THEME="gruvbox-dark"
 export HOMEBREW_CASK_OPTS="--appdir=$HOME/Applications caskroom=$HOME/Applications"
 
+# Golang environment variables
+export GOROOT=/opt/homebrew/bin/go
+export GOPATH=$HOME/go
+export PATH=$GOPATH/bin:$GOROOT/bin:$HOME/.local/bin:$PATH:
+
 #* brew zsh completions init
  if type brew &>/dev/null
  then
